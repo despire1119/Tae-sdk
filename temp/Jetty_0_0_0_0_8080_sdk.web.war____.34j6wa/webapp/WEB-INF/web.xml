@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="GBK"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         metadata-complete="true" version="2.5">
+
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            /META-INF/config/spring/spring-sdk-webconsole.xml
+        </param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>resource:context.path</param-name>
+        <param-value>${sdk.htdocs.path}</param-value>
+    </context-param>
+
+    <listener>
+        <description>系统变量的ServletContextListener实现</description>
+        <listener-class>com.taobao.commons.web.servlet.listener.SystemVariablesServletContextListener</listener-class>
+    </listener>
+
+    <listener>
+        <description>ClassLoader上下文绑定的ServletContextListener</description>
+        <listener-class>com.taobao.commons.web.servlet.listener.ClassLoaderContextBindingServletContextListener
+        </listener-class>
+    </listener>
+
+    <listener>
+        <description>ThreadLocal上下文绑定的ServletRequestListener</description>
+        <listener-class>com.taobao.commons.web.servlet.listener.ThreadLocalContextBindingServletRequestListener
+        </listener-class>
+    </listener>
+
+
+    <listener>
+        <description>ThreadLocal上下文ServletRequestListener清除器</description>
+        <listener-class>com.taobao.commons.web.servlet.listener.ThreadLocalContextCleanerServletRequestListener
+        </listener-class>
+    </listener>
+
+
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>com.taobao.tae.sdk.web.servlet.SDKCharacterEncodingFilter</filter-class>
+        <!--<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>-->
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>GBK</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <servlet-name>springMVC</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>LastAccessResourceServletFilter</filter-name>
+        <filter-class>com.taobao.commons.web.servlet.filter.LastAccessResourceServletFilter</filter-class>
+        <init-param>
+            <param-name>supported-http-methods</param-name>
+            <param-value>GET</param-value>
+        </init-param>
+        <init-param>
+            <param-name>supported-accept-headers</param-name>
+            <param-value>text/html</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LastAccessResourceServletFilter</filter-name>
+        <servlet-name>springMVC</servlet-name>
+    </filter-mapping>
+
+    <!--
+    <filter>
+        <filter-name>ImageFileServletFilter</filter-name>
+        <filter-class>com.taobao.tae.sdk.web.servlet.ImageFileServletFilter</filter-class>
+    </filter>
+
+    <filter>
+        <filter-name>CombinedResourceFileServletFilter</filter-name>
+        <filter-class>com.taobao.tae.sdk.web.servlet.CombinedResourceFileServletFilter</filter-class>
+    </filter>
+    -->
+
+    <filter>
+        <filter-name>CombinedResourceFileServletFilter</filter-name>
+        <filter-class>com.taobao.commons.web.servlet.filter.GenericServletFilter</filter-class>
+        <init-param>
+            <param-name>required-handlers-config</param-name>
+            <param-value>/META-INF/config/required-combined-files-handlers</param-value>
+        </init-param>
+    </filter>
+
+    <filter>
+        <filter-name>ImageFileServletFilter</filter-name>
+        <filter-class>com.taobao.commons.web.servlet.filter.GenericServletFilter</filter-class>
+        <init-param>
+            <param-name>required-handlers-config</param-name>
+            <param-value>/META-INF/config/required-scalable-image-file-handlers</param-value>
+        </init-param>
+    </filter>
+
+    <filter>
+        <filter-name>RemoteCacheFileServletFilter</filter-name>
+        <filter-class>com.taobao.commons.web.servlet.filter.GenericServletFilter</filter-class>
+        <init-param>
+            <param-name>required-handlers-config</param-name>
+            <param-value>/META-INF/config/required-remote-cache-file-handlers</param-value>
+        </init-param>
+    </filter>
+
+
+    <filter>
+        <filter-name>CookieServletFilter</filter-name>
+        <filter-class>com.taobao.tae.sdk.web.servlet.CookieServletFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CombinedResourceFileServletFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>ImageFileServletFilter</filter-name>
+        <url-pattern>*.css</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>ImageFileServletFilter</filter-name>
+        <url-pattern>*.jpg</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>ImageFileServletFilter</filter-name>
+        <url-pattern>*.png</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>ImageFileServletFilter</filter-name>
+        <url-pattern>*.gif</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>RemoteCacheFileServletFilter</filter-name>
+        <url-pattern>/remote.cache</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>CookieServletFilter</filter-name>
+        <url-pattern>/bugs/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>springMVC</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>springMVC</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://tae-sdk.taobao.com/taglibs/sdk</taglib-uri>
+            <taglib-location>/META-INF/config/taglibs/sdk-web-1.0.tld</taglib-location>
+        </taglib>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>GBK</page-encoding>
+            <!-- 请不要随意修改定义顺序 -->
+            <include-prelude>/WEB-INF/jsp/prelude/include-taglibs.jspf</include-prelude>
+            <include-prelude>/WEB-INF/jsp/prelude/variables.jspf</include-prelude>
+            <include-prelude>/WEB-INF/jsp/prelude/include-css.jspf</include-prelude>
+            <include-prelude>/WEB-INF/jsp/prelude/header.jspf</include-prelude>
+            <include-coda>/WEB-INF/jsp/coda/footer.jspf</include-coda>
+            <trim-directive-whitespaces>true</trim-directive-whitespaces>
+        </jsp-property-group>
+
+        <jsp-property-group>
+            <url-pattern>*.jspf</url-pattern>
+            <page-encoding>GBK</page-encoding>
+            <include-prelude>/WEB-INF/jsp/prelude/include-taglibs.jspf</include-prelude>
+            <include-prelude>/WEB-INF/jsp/prelude/variables.jspf</include-prelude>
+            <trim-directive-whitespaces>true</trim-directive-whitespaces>
+        </jsp-property-group>
+    </jsp-config>
+
+    <welcome-file-list>
+        <welcome-file>/</welcome-file>
+        <welcome-file>/index</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/index</location>
+    </error-page>
+
+</web-app>

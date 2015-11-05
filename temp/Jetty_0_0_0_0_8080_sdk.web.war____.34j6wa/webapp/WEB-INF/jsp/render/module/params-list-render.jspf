@@ -1,0 +1,5 @@
+<c:forEach items="${section.param}" var="parameter">
+	<c:if test="${not parameter.readonly and not parameter.disabled}">
+		<jsp:directive.include file="/WEB-INF/jsp/render/module/param-render.jspf" />
+	</c:if>
+</c:forEach>

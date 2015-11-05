@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<module>
+    <id>tshop-um-15071733</id>
+    <uuid>0e9a6cdfda354f26a464129299f8d164</uuid>
+    <name>test</name>
+    <file>tshop-um-15071733.php</file>
+    <thumbnail>../../assets/images/default-thumbnail.png</thumbnail>
+    <description></description>
+    <requiredCache>true</requiredCache>
+    <supportedWidth>190,550,750,950</supportedWidth>
+    <app-key></app-key>
+    <themes default="默认">
+        <theme name="默认">
+            <css>assets/stylesheets/default.css</css>
+        </theme>
+    </themes>
+</module>

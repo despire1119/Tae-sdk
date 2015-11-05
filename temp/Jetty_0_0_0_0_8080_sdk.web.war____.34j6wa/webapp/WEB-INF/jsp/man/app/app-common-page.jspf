@@ -1,0 +1,5 @@
+<%-- App 公用页面 --%>
+
+<%-- App 公用变量定义 --%>
+<c:set var="appRootURL" value="http://${appName}.taobaoapps.net:${serverPort}" scope="request"/>
+<c:set var="encoding" value="${sysProps['file.encoding']}"  scope="request"/>

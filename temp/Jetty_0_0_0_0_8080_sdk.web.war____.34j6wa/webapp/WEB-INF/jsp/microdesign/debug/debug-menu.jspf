@@ -1,0 +1,7 @@
+<div id="sidebar">
+    <ul>
+        <li class="sub-nav">
+            <a href="/man/microtemplate/assemble/${templateDirectoryName}/" class="nav-main current"><i></i><span class="label">ÎÒµÄÒ³Ãæ</span></a>
+        </li>
+    </ul>
+</div>

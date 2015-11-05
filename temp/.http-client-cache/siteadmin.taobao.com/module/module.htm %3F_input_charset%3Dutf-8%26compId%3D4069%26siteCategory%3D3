@@ -1,0 +1,44 @@
+
+
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-other-wireless-code&quot;&gt;
+	&lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    &lt;div class=&quot;skin-box-hd&quot;&gt;
+        &lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;&lt;h3&gt;&lt;span&gt;收藏店铺到手机&lt;/span&gt;&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;skin-box-bd&quot;&gt;
+        		
+		     &lt;input type=&quot;hidden&quot; name=&quot;error&quot; value=&quot;$e&quot;/&gt;
+			 &lt;input type=&quot;hidden&quot; name=&quot;wapPicture&quot; value=&quot;{}&quot;/&gt;
+			 &lt;input type=&quot;hidden&quot; name=&quot;wapPicture&quot; value=&quot;${shop.getWapFeature(&#39;wapPromotions&#39;)}&quot;/&gt;
+			 
+                &lt;div class=&quot;item1 item&quot;&gt;
+                    &lt;h4&gt;手机活动公告&lt;/h4&gt;
+                    &lt;div class=&quot;cont&quot;&gt;
+        				        					访问我的手机店铺，首次用手机淘宝客户端，即有机会获10元红包哦。
+        				        			&lt;/div&gt;
+                &lt;/div&gt;
+				&lt;div class=&quot;item2 item&quot;&gt;
+                    &lt;h4&gt;手机店铺地址&lt;/h4&gt;
+                    &lt;div class=&quot;shoplink cont&quot;&gt;&lt;a href=&quot;http://shop1.m.taobao.com&quot;&gt;http://shop1.m.taobao.com&lt;/a&gt;&lt;/div&gt;
+                    &lt;div class=&quot;img2wbg&quot;&gt;
+                        &lt;div class=&quot;img2w&quot;&gt;
+														            				                                                        &lt;!-- test32: //ma.m.taobao.com/s/scan/1 --&gt;
+                            &lt;a href=&quot;http://www.taobao.com/go/act/sale/sjdpzd.php?sprefer=syg555&quot;&gt;
+																   &lt;img src=&quot;//ma.m.taobao.com/s/scan/1&quot; alt=&quot;&quot; width=&quot;124&quot; height=&quot;124&quot;&gt;
+							    							&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item3 item&quot; &gt;
+                    &lt;h4&gt;下载淘宝客户端&lt;/h4&gt;
+        
+                    &lt;div class=&quot;cont&quot;&gt;手机访问&lt;b&gt;m.taobao.com/p/qrma&lt;/b&gt;下载淘宝客户端（支持二维码 扫描）&lt;/div&gt;
+                    &lt;div class=&quot;down&quot;&gt;
+                        &lt;a href=&quot;http://www.taobao.com/m&quot; target=&quot;_blank&quot;&gt;下载淘宝客户端&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+		    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;/div&gt;
+
+

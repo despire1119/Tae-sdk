@@ -1,0 +1,4 @@
+<meta charset="gbk"/>
+<title>店铺装修-布局管理-淘宝网</title>
+<jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+<link rel="stylesheet" href="http://${assetsHost}/apps/taesite/platinum/stylesheet/platform/layout/layout-min.css?t=${date}">

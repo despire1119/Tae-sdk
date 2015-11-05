@@ -1,0 +1,9 @@
+<body>
+<jsp:directive.include file="/WEB-INF/jsp/render/microshop/body-page.jspf" />
+</body>
+<c:choose>
+    <c:when test="${siteLayout.siteID >= 1003}">
+        <script src="http://g.tbcdn.cn/kissy/k/1.4.1/seed-min.js"></script>
+    </c:when>
+</c:choose>
+<jsp:directive.include file="/WEB-INF/jsp/prelude/render-js.jspf"/>

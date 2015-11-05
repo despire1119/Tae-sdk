@@ -1,0 +1,73 @@
+<div class="toolbar" id="vl-toolbar">
+    <div class="operater">
+        <ul class="toolbar-actions">
+            <li>
+                <a href="${pageDebugURI}" <c:if test="${isDebug}">class="active"</c:if>><span>页面编辑</span></a>
+            </li>
+            <li>
+                <a href="${pageLayoutURI}"  <c:if test="${isLayout}">class="active"</c:if>><span>布局管理</span></a>
+            </li>
+             <li>
+                    <a href="${pageSettingURI}"><span>页面属性</span></a>
+             </li>
+             <li class="toolbar-sep"></li>
+             <li class="toolbar-disable" title="系统页面不可删除">不可删除</li>
+        </ul>
+    </div>
+    <div class="toolbar-opts">
+        <c:if test="${isLayout or isDebug}">
+                <a class="preview" href="${pageRenderURI}" target="_blank"><span>预览</span></a>
+                <a class="release" href="${pageRenderURI}" target="_blank" ><span>发布</span></a>
+        </c:if>
+    </div>
+    <div class="operater">
+        <p>
+            <%-- TODO --%>
+        </p>
+    </div>
+
+    <div class="ds-msgs">
+        <span class="txt tb-hidden hidden" id="J_DSMsg">${errorMessage}</span>
+    </div>
+
+    <textarea id="J_TReleaseContent" class="hidden">
+
+        <div class="release-dialog" style="padding: 24px 10px 10px 24px;">
+            <form id="release-form" class="release-form" method="post">
+                <input type="hidden" name="sid" value="${templateDirectoryName}/${pageFileName}"/>
+                <input type="hidden" name="_tb_token_" value=""/>
+
+                <div class="release-msg release-msg24">
+                    <i></i>
+
+                    <p class="tips"><b>大功告成！</b>马上让买家看到你的最新店铺杰作吧！</p>
+                </div>
+                <p class="btn-footer">
+                    <a class="btn btn-ok" data-url="/releaseSite.htm">确定</a><a class="btn btn-cancel">取消</a>
+                </p>
+            </form>
+        </div>
+
+    </textarea>
+    <textarea id="J_TRestoreContent" class="hidden">
+        <div class="restore-dialog" style="padding: 24px 24px 10px 24px;">
+            <form id="restore-form" class="restore-form" method="post">
+                <input type="hidden" name="sid" value="${templateDirectoryName}/${pageFileName}"/>
+                <input type="hidden" name="_tb_token_" value=""/>
+
+                <div class="release-msg release-msg24">
+                    <i></i>
+
+                    <p class="tips">
+                        该操作可以将店铺(所有页面)还原到上一次发布状态（<span class="highlight">装修模板版本</span>），当前操作不会被保留。确认进行还原？
+                    </p>
+                </div>
+                <p class="btn-footer">
+                    <a class="btn btn-ok" data-url="">确定</a><a class="btn btn-cancel">取消</a>
+                </p>
+
+            </form>
+        </div>
+    </textarea>
+
+</div>

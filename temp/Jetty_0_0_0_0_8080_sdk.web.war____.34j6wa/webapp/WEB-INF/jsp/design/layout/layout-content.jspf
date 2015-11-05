@@ -1,0 +1,15 @@
+<div id="content" class="eshop head-expand tb-shop " <c:if test="${ruleOn}">data-max-layout="${maxLayout}" data-max-module="${maxModule}"</c:if> >
+	<div class="page-edit">
+		<jsp:directive.include file="/WEB-INF/jsp/render/common/body-page-content-layout.jspf" />
+	</div>
+	<form id="J_Save" method="post" action="${savePageLayoutURI}">
+		<input type="hidden" name="opt" value="layout"/>
+		<input type="hidden" name="sid" value=""/>
+		<input type="hidden" name="pageId" value="$page.id">
+		<input type="hidden" id="J_PageJson" name="pagejson" value=""/>
+		<p style="padding:20px;text-align:center;">
+			<a class="btn-ok J_TSubmit">±£´æ</a>
+			<a href="${referer}" class="btn J_TCancel">È¡Ïû</a>
+		</p>
+	</form>
+</div>

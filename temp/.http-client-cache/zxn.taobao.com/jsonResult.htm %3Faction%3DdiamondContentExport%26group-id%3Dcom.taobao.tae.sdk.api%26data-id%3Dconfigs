@@ -1,0 +1,171 @@
+
+
+vimage.url.prefix.csv=",',(
+template.dir.max.size = 10485760
+#模板目录最大文件个数
+template.dir.max.file.number=300
+#模块JS文件最大空间
+module.javascript.file.max.space=18432
+#最大设计师模块个数
+template.local.module.max.size=20
+#模板最大皮肤个数
+template.theme.max.number =3 
+#模块样式类选择器白名单
+module.style.classs.selector.while.lists=tb-module,J_TWidget,J_TokenSign,J_CartPluginTrigger
+#响应式布局
+template.response.version=990,1190
+#站点列表
+sdk.apply.sites.csv =1,2,3,58,66,60,1001,1003
+#站点对应tbmlfilter配置
+#手机店铺
+tbmlfilter.config.1003 = tbml-filter-tae-newsdk.xml,newsdk,ss
+#O2O店铺
+tbmlfilter.config.1001 = tbml-filter-tae-newsdk.xml,newsdk,ss
+#天猫品牌站
+tbmlfilter.config.66 = tbml-filter-tmallbrandsite-newsdk.xml,tmallbrandsite,sc
+#免费版
+tbmlfilter.config.1 = tbml-filter-tae-newsdk.xml,newsdk,ss
+#收费版
+tbmlfilter.config.2 = tbml-filter-tae-newsdk.xml,newsdk,ss
+#天猫店铺
+tbmlfilter.config.3 = tbml-filter-tae-newsdk.xml,newsdk,ss
+#集市品牌站
+tbmlfilter.config.58 = tbml-filter-tae-newsdk.xml,newsdk,ss
+tbmlfilter.config.60 = tbml-filter-tae-newsdk.xml,newsdk,ss
+user.nick = c测试账号154,商家测试帐号28,c测试账号188
+
+#站点信息
+site.1 = 基础版旺铺
+site.2 = 收费版旺铺
+site.3 = 天猫店铺
+site.58 = 集市品牌站
+site.66 = 天猫品牌站
+site.60 = 淘宝U站
+site.1001 = O2O店铺
+site.1003 = 手机店铺
+
+#站点支持的模板类型
+#简易模板=1
+#高级模板=2
+#JS模板=3
+#TAE模板=4
+#基础模板=5
+#天猫品牌站自用模板=6
+#天猫(不再使用）=7
+#集市品牌站=8
+site.template.types.1=5
+site.template.types.2=1,2,3,4
+site.template.types.3=2,3
+site.template.types.58=2,3,4
+site.template.types.60=2,3
+site.template.types.66=6
+site.template.types.1001=2
+site.template.types.1003=2,3
+
+#站点支持的销售类型
+site.sale.types.1=1,2
+site.sale.types.2=1,2
+site.sale.types.3=1,2
+site.sale.types.58=1,2,3
+site.sale.types.60=1,2
+site.sale.types.66=1,2,3
+site.sale.types.1001=1
+site.sale.types.1003=1
+
+#站点SDK模板的默认关联帐号
+#集市品牌站的用户暂时跟普通店铺一致
+site.template.user.nick.1=c测试账号154
+site.template.user.nick.2=c测试账号154
+site.template.user.nick.3=商城测试帐号28
+site.template.user.nick.58=c测试账号154
+site.template.user.nick.66=c测试账号188
+site.template.user.nick.60=c测试账号19
+site.template.user.nick.1001=c测试账号09
+site.template.user.nick.1003=c测试账号WPC
+
+#站点支持的可装修页面类型, 对应PageType
+site.supported.design.page.type.1 = 1,2,4,5
+site.supported.design.page.type.2 = 1,2,4,5
+site.supported.design.page.type.3 = 1,2,4,5
+site.supported.design.page.type.58 = 1,2,4,5
+site.supported.design.page.type.66 = 1,4
+site.supported.design.page.type.60 = 1,3,6,114
+site.supported.design.page.type.1001 = 10001,10003,10004
+site.supported.design.page.type.1003 = 11002,12002,13002
+
+#站点支持的有效系统模块前缀
+site.template.system.module.prefix.1 = tshop-pbsm-
+site.template.system.module.prefix.2 = tshop-pbsm-
+site.template.system.module.prefix.3 = tshop-pbsm-
+site.template.system.module.prefix.58 = tb-pbsm-
+site.template.system.module.prefix.66 = tshop-pbsm-
+site.template.system.module.prefix.60 = tshop-psm-,tshop-uz-
+site.template.system.module.prefix.1001 = of-
+site.template.system.module.prefix.1003 = msp-
+
+#站点SDK支持的引擎语言
+site.engine.languages.1=groovy
+site.engine.languages.2=groovy
+site.engine.languages.3=groovy
+site.engine.languages.58=groovy
+site.engine.languages.66=groovy
+site.engine.languages.60=groovy
+site.engine.languages.1001=groovy
+site.engine.languages.1003=groovy
+
+#站点支持的动态openservice接口名列表
+site.openservice.60=test,uspcontentComponentIsvOpenService,spContentManagerService,spURIManagerService
+
+#站点CAJA运行时URL
+site.caja.js.uri.2 = /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+site.caja.js.uri.3 = /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+site.caja.js.uri.58 = /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+site.caja.js.uri.66 = /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+site.caja.js.uri.60 = /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+site.caja.js.uri.9527 = /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+#站点CAJA Setup URL
+site.caja.setup.js.uri.2 =/apps/taesite/balcony/core/r3002/caja-setup.js
+site.caja.setup.js.uri.3 =/apps/taesite/balcony/core/r3002/caja-setup.js
+site.caja.setup.js.uri.58=/apps/taesite/balcony/core/r3002/caja-setup.js
+site.caja.setup.js.uri.66=/apps/taesite/balcony/core/r3002/caja-setup.js
+site.caja.setup.js.uri.60=/apps/taesite/balcony/core/r3002/caja-setup.js
+site.caja.setup.js.uri.9527 =/apps/taesite/balcony/core/r3002/caja-setup.js
+
+#TAE 应用类型
+tae.app.types=default,shop,sitemodule,tmallbrand,uz,aitb,microtao
+
+#TAE 类型名称
+tae.app.type.name.mapping=1#sitemodule,2#uz,3#default,4#shop,5#tmallbrand,6#aitb,7#microtao
+
+#TAE应用类型 Caja URL
+tae.caja.js.uri.default = /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+tae.caja.js.uri.shop = /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+tae.caja.js.uri.sitemodule= /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+tae.caja.js.uri.tmallbrand= /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+tae.caja.js.uri.uz= /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+tae.caja.js.uri.aitb= /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+
+tae.caja.js.uri.microtao= /apps/taesite/balcony/core/r4000/??caja/caja-mobile-min.js,base/caja-util-min.js,base/caja-log-min.js,base/balcony-min.js
+
+#TAE应用类型 Caja Setup URL
+tae.caja.setup.js.uri.default =/apps/taesite/balcony/core/r3002/caja-setup.js
+tae.caja.setup.js.uri.shop =/apps/taesite/balcony/core/r3002/caja-setup.js
+tae.caja.setup.js.uri.sitemodule=/apps/taesite/balcony/core/r3002/caja-setup.js
+tae.caja.setup.js.uri.tmallbrand=/apps/taesite/balcony/core/r3002/caja-setup.js
+tae.caja.setup.js.uri.uz =/apps/taesite/balcony/core/r3002/caja-setup.js
+tae.caja.setup.js.uri.aitb =/apps/taesite/balcony/core/r3002/caja-setup.js
+tae.caja.setup.js.uri.microtao=/apps/taesite/balcony/core/r4000/base/setup-min.js
+
+#TAE 应用业务套取布局模块原型映射关系
+tae.app.biz.typ.layout.component.mapping=1#18518

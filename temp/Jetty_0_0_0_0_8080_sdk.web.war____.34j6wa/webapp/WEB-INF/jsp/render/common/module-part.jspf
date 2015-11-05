@@ -1,0 +1,41 @@
+<c:set var="moduleInstanceID" value="${module.id}" />
+<c:set var="modulePrototypeID" value="${module.prototypeID}" />
+<c:set var="moduleID" value="${module.moduleID}" />
+<c:set var="isSystemModule" value="${module.systemModule}" />
+<c:set var="moduleRenderURI"
+	value="/module/preview/${templateDirectoryName}/${moduleID}/${moduleInstanceID}/" />
+<c:choose>
+	<c:when test="${isSystemModule}">
+		<c:set var="editable" value="0" />
+		<c:set var="moduleFormURI" value="#" />
+	</c:when>
+	<c:otherwise>
+		<c:set var="editable" value="1" />
+		<c:set var="moduleFormURI"
+			value="/module/form/${templateDirectoryName}/${pageFileName}/${moduleID}/${moduleInstanceID}/" />
+	</c:otherwise>
+</c:choose>
+<c:if test="${module.javaScriptedModule}">
+	<c:set var="javaScriptedModuleClassName" value="J_TScriptedModule" />
+</c:if>
+<div class="J_TModule ${javaScriptedModuleClassName}" 
+	data-id="${moduleInstanceID}"
+	data-widgetid="${moduleInstanceID}"
+	data-componentid="${modulePrototypeID}"
+	data-prototypeid="${modulePrototypeID}" 
+	data-isedit="${editable}"
+	data-ismove="1" data-isdel="1" 
+	data-uri="${moduleFormURI}"
+	data-width="670px"
+	data-render="${moduleRenderURI}"
+	id="shop${moduleInstanceID}"
+	>
+	${module.content}
+	<c:if test="${isSystemModule}">
+		<script type="text/javascript">
+		    if(window.TShop&&window.TShop.ModUtil){
+			    TShop.ModUtil.initMod(document.getElementById("shop${moduleInstanceID}"), 1);
+			}
+	    </script>
+    </c:if>
+</div>

@@ -1,0 +1,92 @@
+
+
+			&lt;div class=&quot;skin-box tb-module tshop-uz-slide&quot;&gt;
+        &lt;div style=&quot;height: 120px; overflow: hidden;&quot;&gt;
+			&lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+			&lt;div class=&quot;skin-box-hd&quot;&gt;
+				&lt;div class=&quot;skin-box-act&quot;&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		    &lt;div class=&quot;skin-box-bd&quot; style=&quot;height: 120px;&quot;&gt;
+				&lt;style&gt;
+					#J_trySlide{
+					   height:120px;
+					   width:950px;
+					   overflow:hidden;
+					   float:left;
+					   position:relative;
+					   margin-bottom:20px;
+					}
+					#J_trySlide .slide-stage li{
+					   position:relative;
+					   height:120px;
+					   overflow:hidden;
+						display:block;
+					}
+					#J_trySlide .slide-stick{
+						bottom: 10px;
+						position: absolute;
+						right: 9px;
+						z-index: 99;
+					}
+					#J_trySlide .slide-stick li{
+						background-color: #000000;
+						color: #FFFFFF;
+						cursor: pointer;
+						float: left;
+						height: 20px;
+						line-height: 20px;
+						margin-left: 6px;
+						text-align: center;
+						width: 20px;
+					}
+					#J_trySlide .slide-stick li.selected{
+					   background-color:#ad2121;
+					   border:solid 1px #ad2121;
+					   width:18px;
+					   height:18px;
+					   line-height:18px;
+					}
+				&lt;/style&gt;
+				&lt;div id=&quot;J_trySlide&quot; class=&quot;slide-box&quot; data-spm=&quot;.2&quot;&gt;
+					&lt;ul class=&quot;slide-stage&quot;&gt;
+					    							&lt;li style=&quot;display: block;&quot;&gt;
+								&lt;a target=&quot;_blank&quot; href=&quot;http://admin.uz.taobao.com&quot;&gt;
+									&lt;img src=&quot;http://img04.taobaocdn.com/tps/i4/T1otn.XmphXXXRhZse-950-120.jpg&quot; alt=&quot;&quot;&gt;
+								&lt;/a&gt;
+							&lt;/li&gt;				
+											&lt;/ul&gt;
+					&lt;div class=&quot;slide-stick-box clear-fix&quot;&gt;
+						&lt;ul class=&quot;slide-stick&quot;&gt;
+						&lt;/ul&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;script&gt;
+				KISSY.ready(function(S){
+					if(S.query(&#39;li&#39;,&#39;.slide-stage&#39;) &lt;= 0){
+						return;
+					}
+					var Event = S.Event, DOM = S.DOM;
+					S.use(&#39;switchable&#39;,function(S, Switchable){
+						var slide = new Switchable.Slide(&#39;#J_trySlide&#39;, {
+							navCls: &#39;slide-stick&#39;,
+							contentCls: &#39;slide-stage&#39;,
+							activeTriggerCls: &#39;selected&#39;,
+							delay: .2,
+							effect: &#39;scrolly&#39;,
+							easing: &#39;easeOutStrong&#39;,
+							duration: .5,
+							autoplay: true
+						});
+					});
+				});
+				&lt;/script&gt;
+		    &lt;/div&gt;
+		    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+		&lt;/div&gt;	
+		&lt;/div&gt;
+	
+
+
+
+

@@ -1,0 +1,28 @@
+<%-- 分页组建--%>
+<%-- 
+    需要变量信息：
+    模型中包含PaginationInfo#toValuesMap()信息
+    分页URI前缀：paginationURIPrefix，例如：${paginationURIPrefix}="/man/template/list"
+--%>
+<div class="pagination pagination-right">
+	<ul>
+		<li class="${hasPrevious ? '' : 'disabled'}">
+		    <c:if test="${hasPrevious}">
+                <c:set var="previousURI" value="${paginationURIPrefix}/${currentPageNumber-1}/" />
+            </c:if>
+            <a href="${not empty hasPrevious ? previousURI : '#'}">《</a>
+		</li>
+		<c:forEach items="${navigatorPageNumberList}" var="pageNum">
+        <li	class="${currentPageNumber eq pageNum ? 'active' : ''}">
+            <a href="${paginationURIPrefix}/${pageNum}/">${pageNum}</a>
+        </li>
+		</c:forEach>
+
+		<li class="${hasNext ? '' : 'disabled'}">
+		    <c:if test="${hasNext}">
+                <c:set var="nextURI" value="${paginationURIPrefix}/${currentPageNumber+1}/" />
+		    </c:if>
+            <a href="${not empty nextURI ? nextURI : '#'}">》</a>
+        </li>
+	</ul>
+</div>

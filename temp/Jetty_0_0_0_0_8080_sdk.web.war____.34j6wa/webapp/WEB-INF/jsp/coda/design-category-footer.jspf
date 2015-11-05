@@ -1,0 +1,10 @@
+
+<script src="http://${assetsHost}${kissyURI}" charset="utf-8"></script>
+<jsp:directive.include file="/WEB-INF/jsp/coda/commons-footer-js.jspf" />
+
+<!--   部署到assets里面 -->
+<script type="text/javascript">
+    KISSY.use('sdk/page/category-edit');
+</script>
+</body>
+</html>

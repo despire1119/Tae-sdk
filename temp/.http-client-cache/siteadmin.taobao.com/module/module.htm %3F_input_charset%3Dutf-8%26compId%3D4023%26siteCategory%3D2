@@ -1,0 +1,36 @@
+
+
+	&lt;!-- searchUrl : http://10.181.100.68:3210/bin/sp?src=taesite10.178.20.21&amp;amp;sort=volume:des&amp;amp;sellerid=1&amp;amp;tab=all&amp;amp;s=0&amp;amp;n=5&amp;amp;app=inshop&amp;amp;outfmt=json   --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-top-list&quot;&gt;
+	&lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+        &lt;div class=&quot;skin-box-hd&quot;&gt;
+		&lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;
+		&lt;h3&gt;
+		    								&lt;span&gt;宝贝排行榜&lt;/span&gt;
+									&lt;/h3&gt;
+		&lt;div class=&quot;skin-box-act disappear&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;more&quot;&gt;更多&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+    	&lt;div class=&quot;skin-box-bd&quot;&gt;
+		&lt;ul class=&quot;top-list-tab&quot;&gt;
+			&lt;li class=&quot;selected&quot;&gt;&lt;span class=&quot;J_SaleTab tab1&quot;&gt;销售量&lt;/span&gt;&lt;/li&gt;
+			&lt;li data-geturl=&quot;//favorite.t.taobao.com/json/shop_hot_items.htm?ownerId=1&amp;limit=5&quot; class=&quot; J_Collect&quot;&gt;&lt;span  class=&quot;J_CollectTab tab2&quot;&gt;收藏数&lt;/span&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div class=&quot;panels&quot;&gt;
+			&lt;div class=&quot;panel sale &quot;&gt;
+				&lt;ul&gt;
+														&lt;/ul&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;panel collection disappear&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;control-group&quot;&gt;
+				&lt;a class=&quot;collect-this-shop border-radius&quot; href=&quot;//favorite.taobao.com/popup/add_collection.htm?itemid=1&amp;itemtype=0&amp;ownerid=1&amp;scjjc=2&amp;_tb_token_=${tbToken}&quot; target=&quot;_blank&quot;  rel=&quot;nofollow&quot; &gt;收藏本店&lt;/a&gt;
+				&lt;span class=&quot;split&quot;&gt;/&lt;/span&gt;
+				&lt;a class=&quot;show-more border-radius disappear hotkeep_desc&quot; target=&quot;_blank&quot; href=&quot;//shop1.taobao.com/search.htm?orderType=hotkeep_desc&quot;&gt;查看更多宝贝&lt;/a&gt;
+                &lt;a class=&quot;show-more border-radius hotsell_desc&quot; target=&quot;_blank&quot; href=&quot;//shop1.taobao.com/search.htm?orderType=hotsell_desc&quot;&gt;查看更多宝贝&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+	&lt;/div&gt;

@@ -1,0 +1,25 @@
+<c:set var="logLink" value="${requestScope['template.validation.log.link']}" />
+<c:set var="validationResult" value="${requestScope['template.validation.result'] }" />
+<h3>发布模板</h3>
+<p>请确认本模板本地调试无误，否则可能被冻结。</p>
+<p>
+	<a href="/man/microtemplate/publish/${template.directoryName}/package/" class="btn">模板打包</a>
+	<c:choose>
+		<c:when test="${empty validationResult}">
+<c:if test="${not empty logLink}">
+	${template.name}模板验证错误，<a href="${logLink}" target="_blank">查看错误日志</a>
+</c:if>
+		</c:when>
+		<c:when test="${validationResult == 'valid'}">
+<c:if test="${templatePackageFile ne null}">
+	<span>
+		提示：模板打包成功!路径：${templatePackageFile.absolutePath}
+		<br />
+	</span>
+</c:if>
+		</c:when>		
+	</c:choose>
+</p>
+<p>
+	<a target="_blank" href="http://designer.zxn.taobao.com/design/wei_template_upload.htm" class="btn">立即发布</a>
+</p>

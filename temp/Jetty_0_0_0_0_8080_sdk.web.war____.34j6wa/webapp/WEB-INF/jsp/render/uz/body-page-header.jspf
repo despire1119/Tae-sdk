@@ -1,0 +1,100 @@
+<script type="text/javascript">
+    window.DAOGOU = KISSY.merge(window.DAOGOU, {
+        GetSiteCommonHeader: 'http://admin.uz.taobao.com/index.do?action=site/GetSiteCommonHeader&amp;event_submit_do_get_header=true&amp;_input_charset=UTF-8',
+        GetCommentsAction: 'http://admin.uz.taobao.com/index.do?action=site/GetCommentsAction&amp;event_submit_do_get=true&amp;userId=431983806&amp;_input_charset=UTF-8',
+        AddContentClassOpt: 'http://admin.uz.taobao.com/index.do?action=contentClass/ContentClassOpt&amp;event_submit_do_opt=add&amp;_input_charset=UTF-8&amp;_tb_token_=H8NXR8hkyH0u',
+        DeleteContentClassOpt: 'http://admin.uz.taobao.com/index.do?action=contentClass/ContentClassOpt&amp;event_submit_do_opt=delete&amp;_input_charset=UTF-8&amp;_tb_token_=H8NXR8hkyH0u',
+        CheckItemAction: 'http://admin.uz.taobao.com/index.do?action=shareItem/CheckItemAction&amp;event_submit_do_check=true&amp;_input_charset=UTF-8',
+        GetItemForAfterAction: 'http://tui.taobao.com/api/item?src=u2i201&amp;p=u&amp;day=-1&amp;page=1&amp;pageSize=50&amp;f=jp&amp;_input_charset=UTF-8',
+        GetItemForShareAction: 'http://admin.uz.taobao.com/index.do?action=shareItem/GetItemForShareAction&amp;event_submit_do_favorItem=true&amp;_input_charset=UTF-8',
+        GetItemDetailAction: 'http://admin.uz.taobao.com/index.do?action=shareItem/GetItemDetailAction&amp;_tb_token_=H8NXR8hkyH0u&amp;_input_charset=UTF-8',
+        PostShareItemAction: 'http://admin.uz.taobao.com/index.do?action=shareItem/ShareItemAction&amp;event_submit_do_share=true&amp;_input_charset=UTF-8&amp;_tb_token_=H8NXR8hkyH0u',
+        GetTaokoCommission: 'http://admin.uz.taobao.com/index.do?action=shareItem/GetTaokoCommission&amp;event_submit_do_get=true&amp;_input_charset=UTF-8',
+        GetPicDetailInfo: 'http://admin.uz.taobao.com/index.do?action=showPic/GetPicDetailInfo&amp;event_submit_do_get=true&amp;_input_charset=UTF-8',
+        PostShowPictureAction: 'http://admin.uz.taobao.com/index.do?action=showPic/ShowPictureAction&amp;_input_charset=UTF-8&amp;_tb_token_=H8NXR8hkyH0u',
+        DeleteAction: 'http://admin.uz.taobao.com/index.do?action=content/DeleteAction&amp;event_submit_do_delete=true&amp;_tb_token_=H8NXR8hkyH0u&amp;_input_charset=UTF-8',
+        GetTextDetailInfo: 'http://admin.uz.taobao.com/index.do?action=writeText/GetTextDetailInfo&amp;event_submit_do_get=true&amp;_input_charset=UTF-8',
+        PostWriteTextAction: 'http://admin.uz.taobao.com/index.do?action=writeText/WriteTextAction&amp;event_submit_do_write=true',
+        UploadImage: 'http://admin.uz.taobao.com/index.do?action=UploadImage&amp;event_submit_do_upload=true&amp;_input_charset=UTF-8',
+        GetCpsAction: 'http://j.uz.taobao.com/index.do?action=site/GetCpsAction&amp;event_submit_do_get=true&amp;_input_charset=UTF-8',
+        GoToTaoKeLink: 'http://www.alimama.com/membersvc/my.htm?domain=taobao&amp;service=user_on_taobao&amp;sign_account=ab95b846a0df81413d070a83d6619142&amp;return_url=http://www.alimama.com/union/spread/selfservice/taokeSearch.htm?spm=0.0.0.15.vrn8Iy',
+        SiteState: 'http://admin.uz.taobao.com/siteState.do',
+        PublishAction: 'http://admin.uz.taobao.com/publishAction.do?_tb_token_=H8NXR8hkyH0u',
+        SaveContentClassOpt: 'http://admin.uz.taobao.com/appClassAdminAction.do?method=save&amp;_input_charset=UTF-8&amp;_tb_token_=H8NXR8hkyH0u',
+        GetCatsInfos: 'http://admin.uz.taobao.com/appClassAdminAction.do?_input_charset=UTF-8&amp;_tb_token_=H8NXR8hkyH0u',
+        _tb_token_: 'H8NXR8hkyH0u',
+        userId: '431983806',
+        siteViewerId: '431983806',
+        siteId: '100044064',
+        envMode: 'preview'
+    });
+</script>
+<link href="http://g.tbcdn.cn/tb/daogoudian/13.10.31/zx_common.css" rel="stylesheet">
+<script type="text/javascript" src="http://g.tbcdn.cn/tb/daogoudian/13.10.31/zx_common.js"></script>
+<script>
+    //去掉所有的链接点击，除了设置data-type="allow"
+    KISSY.ready(function () {
+        setInterval(function () {
+            KISSY.each(KISSY.query('a'), function (aElem) {
+                if (KISSY.DOM.attr(aElem, 'data-type') != 'allow') {
+                    if (aElem.href) {
+                        aElem.href = "#forbidden";
+                    }
+                    aElem.target = "";
+                    KISSY.DOM.attr(aElem, 'data-type', 'allow');
+                }
+            });
+        }, 500);
+    });
+</script>
+<link href="http://g.tbcdn.cn/tb/daogoudian/13.10.31/zhuangxiu.css" rel="stylesheet">
+<script type="text/javascript" src="http://g.tbcdn.cn/tb/daogoudian/13.10.31/zhuangxiu.js"></script>
+<link href="http://g.tbcdn.cn/tb/daogoudian/13.9.22/common_header.css" rel="stylesheet">
+<script type="text/javascript">
+    window.DAOGOU = KISSY.merge(window.DAOGOU, {
+        GetSiteCommonHeader: 'http://admin.uz.taobao.com/index.do?action=site/GetSiteCommonHeader&amp;event_submit_do_get_header=true',
+        GetCpsAction: 'http://j.uz.taobao.com/index.do?action=site/GetCpsAction&amp;event_submit_do_get=true&amp;_input_charset=UTF-8'
+    });
+</script>
+<div class="c-dg-common-header J_cDgCommonHeader">
+    <div class="hd">
+        <div class="c"><a title="火速点击，发现更多精彩U站！" target="" href="http://siteadmin.taobao.com/preview.htm?spm=0.0.0.0.9e2zvy&amp;sid=195100708&amp;pageId=528731228#forbidden" data-type="allow"><h1>淘宝U站</h1></a>
+            <!--- 这个注释代表是用diamond的头尾 皮肤100 -->
+            <div class="site-name"><a href="http://siteadmin.taobao.com/preview.htm?spm=0.0.0.0.9e2zvy&amp;sid=195100708&amp;pageId=528731228#forbidden" target="" data-type="allow"><h2>lalala</h2></a>
+                <ul class="drop-down J_siteDetailDropDown"><li>                                                                                        <label for="">创&nbsp;建&nbsp;&nbsp;者：</label>                                          <span class="hili"><a href="#forbidden" title="点此可以直接与站长c测试账号128交流" target="" data-type="allow"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&amp;uid=c%E6%B5%8B%E8%AF%95%E8%B4%A6%E5%8F%B7128&amp;site=cntaobao&amp;s=1&amp;charset=utf-8"></a></span>                                                     </li>                                                                                     <li>                                                                                        <label for="">创建时间：</label>                                                          2013-12-04                                                                           </li>                                                                                     <li>                                                                                        <label for="">使用人数：</label><span class="hili">9</span>人                      </li>                                                                                     <li>                                                                                        <label for="">站点标签：</label>                                                                                                                                                                                                                 <span class="class-label">装备</span>                                                                                                                                                                                                                                                                                         <span class="class-label">美景掠影</span>                                                                                                                                                                                                                                                                                         <span class="class-label">线路住宿</span>                                                                                                                                                                                                                                                                                         <span class="class-label">保健</span>                                                                                                                                                                                                                                                                                         <span class="class-label">大杂烩</span>                                                                                                                                                                                                                                                                                         <span class="class-label">sss</span>                                                                                                                                                                                                                 </li>                                                                                     <li>                                                                                        <label for="">站点描述：</label>这是个测试描述ssssssss                                                </li></ul>
+            </div>
+            <div class="love-site">
+                <div data-type="site" class="dg-like-btn dg-like-site-btn sns-like sns-widget-ui simple-like"><div class="sns-like-wrap">   <a class="dig-button J_Trigger" title="我的淘宝，大家一起赞！" target="" data-type="allow">       <span class="dig-icon"><s class="J_Icon"></s></span>       <span class="dig-button-title">喜欢</span>   </a>   <span class="dig-count">       <i class="c">(</i>       <span class="J_Counter">3</span>       <i class="c">)</i>   </span>   <div class="tb-dig-tip hide">       <div class="tip-content"></div>       <s class="arrow"></s>   </div></div></div>
+                <div class="drop-down J_loveSiteDropDown"><p>喜欢该小站的人：</p>                                                                   <ul>                                                                                                                                                         <li><a target="" href="#forbidden" data-type="allow"><img alt="" src="http://wwc.taobaocdn.com/avatar/getAvatar.do?userId=1776087088&amp;width=30&amp;height=30&amp;type=sns"></a></li>                                                                                                      <li><a target="" href="#forbidden" data-type="allow"><img alt="" src="http://wwc.taobaocdn.com/avatar/getAvatar.do?userId=1857028745&amp;width=30&amp;height=30&amp;type=sns"></a></li>                                                                                                      <li><a target="" href="#forbidden" data-type="allow"><img alt="" src="http://wwc.taobaocdn.com/avatar/getAvatar.do?userId=431983806&amp;width=30&amp;height=30&amp;type=sns"></a></li>                                                                                                                    </ul>               <div class="line"></div>                                                                  <p>喜欢该小站的人也喜欢：</p>                                                                                                                       <div class="site-dt">                                                                       <div class="s-logo"><a target="" title="轻运动" href="#forbidden" data-type="allow"><img alt="轻运动" src="http://img4.tbcdn.cn/tfscom/i4/15237029532144951/T2pVB.XBXXXXXXXXXX_!!193405237-0-dgshop.jpg_70x70.jpg"></a></div>                                                                                           <dl>                                                                                        <dt><a target="" title="轻运动" href="#forbidden" data-type="allow">轻运动</a></dt>                         <dd><span class="hili">26</span>人喜欢</dd>                                <dd>装备,户外服装,鞋</dd>                                                                    </dl>                                                                                   </div>                                                                                                                                            <div class="site-dt">                                                                       <div class="s-logo"><a target="" title="越野户外网" href="#forbidden" data-type="allow"><img alt="越野户外网" src="http://img2.tbcdn.cn/tfscom/i3/18681028369040545/T2gT4sXyXXXXXXXXXX_!!72498681-0-dgshop.jpg_70x70.jpg"></a></div>                                                                                           <dl>                                                                                        <dt><a target="" title="越野户外网" href="#forbidden" data-type="allow">越野户外网</a></dt>                         <dd><span class="hili">68</span>人喜欢</dd>                                <dd>装备,游记</dd>                                                                    </dl>                                                                                   </div>                                                                                                                                                                   </div>
+            </div>
+            <div class="love-site share-site">
+                <div data-param="{}" data-type="site" class="dg-sns-sharebtn sns-sharebtn sns-widget-ui sns-sharebtn-default"></div>
+            </div>
+            <ul class="r-c J_rightCtrl">
+                <li class="ml">
+                    <div class="r-b"><i class="i-love"></i> <span>我的喜欢</span></div>
+                    <dl class="drop-down J_myLoveDropDown">                                                                             <dd><a target="" href="#forbidden" data-type="allow">我喜欢的内容</a></dd>                                                                                                                                                                                                            <dd><a target="" href="#forbidden" data-type="allow">我喜欢的优站</a></dd>                                                                                                                                </dl>
+                </li>
+                <li class="ms last">
+                    <div class="r-b"><i class="i-messages"></i> <span>消息<em class="J_messagesCount">(2)</em></span>
+                    </div>
+                    <i class="bg"></i>
+                    <dl class="drop-down J_messagesDropDown"><dd><a target="" href="#forbidden" data-type="allow">有<b class="hili">2</b>人喜欢你的小站</a></dd></dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    window.DAOGOU = KISSY.merge(window.DAOGOU, {
+        loginUserId: "431983806",
+        developerId: "431983806",
+        siteId: "100044064",
+        siteName: "lalala",
+        siteDomain: "pretest1",
+        siteLogo: "config-vip.taobaocdn.net/imgextra/",
+        baseurl: 'NDMxOTgzODA2',
+        _tb_token_: 'H8NXR8hkyH0u'
+    });
+</script>
+<div class="sidebar-hide" id="sidebar"></div>

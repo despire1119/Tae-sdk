@@ -1,0 +1,56 @@
+<textarea style="display:none" id="J_couponSetContent">
+    <div class="coupon-content clearfix">
+        <div class="item-set">
+        <span class="J_TManualRecMsg manual-rec-msg msg disappear">
+            <i class="msg-icon"></i>
+            <span class="text"></span>
+        </span>
+            <div class="selected-detail clear-fix" data-search-url="/design/${templateDirectoryName}/${pageFileName}/${moduleID}/${moduleInstanceID}/coupon/chooser/query/coupon/" data-select-url="/design/${templateDirectoryName}/${pageFileName}/${moduleID}/${moduleInstanceID}/coupon/chooser/select/coupon/">
+                <!-- 当前被选中的want 加selected class -->
+                <a class="J_TWantOpt want-opt all selected">全部（<span class="J_TTotalCount"></span>）</a>
+                <a class="J_TWantOpt want-opt recommended">已选择（<span class="J_TRecommendedCount recommended-count"></span>）</a>
+                <input class="J_TSelectedItemIds" type="hidden" value="">
+                <span class="remain-rec no-remain">还可选择<span class="count J_TRemainCount">12</span>张优惠券</span>
+            </div>
+            <!-- 搜索出来的优惠券列表 -->
+            <table>
+                <colgroup>
+                    <col width="110px">
+                    <col width="100px">
+                    <col width="86px">
+                    <col width="180px">
+                    <col width="170px">
+                    <col width="auto">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <td class="td-0">优惠券名称</td>
+                    <td class="td-1">面值金额(￥)</td>
+                    <td class="td-2">优惠券类型</td>
+                    <td class="td-3">使用条件</td>
+                    <td class="td-4">有效日期</td>
+                    <td class="td-5">操作</td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- 翻页 -->
+            <div id="J_TPagination" class="pagination">
+            </div>
+        </div>
+        <div class="opt-footer"></div>
+    </div>
+</textarea>
+
+<script type="text/template" id="couponList-tpl">
+    {{#each itemList as item}}
+    <tr class="item-wrap">
+        <td class="td-0">{{item.couponName}}</td>
+        <td class="td-1">{{item.discount}}</td>
+        <td class="td-2">{{item.couponType}}</td>
+        <td class="td-3">{{item.startFee}}</td>
+        <td class="td-4">{{item.startTime}}-{{item.endTime}}</td>
+        <td class="td-5"><input data-id="{{item.activityId}}" class="J_GetCoupon" type="checkbox" {{#if item.hasChosen == 1}} checked="checked" {{/if}}></td>
+    </tr>
+    {{/each}}
+</script>
+

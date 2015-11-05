@@ -1,0 +1,42 @@
+<c:choose>
+    <c:when test="${siteLayout.siteID eq '60'}">
+        <c:set var="mainClass" value="vl-main"/>
+        <c:set var="containerClass" value="vl-container"/>
+    </c:when>
+    <c:otherwise>
+        <c:set var="mainClass" value="main"/>
+        <c:set var="containerClass" value="container"/>
+    </c:otherwise>
+</c:choose>
+
+<div id="page">
+    <c:choose>
+        <c:when test="${siteLayout.siteID eq '60'}">
+            <jsp:directive.include file="/WEB-INF/jsp/design/debug/uz/tool-bar.jspf" />
+        </c:when>
+        <c:otherwise>
+                <jsp:directive.include file="/WEB-INF/jsp/design/tool-bar.jspf" />
+        </c:otherwise>
+    </c:choose>
+	<div id="wrapper">
+		<jsp:directive.include file="/WEB-INF/jsp/design/left-bar.jspf" />
+		<div id="main">
+			<jsp:directive.include file="/WEB-INF/jsp/design/status-bar.jspf" />
+			<div id="container">
+				<c:choose>
+					<c:when test="${isLayout}">
+						<jsp:directive.include file="/WEB-INF/jsp/design/layout/layout-content.jspf" />
+					</c:when>
+					<c:when test="${isDebug}">
+						<jsp:directive.include file="/WEB-INF/jsp/design/debug/debug-content.jspf" />
+					</c:when>
+				</c:choose>
+				<div id="footer">
+					<p id="copyright">2012 淘宝(中国)软件有限公司 版权所有</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

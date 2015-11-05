@@ -1,0 +1,14 @@
+
+
+&lt;div class=&quot;os-box of-twoitems&quot;&gt;
+        &lt;a href=&quot;&quot; class=&quot;ws-wrap&quot;&gt;
+            &lt;img src=&quot;http://gtms01.alicdn.com/tps/i1/T1dxXsFy8XXXb96jso-287-287.jpg&quot; data-ng=&quot;{{moduleData[&#39;5304&#39;].leftPic}}&quot; alt=&quot;&quot; width=&quot;280&quot; height=&quot;280&quot;&gt;
+            &lt;span data-ng=&quot;{{moduleData[&#39;5304&#39;].leftTitle}}&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;&quot; class=&quot;ws-wrap&quot;&gt;
+            &lt;img src=&quot;http://gtms01.alicdn.com/tps/i1/T1EcYJFoxdXXb96jso-287-287.jpg&quot; data-ng=&quot;{{moduleData[&#39;5304&#39;].rightPic}}&quot; alt=&quot;&quot; width=&quot;280&quot; height=&quot;280&quot;&gt;
+            &lt;span data-ng=&quot;{{moduleData[&#39;5304&#39;].rightTitle}}&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+
+

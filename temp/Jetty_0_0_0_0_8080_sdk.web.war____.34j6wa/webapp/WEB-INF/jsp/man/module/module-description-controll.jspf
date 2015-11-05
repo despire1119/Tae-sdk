@@ -1,0 +1,7 @@
+<div class="form-group">
+	<label class="form-label">描述信息：</label>
+	<div class="form-controls">
+		<form:textarea path="description" cssClass="textarea" />
+		<span class="help-inline"> 方便卖家了解模块功能</span>
+	</div>
+</div>

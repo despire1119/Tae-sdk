@@ -1,0 +1,163 @@
+
+
+<?xml version="1.0" encoding="GBK"?>
+
+<rule name="天猫品牌站" productId="66" desc="null" publishTime="-1">
+  <siteInfo>
+    <maxPageNum>9999</maxPageNum>
+    <homePageId>1</homePageId>
+    <background>true</background>
+    <cms>true</cms>
+    <css>true</css>
+    <footer>true</footer>
+    <headerModule>true</headerModule>
+    <logo>true</logo>
+    <showside>true</showside>
+    <mulitLayout>true</mulitLayout>
+    <scriptcode><![CDATA[null]]></scriptcode>
+    <localModulePrefix>tshop-um-</localModulePrefix>
+    <systemModulePrefix>tshop-pbsm-</systemModulePrefix>
+    <tbmlFilterConfig>
+        <configFileName>tbml-filter-tmallbrandsite-newsdk.xml</configFileName>
+        <configId>tmallbrandsite</configId>
+        <version>sc</version>
+    </tbmlFilterConfig>
+    <offlinePageTypes>
+          <offlinePageType>23</offlinePageType>
+          <offlinePageType>315</offlinePageType>
+          <offlinePageType>10</offlinePageType>
+          <offlinePageType>50</offlinePageType>
+    </offlinePageTypes>
+    <offlinePageDemoIds>
+          <offlinePageDemoId>5005</offlinePageDemoId>
+          <offlinePageDemoId>3602</offlinePageDemoId>
+          <offlinePageDemoId>3603</offlinePageDemoId>
+    </offlinePageDemoIds>
+  </siteInfo>
+  <pageRule>
+    <pages>
+      <page pageId="1" name="首页">
+        <pageInfo>
+          <maxAppend>5</maxAppend>
+          <maxLayout>15</maxLayout>
+          <maxModule>15</maxModule>
+          <renamable>true</renamable>
+          <required>false</required>
+          <position>0</position>
+            <pageurl>/index.htm</pageurl>
+            <defaultLoad>true</defaultLoad>
+            <maxDesign>1</maxDesign>
+          <type>1</type>
+        </pageInfo>
+         <supportedModules>
+        	<module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/> 
+        </supportedModules>
+        <supportedLayouts>
+                    <layout name="grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>                    
+                    <layout name="grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>                
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    </supportedLayouts>
+      </page>
+      <page pageId="4" name="自定义页面">
+        <pageInfo>
+          <maxAppend>50</maxAppend>
+          <maxLayout>15</maxLayout>
+          <maxModule>15</maxModule>
+          <renamable>true</renamable>
+          <required>false</required>
+          <position>0</position>
+            <pageurl>/</pageurl>
+            <defaultLoad>false</defaultLoad>
+            <maxDesign>50</maxDesign>
+          <type>4</type>
+        </pageInfo>
+        <supportedModules>
+        	<module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/> 
+            <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="天猫品牌站类目导航" moduleId="18007"/> 
+            <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="天猫品牌站场景list" moduleId="18006"/>
+            <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="天猫品牌站多媒体中心" moduleId="18005"/>
+            <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="天猫品牌站商品list" moduleId="18004"/>
+      </supportedModules>
+        <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>                    
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>                
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+         </supportedLayouts>
+      </page>
+    </pages>
+  </pageRule>
+  <headRule>
+    <headInfo>
+      <maxLayout>1</maxLayout>
+      <maxModule>10</maxModule>
+      <moduleAddable>true</moduleAddable>
+    </headInfo>
+    <supportedModules>
+        <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>  
+        <module supportWidth="950" renamable="false" maxAppend="1" required="true" deleteable="false" movable="false" editable="true" name="天猫品牌站页头" moduleId="18002"/>  
+    </supportedModules>
+    <supportedLayouts>
+      <layout layoutId="23" name="taobao.layout.head">
+        <layoutInfo>
+          <maxModule>15</maxModule>
+          <required>true</required>
+          <position>0</position>
+          <supportWidth>null</supportWidth>
+        </layoutInfo>
+      </layout>
+    </supportedLayouts>
+  </headRule>
+  <footRule>
+    <footInfo>
+      <maxLayout>1</maxLayout>
+      <maxModule>10</maxModule>
+      <editable>true</editable>
+    </footInfo>
+    <supportedLayouts>
+      <layout layoutId="33" name="taobao.layout.foot">
+        <layoutInfo>
+          <maxModule>15</maxModule>
+          <required>true</required>
+          <position>0</position>
+          <supportWidth>null</supportWidth>
+        </layoutInfo>
+      </layout>
+    </supportedLayouts>
+  </footRule>
+</rule>

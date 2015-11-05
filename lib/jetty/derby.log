@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Thu Nov 05 11:00:27 CST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0150-d596-94fe-000003725cb0 
+on database directory /Users/Mr-WC/svn/tae-sdk/TAE_SDK/db/sdk2  with class loader sun.misc.Launcher$AppClassLoader@7987aeca 
+Loaded from file:/Users/Mr-WC/svn/tae-sdk/TAE_SDK/lib/share/derby-10.8.2.2.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_65-b14-468-11M4833
+user.dir=/Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../temp
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

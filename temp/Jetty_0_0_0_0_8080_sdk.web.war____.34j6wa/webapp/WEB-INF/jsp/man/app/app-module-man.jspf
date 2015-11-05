@@ -1,0 +1,49 @@
+<h3>开发模块</h3>
+<jsp:directive.include file="/WEB-INF/jsp/man/commons/man-opt-message.jspf" />
+<c:set var="moduleRenderPathPrefix" value="/module/render/${appName}"/>
+<c:if test="${1 eq bizType}">
+    <c:set var="moduleRenderPathPrefix" value="/module/render/tmallTaeModule/${appName}"/>
+</c:if>
+
+<ul class="page-list">
+	<c:forEach items="${moduleTemplatesList}" var="module">
+		<li><a href="${moduleRenderPathPrefix}/${module.id}/" target="_blank">
+	<c:set var="moduleImagePath" value="${appRootURL}/modules/${module.id}/${module.thumbnail}" />
+	<c:if test="${fn:startsWith(module.thumbnail,'http:') || fn:startsWith(module.thumbnail,'//') || fn:startsWith(module.thumbnail,'https:')}">
+		<c:set var="moduleImagePath" value="${module.thumbnail}" />
+	</c:if>
+	<img src="${moduleImagePath}" title="点击进入模块调试" />
+	<p moduleid="1">${module.name}</p>
+</a>
+<div class="control">
+	<a href="/man/app/module/edit/${appName}/${module.id}/">编辑</a>
+
+	<c:choose>
+		<c:when test="${module.deletable}">
+            <a href="/man/app/module/delete/${appName}/${module.id}/" class="J_del" data-url="/man/app/module/${appName}/${module.id}/delete/">删除</a>
+		</c:when>
+		<c:otherwise>
+		</c:otherwise>
+	</c:choose>
+</div>
+		</li>
+	</c:forEach>
+
+	<c:if test="${fn:length(moduleTemplatesList) < 1}">
+		<li class="add">
+        <a href="/man/app/module/create/${appName}/">
+	<img src="http://img04.taobaocdn.com/tps/i4/T1ZtblXmNaXXXf1Lo7-240-160.png" title="点击进入模块调试" />
+	<p>添加新模块</p>
+</a>
+		</li>
+	</c:if>
+</ul>
+<div class="guide">
+	<p>
+		想手工创建模块？<a href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E5.88.9B.E5.BB.BA.E8.AE.BE.E8.AE.A1.E5.B8.88.E6.A8.A1.E5.9D.97" target="_blank">点击此处可以了解！</a>
+	</p>
+	<p class="next">
+		<span>完成 开发模块 ？</span> <a href="/man/app/publish/${appName}" class="btn">进入下一步</a>
+	</p>
+</div>
+

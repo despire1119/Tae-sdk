@@ -1,0 +1,24 @@
+<div class="form-group J_layout ${jmneSN}">
+	<label class="form-label">文件创建：</label>
+	<div class="form-controls">
+		<c:forEach items="${moduleFileTypeList}"
+			var="FileType">
+			<lable class="radio"> <input name="moduleFileType"
+				type="checkbox" value="${FileType.value}"
+				<c:forEach items="${moduleForm.moduleFileType}" var="typeValue" >					
+					<c:if test="${FileType.value eq typeValue}">
+						checked="true" <c:if test="${editMode}"><c:if test="${FileType.label ne jsFileLabel}">disabled="true"</c:if></c:if>
+					</c:if>	
+					<c:if test="${jsModuleNumOutLimit && FileType.label eq jsFileLabel && !editMode}"> disabled="true"</c:if>
+				</c:forEach>>${FileType.label}
+				<c:if test="${FileType.label eq jsFileLabel and jmneSN eq err and editMode}">
+					<span class="help-inline"> &nbsp;&nbsp;&nbsp;&nbsp;${jmne}
+					</span>
+				</c:if>
+			</lable>
+		</c:forEach>
+		<%--
+		<form:checkboxes items="${moduleSupportedWidthList}" path="supportedWidth" />
+		 --%>
+	</div>
+</div>

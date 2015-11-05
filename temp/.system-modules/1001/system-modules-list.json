@@ -1,0 +1,94 @@
+
+
+    {
+    "system-modules-list": [
+        {
+            "id": "weishop.module.leftPicWithTitleText",
+            "last-modified": "2014-02-20T09:03:57+0000",
+            "pic-url": "//gdp.alicdn.com/tps/i1/T1taz0FkVcXXbEg._e-161-91.png",
+            "cssSelectorName": "of-leftpic",
+            "name": "\u56FE\u6587\u7B80\u4ECB",
+            "js-url": "http://gitlab.alibaba-inc.com/tb/o2o/blob/master/src/weishop/mods/of-leftpic/index.js",
+            "params": {
+                
+            },
+            "componentId": 5303,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=5303&siteCategory=1001"
+        },
+        {
+            "id": "weishop.module.topPicWithText",
+            "last-modified": "2014-01-21T03:24:14+0000",
+            "pic-url": "//gdp.alicdn.com/tps/i1/T1y84pFwBeXXbt5o_e-161-94.png",
+            "cssSelectorName": "of-banner",
+            "name": "\u7126\u70B9\u4FE1\u606F",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 5302,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=5302&siteCategory=1001"
+        },
+        {
+            "id": "weishop.module.picSlide",
+            "last-modified": "2014-10-29T07:03:57+0000",
+            "pic-url": "//gdp.alicdn.com/tps/i1/T1zuHZFbBdXXbEg._e-161-91.png",
+            "cssSelectorName": "of-slide",
+            "name": "\u56FE\u7247\u96C6\u5408",
+            "js-url": "http://gitlab.alibaba-inc.com/tb/o2o/blob/master/src/weishop/mods/of-slide/index.js",
+            "params": {
+                "pic": [
+                    "http://gtms02.alicdn.com/tps/i2/T1FrGMFCxcXXXPTPQY-549-300.jpg",
+                    "http://gtms04.alicdn.com/tps/i4/T1D8mNFB4bXXXPTPQY-549-300.jpg"
+                ],
+                "url": "http://www.taoboa.com"
+            },
+            "componentId": 5301,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=5301&siteCategory=1001"
+        },
+        {
+            "id": "weishop.module.splitLine",
+            "last-modified": "2014-02-20T09:04:03+0000",
+            "pic-url": "//gdp.alicdn.com/tps/i1/T18W_2Fl4bXXbEg._e-161-91.png",
+            "cssSelectorName": "of-separator",
+            "name": "\u5206\u5272\u7EBF",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 5307,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=5307&siteCategory=1001"
+        },
+        {
+            "id": "weishop.module.text",
+            "last-modified": "2014-01-21T03:23:47+0000",
+            "pic-url": "//gdp.alicdn.com/tps/i1/T1y84pFwBeXXbt5o_e-161-94.png",
+            "cssSelectorName": "of-text",
+            "name": "\u901A\u680F\u6587\u6848",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 5306,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=5306&siteCategory=1001"
+        },
+        {
+            "id": "weishop.module.twoPics",
+            "last-modified": "2014-01-21T03:23:19+0000",
+            "pic-url": "//gdp.alicdn.com/tps/i1/T1xfrZFl0cXXbEg._e-161-91.png",
+            "cssSelectorName": "of-twoitems",
+            "name": "\u56FE\u6587\u7A97\u683C",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 5304,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=5304&siteCategory=1001"
+        }
+    ]
+}

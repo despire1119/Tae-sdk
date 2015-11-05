@@ -1,0 +1,10 @@
+<!-- select选择框样式开始 -->
+<select class="input-box" name="${parameter.name}">
+	<c:forEach items="${parameter.optionsList}" var="option">
+		<option value="${option.value}"
+			<c:if test="${not empty option.selected}">
+					selected="selected"
+				</c:if>>${option.content}</option>
+	</c:forEach>
+</select>
+<!-- select选择框样式结束 -->

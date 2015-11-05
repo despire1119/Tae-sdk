@@ -1,0 +1,12 @@
+<c:forEach items="${column.modulesList}" var="module">
+    <div class="tb-module module J_TModule"
+        data-ismove="1"
+        data-isdel="1"
+        data-isedit="1"
+        data-id="${module.id}"
+        data-widgetid="${module.id}"
+        data-componentid="${module.prototypeID}"
+        data-prototypeid="${module.prototypeID}">
+        <span>${module.name}</span>
+    </div>
+</c:forEach>

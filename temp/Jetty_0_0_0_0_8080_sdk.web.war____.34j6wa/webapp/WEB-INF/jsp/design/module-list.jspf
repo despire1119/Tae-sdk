@@ -1,0 +1,255 @@
+<c:set var="noSubMenu" value="true" />
+<div id="mods-list">
+	<div class="dialog-nav">
+		<ul class="ks-switchable-nav">
+			<c:forEach items="${prototypeModulesMapsList}" var="prototypeModulesMap" varStatus="status" >
+				<c:set var="expandClassValue" value="folding" />
+				<c:set var="firstLevelMenuTitle" value="系统模块" />
+				<c:set var="selectedClassValue" value="" />
+				<c:if test="${status.index == 0}">
+					<c:set var="expandClassValue" value="expand" />
+					<c:set var="firstLevelMenuTitle" value="设计师模块" />
+					<c:set var="selectedClassValue" value="selected" />	 
+				</c:if>
+                <c:if test="${status.index == 2}">
+					<c:set var="expandClassValue" value="expand" />
+					<c:set var="firstLevelMenuTitle" value="TAE模块" />
+				</c:if>
+				<c:set var="titleClassValue" value="title" />
+				<c:if test="${noSubMenu}">
+					<c:set var="expandClassValue" value="" />
+					<c:set var="titleClassValue" value="titlea" />
+				</c:if>
+				
+				<li class="onelevel ${expandClassValue} ${selectedClassValue}">
+					<c:choose>
+						<c:when test="${noSubMenu}">
+						</c:when>
+						<c:otherwise>
+							<i class="switch"></i>
+						</c:otherwise>
+					</c:choose>
+					<span href="#" class="${titleClassValue}">${firstLevelMenuTitle}</span>
+					<c:if test="${not noSubMenu}">
+						
+					</c:if>
+				</li>
+			</c:forEach>           
+        </ul>	
+	</div>
+
+	<div class="panel-header">
+		<div class="mods-num">
+			共有<span class="highlight">${moduleSize}</span>模块
+		</div>
+	</div>
+	
+	
+    <div class="dialog-panel ks-switchable-content" hasRule="${ruleOn}" id="J_TAddModsPanel">
+    	<c:forEach items="${prototypeModulesMapsList}" var="prototypeModulesMap" varStatus="status" >
+    		<c:set var="expandClassValue" value="folding" />
+    		<c:set var="selectedStyleValue" value="display: none;" />
+    		<c:if test="${status.index == 0}">
+				<c:set var="expandClassValue" value="expand" />
+				<c:set var="selectedClassValue" value="selected" />	
+				<c:set var="selectedStyleValue" value="display: block;" /> 
+			</c:if>
+			
+			<ul style="${selectedStyleValue}">
+				<c:choose>
+					<c:when test="${noSubMenu}">
+						<c:forEach items="${prototypeModulesMap}" var="prototypeModuleEntry">
+							<c:set var="module" value="${prototypeModuleEntry.value}" />
+							<c:set var="moduleID" value="${prototypeModuleEntry.key}" />
+							<li data-componentid="${moduleID}" 
+								<%-- 
+								data-context="${dataContext}"
+	                            data-maxappend="${maxAppend}"
+	                            data-hasappend="${hasAppend}"
+	                            --%>
+	                            data-context="${module.context}"
+	                            data-maxappend="${module.maxAppend}";
+	                            data-hasappend="${module.hasAppend}"
+	                            class="module"
+	                            data-isdel="${module.deletable ? 1 : 0}"
+	                            data-ismove="${module.movable ? 1 : 0}"
+	                            data-isedit="${module.editable ? 1 : 0}"
+	                            id="shop${moduleID}">
+	                            <div class="thumb">
+	                                <c:set var="moduleImagePath" value="/${templateDirectoryName}/modules/${module.moduleID}/${module.thumbnail}" />
+									<c:if test="${fn:startsWith(module.thumbnail,'http:') || fn:startsWith(module.thumbnail,'//') || fn:startsWith(module.thumbnail,'https:')}">
+										<c:set var="moduleImagePath" value="${module.thumbnail}" />
+									</c:if>
+                                    <img src="${moduleImagePath}" />
+	                            </div>
+	                            <p>
+	                                <strong>
+	                                    ${module.name}
+	                                </strong>
+	                                ${module.description}
+	                                <br/>
+	                                                                                      价格：<span class="price">免费</span>
+	                            </p>
+	
+	                            <div style="float: left;">
+	                                <a data-uri="/design/${templateDirectoryName}/${pageFileName}/module/add/?module_comp_id=${moduleID}" class="btn btn-ok" style="height: 18px;line-height: 18px;width: auto;">
+                                    	添加
+                                	</a>
+	                            </div>
+	                        </li>
+                        </c:forEach>
+					</c:when>
+					<c:otherwise>
+					</c:otherwise>
+				</c:choose>
+			</ul>
+    	</c:forEach>        
+    </div>
+    
+</div>
+
+<%--
+#set($tokenKey = ${csrfToken.getKey()})
+#set($tokenValue = ${csrfToken.getUniqueToken()})
+
+#set($moduleAddUrl = $moduleOptUrl.addQueryData("sid",${siteInstanceId}).addQueryData("opt","add").render() + "&$!tokenKey=$!tokenValue&pageType=$!pageType&pageId=$!pageId")
+#set($subMenuIndex = 0)
+
+#macro (getEdit $comp) #if($hasRule) #set($tmpEdit = $moduleInfo.get($comp.id).getEdit()) #if($utils.isEmptyObject($tmpEdit)) #set($tmpEdit = $comp.getConfig("data-isedit")) #end $!tmpEdit #end #end
+#macro (getMove $comp) #if($hasRule) #set($tmpEdit = $moduleInfo.get($comp.id).getMove()) #if($utils.isEmptyObject($tmpEdit)) #set($tmpEdit = $comp.getConfig("data-ismove")) #end $!tmpEdit #end #end
+#macro (getDel $comp) #if($hasRule) #set($tmpEdit = $moduleInfo.get($comp.id).getDel()) #if($utils.isEmptyObject($tmpEdit)) #set($tmpEdit = $comp.getConfig("data-isdel")) #end $!tmpEdit #end #end
+
+<div id="mods-list">
+
+    <div class="dialog-nav">
+        <ul class="ks-switchable-nav">
+            #foreach($oneMenu in $menuList)
+                #set($noSubMenu = $utils.isEmptyObject($oneMenu.children))
+                #if($velocityCount == 1)
+                    #set($outFirst=true)
+                #else
+                    #set($outFirst=false)
+                #end
+                #if($subMenuIndex == 0)
+                    #set($expandVal =  "expand")
+                #else
+                    #set($expandVal =  "folding")
+                #end
+
+                <li class="onelevel #if(!$noSubMenu)$expandVal #end #if($outFirst) selected #end">
+                    #if(!$noSubMenu)
+                        <i class="switch"></i>
+                    #end
+                    <span href="#" class="#if($noSubMenu)titlea #else title #end">$oneMenu.title</span>
+                    #if(!$noSubMenu)
+                        <ul class="childlevel" id="J_T$menuIdNameArr.get($subMenuIndex)Trigger}">
+                            #foreach($subMenu in $oneMenu.children)
+                                <li class="#if($outFirst && $velocityCount == 1)ks-active #end">
+                                    <span href="#" class="childtitle">$subMenu.title</span>
+                                </li>
+                            #end
+                        </ul>
+                        #set($subMenuIndex = $subMenuIndex + 1)
+                    #end
+                </li>
+            #end
+        </ul>
+    </div>
+
+    <div class="panel-header">
+        <div class="mods-num">共有<span class="highlight">${moduleTotalCount}</span>模块</div>
+    </div>
+    #set($subMenuIndex = 0)
+    <div class="dialog-panel ks-switchable-content" hasRule="$!hasRule" id="J_TAddModsPanel">
+        #foreach($oneMenu in $menuList)
+            #set($noSubMenu = $utils.isEmptyObject($oneMenu.children))
+            #if($velocityCount == 1)
+                #set($outFirst=true)
+            #else
+                #set($outFirst=false)
+            #end
+            #if($subMenuIndex == 0)
+                #set($expandVal =  "expand")
+            #else
+                #set($expandVal =  "folding")
+            #end
+            <ul #if($outFirst)style="display: block;" #else style="display: none;" #end >
+                #if($noSubMenu)
+                    #foreach($comp in $oneMenu.components)
+                        <li data-componentid="$comp.id" data-context="#if($hasRule)$moduleContext.get($comp.id) #end"
+                            data-maxappend="#if($hasRule)$!moduleInfo.get($comp.id).maxAppend #end"
+                            data-hasappend="#if($hasRule)#if($utils.isEmptyObject($moduleCount.get($comp.id)))0#else $!moduleCount.get($comp.id).size() #end #end"
+                            class="module"
+                            data-isdel="#getDel($comp)"
+                            data-ismove="#getMove($comp)"
+                            data-isedit="#getEdit($comp)"
+                            id="shop$comp.id">
+                            <div class="thumb">
+                                <img src="#if($utils.isEmptyObject($comp.thumbnail))http://img02.taobaocdn.com/tps/i2/T1yf5BXcp1XXXXXXXX-64-64.jpg #else $comp.thumbnail #end">
+                            </div>
+                            <p>
+                                <strong>
+                                    $!{comp.title}
+                                </strong>
+                                $!{comp.description}
+                                <br/>
+                                价格：<span class="price">免费</span> #*10000人在使用*#
+                            </p>
+
+                            <div style="float: left;">
+                                <button data-uri="${moduleAddUrl}&module_comp_id=${comp.id}"
+                                        class="btn-ok" type="button">
+                                    添加
+                                </button>
+                            </div>
+                        </li>
+                    #end
+                #else
+                    <ul id="J_T$menuIdNameArr.get($subMenuIndex)Panel">
+                        #foreach($subMenu in $oneMenu.children)
+                            <li class="panel" #if($outFirst && $velocityCount == 1)style="display: block;" #else
+                                style="display: none;" #end>
+                                <ul>
+                                    #foreach($comp in $subMenu.components)
+                                        <li data-componentid="$comp.id"
+                                            data-context="#if($hasRule)$moduleContext.get($comp.id) #end"
+                                            data-maxappend="#if($hasRule)$!moduleInfo.get($comp.id).maxAppend #end"
+                                            data-hasappend="#if($hasRule)#if($utils.isEmptyObject($moduleCount.get($comp.id)))0#else $!moduleCount.get($comp.id).size() #end #end"
+                                            class="module"
+                                            data-isdel="#getDel($comp)"
+                                            data-ismove="#getMove($comp)"
+                                            data-isedit="#getEdit($comp)"
+                                            id="shop$comp.id">
+                                            <div class="thumb">
+                                                <img src="#if($utils.isEmptyObject($comp.thumbnail))http://img02.taobaocdn.com/tps/i2/T1yf5BXcp1XXXXXXXX-64-64.jpg #else $comp.thumbnail #end">
+                                            </div>
+                                            <p>
+                                                <strong>
+                                                    $!{comp.title}
+                                                </strong>
+                                                $!{comp.description}
+                                                <br/>
+                                                价格：<span class="price">免费</span> #*10000人在使用*#
+                                            </p>
+
+                                            <div style="float: left;">
+                                                <button data-uri="${moduleAddUrl}&module_comp_id=${comp.id}"
+                                                        class="btn-ok" type="button">
+                                                    添加
+                                                </button>
+                                            </div>
+                                        </li>
+                                    #end
+                                </ul>
+                            </li>
+                        #end
+                    </ul>
+                    #set($subMenuIndex = $subMenuIndex + 1)
+                #end
+            </ul>
+        #end
+    </div>
+</div>
+
+ --%>
+

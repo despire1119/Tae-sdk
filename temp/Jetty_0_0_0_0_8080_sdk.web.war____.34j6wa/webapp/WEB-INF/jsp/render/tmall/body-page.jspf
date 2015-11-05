@@ -1,0 +1,7 @@
+<div id="page">
+    <jsp:directive.include file="/WEB-INF/jsp/render/tmall/body-page-site-nav.jspf"/>
+    <jsp:directive.include file="/WEB-INF/jsp/render/tmall/body-page-header.jspf"/>
+    <jsp:directive.include file="/WEB-INF/jsp/render/common/body-page-content.jspf"/>
+    <jsp:directive.include file="/WEB-INF/jsp/render/tmall/body-page-footer.jspf"/>
+    <jsp:directive.include file="/WEB-INF/jsp/prelude/caja-js.jspf"/>
+</div>

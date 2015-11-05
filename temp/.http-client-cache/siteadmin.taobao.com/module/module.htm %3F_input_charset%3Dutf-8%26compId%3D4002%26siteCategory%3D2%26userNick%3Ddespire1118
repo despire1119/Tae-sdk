@@ -1,0 +1,144 @@
+
+
+&lt;!--  rsdata.trackidStr : 2d1ee63c2045ce55cedda1765ed287a6 rsdata.cnaStr :  --&gt;
+&lt;!-- $categoryId $aabc 搜索列表${x-shop-url}请求:searchURL: http://10.181.100.82:3210/bin/sp?src=taesite10.178.56.105&amp;amp;sort=volume:des&amp;amp;sellerid=789344397&amp;amp;tab=all&amp;amp;bucket=0&amp;amp;navigator=property&amp;amp;s=0&amp;amp;n=24&amp;amp;app=inshop&amp;amp;outfmt=json，无宝贝：searchURL: , bucketId: 0 bucketUser： --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-srch-list&quot;&gt;
+	    &lt;div id=&quot;J_ShopSearchResult&quot; class=&quot;shop-hesper&quot;&gt;
+				&lt;input type=&quot;hidden&quot; class=&quot;J_TItemRatesUrl&quot;  value=&quot;//rate.taobao.com/batch_query_rate.htm?sellerId=789344397&amp;itemIds=38951505405&amp;source=shop&quot;/&gt;
+				        &lt;div class=&quot;skin-box-bd&quot;&gt;
+            &lt;span data-info=&quot;&quot; id=&quot;J_ShopSearchUserParams&quot;&gt;&lt;/span&gt;
+            &lt;span data-info=&quot;keyword=&amp;price1=&amp;price2=&amp;bannerPageTitle=搜索宝贝&quot; id=&quot;J_UserSearchParams&quot;&gt;&lt;/span&gt;
+            &lt;div class=&quot;shop-hesper-hd J_TWidget&quot; data-widget-config=&quot;{&#39;triggerCls&#39;: &#39;trigger&#39;, &#39;panelCls&#39;: &#39;hesper-content&#39;,&#39;multiple&#39;: &#39;true&#39;, &#39;activeTriggerCls&#39;: &#39;collapse&#39;}&quot; data-widget-type=&quot;Accordion&quot;&gt;
+                &lt;div id=&quot;J_HesperCats&quot; class=&quot;hesper-cats&quot;&gt;
+                    &lt;ol&gt;
+                        &lt;li&gt;
+                                &lt;a href=&quot;//shop71884477.taobao.com/search.htm?search=y&quot; class=&quot;J_SearchAsync&quot;&gt;所有宝贝&lt;/a&gt;&lt;i class=&quot;right-arrow&quot;&gt;&lt;/i&gt;
+                        &lt;/li&gt;
+                                            &lt;/ol&gt;
+                    &lt;div class=&quot;hesper-content&quot;&gt;
+                    	                            &lt;div class=&quot;J_PropSingle attr-data&quot;&gt;
+    							                                &lt;table class=&quot;J_AttrBox&quot;&gt;
+                                    &lt;tbody&gt;
+										                                    &lt;/tbody&gt;
+                                &lt;/table&gt;
+								                            &lt;/div&gt;&lt;!-- END OF J_PropSingle attr-data结束具体的属性显示--&gt;
+						                    &lt;/div&gt;&lt;!--END OF hesper-content--&gt;
+                    &lt;i title=&quot;展开或者收缩&quot; class=&quot;trigger&quot; id=&quot;J_HesperCatsTrigger&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;&lt;!--END OF hesper-cats--&gt;
+                &lt;form method=&quot;get&quot; id=&quot;shop-search-list&quot; action=&quot;//shop71884477.taobao.com/search.htm&quot;&gt;
+                    &lt;div class=&quot;shop-search&quot;&gt;
+                        &lt;div class=&quot;search-form&quot; style=&quot;width:517px;&quot;&gt;
+                            &lt;ul&gt;
+                                &lt;input type=&quot;hidden&quot; data-info=&quot;//shop71884477.taobao.com/search.htm?search=y&quot; id=&quot;J_ShopSearchFormUrl&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; value=&quot;&quot; name=&quot;orderType&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; value=&quot;grid&quot; name=&quot;viewType&quot;&gt;
+                                                                                                                                                                &lt;li class=&quot;keyword&quot;&gt;
+                                    &lt;label for=&quot;keyword&quot;&gt;关键字：&lt;/label&gt;
+                                    &lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;keyword&quot;&gt;
+                                &lt;/li&gt;
+                                &lt;li class=&quot;price&quot;&gt;
+                                    &lt;label for=&quot;price&quot;&gt;价格：&lt;/label&gt;
+                                    &lt;input type=&quot;text&quot; value=&quot;&quot; class=&quot;price J_CheckInput&quot; name=&quot;lowPrice&quot; id=&quot;price1&quot;&gt;
+                                    到
+                                    &lt;input type=&quot;text&quot; value=&quot;&quot; class=&quot;price J_CheckInput&quot; name=&quot;highPrice&quot; id=&quot;price2&quot;&gt;
+                                &lt;/li&gt;
+                                &lt;li class=&quot;submit&quot;&gt;
+                                    &lt;button class=&quot;button&quot; type=&quot;submit&quot;&gt;搜索&lt;/button&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;search-result&quot;&gt;
+                            共搜索到&lt;span&gt; 1 &lt;/span&gt;个符合条件的商品。
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;&lt;!--END OF shop-hesper-hd J_TWidget结束属性导航div的显示--&gt;
+			
+            &lt;div class=&quot;shop-hesper-bd grid&quot;&gt;
+                &lt;div class=&quot;shop-filter&quot;&gt;
+                    &lt;div class=&quot;mode&quot;&gt;
+                        &lt;span&gt;显示：&lt;/span&gt;
+                        &lt;a class=&quot;J_SearchAsync mode-row&quot; title=&quot;列表方式&quot; alt=&quot;列表方式&quot; href=&quot;//shop71884477.taobao.com//search.htm?_input_charset=utf-8&amp;amp;compId=4002&amp;amp;siteCategory=2&amp;amp;userNick=despire1118&amp;viewType=list&quot;&gt;列表模式&lt;/a&gt;
+                        &lt;a class=&quot;J_SearchAsync mode-grid&quot; title=&quot;图表方式&quot; alt=&quot;图表方式&quot; href=&quot;//shop71884477.taobao.com//search.htm?_input_charset=utf-8&amp;amp;compId=4002&amp;amp;siteCategory=2&amp;amp;userNick=despire1118&amp;viewType=grid&quot;&gt;图表模式&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;taxis&quot;&gt;
+                        &lt;span&gt;排序：&lt;/span&gt;
+                        &lt;a title=&quot;按人气排列&quot; alt=&quot;按人气排列&quot; class=&quot; selected  &quot; href=&quot;//shop71884477.taobao.com//search.htm?_input_charset=utf-8&amp;amp;compId=4002&amp;amp;siteCategory=2&amp;amp;userNick=despire1118&amp;orderType=coefp_desc&amp;bucket_id=0&quot;&gt;人气&lt;i class=&quot;order-icon down-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a class=&quot; J_SearchAsync down &quot; title=&quot;按销量排列&quot; alt=&quot;按销量排列&quot;  href=&quot;//shop71884477.taobao.com//search.htm?_input_charset=utf-8&amp;amp;compId=4002&amp;amp;siteCategory=2&amp;amp;userNick=despire1118&amp;orderType=hotsell_desc&quot;&gt;销量&lt;i class=&quot;order-icon down-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a class=&quot; J_SearchAsync def&quot; title=&quot;按新品排列&quot; alt=&quot;按新品排列&quot;  href=&quot;//shop71884477.taobao.com//search.htm?_input_charset=utf-8&amp;amp;compId=4002&amp;amp;siteCategory=2&amp;amp;userNick=despire1118&amp;orderType=newOn_desc&quot;&gt;新品&lt;i class=&quot;order-icon down-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a class=&quot; J_SearchAsync def&quot; title=&quot;按价格排列&quot; alt=&quot;按价格排列&quot; href=&quot;//shop71884477.taobao.com//search.htm?_input_charset=utf-8&amp;amp;compId=4002&amp;amp;siteCategory=2&amp;amp;userNick=despire1118&amp;orderType=price_asc&quot;&gt;价格&lt;i class=&quot;order-icon up-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a class=&quot; J_SearchAsync fav def&quot; title=&quot;按收藏排列&quot; alt=&quot;按收藏排列&quot; href=&quot;//shop71884477.taobao.com//search.htm?_input_charset=utf-8&amp;amp;compId=4002&amp;amp;siteCategory=2&amp;amp;userNick=despire1118&amp;orderType=hotkeep_desc&quot;&gt;收藏&lt;i class=&quot;order-icon down-icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;pagination pagination-mini&quot;&gt;
+                        &lt;span class=&quot;page-info&quot;&gt;1/1&lt;/span&gt;
+						 						 						&lt;a class=&quot;disable&quot;   &gt;上一页&lt;/a&gt;
+                        &lt;a  class=&quot;disable&quot;  &gt;下一页&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+																						&lt;div class=&quot;item3line1&quot;&gt;
+										
+					                    &lt;dl class=&quot;item &quot; data-id=&quot;38951505405&quot;&gt;
+                        &lt;dt class=&quot;photo&quot;&gt;
+                            &lt;a href=&quot;//item.taobao.com/item.htm?id=38951505405&quot; target=&quot;_blank&quot;&gt;
+								                                     &lt;img alt=&quot;Air Jordan 1 Retro 86 AJ1男子板鞋 AJ2元素 经典黑蓝644490-014&quot;  src=&quot;//img.alicdn.com/bao/uploaded/i1/TB1HyzIFFXXXXbLXXXXXXXXXXXX_!!0-item_pic.jpg_240x240.jpg&quot;  &gt;
+                                                             &lt;/a&gt;
+                        &lt;/dt&gt;
+                        &lt;dd class=&quot;detail&quot;&gt;
+                            &lt;a class=&quot;item-name&quot; href=&quot;//item.taobao.com/item.htm?id=38951505405&quot; target=&quot;_blank&quot;&gt;Air Jordan 1 Retro 86 AJ1男子板鞋 AJ2元素 经典黑蓝644490-014&lt;/a&gt;
+                            &lt;div class=&quot;attribute&quot;&gt;
+								    																							                                    &lt;div class=&quot;cprice-area&quot;&gt;&lt;span class=&quot;symbol&quot;&gt;&amp;yen;&lt;/span&gt;&lt;span class=&quot;c-price&quot;&gt;1020.00 &lt;/span&gt;&lt;/div&gt;
+																									&lt;div class=&quot;sale-area&quot;&gt;已售：&lt;span class=&quot;sale-num&quot;&gt;0&lt;/span&gt;件&lt;/div&gt;
+								                            &lt;/div&gt;
+                        &lt;/dd&gt;
+						                        &lt;dd class=&quot;rates&quot;&gt;
+							                            &lt;div class=&quot;title&quot;&gt;
+                                &lt;h4&gt;
+									评论(&lt;a href=&quot;//item.taobao.com/item.htm?id=38951505405&amp;on_comment=1&quot; target=&quot;_blank&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;/a&gt;)
+                                &lt;/h4&gt;
+                            &lt;/div&gt;
+														                            &lt;p class=&quot;rate J_TRate&quot;&gt;&lt;/p&gt;
+							                        &lt;/dd&gt;
+						                    &lt;/dl&gt;
+					                    &lt;/div&gt;
+																		
+                                &lt;div class=&quot;pagination&quot;&gt;
+                                                            &lt;a class=&quot;disable&quot;&gt;上一页&lt;/a&gt;
+                                                                                                                            &lt;a class=&quot;page-cur&quot;&gt;1&lt;/a&gt;
+                                                                                                                        &lt;a class=&quot;disable&quot;&gt;下一页&lt;/a&gt;
+                                                        &lt;form action=&quot;//shop71884477.taobao.com//search.htm&quot; method=&quot;get&quot;&gt;
+								                                                                            &lt;input type=&quot;hidden&quot; name=&quot;_input_charset&quot; value=&quot;utf-8&quot;&gt;
+                                                                                                                                                &lt;input type=&quot;hidden&quot; name=&quot;compId&quot; value=&quot;4002&quot;&gt;
+                                                                                                                                                &lt;input type=&quot;hidden&quot; name=&quot;siteCategory&quot; value=&quot;2&quot;&gt;
+                                                                                                                                                &lt;input type=&quot;hidden&quot; name=&quot;userNick&quot; value=&quot;despire1118&quot;&gt;
+                                                                                                    到第 &lt;input type=&quot;text&quot; value=&quot;1&quot; size=&quot;3&quot; name=&quot;pageNo&quot;&gt; 页
+                                &lt;button type=&quot;submit&quot;&gt;确定&lt;/button&gt;
+                            &lt;/form&gt;
+                &lt;!--END OF  pagination--&gt;
+                &lt;/div&gt;
+                            &lt;/div&gt;
+        &lt;/div&gt;
+				    &lt;/div&gt;
+	&lt;/div&gt;
+
+&lt;script&gt;
+    var ua = &quot;&quot;;
+    var UA_Opt = {};
+    UA_Opt.LogVal = &quot;ua&quot;;
+    UA_Opt.MaxMCLog = 3;
+    UA_Opt.MaxMPLog = 3;
+    UA_Opt.MaxKSLog = 3;
+    UA_Opt.Token = new Date().getTime() + &quot;:&quot; + Math.random();
+    UA_Opt.SendMethod = 8;
+    UA_Opt.Flag = 13454;
+&lt;/script&gt;
+&lt;script src=&#39;//uaction.alicdn.com/js/ua.js&#39;&gt;&lt;/script&gt;
+&lt;script&gt;
+    try {
+        UA_Opt.Token = new Date().getTime() + &quot;:&quot; + Math.random();
+        UA_Opt.reload();
+    } catch (err) {
+    }
+    var uaexp = new Date();
+    uaexp.setTime(uaexp.getTime() + 30 * 24 * 60 * 60 * 1000);
+    document.cookie = &quot;pnm_cku822=&quot; + encodeURIComponent(ua) + &quot;;path=/;expires=&quot; + uaexp.toGMTString();
+&lt;/script&gt;

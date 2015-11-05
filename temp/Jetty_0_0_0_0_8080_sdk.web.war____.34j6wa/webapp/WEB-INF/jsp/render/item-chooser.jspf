@@ -1,0 +1,151 @@
+<textarea style="display: none" id="J_itemChoseContent">
+<div class="manual-rec-content clearfix">
+        <form action="/design/${templateDirectoryName}/${pageFileName}/${moduleID}/${moduleInstanceID}/item/chooser/query/" class="J_TManualRecForm manual-rec-form" name="itemSetForm">
+        </form>
+        
+        <div class="items-count J_itemCondition">
+            <a class="all selected J_TGetAllItems" href="">全部(<span class="J_TTotalCount"></span>)</a>
+            <a class="chosed J_TGetHasChosed" href="">已选择(<span class="J_TChosedCount"></span>)</a>
+        </div>
+        <div class="item-srch">
+            <div class="srch-conds clearfix">
+                <div class="control-group srch-cond">
+                    <label class="control-label hidden" for="">宝贝分类：</label>
+                    <div class="control">
+                        <select name="itemCates" class="input-box J_TItemCates" style="z-index: 1;">
+                         	<!-- 分类标签的使用规则 -->
+                            <!-- 所有分类、无子分类的一级分类、二级分类，统统用option标签展示 -->
+                            <!-- 有子分类的一级分类用optgroup标签展示，分类名作为 label的值 -->
+                            <!-- 用option 展示时，分类名作为option的text, 分类id作为option的value值 -->
+							<option value="-1">所有分类</option>
+							<c:forEach items="${shopCategories}" var="shopCategory">
+								<c:choose>
+									<c:when test="${not empty shopCategory.children}">
+										<optgroup label="${shopCategory.name}">
+											<c:forEach items="${shopCategory.children}"
+												var="subShopCategory">
+												<option value="${subShopCategory.id}">${subShopCategory.name}</option>
+											</c:forEach>
+										</optgroup>
+									</c:when>
+									<c:otherwise>
+										<option value="${shopCategory.id}">${shopCategory.name}</option>
+									</c:otherwise>
+								</c:choose>
+							</c:forEach>
+						</select>
+                    </div>
+                </div>
+                <div class="control-group srch-cond keyword">
+                    <label class="keyword-label J_TKeywordLabel" for="">关键字</label>
+                    <div class="control">
+                        <input class="input-box keyword-input J_TKeywordInput" type="text" name="keyword" autocomplete="off">
+                    </div>
+                </div>
+                 <div class="control-group srch-cond price">
+                    <label class="control-label" for="">价格</label>
+                    <div class="control">
+                        <input class="input-box low-price-input J_TPriceInput" type="text" name="lowPrice">
+                        <span>-</span>
+                        <input class="input-box high-price-input J_TPriceInput" type="text" name="highPrice">
+                    </div>
+                </div>
+               <div class="control-group srch-action">
+                    <span class="srch-btn J_TSrchBtn"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 搜索出来的宝贝列表 -->
+        <ul class="items J_TItems">       	
+       	</ul>
+       	 <!-- 翻页 -->
+        <div class="edit-pagination" id="J_TPagination"></div>
+</div>
+<div class="opt-footer">
+		<!-- 
+        <a class="btn-ok J_saveItems" href="">保存</a>
+        <a class="btn-cancel J_cancelItems">取消</a>
+        -->
+</div>
+</textarea>
+<script type="text/template" id="itemList-tpl">
+    {{#each itemList as item}}
+    <li class="item-wrap">
+        <dl class="item clear-fix">
+            <dt class="pic">
+                <a href="{{item.uri}}" target="_blank"><img alt="宝贝图片" src="{{item.pic}}" ></a>
+            </dt>
+            <dd class="detail-info">
+                <p class="title"><a href="{{item.uri}}" target="_blank">{{item.name}}</a></p>
+                <p class="price">
+                    <span class="symbol">￥</span><span class="value">{{item.price}}</span>
+                </p>
+            </dd>
+            <dd class="opts">
+                <a href="{{item.handleUri}}" class="rec-opt J_TRecOpt">{{#if item.isChosed == 0}}选择{{#else}}取消选择{{/if}}</a>
+            </dd>
+        </dl>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/template" id="pagination-tpl">
+    {{#if totalPage > 0}}
+    {{#! 显示上一页 }}
+    {{#if currentPage === startPage }}
+    <a class="pg-prev pg-prev-disabled"></a>
+    {{#else}}
+    <a class="pg-prev" href="demo.html#" data-page="{{ currentPage - 1 }}"></a>
+    {{/if}}
+
+    {{#if showPageNum }}
+    {{#! 左边固定显示几页, 如固定显示 1 和 2 }}
+    {{#if currentPage > startPage + alwaysDisplayCount - 1}}
+    {{#for var i = 0; i < alwaysDisplayCount; i++ }}
+    {{#! 避免后面重复显示 }}
+    {{#if i + startPage < startIndex }}
+    <a class="pg-page pg-item" href="demo.html#" data-page="{{ i + startPage }}">{{ i + startPage }}</a>
+    {{/if}}
+    {{/for}}
+    {{/if}}
+
+    {{#! 是否显示省略号 }}
+    {{#if ellipseText && startIndex > startPage + alwaysDisplayCount }}
+    <span class="pg-item">…</span>
+    {{/if}}
+
+    {{#! 显示页数 }}
+    {{#for var i = startIndex; i <= endIndex; i++ }}
+    {{#if currentPage !== i }}
+    <a class="pg-page pg-item" href="demo.html#" data-page="{{ i }}">{{ i }}</a>
+    {{#else}}
+    <span class="pg-current pg-item">{{ i }}</span>
+    {{/if}}
+    {{/for}}
+
+    {{#! 是否显示省略号 }}
+    {{#if ellipseText && endIndex < endPage - alwaysDisplayCount }}
+    <span class="pg-item">…</span>
+    {{/if}}
+
+    {{#! 右边固定显示几页 }}
+    {{#if currentPage < endPage - alwaysDisplayCount + 1 }}
+    {{#for var i = endPage - alwaysDisplayCount + 1; i <= endPage; i++ }}
+    {{#if i > endIndex }}
+    <a class="pg-page pg-item" href="demo.html#" data-page="{{ i }}">{{ i }}</a>
+    {{/if}}
+    {{/for}}
+    {{/if}}
+    {{/if}}
+
+    {{#! 显示下一页 }}
+    {{#if currentPage === endPage }}
+    <a class="pg-next pg-next-disabled"></a>
+    {{#else}}
+    <a class="pg-next" href="demo.html#" data-page="{{ currentPage + 1 }}"></a>
+    {{/if}}
+    {{/if}}
+</script>
+
+
+

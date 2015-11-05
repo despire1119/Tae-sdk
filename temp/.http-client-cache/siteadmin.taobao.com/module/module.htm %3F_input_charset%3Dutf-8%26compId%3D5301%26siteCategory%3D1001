@@ -1,0 +1,24 @@
+
+
+&lt;!-- weishopRsActivityPageList: --&gt;
+&lt;!-- e: --&gt;
+&lt;div class=&quot;os-box of-slide&quot;&gt;
+    &lt;p class=&quot;ws-flipsnap&quot;  &gt;
+                            &lt;!-- http://gtms02.alicdn.com/tps/i2/T1FrGMFCxcXXXPTPQY-549-300.jpg --&gt;
+                                                                                                                &lt;!-- === http://gtms02.alicdn.com/tps/i2/T1FrGMFCxcXXXPTPQY-549-300.jpg == --&gt;
+            &lt;a href=&quot;http://www.taoboa.com&quot; data-ng=&quot;{{moduleData[&#39;5301&#39;].url[0]}}&quot; class=&quot;J_Gold ws-wrap&quot;   data-str=&quot;picSlide=0&quot;&gt;
+                &lt;img data-ng=&quot;{{moduleData[&#39;5301&#39;].pic[0]}}&quot; src=&quot;http://gtms02.alicdn.com/tps/i2/T1FrGMFCxcXXXPTPQY-549-300.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;&quot;&gt;
+            &lt;/a&gt;
+                                &lt;!-- http://gtms04.alicdn.com/tps/i4/T1D8mNFB4bXXXPTPQY-549-300.jpg --&gt;
+                                                &lt;!-- === http://gtms04.alicdn.com/tps/i4/T1D8mNFB4bXXXPTPQY-549-300.jpg == --&gt;
+            &lt;a href=&quot;#&quot; data-ng=&quot;{{moduleData[&#39;5301&#39;].url[1]}}&quot; class=&quot;J_Gold ws-wrap&quot;   data-str=&quot;picSlide=1&quot;&gt;
+                &lt;img data-ng=&quot;{{moduleData[&#39;5301&#39;].pic[1]}}&quot; src=&quot;http://gtms04.alicdn.com/tps/i4/T1D8mNFB4bXXXPTPQY-549-300.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;&quot;&gt;
+            &lt;/a&gt;
+                    
+            &lt;/p&gt;
+
+    &lt;p class=&quot;ws-nav&quot;&gt;
+                            &lt;span class=&quot;ws-selected&quot;&gt;&lt;/span&gt;
+                                &lt;span&gt;&lt;/span&gt;
+                        &lt;/p&gt;
+&lt;/div&gt;

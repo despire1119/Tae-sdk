@@ -1,0 +1,53 @@
+<%-- Detail装修页面 --%>
+<div class="skin-box tb-module ">
+    <s class="skin-box-tp">
+        <b></b>
+    </s>
+    <div class="skin-box-hd">
+        <i></i>
+        <h3>宝贝基础信息</h3>
+    </div>
+    <div class="skin-box-bd">
+        <img src="http://img07.taobaocdn.com/tps/i7/T17XppXhVzXXXXXXXX-750-312.jpg"/>
+    </div>
+    <s class="skin-box-bt">
+        <b></b>
+    </s>
+</div>
+<div class="J_TModule" data-widgetid="null" data-componentid="201" data-ismove="0" data-isdel="0" data-isedit="0" data-isadd="1">
+    <div class="skin-box tb-module ">
+        <s class="skin-box-tp">
+            <b></b>
+        </s>
+        <div class="skin-box-hd">
+            <i></i>
+            <h3>宝贝描述信息</h3>
+        </div>
+        <div class="skin-box-bd">
+            <img src="http://img05.taobaocdn.com/tps/i5/T1FFVpXc0nXXXXXXXX-750-290.jpg"/>
+        </div>
+        <s class="skin-box-bt">
+            <b></b>
+        </s>
+    </div>
+</div>
+
+<%-- 右栏允许添加模块部分：开始 --%>
+<jsp:directive.include file="/WEB-INF/jsp/render/common/body-page-content-layout-modules-list.jspf" />
+<%-- 右栏允许添加模块部分：结束--%>
+
+<div class="skin-box tb-module ">
+    <s class="skin-box-tp">
+        <b></b>
+    </s>
+    <div class="skin-box-hd">
+        <i></i>
+        <h3>宝贝相关信息</h3>
+    </div>
+    <div class="skin-box-bd">
+        <img src="http://img07.taobaocdn.com/tps/i7/T1VpdpXfxEXXXXXXXX-750-290.jpg"/>
+    </div>
+    <s class="skin-box-bt">
+        <b></b>
+    </s>
+</div>

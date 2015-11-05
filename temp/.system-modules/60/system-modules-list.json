@@ -1,0 +1,132 @@
+
+
+    {
+    "system-modules-list": [
+        {
+            "id": "daogou.module.interact",
+            "last-modified": "2014-05-27T09:33:37+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": " \u7AD9\u957F\u7528\u6237\u4E92\u52A8\u533A",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9012,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9012&siteCategory=60"
+        },
+        {
+            "id": "daogou.module.detail",
+            "last-modified": "2015-10-08T10:32:02+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u5BFC\u8D2D\u7AD9\u70B9Detail\u9875\u9762",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9011,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9011&siteCategory=60"
+        },
+        {
+            "id": "daogou.module.admin",
+            "last-modified": "2014-05-27T09:33:43+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u5BFC\u8D2D\u5E97\u94FA\u7AD9\u957F\u7BA1\u7406\u6D6E\u5C42",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9029,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9029&siteCategory=60"
+        },
+        {
+            "id": "daogou.module.custom",
+            "last-modified": "2015-07-29T03:08:58+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u81EA\u5B9A\u4E49\u5185\u5BB9\u533A",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9010,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9010&siteCategory=60"
+        },
+        {
+            "id": "daogou.module.slide",
+            "last-modified": "2014-05-27T09:33:42+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u56FE\u7247\u8F6E\u64AD",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9008,
+            "css-url": "http://www.taobao.com/go/rgn/hubeiguan/yellow/bigpicture.css",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9008&siteCategory=60"
+        },
+        {
+            "id": "daogou.module.waterfull",
+            "last-modified": "2015-10-13T11:07:26+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u5185\u5BB9\u7011\u5E03\u6D41",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9006,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9006&siteCategory=60"
+        },
+        {
+            "id": "daogou.module.navigation",
+            "last-modified": "2015-03-05T07:21:04+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u5BFC\u8D2D\u7AD9\u70B9\u5BFC\u822A\u680F",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9002,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9002&siteCategory=60"
+        },
+        {
+            "id": "daogou.module.header",
+            "last-modified": "2015-07-28T08:19:55+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u5BFC\u8D2D\u7AD9\u70B9\u5957\u5934",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9001,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9001&siteCategory=60"
+        },
+        {
+            "id": "daogou.module.hangjiaslide",
+            "last-modified": "2014-10-30T09:35:19+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u884C\u5BB6\u8F6E\u64AD\u6A21\u5757",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 9205,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=9205&siteCategory=60"
+        }
+    ]
+}

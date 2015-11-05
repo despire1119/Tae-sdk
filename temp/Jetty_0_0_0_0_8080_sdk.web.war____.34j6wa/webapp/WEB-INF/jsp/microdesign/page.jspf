@@ -1,0 +1,12 @@
+<div class="w clearfix">
+    <jsp:directive.include file="/WEB-INF/jsp/microdesign/debug/debug-menu.jspf" />
+    <link rel="stylesheet" type="text/css" href="http://g.tbcdn.cn/tb/o2o/0.0.4/weishop/main.css"/>
+    <script src="http://g.tbcdn.cn/tb/o2o/0.0.4/weishop/main.js"></script>
+    <div id="content">
+        <div id="ng-app" ng-app="o2o" class="ng-scope">
+            <div ng-view style="height:100%"></div>
+            <jsp:directive.include file="/WEB-INF/jsp/microdesign/scripts.jspf" />
+		</div>
+	</div>
+</div>
+

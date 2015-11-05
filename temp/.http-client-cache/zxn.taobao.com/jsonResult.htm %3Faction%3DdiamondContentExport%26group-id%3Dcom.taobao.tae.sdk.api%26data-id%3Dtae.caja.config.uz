@@ -1,0 +1,10 @@
+
+
+window.cajaConfig = {
+    kissy:{
+        io:false,
+         kcharts:true,
+        calendar:true
+
+    }
+};

@@ -1,0 +1,40 @@
+<h3>为每个页面创建布局</h3>
+<ul class="page-list">
+<c:forEach items="${typedPagesMap}" var="typedPagesEntry">
+	<c:set var="pagesList" value="${typedPagesEntry.value}" />
+    <c:forEach items="${pagesList}" var="page" varStatus="loop">
+    <li>
+	    <c:set var="thumbnail" value="${page.thumbnail}" />
+	    <c:if test="${not fn:startsWith(thumbnail,'http') && not fn:startsWith(thumbnail,'//')}">
+            <c:set var="thumbnail" value="/${template.directoryName}/${page.thumbnail}" />
+	    </c:if>
+	    <a href="/microdesign/page/debug/${template.directoryName}/${page.file}/" target="_blank">
+        <img src="${thumbnail}" title="点击选择布局">
+        <p pageid="1">${page.name}</p> </a>
+	    <div class="control">
+        <a href="/microshop/htdocs/preview/${template.directoryName}/${page.file}/" target="_blank">预览</a>
+        <a href="/man/microtemplate/page/edit/${template.directoryName}/${page.file}/">编辑</a>
+        <c:if test="${page.type eq 'OTHER'or page.type eq '4' or loop.index > 0 }">
+	        <a href="/man/microtemplate/page/layout/${template.directoryName}/${page.file}/page/delete/"
+        class="J_del" data-url="/man/microtemplate/page/layout/${template.directoryName}/${page.file}/page/delete/">删除</a>
+        </c:if>
+	</div>
+    </li>
+    </c:forEach>
+</c:forEach>
+    <li class="add">
+        <a href="/man/microtemplate/page/form/${templateDirectoryName}/">
+        <img src="http://img04.taobaocdn.com/tps/i4/T1ZtblXmNaXXXf1Lo7-240-160.png" title="点击添加新页面">
+        <p>添加新页面</p>
+        </a>
+    </li>
+</ul>
+<div class="guide">
+    <p>
+        想手工为页面创建布局？<a href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E5.88.9B.E5.BB.BA.E7.9B.AE.E5.BD.95.E5.8F.8A.E5.85.B6.E6.8F.8F.E8.BF.B0.E6.96.87.E4.BB.B6" target="_blank">点击此处可以了解！</a>
+    </p>
+    <p class="next">
+        <span>完成 选择布局 ？</span> <a
+    href="/man/microtemplate/module/${template.directoryName}" class="btn">进入下一步</a>
+    </p>
+</div>

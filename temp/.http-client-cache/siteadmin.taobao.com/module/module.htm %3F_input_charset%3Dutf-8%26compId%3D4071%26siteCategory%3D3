@@ -1,0 +1,62 @@
+
+
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-other-sycm&quot;&gt;
+&lt;style&gt;
+.tshop-pbsm-other-sycm {
+	margin-bottom: 10px;
+}
+.tshop-pbsm-other-sycm .more {
+	height: 42px;
+	width: 188px;
+	line-height: 42px;
+	text-align: center;
+	margin-top: -14px;
+}
+.tshop-pbsm-other-sycm .more a {
+	color: #666;
+}
+#J_sycm_stat &gt; li {
+	margin: 15px 10px;
+	overflow: hidden;
+}
+#J_sycm_stat &gt; li &gt; p {
+	color: #666;
+}
+#J_sycm_stat &gt; li &gt; p &gt; .city {
+	overflow: hidden;
+	max-width: 100px;
+	display: inline-block;
+	word-spacing: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+	color: #000;
+}
+#J_sycm_stat &gt; li &gt; .img {
+	margin-top: 5px;
+	float: left;
+	font-size: 0;
+	border: 1px solid #e4e4e4;
+	padding: 1px;
+}
+#J_sycm_stat &gt; li &gt; .detail {
+	margin-left: 55px;
+	margin-top: 7px;
+}
+#J_sycm_stat &gt; li .price &gt; .num {
+	margin: 0 2px;
+}
+#J_sycm_stat &gt; li .red {
+	color: #fd490a;
+}
+&lt;/style&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    &lt;div class=&quot;skin-box-hd&quot;&gt;
+        &lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;&lt;h3&gt;&lt;span&gt;生意参谋-实时播报&lt;/span&gt;&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;skin-box-bd&quot;&gt;
+        &lt;!-- 在此写入你的模块内容  --&gt;
+		&lt;ul id=&quot;J_sycm_stat&quot;&gt;&lt;li&gt;数据读取中...&lt;/li&gt;&lt;/ul&gt;
+        &lt;p class=&quot;more&quot;&gt;&lt;a href=&quot;http://d.alibaba.com&quot; target=&quot;_blank&quot; title=&quot;进入生意参谋平台&quot;&gt;查看更多数据&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;

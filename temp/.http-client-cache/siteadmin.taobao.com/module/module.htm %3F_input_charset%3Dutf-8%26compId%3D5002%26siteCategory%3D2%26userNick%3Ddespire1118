@@ -1,0 +1,193 @@
+
+
+&lt;!-- navigatorForCharge,${renderForDetailLeft}, ${showForceShow} dcPageId: --&gt;
+&lt;!--hasDcOnNav :  , hasDcPage :  --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-nav-ch&quot;&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+
+    &lt;div class=&quot;skin-box-bd&quot;&gt;
+                    &lt;div class=&quot;all-cats popup-container&quot;&gt;
+                &lt;div class=&quot;all-cats-trigger popup-trigger&quot;&gt;
+                    &lt;a class=&quot;link &quot; href=&quot;//shop71884477.taobao.com/search.htm?search=y&quot;&gt;
+                     &lt;span class=&quot;title&quot;&gt;
+                                                      所有分类
+                                              &lt;/span&gt;
+                        &lt;i class=&quot;popup-icon&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;popup-content all-cats-popup&quot;&gt;
+                    &lt;div class=&quot;popup-inner&quot;&gt;
+                                                                                                                                                                                                                            
+                        &lt;ul class=&quot;J_TAllCatsTree cats-tree&quot;&gt;
+                            &lt;li class=&quot;cat fst-cat&quot;&gt;
+                                &lt;h4 class=&quot;cat-hd fst-cat-hd has-children&quot;&gt;
+                                                                    &lt;i class=&quot;cat-icon fst-cat-icon&quot;&gt;&lt;/i&gt;
+                                    &lt;a href=&quot;//shop71884477.taobao.com/search.htm?search=y&quot; class=&quot;cat-name fst-cat-name&quot;&gt;所有宝贝&lt;/a&gt;
+                                &lt;/h4&gt;
+
+                                &lt;div class=&quot;snd-pop&quot;&gt;
+                                    &lt;div class=&quot;snd-pop-inner&quot;&gt;
+                                        &lt;ul class=&quot;fst-cat-bd&quot;&gt;
+                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                                                                &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                    &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                    &lt;a href=&quot;//shop71884477.taobao.com/search.htm?search=y&amp;orderType=hotsell_desc&quot;
+                                                       class=&quot;by-label by-sale snd-cat-name&quot; rel=&quot;nofollow&quot; &gt;按销量&lt;/a&gt;
+                                                &lt;/h4&gt;
+                                                &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                    &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                    &lt;a href=&quot;//shop71884477.taobao.com/search.htm?search=y&amp;orderType=newOn_desc&quot;
+                                                       class=&quot;by-label by-new snd-cat-name&quot; rel=&quot;nofollow&quot; &gt;按新品&lt;/a&gt;
+                                                &lt;/h4&gt;
+                                                &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                    &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                    &lt;a href=&quot;//shop71884477.taobao.com/search.htm?search=y&amp;orderType=price_asc&quot;
+                                                       class=&quot;by-label by-price snd-cat-name&quot; rel=&quot;nofollow&quot; &gt;按价格&lt;/a&gt;
+                                                &lt;/h4&gt;
+                                            &lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                                                            &lt;li class=&quot;cat fst-cat&quot;&gt;
+                                    &lt;h4 class=&quot;cat-hd fst-cat-hd has-children&quot;&gt;
+                                    
+                                        &lt;i class=&quot;cat-icon fst-cat-icon  active-trigger&quot;&gt;&lt;/i&gt;
+                                        &lt;a class=&quot;cat-name fst-cat-name&quot;
+
+                                                                                       href=&quot;//shop71884477.taobao.com/category-490138568.htm?search=y&amp;catName=%CA%D6%BB%FA&quot;
+                                             &gt;手机&lt;/a&gt;
+                                                                        &lt;/h4&gt;
+                                                                            &lt;div class=&quot;snd-pop&quot;&gt;
+                                            &lt;div class=&quot;snd-pop-inner&quot;&gt;
+                                                &lt;ul class=&quot;fst-cat-bd&quot;&gt;
+                                                                                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                            &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                                &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                                &lt;a class=&quot;cat-name snd-cat-name&quot;
+                                                                                                                                       href=&quot;//shop71884477.taobao.com/category-490138569.htm?search=y&amp;parentCatId=490138568&amp;parentCatName=%CA%D6%BB%FA&amp;catName=iPhone&quot;
+                                                                     &gt;
+                                                                    iPhone
+                                                                &lt;/a&gt;
+                                                            &lt;/h4&gt;
+                                                        &lt;/li&gt;
+                                                                                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                            &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                                &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                                &lt;a class=&quot;cat-name snd-cat-name&quot;
+                                                                                                                                       href=&quot;//shop71884477.taobao.com/category-490138570.htm?search=y&amp;parentCatId=490138568&amp;parentCatName=%CA%D6%BB%FA&amp;catName=Samsung&quot;
+                                                                     &gt;
+                                                                    Samsung
+                                                                &lt;/a&gt;
+                                                            &lt;/h4&gt;
+                                                        &lt;/li&gt;
+                                                                                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                            &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                                &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                                &lt;a class=&quot;cat-name snd-cat-name&quot;
+                                                                                                                                       href=&quot;//shop71884477.taobao.com/category-490138571.htm?search=y&amp;parentCatId=490138568&amp;parentCatName=%CA%D6%BB%FA&amp;catName=HTC&quot;
+                                                                     &gt;
+                                                                    HTC
+                                                                &lt;/a&gt;
+                                                            &lt;/h4&gt;
+                                                        &lt;/li&gt;
+                                                                                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                            &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                                &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                                &lt;a class=&quot;cat-name snd-cat-name&quot;
+                                                                                                                                       href=&quot;//shop71884477.taobao.com/category-490138572.htm?search=y&amp;parentCatId=490138568&amp;parentCatName=%CA%D6%BB%FA&amp;catName=NOKIA&quot;
+                                                                     &gt;
+                                                                    NOKIA
+                                                                &lt;/a&gt;
+                                                            &lt;/h4&gt;
+                                                        &lt;/li&gt;
+                                                                                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                            &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                                &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                                &lt;a class=&quot;cat-name snd-cat-name&quot;
+                                                                                                                                       href=&quot;//shop71884477.taobao.com/category-490138573.htm?search=y&amp;parentCatId=490138568&amp;parentCatName=%CA%D6%BB%FA&amp;catName=SONY&quot;
+                                                                     &gt;
+                                                                    SONY
+                                                                &lt;/a&gt;
+                                                            &lt;/h4&gt;
+                                                        &lt;/li&gt;
+                                                                                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                            &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                                &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                                &lt;a class=&quot;cat-name snd-cat-name&quot;
+                                                                                                                                       href=&quot;//shop71884477.taobao.com/category-490138574.htm?search=y&amp;parentCatId=490138568&amp;parentCatName=%CA%D6%BB%FA&amp;catName=%B9%FA%B2%FA%C7%BF%BB%FA&quot;
+                                                                     &gt;
+                                                                    国产强机
+                                                                &lt;/a&gt;
+                                                            &lt;/h4&gt;
+                                                        &lt;/li&gt;
+                                                                                                    &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                                                    &lt;/li&gt;
+                                                            &lt;li class=&quot;cat fst-cat&quot;&gt;
+                                    &lt;h4 class=&quot;cat-hd fst-cat-hd has-children&quot;&gt;
+                                    
+                                        &lt;i class=&quot;cat-icon fst-cat-icon  active-trigger&quot;&gt;&lt;/i&gt;
+                                        &lt;a class=&quot;cat-name fst-cat-name&quot;
+
+                                                                                       href=&quot;//shop71884477.taobao.com/category-490138575.htm?search=y&amp;catName=%C6%BB%B9%FB%B2%FA%C6%B7&quot;
+                                             &gt;苹果产品&lt;/a&gt;
+                                                                        &lt;/h4&gt;
+                                                                            &lt;div class=&quot;snd-pop&quot;&gt;
+                                            &lt;div class=&quot;snd-pop-inner&quot;&gt;
+                                                &lt;ul class=&quot;fst-cat-bd&quot;&gt;
+                                                                                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                            &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                                &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                                &lt;a class=&quot;cat-name snd-cat-name&quot;
+                                                                                                                                       href=&quot;//shop71884477.taobao.com/category-490138576.htm?search=y&amp;parentCatId=490138575&amp;parentCatName=%C6%BB%B9%FB%B2%FA%C6%B7&amp;catName=ipod+touch&quot;
+                                                                     &gt;
+                                                                    ipod touch
+                                                                &lt;/a&gt;
+                                                            &lt;/h4&gt;
+                                                        &lt;/li&gt;
+                                                                                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                            &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                                &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                                &lt;a class=&quot;cat-name snd-cat-name&quot;
+                                                                                                                                       href=&quot;//shop71884477.taobao.com/category-490138577.htm?search=y&amp;parentCatId=490138575&amp;parentCatName=%C6%BB%B9%FB%B2%FA%C6%B7&amp;catName=ipad&quot;
+                                                                     &gt;
+                                                                    ipad
+                                                                &lt;/a&gt;
+                                                            &lt;/h4&gt;
+                                                        &lt;/li&gt;
+                                                                                                    &lt;/ul&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                                                    &lt;/li&gt;
+                                                            &lt;li class=&quot;cat fst-cat&quot;&gt;
+                                    &lt;h4 class=&quot;cat-hd fst-cat-hd &quot;&gt;
+                                    
+                                        &lt;i class=&quot;cat-icon fst-cat-icon  active-trigger&quot;&gt;&lt;/i&gt;
+                                        &lt;a class=&quot;cat-name fst-cat-name&quot;
+
+                                                                                       href=&quot;//shop71884477.taobao.com/category-490138578.htm?search=y&amp;catName=monster+%C4%A7%C9%F9%B6%FA%BB%FA&quot;
+                                             &gt;monster 魔声耳机&lt;/a&gt;
+                                                                        &lt;/h4&gt;
+                                                                    &lt;/li&gt;
+                                                    &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+                &lt;ul class=&quot;menu-list&quot;&gt;
+                        			                             				                            &lt;li class=&quot;menu&quot; data-page-id=&quot;13423616&quot;&gt;
+                            &lt;a class=&quot;link&quot; href=&quot;//shop71884477.taobao.com/index.htm&quot;   rel=&quot;nofollow&quot; &gt;&lt;span class=&quot;title&quot;&gt;首页&lt;/span&gt;&lt;/a&gt;   &lt;!--444 13423616   0 444--&gt;
+                        &lt;/li&gt;
+					                    
+                    &lt;!-- isShowHuodongNavTab:  --&gt;
+                    
+                
+                                             				                        
+                    &lt;!-- isShowHuodongNavTab:  --&gt;
+                    
+                
+                                             &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    &lt;/div&gt;

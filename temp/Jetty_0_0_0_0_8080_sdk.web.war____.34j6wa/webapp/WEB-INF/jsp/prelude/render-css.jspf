@@ -1,0 +1,24 @@
+<c:choose>
+    <c:when test="${siteLayout.siteID eq 3}">
+        <link href="http://${assetsHost}/??p/mall/base/global-v2.css,apps/tmall/header/shop/header-v2.css,apps/tmall/header/shop/head-info.css?t=${date}" rel="stylesheet"/>
+        <link href="http://${assetsHost}/apps/taesite/platinum/stylesheet/??common/mods/ww-hover/default-min.css,view/layout-tmall-990-min.css,common/modules-sys-tmall-default-min.css,common/modules-other-tmall-default-min.css?t=${date}" rel="stylesheet"/>
+    </c:when>
+    <c:when test="${siteLayout.siteID eq 66}">
+        <link rel="stylesheet" href="http://a.tbcdn.cn/??p/mall/base/global-v2.css,p/mall/base/header-v2.css?t=${date}" />
+        <link rel="stylesheet" href="http://${assetsHost}/apps/tmall/brandsite/1.0/css/??base.css,favbrand.css,nav.css,searchbar.css?t=${date}" />
+    </c:when>
+    <c:when test="${siteLayout.siteID eq 60}">
+        <link href="http://${assetsHost}/??p/global/1.0/global-min.css,apps/taesite/platinum/stylesheet/view/layout-min.css,apps/taesite/platinum/stylesheet/view/footer-min.css"
+              rel="stylesheet">
+        <link rel="stylesheet" href="http://${assetsHost}/??p/global/1.0/global-min.css?t=20131225111.css"/>
+        <link rel="stylesheet" href="http://${assetsHost}/apps/taesite/wangpu2012/stylesheet/platform/framework/??layout-min.css,navbar-min.css,sidebar-min.css?t=20131225111.css" type="text/css"/>
+    </c:when>
+    <c:otherwise>
+        <!-- 渲染所需的CSS Link -->
+        <link rel="stylesheet" href="http://${assetsHost}/??p/global/1.0/global-min.css?t=${date}" />
+        <!-- 系统模块的默认皮肤CSS -->
+        <link rel="stylesheet" href="http://${assetsHost}/apps/taesite/platinum/stylesheet/??view/footer-min.css,view/layout-min.css,common/mods/header/header-min.css,common/modules-sys-default-min.css,common/modules-other-default-min.css?t=${date}"/>
+    </c:otherwise>
+</c:choose>
+
+<jsp:directive.include file="/WEB-INF/jsp/prelude/template-render-css.jspf" />

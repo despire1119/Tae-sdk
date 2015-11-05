@@ -1,0 +1,22 @@
+
+
+&lt;div class=&quot;skin-box tb-module tm-activity-page-module&quot; style=&quot;margin-bottom:10px&quot;&gt;
+    		&lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+        &lt;div class=&quot;skin-box-hd&quot;&gt;
+            &lt;h3&gt;
+				&lt;span&gt;
+    			   ISV互动游戏
+				&lt;/span&gt;
+			&lt;/h3&gt;
+        &lt;/div&gt;
+					&lt;div&gt;
+                &lt;p style=&quot;text-align: center&quot;&gt;请先编辑,订购或选择游戏及活动实例&lt;/p&gt;
+            &lt;/div&gt;
+		        &lt;div&gt;
+        &lt;ul class=&quot;isvgame&quot;&gt;
+                                                &lt;!-- no travel no pc instance --&gt;
+                                    &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+	    &lt;!-- jiaoben --&gt;
+		&lt;/div&gt;

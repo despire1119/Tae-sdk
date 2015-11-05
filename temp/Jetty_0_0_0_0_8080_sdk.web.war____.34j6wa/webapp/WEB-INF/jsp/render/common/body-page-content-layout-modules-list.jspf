@@ -1,0 +1,15 @@
+<%--
+    页面 -> body - content -> layout -> 模块列表渲染页面
+    通过请求URI来源不同，加载不同的渲染页面结果
+--%>
+
+<c:choose>
+    <c:when test="${fn:startsWith(requestForwardedURI,'/design/page/layout/')}">
+        <jsp:directive.include file="/WEB-INF/jsp/design/layout/layout-modules-list.jspf" />
+    </c:when>
+    <c:otherwise>
+        <c:forEach items="${column.modulesList}" var="module">
+            <jsp:directive.include file="/WEB-INF/jsp/render/common/module-part.jspf" />
+        </c:forEach>
+        </c:otherwise>
+</c:choose>

@@ -1,0 +1,22 @@
+<head>
+
+
+    <c:choose>
+        <c:when test="${siteLayout.siteID == 1001}">
+            <meta charset="gbk"/>
+            <title>掌中宝</title>
+            <jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+            <jsp:directive.include file="/WEB-INF/jsp/prelude/template-render-css.jspf" />
+            <link rel="stylesheet" href="http://g.tbcdn.cn/tb/o2o/0.0.4/weishop/main-debug.css">
+            <script src="http://g.tbcdn.cn/tb/o2o/0.0.4/weishop/main-debug.js"></script>
+        </c:when>
+        <c:otherwise>
+            <meta charset="gbk"/>
+            <title>手机店铺</title>
+            <jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+            <jsp:directive.include file="/WEB-INF/jsp/prelude/template-render-css.jspf" />
+        </c:otherwise>
+    </c:choose>
+</head>

@@ -1,0 +1,3 @@
+<c:forEach items="${modules}" var="module">
+    ${module.html}
+</c:forEach>

@@ -1,0 +1,78 @@
+
+
+&lt;!-- waterfull module --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!-- queryParameter siteOwnerId : $siteOwnerId  tagName : $tagName  classId : $classId tags : $tags  --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  daogouHeaderPage :   $daogouHeaderPage --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  daogouContents :   $daogouContents --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  siteInfo :   $siteInfo --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  taeSiteDO :   TaeSiteDO[id=1,userId=1,nick=MOCK’À∫≈,siteCategoryId=60,shopOrSiteId=null,defaultInstanceId=null,designInstanceId=1] --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  errorStacks of eClass :   $errorStacksClass --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  errorStacks of e :   $errorStacks --&gt;
+&lt;!-- ================================= --&gt;
+
+&lt;!--$isHangjiaStyle  ====================  =    $daogouContents $e --&gt;
+&lt;!-- $totle ++++++ $xxxx --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-uz-waterfall&quot;&gt;
+&lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;div class=&quot;skin-box-hd&quot;&gt;
+    &lt;div class=&quot;skin-box-act&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;skin-box-bd&quot;&gt;
+&lt;!-- $havedClassList --&gt;
+&lt;!-- $classId --&gt;
+&lt;!-- $equal --&gt;
+&lt;!-- $errorStacks --&gt;
+&lt;div class=&quot;m-dg-waterfall&quot; &gt;
+&lt;div class=&quot;col-wrap clearfix&quot;&gt;
+&lt;div class=&quot;water-col&quot; name=&quot;column1&quot;&gt;
+                        &lt;/div&gt;
+&lt;div class=&quot;water-col&quot; name=&quot;column2&quot;&gt;
+    &lt;/div&gt;
+&lt;div class=&quot;water-col&quot; name=&quot;column3&quot;&gt;
+    &lt;/div&gt;
+&lt;div class=&quot;water-col&quot; name=&quot;column4&quot;&gt;
+                &lt;style&gt;
+        .actions .focus{
+        display: block;
+        overflow: hidden;
+        color: #999;
+        cursor: pointer;
+        font-size: 12px;
+        width: 30px;
+        height: 20px;
+        background: url(&#39;http://gtms02.alicdn.com/tps/i2/T17tYyFOtaXXaQc3zc-27-54.png&#39;) no-repeat;
+        padding-left: 25px;
+        line-height: 20px;
+        text-decoration: none;
+        padding: 0px 10px 5px 25px;
+        margin-left: 6px;
+        }
+
+        .actions .focus:hover, actions .focused {
+        color: #ff5a4d;
+        background-position: 0 -22px;
+        }
+
+    &lt;/style&gt;
+    &lt;script&gt;
+        KISSY.use(&#39;components/site-content/index&#39;, function (S, SiteContent) {
+
+        new SiteContent();
+
+    });&lt;/script&gt;
+  
+
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;/div&gt;

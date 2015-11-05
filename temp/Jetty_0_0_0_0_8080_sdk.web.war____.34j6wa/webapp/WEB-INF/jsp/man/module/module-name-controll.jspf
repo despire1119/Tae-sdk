@@ -1,0 +1,15 @@
+<div class="form-group ${lmneSN}">
+	<label class="form-label">模块名称：</label>
+	<div class="form-controls">
+		<c:choose>
+			<c:when test="${isSystemModule}">
+				<form:input cssClass="form-text disable J_templateFileName" disabled="true" path="name" />
+				<form:hidden path="name" />
+			</c:when>
+			<c:when test="${isLocalModule}">
+				<form:input path="name" cssClass="form-text J_templateFileName" />
+				<span class="help-inline">  最长8个中文（设计师模块必填）；模块的展示名称，帮助卖家了解模块的功能</span>		
+			</c:when>
+		</c:choose>
+	</div>
+</div>

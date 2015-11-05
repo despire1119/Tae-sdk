@@ -1,0 +1,7 @@
+	<div class="form-group ${not empty thumbnailBlankError ? 'error':'' }">
+		<label class="form-label">模块缩略图：</label>
+		<div class="form-controls">
+			<form:input path="thumbnail" cssClass="form-text" />
+			<span class="help-inline">  64x64，请填写图片相对（模块）路径，如：assets/images/xxx.jpg，仅支持png、jpg和gif格式（必填）</span>
+		</div>
+	</div>

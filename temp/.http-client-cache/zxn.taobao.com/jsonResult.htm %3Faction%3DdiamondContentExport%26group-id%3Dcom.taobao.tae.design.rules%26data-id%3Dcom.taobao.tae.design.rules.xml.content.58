@@ -1,0 +1,900 @@
+
+
+<?xml version="1.0" encoding="GB18030"?>
+<rule publishTimeMills="1340159085086" desc="品牌站店铺装修规则" name="ab品牌站" productId="58" xsi:schemaLocation="http://design.taobao.com/design/rules/schema/design-rules-1.0.xsd" xmlns:ns2="http://design.taobao.com/tae-design-rules" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <siteInfo>
+        <maxPageNum>40</maxPageNum>
+        <homePageId>1</homePageId>
+        <background>true</background>
+        <cms>true</cms>
+        <css>true</css>
+        <footer>true</footer>
+        <headerModule>true</headerModule>
+        <logo>true</logo>
+        <showside>true</showside>
+        <mulitLayout>true</mulitLayout>
+        <scriptcode><![CDATA[
+                ]]></scriptcode>
+        <permissions>
+            <permission permId="900" scope="edit" desc="开通完全自定义内容区的权限">
+            <scriptcode>
+                <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                import com.taobao.tae.common.context.Env
+                  def execute(context) {
+                        def result = new ValidateResult()
+	                    try{
+                                result.setSuccess(false)
+                                result.setErrorMessage("没有完全自定义内容区权限")
+	                    }catch(e){
+	                        result.setSuccess(false)
+	                        result.errorMessage = '系统出错'
+	                        log.error('validate permission 900 in rule 58 errors',e)
+	                    }
+                 result
+                }
+                ]]></scriptcode>
+        </permission>
+        </permissions>
+        <localModulePrefix>tshop-um-</localModulePrefix>
+        <systemModulePrefix>tshop-pbsm-</systemModulePrefix>
+        <tbmlFilterConfig>
+            <configFileName>tbml-filter-tae-newsdk.xml</configFileName>
+            <configId>newsdk</configId>
+            <version>ss</version>
+        </tbmlFilterConfig>
+        <pageGroups>
+            <pageGroup>
+                <id>1</id>
+                <pageGroupName>基础页</pageGroupName>
+                <addiable>false</addiable>
+                <sortedPageTypes>
+                    <pageTypeId>1</pageTypeId>
+                </sortedPageTypes>
+            </pageGroup>
+            <pageGroup>
+                <id>4</id>
+                <pageGroupName>自定义页面</pageGroupName>
+                <addiable>true</addiable>
+                <sortedPageTypes>
+                    <pageTypeId>4</pageTypeId>
+                    <pageTypeId>116</pageTypeId>
+                    <pageTypeId>115</pageTypeId>
+                    <pageTypeId>114</pageTypeId>
+                </sortedPageTypes>
+            </pageGroup>
+        </pageGroups>
+        <presetPages>
+            <presetPage>
+                <pageDemoId>2003</pageDemoId>
+                <defaultLoad>false</defaultLoad>
+                <condition>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                  def execute(Map context) {
+                		return true
+                	}]]>
+                </condition>
+            </presetPage>
+            <presetPage>
+                <pageDemoId>2004</pageDemoId>
+                <defaultLoad>false</defaultLoad>
+                <condition>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                  def execute(Map context) {
+                		return true
+                	}]]>
+                </condition>
+            </presetPage>
+            <presetPage>
+                <pageDemoId>3710</pageDemoId>
+                <defaultLoad>true</defaultLoad>
+                <condition>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                  def execute(Map context) {
+                		return true
+                	}]]>
+                </condition>
+            </presetPage>
+            <presetPage>
+                <pageDemoId>3713</pageDemoId>
+                <defaultLoad>true</defaultLoad>
+                <condition>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                  def execute(Map context) {
+                		return true
+                	}]]>
+                </condition>
+            </presetPage>
+            <presetPage>
+                <pageDemoId>7004</pageDemoId>
+                <defaultLoad>false</defaultLoad>
+                <condition>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                  def execute(Map context) {
+                		return true
+                	}]]>
+                </condition>
+            </presetPage>
+        </presetPages>
+        <presetPageGroups>
+            <presetPageGroup>
+                <id>4</id>
+                <groupName>自定义页</groupName>
+                <pageTypeIds>
+                    <pageTypeId>4</pageTypeId>
+                    <pageTypeId>116</pageTypeId>
+                    <pageTypeId>115</pageTypeId>
+                    <pageTypeId>114</pageTypeId>
+                </pageTypeIds>
+                <action>/page/selfPage.htm</action>
+            </presetPageGroup>
+        </presetPageGroups>
+
+        <offlinePageTypes>
+            <offlinePageType>23</offlinePageType>  <!--十周年抽奖页面  site_page_types 标中已不存在记录-->
+            <offlinePageType>315</offlinePageType> <!--活动促销页 site_page_types 标中已不存在记录 -->
+            <offlinePageType>10</offlinePageType>  <!--店铺动态页  -->
+            <offlinePageType>50</offlinePageType>  <!--会员权益页 site_page_types 标中已不存在记录 -->
+
+        </offlinePageTypes>
+        <offlinePageDemoIds>
+            <offlinePageDemoId>5005</offlinePageDemoId>  <!--活动促销页  -->
+            <offlinePageDemoId>3602</offlinePageDemoId>  <!--混合布局协作页面  -->
+            <offlinePageDemoId>3603</offlinePageDemoId>  <!-- 通栏协作页面 -->
+        </offlinePageDemoIds>
+    </siteInfo>
+    <pageRule>
+        <pages>
+            <page name="首页" pageId="1">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+					<pageurl>/index.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>1</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="直播墙" moduleId="915" designable="true"/>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="品牌时效" moduleId="901"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="锚点模块" moduleId="912"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="通栏图片轮播" moduleId="453" designable="true"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="全屏图片轮播" moduleId="447" designable="true"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="招商营销模块" moduleId="888"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="话题动态列表" moduleId="344"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="营销活动" moduleId="888"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="新品推荐" moduleId="911"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="授权店铺" moduleId="444"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="站点类目" moduleId="445"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="当季热卖" moduleId="688"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="类目导航栏" moduleId="349"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="图片轮播" moduleId="791" designable="true"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="授权店铺" moduleId="444"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="站点类目" moduleId="445"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="授权店铺（大）" moduleId="446"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="抽奖" moduleId="455"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2" designable="true"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="授权flash模块" moduleId="801"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="热销商品" moduleId="449"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="会员活动" moduleId="450"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="优选商户" moduleId="451"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="会员权益" moduleId="452"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="Feeds" moduleId="454"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="话题动态列表" moduleId="344"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="热门商家" moduleId="789"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="热门商家" moduleId="788"/>
+					<module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="内容详情" moduleId="999"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="品牌释义" moduleId="354"/>
+					<module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="活动页头(1212专用)" moduleId="995"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="热门商品自动抽取(1212专用)" moduleId="996"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="热门商品(1212专用)" moduleId="997"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="品牌推荐(1212专用)" moduleId="998"/>
+
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-s5m0e5" layoutId="20">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-m0s5e5" layoutId="229">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-s5e5m0" layoutId="230">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="列表页" pageId="3">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>3</type>
+                </pageInfo>
+                <supportedModules>
+                <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                 <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="全屏图片轮播" moduleId="447"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="营销活动" moduleId="888"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="产品筛选栏" moduleId="360"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="产品展示栏" moduleId="362"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="产品列表" moduleId="795"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="商品列表" moduleId="346"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="Feeds" moduleId="454"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="话题动态列表" moduleId="344"/>
+
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                      <layout name="grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-s5m0e5" layoutId="20">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-m0s5e5" layoutId="229">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-s5e5m0" layoutId="230">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="详情页" pageId="2">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>2</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="直播墙" moduleId="915"/>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="全屏图片轮播" moduleId="447"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="营销活动" moduleId="888"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="产品详情" moduleId="367"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="产品搭配" moduleId="368"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="商家在售（不维护）" moduleId="369"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="产品在售商家列表" moduleId="800"/>
+                    <module supportWidth="190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="品牌商设计师" moduleId="787"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="产品评论列表栏（不维护）" moduleId="370"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="产品评论发布栏（不维护）" moduleId="371"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="产品点评" moduleId="793"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="Feeds" moduleId="454"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="话题动态列表" moduleId="344"/>
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="活动详情页" pageId="110">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>110</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="全屏图片轮播" moduleId="447"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="营销活动" moduleId="888"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="false" movable="false" editable="false" name="活动模块" moduleId="347"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="Feeds" moduleId="454"/>
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="话题列表页" pageId="111">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>111</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="全屏图片轮播" moduleId="447"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="话题动态列表" moduleId="344"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="Feeds" moduleId="454"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="话题动态列表" moduleId="344"/>
+
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            
+            <page name="授权店铺页面" pageId="117">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>117</type>
+                </pageInfo>
+                <supportedModules>
+                <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="直播墙" moduleId="915"/>
+                 <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                 <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="全屏图片轮播" moduleId="447"/>
+                 <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="授权店铺模块" moduleId="446"/>
+                 <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                 <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                 <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="内容详情" moduleId="999"/>
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+			<page name="1212活动页面" pageId="118">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>118</type>
+                </pageInfo>
+                <supportedModules>
+				<module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="false" editable="false" name="活动页头(1212专用)" moduleId="995"/>
+                 <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="热门商品(1212专用)" moduleId="997"/>
+                <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="直播墙" moduleId="915"/>
+                 <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                 <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="全屏图片轮播" moduleId="447"/>
+                 <module>
+					<permissions>
+                            <permission permId="900"/>
+                     </permissions>
+                </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            
+            <page name="评论列表页" pageId="113">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>113</type>
+                </pageInfo>
+                <supportedModules>
+                <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="直播墙" moduleId="915"/>
+                   <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="话题评论列表" moduleId="342"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="话题详情页" pageId="112">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>112</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="false" movable="false" editable="false" name="话题详情" moduleId="341"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="资讯详情页" pageId="114">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <type>114</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="资讯详情" moduleId="385"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌（不维护）" moduleId="786"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌（不维护）" moduleId="799"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="热门话题" moduleId="790"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="资讯列表页" pageId="115">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <type>115</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="资讯列表" moduleId="378"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌（不维护）" moduleId="786"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌（不维护）" moduleId="799"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="热门话题" moduleId="790"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="品牌实效自定义页" pageId="125">
+                <pageInfo>
+                    <maxAppend>10</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>1</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <type>125</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="true" deleteable="false"
+                            movable="false" editable="true" name="自定义内容区" moduleId="910"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="自定义页" pageId="4">
+                <pageInfo>
+                    <maxAppend>40</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+					<pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <maxDesign>50</maxDesign>
+                    <type>4</type>
+                </pageInfo>
+                <supportedModules>
+                <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="直播墙" moduleId="915" designable="true"/>
+                <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="自定义spu评论" moduleId="913"/>
+                <module supportWidth="950,750,550,190" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="sns话题组件" moduleId="914"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="产品详情" moduleId="367"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="锚点模块" moduleId="912"/>
+                    <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="false" name="产品点评" moduleId="793"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="通栏图片轮播" moduleId="453" designable="true"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="招商营销模块" moduleId="888"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="全屏图片轮播" moduleId="447" designable="true"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="营销活动" moduleId="888"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="关注品牌" moduleId="798"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="false" name="热门商家" moduleId="789"/>
+                    <module supportWidth="190" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="类目导航栏" moduleId="349"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="图片轮播" moduleId="791" designable="true"/>
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="热销产品" moduleId="358"/>
+                    <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="抽奖" moduleId="455"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2" designable="true"/>
+		            <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="授权flash模块" moduleId="801"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                    <module supportWidth="750" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="Feeds" moduleId="454"/>
+                     <module supportWidth="750" renamable="false" maxAppend="1" required="false" deleteable="true" movable="false" editable="false" name="话题动态列表" moduleId="344"/>      
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="taobao.layout.grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout name="taobao.layout.grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+        </pages>
+    </pageRule>
+    <headRule>
+        <headInfo>
+            <maxLayout>1</maxLayout>
+            <maxModule>2</maxModule>
+            <moduleAddable>true</moduleAddable>
+        </headInfo>
+        <supportedModules>
+         <module supportWidth="950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="新版页头" moduleId="803"/>
+            <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="页头模块" moduleId="348"/>
+            <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+            <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+        </supportedModules>
+        <supportedLayouts>
+            <layout name="taobao.layout.head" layoutId="23">
+                <layoutInfo>
+                    <maxModule>2</maxModule>
+                    <required>true</required>
+                    <position>0</position>
+                    <supportWidth>950</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </headRule>
+    <footRule>
+        <footInfo>
+            <maxLayout>1</maxLayout>
+            <maxModule>1</maxModule>
+            <editable>false</editable>
+        </footInfo>
+        <supportedModules>
+            <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="2"/>
+            <module supportWidth="190,550,750,950" renamable="false" maxAppend="40" required="false" deleteable="true" movable="true" editable="true" name="完全自定义内容区" moduleId="900">
+                        <permissions>
+                            <permission permId="900"/>
+                        </permissions>
+                    </module>
+        </supportedModules>
+        <supportedLayouts>
+            <layout name="taobao.layout.foot" layoutId="33">
+                <layoutInfo>
+                    <maxModule>1</maxModule>
+                    <required>true</required>
+                    <position>0</position>
+                    <supportWidth>950</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </footRule>
+</rule>

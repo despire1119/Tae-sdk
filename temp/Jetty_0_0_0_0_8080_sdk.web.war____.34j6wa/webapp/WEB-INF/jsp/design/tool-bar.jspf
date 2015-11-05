@@ -1,0 +1,151 @@
+
+<jsp:directive.include file="/WEB-INF/jsp/design/commons-variables.jspf" />
+
+<c:choose>
+	<c:when test="${isLayout || isDebug}">
+		<c:set var="navListStyleClass" value="dropdown current" />
+	</c:when>
+	<c:otherwise>
+		<c:set var="navListStyleClass" value="dropdown" />
+	</c:otherwise>
+</c:choose>
+
+
+<div id="navbar">
+    <div class="navbg">
+        	<div class="logo">
+        	    <a href="#">
+        	        <img src="${navLogoImageURL}">
+        	    </a>
+        	</div>
+        <ul class="nav">
+            <li style="width:60px;" class="${navListStyleClass}">
+                <div>
+                    <a class="dropdown-main" href="${pageDebugURI}">装修</a>
+                    <a href="#" class="trigan">
+                        <i class="triangle"></i>
+                    </a>
+                </div>
+                <ul class="sub sub1">
+                    <li><a href="${pageManageURI}">页面管理</a></li>
+                    <li><a href="${templateThemeURI}">样式编辑</a></li>
+                    <li><a href="${templateManageURI}">模板管理</a></li>
+
+                </ul>
+            </li>
+            <c:if test="${isDebug}">
+            <li style="width:94px;" class="${navListStyleClass}">
+                    <div>
+                        <a class="dropdown-main" href="${templateThemeURI}">风格切换</a>
+                        <a href="#" class="trigan">
+                            <i class="triangle"></i>
+                        </a>
+                    </div>
+					<c:set var="themes" value="${siteTemplate.themes}" />
+					<ul class="sub sub1" >
+                    <c:forEach items="${themes.theme}" var="theme">
+                        <li>
+							<a href="/design/page/debug/${templateDirectoryName}/${currentPage.file}/${theme.name}/">
+								${theme.name}
+								<c:if test="${themes.default eq theme.name}">(默认)</c:if>
+							</a>
+						</li>
+                    </c:forEach>
+                    </ul>
+            </li>
+            </c:if>
+         </ul>
+        <div class="account-nav">
+            <ul class="nav-collapse">
+                <li class="sub">|</li>
+                <li class="shopdetail" style="width:48px;">
+                    <a class="J_TGoldData" href="${pageRenderURI}" target="_blank">
+                        查看店铺
+                    </a>
+                </li>
+                <li class="sub">|</li>
+                <li class="help" style="width:24px;">
+                    <a class="J_TGoldData" href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E6.A8.A1.E6.9D.BF.E7.BB.84.E8.A3.85" target="_blank">帮助</a>
+                </li>
+                <li class="account-dropdown" style="width:50px">
+                    <ul class="account-sub">
+                        <li>
+                            <a class="account-name" href="#">${user.nick}</a>
+                        </li>
+                        <li class="account-exit">
+                            <a class="exit" href="${templateAssembleURI}">退出</a>
+                            <div class="img" style="width:14px;height:15px;"></div>
+                        </li>
+                    </ul>
+                    <div class="account">
+                        <a class="account-main J_TGoldData" href="#">帐号</a>
+                        <a class="trigan" href="#">
+                            <i class="triangle"></i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<%--<div id="vl-navbar">--%>
+    <%--<div class="vl-brand">--%>
+        <%--<h1>--%>
+            <%--<a href="#"> 旺铺 </a>--%>
+        <%--</h1>--%>
+        <%--<b></b>--%>
+            <%--<span>--%>
+                <%--<c:choose>--%>
+                    <%--<c:when test="${siteLayout.siteID eq '1'}">--%>
+                        <%--基础版--%>
+                    <%--</c:when>--%>
+                    <%--<c:when test="${siteLayout.siteID eq '2'}">--%>
+                        <%--专业版--%>
+                    <%--</c:when>--%>
+                    <%--<c:when test="${siteLayout.siteID eq '3'}">--%>
+                        <%--天猫版--%>
+                    <%--</c:when>--%>
+                <%--</c:choose>--%>
+            <%--</span>--%>
+    <%--</div>--%>
+    <%--<div class="vl-navs">--%>
+        <%--<ul>--%>
+            <%--<li class="vl-f-li vl-li-active">--%>
+                <%--<a class="vl-f-m vl-toggle-trigger J_TGoldData" href="${pageDebugURI}" data-gold-type="click/type"--%>
+                   <%--data-gold-url="/tbwmdd.3.2"--%>
+                   <%--data-gold-data='{"siteCategoryId":2,"userId":1,"instId":123,"pageId":1123}'--%>
+                        <%--><span>装修</span><i class="vl-close"></i>--%>
+                <%--</a>--%>
+                <%--<ul class="vl-s-m">--%>
+                    <%--<li>--%>
+                        <%--<a href="${pageManageURI}">页面管理</a>--%>
+                    <%--</li>--%>
+                    <%--<li>--%>
+                        <%--<a href="${templateThemeURI}">样式编辑</a>--%>
+                    <%--</li>--%>
+                    <%--<li>--%>
+                        <%--<a href="${templateManageURI}">模板管理</a>--%>
+                    <%--</li>--%>
+                <%--</ul>--%>
+            <%--</li>--%>
+        <%--</ul>--%>
+    <%--</div>--%>
+    <%--<div class="vl-my-setting">--%>
+        <%--<ul>--%>
+            <%--<li class="vl-my-li vl-shop-name">--%>
+                <%--<a href="${pageRenderURI}" target="_blank" class="vl-my-f-m">查看店铺</a>--%>
+            <%--</li>--%>
+            <%--<li class="vl-my-li vl-setting">--%>
+                <%--<a href="javascript:void(0);" class="vl-toggle-trigger vl-my-f-m"></a>--%>
+                <%--<ul class="vl-my-s-m">--%>
+                    <%--#end--%>
+                    <%--<li><a href="${templateAssembleURI}">退出</a></li>--%>
+                <%--</ul>--%>
+            <%--</li>--%>
+            <%--<li class="vl-my-li vl-help">--%>
+                <%--<a target="_blank" href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E6.A8.A1.E6.9D.BF.E7.BB.84.E8.A3.85" class="vl-my-f-m">帮助</a>--%>
+            <%--</li>--%>
+        <%--</ul>--%>
+    <%--</div>--%>
+<%--</div>--%>

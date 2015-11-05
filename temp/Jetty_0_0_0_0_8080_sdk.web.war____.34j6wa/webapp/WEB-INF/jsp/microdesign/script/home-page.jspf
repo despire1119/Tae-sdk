@@ -1,0 +1,111 @@
+<script id="homePage.html" type="text/ng-template">
+    <div id="message" style="width:120px; height:300px; border:1px solid red; display:none;" class="message"></div>
+    <div class="body-wrap">
+        <input type="hidden" id="J_tbToken" name="_tb_token_" value="7e33e81533d3e"/>
+        <input type="hidden" id="J_params" name="J_params" value='{"_input_charset":"utf-8","pageId":"560876726","activityId":"0"}'/>
+
+        <input type="hidden" id="J_editModule" name="editUrl" value="${moduleEditURI}"/>
+        <input type="hidden" id="J_addModule" name="addUrl" value="${moduleAddURI}"/>
+        <input type="hidden" id="J_saveWidget" name="saveUrl" value="${moduleSaveURI}"/>
+        <input type="hidden" id="J_delModule" name="delUrl" value="${moduleDelURI}"/>
+        <input type="hidden" id="J_module" name="editUrl" value="${moduleListURI}"/>
+        <input type="hidden" id="J_moduleContent" name="editUrl" value="${pageContentURI}"/>
+        <input type="hidden" id="J_saveLayout" name="editUrl" value="${layoutSaveURI}"/>
+        <input type="hidden" id="J_fileUpload" name="uploadUrl" value="${imageUploadURI}"/>
+
+        <div yyz-notify></div>
+
+        <div class="box">
+            <div class="flow-steps">
+            </div>
+            <!--end steps-->
+            <div class="box-con clearfix">
+                <div class="box-con-left">
+                    <div class="box-con-margin">
+
+                        <!-- 页面名称编辑 -->
+                        <div config='{"saveUrl":"${pageNameSaveURI}","edit":"true","initval":"${pageName}"}' smart-edit="" class="box-con-title">
+                            <p ng-show="show" class="default-line"><span class="ng-binding">添加页面名称</span><span ng-click="edit()" class="icon-edit"></span></p>
+                            <p ng-hide="show" class="opt-line ng-hide">
+                                <input type="text" value="添加页面名称" ng-model="prePagename" class="ng-pristine ng-valid">
+                                <span class="edit-button-next" href="#" ng-click="save(event)">保存</span>
+                                <span class="form-button-cancel" ng-click="cancel()">取消</span>
+                            </p>
+                        </div>
+
+
+                        <div class="container">
+                            <div class="main">
+                                <div class="main-wrap">
+                                    <div class="phone-wrap">
+                                        <div class="phone">
+                                            <div class="phone-container"
+                                                 ng-class="goodModuleId && 'phone-container-disabled' || ''"
+                                                    >
+                                                <div class="phone-load loading-icon" ng-show="phoneLoad"></div>
+                                                <div class="list-item"
+                                                     ng-class="shop.widgetId && goodModuleId == shop.widgetId && 'edit-item' || ''"
+                                                     ng-repeat="shop in itemShop">
+                                                    <div bind-html-unsafe="shop.html"></div>
+                                                    <div class='item-layer'>
+                                                        <div class='item-handle'>
+                                                            <a class='item-edit'
+                                                               ng-click='editItem(shop.widgetId,$event,-1,shop.moduleId)'></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="moduleContent" dnd-list="moduleContent" class="phone-content">
+                                                    <div class="list-item {{item.widgetId}}"
+                                                         ng-class="{'can-drag':item.canMove}"
+                                                         ng-repeat="item in moduleContent">
+                                                        <div bind-html-unsafe="item.html"></div>
+                                                        <div class='item-layer'>
+                                                            <div class='item-handle'>
+                                                                <a ng-hide="item.canEdit == false" class='item-edit'
+                                                                   ng-click='editItem(item.widgetId,$event,$index,item.moduleId)'></a>
+                                                                <a ng-hide="item.canDel == false" class='item-delete'
+                                                                   ng-click='deleteItem($index)'></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="phone-container-layer"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-con-right" style="top:{{boxRight}}px;">
+                    <div class="box-con-margin">
+                        <img class="box-con-right-ico" src="http://gtms01.alicdn.com/tps/i1/T1B7nsFllcXXXFQATa-19-38.png">
+                        <div class="container">
+                            <div class="edit-wrap {{editHideShow}} clearfix" style="height:{{editWrapHieght}}" edit-form>
+                                <div id="editModule" class="edit-module">
+                                    <div class="edit-load loading-icon"></div>
+                                </div>
+                            </div>
+                            <div class="side {{sideHideShow}} clearfix" dnd-Module="moduleList" style="height:{{editWrapHieght}}">
+                                <div class="draggable module {{module.moduleId}}" title="{{module.desc}}"
+                                     ng-repeat="module in moduleList">
+                                    <img ng-src="{{module.icon}}" style="height:90px;width:160px;"/>
+                                    <p>{{module.name}}</p>
+                                    <p>{{module.desc}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-btn">
+                <p>
+                    <a href="/microshop/htdocs/preview/${templateDirectoryName}/${pageFileName}/" class="edit-button-next" target="_blank">预览</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</script>

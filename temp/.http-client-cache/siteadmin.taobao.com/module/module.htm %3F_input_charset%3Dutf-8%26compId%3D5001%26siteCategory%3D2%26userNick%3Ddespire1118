@@ -1,0 +1,32 @@
+
+
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-custom-banner&quot;&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    &lt;div class=&quot;skin-box-hd disappear&quot;&gt;
+        &lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;
+
+        &lt;h3&gt;&lt;span&gt;店标&lt;/span&gt;&lt;/h3&gt;
+
+        &lt;div class=&quot;skin-box-act&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;more&quot;&gt;更多&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;skin-box-bd&quot;&gt;
+                                                                    &lt;style&gt;.tshop-pbsm-shop-custom-banner .banner-box {
+            background : url(//img.alicdn.com/tps/TB1hYBhJXXXXXciXpXXXXXXXXXX-950-120.png) repeat 0 0 ;
+            height : 115px ;
+            }
+
+            .tshop-pbsm-shop-custom-banner {
+            height : 115px ;
+            }&lt;/style&gt;
+                
+        &lt;div&gt;
+                            &lt;div class=&quot;banner-box&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                     &lt;h2 class=&quot;title border-radius&quot;&gt;南京没有春天&lt;/h2&gt;            &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    
+    
+
+&lt;/div&gt;

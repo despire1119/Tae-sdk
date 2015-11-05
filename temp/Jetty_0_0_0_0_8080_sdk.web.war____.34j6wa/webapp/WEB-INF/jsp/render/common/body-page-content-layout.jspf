@@ -1,0 +1,41 @@
+<c:forEach items="${layoutListMap}" var="layoutsEntry">
+        <c:set var="regionName" value="${layoutsEntry.key}" />
+        <c:set var="regionShortName" value="${fn:substring(regionName,0,1)}" />
+        <div id="${regionName}" <c:if test="${'bd' eq regionName && siteLayout.siteID ne '60'}">style="width:100%"</c:if> >
+            <c:forEach items="${layoutsEntry.value}" var="layout">
+                <c:set var="layoutTypeName" value="${layout.name}" />
+                <div class="layout ${layoutTypeName} J_TLayout"
+                    data-id="${layout.id}"
+                    data-widgetid="${layout.id}"
+                    data-prototypeid="${layout.prototypeID}"
+                    data-componentid="${layout.prototypeID}">
+                    <c:forEach items="${layout.layoutColumnsMap}" var="layoutColumnsEntry">
+                        <c:set var="columnName" value="${layoutColumnsEntry.key}" />
+                        <c:set var="column" value="${layoutColumnsEntry.value}" />
+                        <c:set var="layoutWidth" value="${siteLayout.siteLayoutTypesMap[layoutTypeName].siteLayoutColumnsMap[columnName].width}" />
+                        <c:choose>
+                            <c:when test="${'main' eq columnName}">
+                                <div class="col-main" >
+                                    <div class="main-wrap J_TRegion" data-modules="${columnName}" data-width="${regionShortName}${layoutWidth}">
+                                        <c:choose>
+                                            <c:when test="${isDetailPage and 'grid-s5m0' eq layoutTypeName}">
+                                                <jsp:directive.include file="/WEB-INF/jsp/render/detail/detail-page.jspf"/>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <jsp:directive.include file="/WEB-INF/jsp/render/common/body-page-content-layout-modules-list.jspf" />
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </div>
+                                </div>
+                            </c:when>
+                            <c:otherwise>
+                                <div class="col-${columnName} J_TRegion" data-modules="${columnName}" data-width="${regionShortName}${layoutWidth}">
+                                        <jsp:directive.include file="/WEB-INF/jsp/render/common/body-page-content-layout-modules-list.jspf" />
+                                </div>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
+                </div>
+            </c:forEach>
+        </div>
+</c:forEach>

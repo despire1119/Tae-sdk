@@ -1,0 +1,15 @@
+<c:choose>
+	<c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/render/')}">
+	</c:when>
+	<c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/design/category/')}">
+		<jsp:directive.include file="/WEB-INF/jsp/coda/design-category-footer.jspf" />
+	</c:when>
+	<c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/design/')}">
+	</c:when>
+    <c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/microdesign/')}">
+    </c:when>
+	<c:otherwise>
+		<jsp:directive.include file="/WEB-INF/jsp/coda/manage-footer.jspf" />
+		<!-- ${requestURI} -->
+	</c:otherwise>
+</c:choose>

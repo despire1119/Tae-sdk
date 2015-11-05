@@ -1,0 +1,7 @@
+<%-- 天猫店铺尾部 --%>
+<div id="footer">
+    <p>2012 淘宝(中国)软件有限公司 版权所有</p>
+    <div id="server-num" style="display:none"></div>
+</div>
+<script type="text/javascript" src="http://js.tongji.linezing.com/3004595/tongji.js"></script>
+<!--包含js路径-->

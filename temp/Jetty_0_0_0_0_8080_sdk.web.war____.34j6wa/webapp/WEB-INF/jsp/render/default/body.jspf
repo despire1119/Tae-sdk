@@ -1,0 +1,32 @@
+<body>
+    <script type="text/javascript">
+    (function (d) {
+    var ta=d.createElement("script");ta.type="text/javascript";ta.async=true;ta.id="tb-beacon-ac";
+    ta.setAttribute("exparams","category=&userid=&channel=112&at_shoptype=4%5f62270886&at_isb=0&at_shoptype=4%5f62270886&atp_isdpp=4v62270886&");
+    ta.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/ac.js";
+    d.getElementsByTagName("head")[0].appendChild(ta);
+    })(document);
+    </script>
+    <script type="text/javascript">
+    (function (d) {
+    var ta=d.createElement("script");ta.type="text/javascript";ta.async=true;ta.id="tb-beacon";
+    ta.setAttribute("exparams","category=&userid=&tid=1591ee54299b914df44ee2603a1bca89&channel=112&at_shoptype=4%5f62270886&at_isb=0&atp_isdpp=4v62270886&atpanel_end");
+    ta.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/atp.js";
+    d.getElementsByTagName("head")[0].appendChild(ta);
+    })(document);
+    </script>
+    <script type="text/javascript">
+    (function (d) {
+    var t=d.createElement("script");t.type="text/javascript";t.async=true;t.id="tb-beacon-aplus";
+    t.setAttribute("exparams","category=&userid=&at_shoptype=4%5f62270886&at_isb=0&atp_isdpp=4v62270886&aplus");
+    t.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/aplus_v2.js";
+    d.getElementsByTagName("head")[0].appendChild(t);
+    })(document);
+    </script>
+    <jsp:directive.include file="/WEB-INF/jsp/render/default/body-page-site-nav.jspf" />
+    <%-- 初始化旺旺点灯需要  --%>
+    <script>
+    	TB.Global.init();
+    </script>
+    <jsp:directive.include file="/WEB-INF/jsp/render/default/body-page.jspf" />
+</body>

@@ -1,0 +1,11 @@
+<ul class="tab">
+<c:forEach items="${managerViewUIList}" var="managerViewUI" >
+    <c:set var="sectionURIPrefix" value="${managerViewUI.sectionURIPrefix}" />	
+    <c:set var ="sectionURI" value="${sectionURIPrefix}/${manDirectoryName}/" />	
+    <c:if test="${fn:contains(sectionURIPrefix,currentMangerNavigationView.matchURIPrefix)}">
+    <li>
+        <a href="${sectionURI}" <c:if test="${managerViewUI eq currentManagerViewUI}">class="first active"</c:if> >${managerViewUI.sectionTabTitle}</a>
+     </li>
+    </c:if>
+</c:forEach>
+</ul>

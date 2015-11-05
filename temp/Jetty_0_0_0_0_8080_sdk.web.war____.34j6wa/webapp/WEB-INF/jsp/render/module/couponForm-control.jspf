@@ -1,0 +1,13 @@
+<c:set var="couponsCount" value="0" />
+<c:choose>
+    <c:when test="${not empty parameter.value}">
+        <c:set var="activityIDsArray" value="${fn:split(parameter.value,',')}" />
+        <c:set var="couponsCount" value="${fn:length(activityIDsArray)}" />
+    </c:when>
+    <c:otherwise>
+    </c:otherwise>
+</c:choose>
+<a data-trigger="${parameter.name}" class="widget-btn J_couponSetBtn" href="#">选择优惠券</a>
+<span class="item-sum J_couponSum"> （已选择 <em>${couponsCount}</em> /12张优惠券） </span>
+<input type="hidden" value="" name="$!{parameter.name}" class="J_couponDate">
+<input type="hidden" value="" name="temp_$!{parameter.name}" class="J_temp_couponDate">

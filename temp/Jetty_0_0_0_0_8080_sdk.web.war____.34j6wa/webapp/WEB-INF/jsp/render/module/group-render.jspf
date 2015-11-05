@@ -1,0 +1,22 @@
+<c:forEach items="${group.section}" var="section"
+	varStatus="sectionStatus">
+	<c:choose>
+		<c:when test="${not empty section.title}">
+			<c:choose>
+				<c:when test="${section.folded}">
+					<div class="items-set closed">
+						<jsp:directive.include file="/WEB-INF/jsp/render/module/section-render.jspf" />
+					</div>
+				</c:when>
+				<c:otherwise>
+					<div class="items-set opened">
+						<jsp:directive.include file="/WEB-INF/jsp/render/module/section-render.jspf" />
+					</div>
+				</c:otherwise>
+			</c:choose>
+		</c:when>
+		<c:otherwise>
+			<jsp:directive.include file="/WEB-INF/jsp/render/module/params-list-render.jspf" />
+		</c:otherwise>
+	</c:choose>
+</c:forEach>

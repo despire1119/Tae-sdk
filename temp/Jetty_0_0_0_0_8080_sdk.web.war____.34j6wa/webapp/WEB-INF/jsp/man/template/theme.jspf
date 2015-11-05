@@ -1,0 +1,28 @@
+<div class="title">
+	<h3>管理风格</h3>
+	<c:if test="${ 'BASIC' ne template.siteTemplate.templateType }">
+	    <a href="/man/template/theme/form/${template.directoryName}/" class="radius-btn"> <i class="icon-plus"></i> 设计新风格 </a>
+	</c:if>
+</div>
+<ul>
+	<c:forEach items="${themesList}" var="theme">
+		<li>
+<s style="background: #ff0000"></s>
+<span>${theme.name}</span>
+		 	<a href="/htdocs/${template.directoryName}/index/${theme.name}/" target="_blank">预览</a>
+<a href="/man/template/theme/form/${template.directoryName}/${theme.name}/true/">编辑</a>
+<c:if test="${defaultTheme ne theme.name}">
+	<a href="/man/template/theme/${template.directoryName}/${theme.name}/delete/">删除</a>
+</c:if>
+	</li>
+	 </c:forEach>
+</ul>
+<div class="guide">
+	<p>
+		想手工为页面创建风格？<a href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E5.A4.9A.E5.A5.97.E9.A3.8E.E6.A0.BC" target="_blank">点击此处可以了解！</a>
+	</p>
+	<p class="next">
+		<span>完成 管理风格 ？</span> <a href="/man/template/publish/${template.directoryName}/" class="btn">进入下一步</a>
+	</p>
+</div>
+		

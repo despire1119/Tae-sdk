@@ -1,0 +1,105 @@
+
+<%-- 系统模块的合并JS URL --%>
+<c:if test="${systemModulesCombinedJsURL ne null}">
+	<script id="J_TModsFileList" src="http://${systemModulesCombinedJsURL}"></script>
+</c:if>
+
+<c:if test="${not empty localModulesCombinedJsURL}">
+		<script type="text/javascript" src="${localModulesCombinedJsURL}"></script>
+</c:if>
+
+<c:if test="${not empty modulesCombinedLessURL}">
+		<script src="/resource/javascripts/less" type="text/javascript"></script> 
+</c:if>
+
+<script type="text/template" id="itemList-tpl">
+    {{#each itemList as item}}
+    <li class="item-wrap">
+        <dl class="item clear-fix">
+            <dt class="pic">
+                <a href="{{item.uri}}" target="_blank"><img alt="宝贝图片" src="{{item.pic}}" ></a>
+            </dt>
+            <dd class="detail-info">
+                <p class="title"><a href="{{item.uri}}" target="_blank">{{item.name}}</a></p>
+                <p class="price">
+                    <span class="symbol">￥</span><span class="value">{{item.price}}</span>
+                </p>
+            </dd>
+            <dd class="opts">
+                <a href="{{item.handleUri}}" class="rec-opt J_TRecOpt">{{#if item.isChosed == 0}}选择{{#else}}取消选择{{/if}}</a>
+            </dd>
+        </dl>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/template" id="pagination-tpl">
+    {{#if totalPage > 0}}
+    {{#! 显示上一页 }}
+    {{#if currentPage === startPage }}
+    <a class="pg-prev pg-prev-disabled"></a>
+    {{#else}}
+    <a class="pg-prev" href="demo.html#" data-page="{{ currentPage - 1 }}"></a>
+    {{/if}}
+
+    {{#if showPageNum }}
+    {{#! 左边固定显示几页, 如固定显示 1 和 2 }}
+    {{#if currentPage > startPage + alwaysDisplayCount - 1}}
+    {{#for var i = 0; i < alwaysDisplayCount; i++ }}
+    {{#! 避免后面重复显示 }}
+    {{#if i + startPage < startIndex }}
+    <a class="pg-page pg-item" href="demo.html#" data-page="{{ i + startPage }}">{{ i + startPage }}</a>
+    {{/if}}
+    {{/for}}
+    {{/if}}
+
+    {{#! 是否显示省略号 }}
+    {{#if ellipseText && startIndex > startPage + alwaysDisplayCount }}
+    <span class="pg-item">…</span>
+    {{/if}}
+
+    {{#! 显示页数 }}
+    {{#for var i = startIndex; i <= endIndex; i++ }}
+    {{#if currentPage !== i }}
+    <a class="pg-page pg-item" href="demo.html#" data-page="{{ i }}">{{ i }}</a>
+    {{#else}}
+    <span class="pg-current pg-item">{{ i }}</span>
+    {{/if}}
+    {{/for}}
+
+    {{#! 是否显示省略号 }}
+    {{#if ellipseText && endIndex < endPage - alwaysDisplayCount }}
+    <span class="pg-item">…</span>
+    {{/if}}
+
+    {{#! 右边固定显示几页 }}
+    {{#if currentPage < endPage - alwaysDisplayCount + 1 }}
+    {{#for var i = endPage - alwaysDisplayCount + 1; i <= endPage; i++ }}
+    {{#if i > endIndex }}
+    <a class="pg-page pg-item" href="demo.html#" data-page="{{ i }}">{{ i }}</a>
+    {{/if}}
+    {{/for}}
+    {{/if}}
+    {{/if}}
+
+    {{#! 显示下一页 }}
+    {{#if currentPage === endPage }}
+    <a class="pg-next pg-next-disabled"></a>
+    {{#else}}
+    <a class="pg-next" href="demo.html#" data-page="{{ currentPage + 1 }}"></a>
+    {{/if}}
+    {{/if}}
+</script>
+<script type="text/javascript">
+    KISSY.config({
+        packages:[
+            {
+                name:"scripts",            	
+               	tag:"${date}",
+                path: "http://${assetsHost}/apps/taesite/platinum/",
+                charset:"gbk"
+            }
+        ]
+    });
+    KISSY.use('scripts/platform/design/init');
+</script>

@@ -1,0 +1,77 @@
+
+
+&lt;!--  rsdata.trackidStr : 60f27a40011c1dbe3971f27c10b34ca6 rsdata.cnaStr :  --&gt;
+&lt;!-- $categoryId $aabc 搜索列表${x-shop-url}请求:searchURL: http://10.246.40.66:3210/bin/sp?src=taesite10.178.50.86&amp;amp;sort=volume:des&amp;amp;sellerid=1&amp;amp;tab=all&amp;amp;bucket=0&amp;amp;navigator=property&amp;amp;s=0&amp;amp;n=24&amp;amp;app=inshop&amp;amp;outfmt=json，无宝贝：searchURL: http://10.103.2.192:3210/bin/sp?src=taesite10.178.50.86&amp;amp;sort=cc_score1:des&amp;amp;sellerid=1&amp;amp;tab=all&amp;amp;s=0&amp;amp;n=8&amp;amp;app=inshop&amp;amp;outfmt=json, bucketId: 0 bucketUser： --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-srch-list&quot;&gt;
+	    &lt;div id=&quot;J_ShopSearchResult&quot; class=&quot;shop-hesper&quot;&gt;
+				&lt;input type=&quot;hidden&quot; class=&quot;J_TItemRatesUrl&quot;  value=&quot;//rate.taobao.com/batch_query_rate.htm?sellerId=1&amp;itemIds=&amp;source=shop&quot;/&gt;
+						        &lt;div class=&quot;skin-box-bd&quot;&gt;
+            &lt;div class=&quot;shop-hesper-hd&quot;&gt;
+                &lt;div id=&quot;J_HesperCats&quot; class=&quot;hesper-cats&quot;&gt;
+					&lt;div class=&quot;hesper-content&quot;&gt;
+				    &lt;/div&gt;
+                    &lt;ol&gt;
+                        &lt;li&gt;
+                                &lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&quot; class=&quot;J_SearchAsync&quot;&gt;所有宝贝&lt;/a&gt;&lt;i class=&quot;right-arrow&quot;&gt;&lt;/i&gt;
+                        &lt;/li&gt;
+                                            &lt;/ol&gt;
+                    &lt;i title=&quot;展开或者收缩&quot; class=&quot;trigger&quot; id=&quot;J_HesperCatsTrigger&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;&lt;!--END OF hesper-cats--&gt;
+                &lt;form method=&quot;get&quot; id=&quot;shop-search-list&quot; action=&quot;//shop1.taobao.com/search.htm&quot;&gt;
+                    &lt;div class=&quot;shop-search&quot;&gt;
+                        &lt;div class=&quot;search-form&quot; style=&quot;width:517px;&quot;&gt;
+                            &lt;ul&gt;
+                                &lt;input type=&quot;hidden&quot; data-info=&quot;//shop1.taobao.com/search.htm?search=y&quot; id=&quot;J_ShopSearchFormUrl&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; value=&quot;&quot; name=&quot;orderType&quot;&gt;
+                                &lt;input type=&quot;hidden&quot; value=&quot;grid&quot; name=&quot;viewType&quot;&gt;
+                                                                                                &lt;li class=&quot;keyword&quot;&gt;
+                                    &lt;label for=&quot;keyword&quot;&gt;关键字：&lt;/label&gt;
+                                    &lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;keyword&quot; &gt;
+                                &lt;/li&gt;
+                                &lt;li class=&quot;price&quot;&gt;
+                                    &lt;label for=&quot;price&quot;&gt;价格：&lt;/label&gt;
+                                    &lt;input type=&quot;text&quot; value=&quot;&quot; class=&quot;price J_CheckInput&quot; name=&quot;lowPrice&quot; id=&quot;price1&quot;&gt;
+                                    到
+                                    &lt;input type=&quot;text&quot; value=&quot;&quot; class=&quot;price J_CheckInput&quot; name=&quot;highPrice&quot; id=&quot;price2&quot;&gt;
+                                &lt;/li&gt;
+                                &lt;li class=&quot;submit&quot;&gt;
+                                    &lt;button class=&quot;button&quot; type=&quot;submit&quot;&gt;搜索&lt;/button&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;search-result&quot;&gt;
+                            共搜索到&lt;span&gt; 0 &lt;/span&gt;个符合条件的商品。
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+												            &lt;/div&gt;            &lt;div class=&quot;no-result-new &quot;&gt;
+                &lt;p class=&quot;item-not-found&quot;&gt;&lt;strong&gt;很抱歉，搜索到&ldquo;&lt;em&gt;0&lt;/em&gt;&rdquo;个宝贝&lt;/strong&gt;&lt;/p&gt;
+            &lt;/div&gt;
+			
+			
+        &lt;/div&gt;
+				    &lt;/div&gt;
+	&lt;/div&gt;
+
+&lt;script&gt;
+    var ua = &quot;&quot;;
+    var UA_Opt = {};
+    UA_Opt.LogVal = &quot;ua&quot;;
+    UA_Opt.MaxMCLog = 3;
+    UA_Opt.MaxMPLog = 3;
+    UA_Opt.MaxKSLog = 3;
+    UA_Opt.Token = new Date().getTime() + &quot;:&quot; + Math.random();
+    UA_Opt.SendMethod = 8;
+    UA_Opt.Flag = 13454;
+&lt;/script&gt;
+&lt;script src=&#39;//uaction.alicdn.com/js/ua.js&#39;&gt;&lt;/script&gt;
+&lt;script&gt;
+    try {
+        UA_Opt.Token = new Date().getTime() + &quot;:&quot; + Math.random();
+        UA_Opt.reload();
+    } catch (err) {
+    }
+    var uaexp = new Date();
+    uaexp.setTime(uaexp.getTime() + 30 * 24 * 60 * 60 * 1000);
+    document.cookie = &quot;pnm_cku822=&quot; + encodeURIComponent(ua) + &quot;;path=/;expires=&quot; + uaexp.toGMTString();
+&lt;/script&gt;

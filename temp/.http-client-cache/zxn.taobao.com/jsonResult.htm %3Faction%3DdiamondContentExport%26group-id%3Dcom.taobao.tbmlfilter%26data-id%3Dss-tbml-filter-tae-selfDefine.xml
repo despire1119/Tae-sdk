@@ -1,0 +1,995 @@
+
+
+<?xml version="1.0" encoding="GBK"?>
+<config id="taeSelfDefine" extend="core">
+    <urlConfigs>
+        <rule id="nourl" checkDomain="false" supportRelativePath="true" relativePathStartWithSlash="false"
+              supportAnchor="true" supportHttps="true">
+        </rule>
+        <rule id="default" checkDomain="false" supportRelativePath="false"
+              relativePathStartWithSlash="true" supportAnchor="true" supportHttps="true">
+        </rule>
+
+        <rule id="href" checkDomain="true" supportRelativePath="false"
+              relativePathStartWithSlash="true" supportAnchor="true" supportHttps="true"
+              callback="Common_SecondJumpCallback_14.groovy">
+            <allowedDomains>
+                <domain value=".taobao.com"/>
+                <domain value=".taobao.net"/>
+                <domain value=".alibaba.com"/>
+                <domain value=".alimama.com"/>
+                <domain value=".koubei.com"/>
+                <domain value="detail.amap.com"/>
+                <domain value=".alisoft.com"/>
+                <domain value=".taobaocdn.com"/>
+                <domain value=".taobaocdn.net"/>
+                <domain value=".tbcdn.cn"/>
+                <domain value=".tmall.com"/>
+                <domain value=".tmall.hk"/>
+                <domain value=".atpanel.com"/>
+                <domain value=".linezing.com"/>
+                <domain value=".yisou.com"/>
+                <domain value=".etao.com"/>
+                <domain value=".juhuasuan.com"/>
+                <domain value=".hitao.com"/>
+                <domain value=".alicdn.com"/>
+                <domain value=".mqyb.org"/>
+                <domain value=".yunos.com"/>
+                <domain value=".aliyun.com"/>
+                <domain value=".5317wan.com"/>
+                <domain value=".shopmodule.jaeapp.com"/>
+                <domain value=".yao.95095.com"/>
+                <domain value=".alitrip.com"/>
+                <domain value=".alitrip.hk"/>
+                <domain value=".play.m.jaeapp.com"/>
+                <domain value=".play.jaeapp.com"/>
+                <domain value=".jiyoujia.com"/>
+            </allowedDomains>
+            <domainBlacklist>
+                <domain value="s.click.alimama.com"/>
+                <domain value="gouwu.alimama.com"/>
+                <domain value="cam.taoke.alimama.com"/>
+                <domain value="tms.taoke.alimama.com"/>
+                <domain value="search8.taobao.com"/>
+                <domain value="p.alimama.com"/>
+                <domain value="z.alimama.com"/>
+                <domain value="t.alimama.com"/>
+                <domain value="s.click.taobao.com"/>
+                <domain value="huoban.taobao.com"/>
+                <domain value="login.taobao.com"/>
+                <domain value="login.etao.com"/>
+                <domain value="logo.taobao.com"/>
+                <domain value="member1.taobao.com"/>
+                <domain value="t.pianyi.taobao.com"/>
+                <domain value="g.click.taobao.com"/>
+                <domain value="a.alimama.com"/>
+                <domain value="click.alimama.com"/>
+                <domain value="fandiaoyu.taobao.com"/>
+                <domain value="haibao.huoban.taobao.com"/>
+                <domain value="pindao.huoban.taobao.com"/>
+                <domain value="taoke.alimama.com"/>
+                <domain value="tk.alimama.com"/>
+                <domain value="zhuti.huoban.taobao.com"/>
+                <domain value="item8.taobao.com"/>
+                <domain value="shop8.taobao.com"/>
+                <domain value="dingyue.taobao.com"/>
+                <domain value="member.alisoft.com"/>
+                <domain value="learn.taobao.com"/>
+                <domain value="s8.taobao.com"/>
+                <domain value="to.taobao.com"/>
+                <domain value="stat.simba.taobao.com"/>
+                <domain value="redirect.simba.taobao.com"/>
+                <domain value="container.api.taobao.com"/>
+                <domain value="container.open.taobao.com"/>
+                <domain value="oauth.taobao.com"/>
+                <domain value=".tw.taobao.com"/>
+                <domain value="taiwan.taobao.com"/>
+                <domain value=".taiwan.tmall.com"/>
+                <domain value="taiwan.tmall.com"/>
+                <domain value="hbao.tmall.com"/>
+            </domainBlacklist>
+        </rule>
+
+        <rule id="image" checkDomain="true" supportRelativePath="true"
+              relativePathStartWithSlash="false" supportAnchor="false" supportHttps="true">
+            <allowedDomains>
+                <domain value=".taobao.com"/>
+                <domain value=".taobao.net"/>
+                <domain value=".alipay.com"/>
+                <domain value=".alibaba.com"/>
+                <domain value=".alimama.com"/>
+                <domain value=".koubei.com"/>
+                <domain value=".alisoft.com"/>
+                <domain value=".taobaocdn.com"/>
+                <domain value=".taobaocdn.net"/>
+                <domain value=".tbcdn.cn"/>
+                <domain value=".tmall.com"/>
+                <domain value=".tmall.hk"/>
+                <domain value=".atpanel.com"/>
+                <domain value=".linezing.com"/>
+                <domain value=".yisou.com"/>
+                <domain value=".etao.com"/>
+                <domain value=".juhuasuan.com"/>
+                <domain value=".hitao.com"/>
+                <domain value=".alicdn.com"/>
+                <!-- 新增Google API域名，提供二维码服务 -->
+                <domain value="chart.apis.google.com"/>
+            </allowedDomains>
+            <domainBlacklist>
+                <domain value="s.click.alimama.com"/>
+                <domain value="gouwu.alimama.com"/>
+                <domain value="cam.taoke.alimama.com"/>
+                <domain value="tms.taoke.alimama.com"/>
+                <domain value="search8.taobao.com"/>
+                <domain value="p.alimama.com"/>
+                <domain value="z.alimama.com"/>
+                <domain value="t.alimama.com"/>
+                <domain value="s.click.taobao.com"/>
+                <domain value="huoban.taobao.com"/>
+                <domain value="login.taobao.com"/>
+                <domain value="login.etao.com"/>
+                <domain value="member1.taobao.com"/>
+                <domain value="taoquan.taobao.com"/>
+                <domain value="cart.taobao.com"/>
+                <domain value="cart.tmall.com"/>
+                <domain value="favorite.taobao.com"/>
+            </domainBlacklist>
+        </rule>
+
+        <rule id="lazyImage" checkDomain="false" supportRelativePath="flase"
+              relativePathStartWithSlash="false" supportAnchor="false" supportHttps="true"
+              callback="ss_SelfDefineImageCallback.groovy">
+        </rule>
+
+        <rule id="imgUrl" checkDomain="false" supportRelativePath="false"
+              relativePathStartWithSlash="true" supportAnchor="false" supportHttps="true"
+              callback="ss_ImageUrlCheckCallback.groovy">
+        </rule>
+
+        <rule id="formAction" checkDomain="true" supportRelativePath="true"
+              relativePathStartWithSlash="true" supportAnchor="true" supportHttps="true" callback="Common_SecondJumpCallback_14.groovy">
+            <allowedDomains>
+                <domain value=".taobao.com"/>
+                <domain value=".taobao.net"/>
+                <domain value=".alibaba.com"/>
+                <domain value=".alimama.com"/>
+                <domain value=".koubei.com"/>
+                <domain value=".alisoft.com"/>
+                <domain value=".taobaocdn.com"/>
+                <domain value=".taobaocdn.net"/>
+                <domain value=".tbcdn.cn"/>
+                <domain value=".tmall.com"/>
+                <domain value=".tmall.hk"/>
+                <domain value=".atpanel.com"/>
+                <domain value=".linezing.com"/>
+                <domain value=".yisou.com"/>
+                <domain value=".etao.com"/>
+                <domain value=".juhuasuan.com"/>
+                <domain value=".hitao.com"/>
+                <domain value=".alicdn.com"/>
+                <domain value=".shopmodule.jaeapp.com"/>
+                <domain value=".alitrip.com"/>
+                <domain value=".alitrip.hk"/>
+            </allowedDomains>
+            <domainBlacklist>
+                <domain value="s.click.alimama.com"/>
+                <domain value="gouwu.alimama.com"/>
+                <domain value="cam.taoke.alimama.com"/>
+                <domain value="tms.taoke.alimama.com"/>
+                <domain value="search8.taobao.com"/>
+                <domain value="p.alimama.com"/>
+                <domain value="z.alimama.com"/>
+                <domain value="t.alimama.com"/>
+                <domain value="s.click.taobao.com"/>
+                <domain value="huoban.taobao.com"/>
+                <domain value="login.taobao.com"/>
+                <domain value="login.etao.com"/>
+                <domain value="logo.taobao.com"/>
+                <domain value="member1.taobao.com"/>
+                <domain value="t.pianyi.taobao.com"/>
+                <domain value="g.click.taobao.com"/>
+                <domain value="a.alimama.com"/>
+                <domain value="click.alimama.com"/>
+                <domain value="fandiaoyu.taobao.com"/>
+                <domain value="haibao.huoban.taobao.com"/>
+                <domain value="pindao.huoban.taobao.com"/>
+                <domain value="taoke.alimama.com"/>
+                <domain value="tk.alimama.com"/>
+                <domain value="zhuti.huoban.taobao.com"/>
+                <domain value="item8.taobao.com"/>
+                <domain value="shop8.taobao.com"/>
+                <domain value="dingyue.taobao.com"/>
+                <domain value="member.alisoft.com"/>
+                <domain value="learn.taobao.com"/>
+                <domain value="s8.taobao.com"/>
+                <domain value="to.taobao.com"/>
+                <domain value="stat.simba.taobao.com"/>
+                <domain value="redirect.simba.taobao.com"/>
+                <domain value="container.api.taobao.com"/>
+                <domain value="container.open.taobao.com"/>
+                <domain value="oauth.taobao.com"/>
+                <domain value=".tw.taobao.com"/>
+                <domain value="taiwan.taobao.com"/>
+                <domain value=".taiwan.tmall.com"/>
+                <domain value="taiwan.tmall.com"/>
+                <domain value="hbao.tmall.com"/>
+            </domainBlacklist>
+        </rule>
+
+        <rule id="flashURL" checkDomain="true" supportRelativePath="false"
+              relativePathStartWithSlash="false" supportAnchor="false" supportHttps="true" callback="Common_FlashPathCallback_11.groovy">
+            <allowedDomains>
+                <domain value=".alimama.cn"/>
+                <domain value="gbm.alicdn.com"/>
+                <domain value=".tbcdn.cn"/>
+                <domain value=".uu1001.cn"/>
+                <domain value="mall.3dsource.cn"/>
+                <domain value="t.focosee.com"/>
+                <domain value="publish.show-wise.com"/>
+                <domain value="custom.show-wise.com"/>
+                <domain value="taobao.show-wise.com"/>
+                <domain value="3dshow.fuwo.com"/>
+                <domain value="tao360.detuyun.com"/>
+                <domain value="app.tv.sohu.com"/>
+                <domain value="cloud.video.taobao.com"/>
+                <domain value="yuntv.letv.com"/>
+                <domain value="yun.taosoft.com.cn"/>
+                <domain value="player.pps.tv"/>
+                <domain value="project.t-immersion.com"/>
+                <domain value="tberp.owyun.com"/>
+                <domain value="js.tudouui.com"/>
+                <domain value="www.eyooyoo.cn"/>
+                <domain value="www.56.com"/>
+                <domain value="56.com"/>
+                <domain value="player.youku.com"/>
+                <domain value="players.youku.com"/>
+                <domain value="video1.watone.com.cn"/>
+                <domain value="proxy.taobao.com"/>
+                <domain value="vodcdn.alicdn.com"/>
+                <domain value="media.alicdn.com"/>
+            </allowedDomains>
+            <domainBlacklist>
+            </domainBlacklist>
+        </rule>
+
+    </urlConfigs>
+    <!-- 以下是CSS白名单配置 -->
+    <cssConfig>
+        <ruleFilter class="com.taobao.top.tbml.css.filter.SuperShopCssRuleFilter"/>
+        <isFormat>false</isFormat>
+        <isKeepComments>false</isKeepComments>
+        <selectorRules>
+            <!--
+            selector selector相关配置
+                <addPrefix>：增加前缀方式，缺省值为always
+                             always：无条件加前缀
+                             auto：如果selector前面没有指定的前缀，则增加前缀，否则不再增加前缀
+            -->
+            <selector addPrefix="auto"/>
+        </selectorRules>
+
+        <propertyRules>
+            <property name="font-family">
+                <allowedValues>
+                    <option value="Arial"/>
+                    <option value="Arial Black"/>
+                    <option value="Arial Narrow"/>
+                    <option value="Arial Unicode MS"/>
+                    <option value="Basemic Symbol"/>
+                    <option value="Basemic Times"/>
+                    <option value="BasemicNew"/>
+                    <option value="Batang"/>
+                    <option value="BatangChe"/>
+                    <option value="Book Antiqua"/>
+                    <option value="Bookman Old Style"/>
+                    <option value="Bookshelf Symbol 7"/>
+                    <option value="Calibri"/>
+                    <option value="Cambria"/>
+                    <option value="Cambria Math"/>
+                    <option value="Candara"/>
+                    <option value="Century"/>
+                    <option value="Century Gothic"/>
+                    <option value="Comic Sans MS"/>
+                    <option value="Consolas"/>
+                    <option value="Constantia"/>
+                    <option value="Corbel"/>
+                    <option value="Courier New"/>
+                    <option value="Dialog"/>
+                    <option value="DialogInput"/>
+                    <option value="Dotum"/>
+                    <option value="DotumChe"/>
+                    <option value="Estrangelo Edessa"/>
+                    <option value="Franklin Gothic Medium"/>
+                    <option value="Garamond"/>
+                    <option value="Gautami"/>
+                    <option value="Georgia"/>
+                    <option value="Gulim"/>
+                    <option value="GulimChe"/>
+                    <option value="Gungsuh"/>
+                    <option value="GungsuhChe"/>
+                    <option value="Impact"/>
+                    <option value="Kartika"/>
+                    <option value="Kingsoft Phonetic Plain"/>
+                    <option value="Latha"/>
+                    <option value="Lucida Bright"/>
+                    <option value="Lucida Console"/>
+                    <option value="Lucida Sans"/>
+                    <option value="Lucida Sans Typewriter"/>
+                    <option value="Lucida Sans Unicode"/>
+                    <option value="Mangal"/>
+                    <option value="Marlett"/>
+                    <option value="Microsoft Sans Serif"/>
+                    <option value="Microsoft Yahei"/>
+                    <option value="MingLiU"/>
+                    <option value="Monospaced"/>
+                    <option value="Monotype Corsiva"/>
+                    <option value="MS Gothic"/>
+                    <option value="MS Mincho"/>
+                    <option value="MS Outlook"/>
+                    <option value="MS PGothic"/>
+                    <option value="MS PMincho"/>
+                    <option value="MS Reference Sans Serif"/>
+                    <option value="MS Reference Specialty"/>
+                    <option value="MS UI Gothic"/>
+                    <option value="MT Extra"/>
+                    <option value="MV Boli"/>
+                    <option value="Palatino Linotype"/>
+                    <option value="PMingLiU"/>
+                    <option value="Raavi"/>
+                    <option value="SansSerif"/>
+                    <option value="Segoe UI"/>
+                    <option value="Serif"/>
+                    <option value="Shruti"/>
+                    <option value="sshlinedraw"/>
+                    <option value="Sylfaen"/>
+                    <option value="Symbol"/>
+                    <option value="Tahoma"/>
+                    <option value="Times New Roman"/>
+                    <option value="Trebuchet MS"/>
+                    <option value="Tunga"/>
+                    <option value="Verdana"/>
+                    <option value="Vrinda"/>
+                    <option value="Webdings"/>
+                    <option value="Wingdings"/>
+                    <option value="Wingdings 2"/>
+                    <option value="Wingdings 3"/>
+                    <option value="仿宋_GB2312"/>
+                    <option value="华文中宋"/>
+                    <option value="华文仿宋"/>
+                    <option value="华文宋体"/>
+                    <option value="华文彩云"/>
+                    <option value="华文新魏"/>
+                    <option value="华文楷体"/>
+                    <option value="华文琥珀"/>
+                    <option value="华文细黑"/>
+                    <option value="华文行楷"/>
+                    <option value="华文隶书"/>
+                    <option value="宋体"/>
+                    <option value="宋体-PUA"/>
+                    <option value="幼圆"/>
+                    <option value="微软雅黑"/>
+                    <option value="新宋体"/>
+                    <option value="方正姚体"/>
+                    <option value="方正舒体"/>
+                    <option value="楷体_GB2312"/>
+                    <option value="隶书"/>
+                    <option value="黑体"/>
+                    <option value="lisu"/>
+                    <option value="kaiti_gb2312"/>
+                    <option value="simhei"/>
+                    <option value="Myriad set"/>
+                    <option value="Lucida Grande"/>
+                    <option value="Helvetica"/>
+                    <option value="sans-serif"/>
+                </allowedValues>
+            </property>
+        </propertyRules>
+        <!--
+        urlConfig 配置CSS中URL过滤规则。如果ruleId为default，可以省略本项配置
+            [ruleId]：对应上面urlConfigs中的rule id。
+        -->
+        <!-- ruleId不能随便改成 imgUrl，这样处理会影响页头页尾的背景设置 -->
+        <urlConfig ruleId="image"/>
+        <allowedProperties>
+            <property name="background"/>
+            <property name="background-attachment"/>
+            <property name="background-color"/>
+            <property name="background-image"/>
+            <property name="background-position"/>
+            <property name="background-repeat"/>
+            <property name="border"/>
+            <property name="border-bottom"/>
+            <property name="border-bottom-color"/>
+            <property name="border-bottom-style"/>
+            <property name="border-bottom-width"/>
+            <property name="border-collapse"/>
+            <property name="border-color"/>
+            <property name="border-left"/>
+            <property name="border-left-color"/>
+            <property name="border-left-style"/>
+            <property name="border-left-width"/>
+            <property name="border-right"/>
+            <property name="border-right-color"/>
+            <property name="border-right-style"/>
+            <property name="border-right-width"/>
+            <property name="border-spacing"/>
+            <property name="border-style"/>
+            <property name="border-top"/>
+            <property name="border-top-color"/>
+            <property name="border-top-style"/>
+            <property name="border-top-width"/>
+            <property name="border-width"/>
+            <property name="bottom"/>
+            <property name="caption-side"/>
+            <property name="clear"/>
+            <property name="clip"/>
+            <property name="color"/>
+            <property name="content"/>
+            <property name="counter-increment"/>
+            <property name="counter-reset"/>
+            <property name="cursor"/>
+            <property name="direction"/>
+            <property name="display"/>
+            <property name="empty-cells"/>
+            <property name="float"/>
+            <property name="font"/>
+            <property name="font-family"/>
+            <property name="font-size"/>
+            <property name="font-size-adjust"/>
+            <property name="font-stretch"/>
+            <property name="font-style"/>
+            <property name="font-variant"/>
+            <property name="font-weight"/>
+            <property name="height"/>
+            <property name="left"/>
+            <property name="letter-spacing"/>
+            <property name="line-height"/>
+            <property name="list-style"/>
+            <property name="list-style-image"/>
+            <property name="list-style-position"/>
+            <property name="list-style-type"/>
+            <property name="margin"/>
+            <property name="margin-bottom"/>
+            <property name="margin-left"/>
+            <property name="margin-right"/>
+            <property name="margin-top"/>
+            <property name="marker-offset"/>
+            <property name="max-height"/>
+            <property name="max-width"/>
+            <property name="min-height"/>
+            <property name="min-width"/>
+            <property name="orphans"/>
+            <property name="outline"/>
+            <property name="outline-color"/>
+            <property name="outline-style"/>
+            <property name="outline-width"/>
+            <property name="overflow"/>
+            <property name="overflow-x"/>
+            <property name="overflow-y"/>
+            <property name="padding"/>
+            <property name="padding-bottom"/>
+            <property name="padding-left"/>
+            <property name="padding-right"/>
+            <property name="padding-top"/>
+            <property name="page-break-after"/>
+            <property name="page-break-before"/>
+            <property name="page-break-inside"/>
+            <property name="position"/>
+            <property name="right"/>
+            <property name="table-layout"/>
+            <property name="text-align"/>
+            <property name="text-decoration"/>
+            <property name="text-indent"/>
+            <property name="text-shadow"/>
+            <property name="text-transform"/>
+            <property name="top"/>
+            <property name="unicode-bidi"/>
+            <property name="vertical-align"/>
+            <property name="visibility"/>
+            <property name="white-space"/>
+            <property name="widows"/>
+            <property name="width"/>
+            <property name="word-break"/>
+            <property name="word-spacing"/>
+            <property name="word-wrap"/>
+            <property name="writing-mode"/>
+            <property name="z-index"/>
+            <property name="opacity"/>
+            <property name="filter"/>
+            <property name="-ms-filter"/>
+            <property name="zoom"/>
+            <property name="transform"/>
+            <property name="-moz-transform"/>
+            <property name="-o-transform"/>
+            <property name="-webkit-transform"/>
+            <property name="-ms-transform"/>
+            <property name="box-shadow"/>
+            <property name="-moz-box-shadow"/>
+            <property name="-webkit-box-shadow"/>
+            <property name="border-radius"/>
+            <property name="-moz-border-radius"/>
+            <property name="-webkit-border-radius"/>
+            <property name="border-top-left-radius"/>
+            <property name="border-top-right-radius"/>
+            <property name="border-bottom-right-radius"/>
+            <property name="border-bottom-left-radius"/>
+            <property name="-webkit-border-top-left-radius"/>
+            <property name="-webkit-border-top-right-radius"/>
+            <property name="-webkit-border-bottom-right-radius"/>
+            <property name="-webkit-border-bottom-left-radius"/>
+            <property name="-moz-border-radius-topleft"/>
+            <property name="-moz-border-radius-topright"/>
+            <property name="-moz-border-radius-bottomright"/>
+            <property name="-moz-border-radius-bottomleft"/>
+            <property name="transition"/>
+            <property name="transition-property"/>
+            <property name="transition-duration"/>
+            <property name="transition-timing-function"/>
+            <property name="transition-delay"/>
+            <property name="-moz-transition"/>
+            <property name="-moz-transition-property"/>
+            <property name="-moz-transition-duration"/>
+            <property name="-moz-transition-timing-function"/>
+            <property name="-moz-transition-delay"/>
+            <property name="-webkit-transition"/>
+            <property name="-webkit-transition-property"/>
+            <property name="-webkit-transition-duration"/>
+            <property name="-webkit-transition-timing-function"/>
+            <property name="-webkit-transition-delay"/>
+            <property name="-o-transition"/>
+            <property name="-o-transition-property"/>
+            <property name="-o-transition-duration"/>
+            <property name="-o-transition-timing-function"/>
+            <property name="-o-transition-delay"/>
+            <property name="scrollbar-arrow-color" class="Color"/>
+            <property name="scrollbar-shadow-color" class="Color"/>
+            <property name="scrollbar-face-color" class="Color"/>
+            <property name="scrollbar-3dlight-color" class="Color"/>
+            <property name="scrollbar-3d-light-color" class="Color"/>
+            <property name="scrollbar-darkshadow-color" class="Color"/>
+            <property name="scrollbar-highlight-color" class="Color"/>
+            <property name="scrollbar-base-color" class="Color"/>
+            <property name="scrollbar-track-color" class="Color"/>
+        </allowedProperties>
+
+        <!-- 配置CSS属性取值规则 -->
+        <cssValues>
+            <listValue>  <!-- 配置字符串列表类型属性取值，不配置表示使用默认配置的取值列表 -->
+                <!--
+                class 配置ListValue类型的取值列表
+                  <name>：class名称，直接写上类名即可，不要写包名。对应类名全称为：com.taobao.top.tbml.css.value.list.$name
+                  <value>：取值列表，多个值之间用竖线（|）分隔
+                -->
+                <class name="Position" value="absolute | fixed | relative | static"/>
+                <class name="ZIndex" value="54321 | 1 | 99"/>
+            </listValue>
+        </cssValues>
+    </cssConfig>
+    <!-- 以下是HTML白名单配置，其中commonAttrs引用core配置文件中的配置 -->
+    <tagConfig>
+        <allowedTags>
+            <tag name="esi:include">
+                <attribute name="src" ruleId="nourl"/>
+            </tag>
+            <tag name="webx:control" group="commonAttrs">
+                <attribute name="path"/>
+            </tag>
+            <tag name="webx:module" group="commonAttrs">
+                <attribute name="id"/>
+            </tag>
+            <tag name="webx:whitemodule" group="commonAttrs">
+                <attribute name="id"/>
+            </tag>
+            <tag name="webx:Lazymodule" group="commonAttrs">
+                <attribute name="id"/>
+            </tag>
+            <tag name="sdk:systemmodule">
+                <attribute name="id"/>
+            </tag>
+            <tag name="cached" group="commonAttrs">
+                <attribute name="key"/>
+            </tag>
+            <tag name="local" group="commonAttrs">
+                <attribute name="key"/>
+            </tag>
+            <tag name="a" group="commonAttrs">
+                <attribute name="href" callback="Common_RemoveFlashCallback_2.groovy"/>
+                <attribute name="hreflang"/>
+                <attribute name="name"/>
+                <attribute name="target"/>
+                <attribute name="shape"/>
+                <attribute name="type"/>
+                <attribute name="rel"/>
+                <attribute name="rev"/>
+                <attribute name="charset"/>
+                <attribute name="coords"/>
+            </tag>
+            <tag name="abbr" group="commonAttrs">
+            </tag>
+            <tag name="acronym" group="commonAttrs">
+            </tag>
+            <tag name="address" group="commonAttrs">
+            </tag>
+            <tag name="area" group="commonAttrs">
+                <attribute name="alt"/>
+                <attribute name="coords"/>
+                <attribute name="href"/>
+                <attribute name="nohref"/>
+                <attribute name="shape"/>
+                <attribute name="target"/>
+            </tag>
+            <tag name="b" group="commonAttrs">
+            </tag>
+            <tag name="base" group="commonAttrs">
+                <attribute name="href"/>
+                <attribute name="target"/>
+            </tag>
+            <tag name="basefont" group="commonAttrs">
+                <attribute name="color"/>
+                <attribute name="face"/>
+                <attribute name="size"/>
+            </tag>
+            <tag name="bdo" group="commonAttrs">
+                <attribute name="dir"/>
+            </tag>
+            <tag name="big" group="commonAttrs">
+            </tag>
+            <tag name="bgsound" group="commonAttrs">
+                <attribute name="src" ruleId="imgUrl"/>
+                <attribute name="loop"/>
+            </tag>
+            <tag name="blockquote" group="commonAttrs">
+                <attribute name="cite"/>
+            </tag>
+            <tag name="br" group="coreAttrs">
+            </tag>
+            <tag name="button" group="commonAttrs">
+                <attribute name="disabled"/>
+                <attribute name="name"/>
+                <attribute name="size"/>
+                <attribute name="tabindex"/>
+                <attribute name="type"/>
+                <attribute name="value"/>
+            </tag>
+            <tag name="caption" group="commonAttrs">
+                <attribute name="align"/>
+                <attribute name="span"/>
+            </tag>
+            <tag name="center" group="commonAttrs">
+            </tag>
+            <tag name="cite" group="commonAttrs">
+            </tag>
+            <tag name="col" group="commonAttrs">
+                <attribute name="align"/>
+                <attribute name="span"/>
+                <attribute name="valign"/>
+                <attribute name="char"/>
+                <attribute name="charoff"/>
+                <attribute name="width"/>
+            </tag>
+            <tag name="colgroup" group="commonAttrs">
+                <attribute name="align"/>
+                <attribute name="span"/>
+                <attribute name="valign"/>
+                <attribute name="char"/>
+                <attribute name="charoff"/>
+                <attribute name="width"/>
+            </tag>
+            <tag name="dd" group="commonAttrs">
+            </tag>
+            <tag name="del" group="commonAttrs">
+                <attribute name="cite"/>
+                <attribute name="datetime"/>
+            </tag>
+            <tag name="dfn" group="commonAttrs">
+            </tag>
+            <tag name="div" group="commonAttrs">
+                <attribute name="data-widget-type"/>
+                <attribute name="data-widget-config" callback="ss_KissWidgetConfigCallback_newselfdefine.groovy"/>
+            </tag>
+            <tag name="dl" group="commonAttrs">
+            </tag>
+            <tag name="dt" group="commonAttrs">
+            </tag>
+            <tag name="em" group="commonAttrs">
+            </tag>
+            <tag name="embed" group="commonAttrs"> <!-- 此标签需要确认下 -->
+                <attribute name="allowScriptAccess" regex="^never$"
+                           required="true" default="never"/>
+                <attribute name="allowNetworking"/>
+                <attribute name="flashvars" required="true" default="scene=taobao_shop"
+                           callback="Common_FlashInTaobaoFlagCallback_11.groovy"/>
+                <attribute name="height"/>
+                <attribute name="name"/>
+                <attribute name="quality"/>
+                <attribute name="src" required="true" ruleId="flashURL"/>
+                <attribute name="type"/>
+                <attribute name="var"/>
+                <attribute name="width"/>
+                <attribute name="wmode"/>
+                <attribute name="border"/>
+                <attribute name="contenteditable"/>
+                <attribute name="pluginspage"/>
+                <attribute name="play"/>
+                <attribute name="loop"/>
+                <attribute name="menu"/>
+            </tag>
+            <tag name="fieldset" group="commonAttrs">
+            </tag>
+            <tag name="font" group="commonAttrs">
+                <attribute name="color"/>
+                <attribute name="face"/>
+                <attribute name="size"/>
+            </tag>
+            <tag name="form" group="commonAttrs">
+                <attribute name="action" ruleId="formAction"/>
+                <attribute name="enctype"/>
+                <attribute name="method" required="true" default="post" callback="Common_FormMethodCallback.groovy"/>
+                <attribute name="name"/>
+                <attribute name="target"/>
+                <attribute name="accept"/>
+                <attribute name="accept-charset"/>
+            </tag>
+            <tag name="h1" group="commonAttrs">
+                <attribute name="align"/>
+            </tag>
+            <tag name="h2" group="commonAttrs">
+                <attribute name="align"/>
+            </tag>
+            <tag name="h3" group="commonAttrs">
+                <attribute name="align"/>
+            </tag>
+            <tag name="h4" group="commonAttrs">
+                <attribute name="align"/>
+            </tag>
+            <tag name="h5" group="commonAttrs">
+                <attribute name="align"/>
+            </tag>
+            <tag name="h6" group="commonAttrs">
+                <attribute name="align"/>
+            </tag>
+            <tag name="hr" group="commonAttrs">
+                <attribute name="height"/>
+                <attribute name="noshade"/>
+                <attribute name="size"/>
+                <attribute name="width"/>
+            </tag>
+            <tag name="marquee" group="commonAttrs">
+                <attribute name="behavior"/>
+                <attribute name="direction"/>
+                <attribute name="scrolldelay"/>
+                <attribute name="scrollamount"/>
+                <attribute name="loop"/>
+                <attribute name="width"/>
+                <attribute name="height"/>
+                <attribute name="vspace"/>
+                <attribute name="hspace"/>
+                <attribute name="bgcolor"/>
+            </tag>
+            <tag name="i" group="commonAttrs">
+                <attribute name="contenteditable"/>
+                <attribute name="contextmenu"/>
+                <attribute name="draggable"/>
+                <attribute name="irrelevant"/>
+                <attribute name="ref"/>
+                <attribute name="registrationmark"/>
+                <attribute name="tabindex"/>
+                <attribute name="template"/>
+            </tag>
+            <tag name="img" group="commonAttrs">
+                <attribute name="alt"/>
+                <attribute name="border"/>
+                <attribute name="height"/>
+                <attribute name="hspace"/>
+                <attribute name="src" ruleId="lazyImage"/>
+                <attribute name="usemap"/>
+                <attribute name="vspace"/>
+                <attribute name="width"/>
+                <attribute name="longdesc"/>
+                <attribute name="data-ks-lazyload" callback="ss_ImageUrlCheckCallback.groovy"/>
+            </tag>
+            <tag name="input" group="commonAttrs">
+                <attribute name="alt"/>
+                <attribute name="checked"/>
+                <attribute name="disabled"/>
+                <attribute name="maxlength"/>
+                <attribute name="name"/>
+                <attribute name="readonly"/>
+                <attribute name="size"/>
+                <attribute name="src" ruleId="imgUrl"/>
+                <attribute name="tabindex"/>
+                <attribute name="type"/>
+                <attribute name="usemap"/>
+                <attribute name="value"/>
+            </tag>
+            <tag name="ins" group="commonAttrs">
+                <attribute name="cite"/>
+                <attribute name="datetime"/>
+            </tag>
+            <tag name="kbd" group="commonAttrs">
+            </tag>
+            <tag name="label" group="commonAttrs">
+                <attribute name="for"/>
+            </tag>
+            <tag name="legend" group="commonAttrs">
+            </tag>
+            <tag name="li" group="commonAttrs">
+                <attribute name="type"/>
+                <attribute name="value"/>
+            </tag>
+            <tag name="map" group="commonAttrs">
+                <attribute name="name"/>
+            </tag>
+            <tag name="ol" group="commonAttrs">
+                <attribute name="type"/>
+                <attribute name="start"/>
+                <attribute name="compact"/>
+            </tag>
+            <tag name="optgroup" group="commonAttrs">
+                <attribute name="disabled"/>
+                <attribute name="label"/>
+            </tag>
+            <tag name="option" group="commonAttrs">
+                <attribute name="disabled"/>
+                <attribute name="label"/>
+                <attribute name="selected"/>
+                <attribute name="value"/>
+            </tag>
+            <tag name="p" group="commonAttrs">
+                <attribute name="align"/>
+            </tag>
+            <tag name="pre" group="commonAttrs">
+                <attribute name="width"/>
+                <attribute name="xml:space"/>
+            </tag>
+            <tag name="q" group="commonAttrs">
+                <attribute name="cite"/>
+            </tag>
+            <tag name="s" group="commonAttrs">
+            </tag>
+            <tag name="select" group="commonAttrs">
+                <attribute name="disabled"/>
+                <attribute name="multiple"/>
+                <attribute name="name"/>
+                <attribute name="size"/>
+                <attribute name="tabindex"/>
+                <attribute name="accesskey"/>
+            </tag>
+            <tag name="small" group="commonAttrs">
+            </tag>
+            <tag name="span" group="commonAttrs">
+            </tag>
+            <tag name="strike" group="commonAttrs">
+            </tag>
+            <tag name="strong" group="commonAttrs">
+            </tag>
+
+            <!--<tag name="style" composite="true" textOnlyChildren="true" trimChildrenTextRemark="true"-->
+                 <!--callback="ss_NewStyleCallback.groovy">-->
+                <!--<attribute name="media"/>-->
+                <!--<attribute name="type"/>-->
+                <!--<attribute name="xml:space"/>-->
+            <!--</tag>-->
+
+            <tag name="search" group="commonAttrs">
+                <attribute name="key"/>
+                <attribute name="order"/>
+                <attribute name="view"/>
+                <attribute name="amount"/>
+                <attribute name="isnew"/>
+                <attribute name="cate"/>
+                <attribute name="shopcate"/>
+                <attribute name="price"/>
+            </tag>
+            <tag name="sub" group="commonAttrs">
+            </tag>
+            <tag name="sup" group="commonAttrs">
+            </tag>
+            <tag name="table" group="commonAttrs">
+                <attribute name="border"/>
+                <attribute name="borderColor"/>
+                <attribute name="blockquote"/>
+                <attribute name="cellpadding"/>
+                <attribute name="cellspacing"/>
+                <attribute name="color"/>
+                <attribute name="height"/>
+                <attribute name="summary"/>
+                <attribute name="rules"/>
+                <attribute name="frame"/>
+                <attribute name="width"/>
+            </tag>
+            <tag name="tbody" group="commonAttrs">
+                <attribute name="align"/>
+                <attribute name="char"/>
+                <attribute name="charoff"/>
+                <attribute name="valign"/>
+            </tag>
+            <tag name="td" group="commonAttrs">
+                <attribute name="abbr"/>
+                <attribute name="char"/>
+                <attribute name="charoff"/>
+                <attribute name="colspan"/>
+                <attribute name="headers"/>
+                <attribute name="height"/>
+                <attribute name="rowspan"/>
+                <attribute name="scope"/>
+                <attribute name="width"/>
+            </tag>
+            <tag name="textarea" group="commonAttrs">
+                <attribute name="cols"/>
+                <attribute name="disabled"/>
+                <attribute name="name"/>
+                <attribute name="readonly"/>
+                <attribute name="rows"/>
+                <attribute name="tabindex"/>
+                <attribute name="wrap"/>
+                <attribute name="accesskey"/>
+            </tag>
+            <tag name="tfoot" group="commonAttrs">
+                <attribute name="char"/>
+                <attribute name="charoff"/>
+            </tag>
+            <tag name="th" group="commonAttrs">
+                <attribute name="abbr"/>
+                <attribute name="axis"/>
+                <attribute name="background"/>
+                <attribute name="bgcolor"/>
+                <attribute name="colspan"/>
+                <attribute name="char"/>
+                <attribute name="charoff"/>
+                <attribute name="headers"/>
+                <attribute name="height"/>
+                <attribute name="rowspan"/>
+                <attribute name="scope"/>
+                <attribute name="nowrap"/>
+                <attribute name="width"/>
+            </tag>
+            <tag name="thead" group="commonAttrs">
+                <attribute name="char"/>
+                <attribute name="charoff"/>
+            </tag>
+            <tag name="tr" group="commonAttrs">
+                <attribute name="char"/>
+                <attribute name="charoff"/>
+                <attribute name="bgcolor"/>
+                <attribute name="height"/>
+            </tag>
+            <tag name="tt" group="commonAttrs">
+            </tag>
+            <tag name="u" group="commonAttrs">
+            </tag>
+            <tag name="ul" group="commonAttrs">
+                <attribute name="type"/>
+                <attribute name="compact"/>
+            </tag>
+            <tag name="var" group="commonAttrs">
+            </tag>
+        </allowedTags>
+        <attributeRules>
+            <uriAttributes>
+                <attribute name="background" ruleId="imgUrl"/>
+                <attribute name="cite" ruleId="default"/>
+                <attribute name="src"/>
+                <attribute name="href" ruleId="href"/>
+            </uriAttributes>
+        </attributeRules>
+        <attributeGroups>
+            <group id="commonAttrs">
+                <attribute name="class" callback="ss_New_SelfDefineClassAttributeCallback.groovy"/>
+                <attribute name="dir"/>
+                <attribute name="style" callback="ss_NewStyleCallback.groovy"/>
+                <attribute name="title"/>
+                <attribute name="lang"/>
+                <attribute name="xml:lang"/>
+                <attribute name="align"/>
+                <attribute name="valign"/>
+                <attribute name="bgcolor"/>
+                <attribute name="background"/>
+                <attribute name="microscope-data"/>
+                <attribute name="data-*" nameType="prefix" namePrefix="data-" nameSuffixType="letter"
+                           nameSuffixMinLength="1" nameSuffixMaxLength="20" nameCase="lower"/>
+            </group>
+        </attributeGroups>
+    </tagConfig>
+</config>
+

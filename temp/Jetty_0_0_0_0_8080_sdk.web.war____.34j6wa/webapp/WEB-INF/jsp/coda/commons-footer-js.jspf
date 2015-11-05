@@ -1,0 +1,13 @@
+<!--部署到assets里面-->
+<script type="text/javascript">
+    KISSY.config({
+        packages: [
+            {
+                name: "scripts", // 包名
+                tag: "${date}", // 时间戳,
+                path: 'http://${assetsHost}/apps/taesite/platinum/', // daily
+                charset: "gbk" // 包里模块文件编码格式
+            }
+        ]
+    });
+</script>

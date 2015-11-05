@@ -1,0 +1,358 @@
+
+
+<?xml version="1.0" encoding="GBK"?>
+<rule productId="1001" name="O2O店铺" desc="O2O店铺装修规则" publishTimeMills="1342859986550"
+      xsi:schemaLocation="http://design.taobao.com/design/rules/schema/design-rules-1.0.xsd"
+      xmlns:ns2="http://design.taobao.com/tae-design-rules" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <siteInfo>
+        <maxPageNum>9999</maxPageNum>
+        <homePageId>1</homePageId>
+        <background>true</background>
+        <cms>true</cms>
+        <css>true</css>
+        <footer>true</footer>
+        <headerModule>true</headerModule>
+        <logo>true</logo>
+        <showside>true</showside>
+        <mulitLayout>true</mulitLayout>
+        <scriptcode><![CDATA[
+                ]]></scriptcode>
+        <permissions>
+        </permissions>
+        <localModulePrefix>ot-</localModulePrefix>
+        <systemModulePrefix>of-</systemModulePrefix>
+        <tbmlFilterConfig>
+            <configFileName>tbml-filter-tae-newsdk.xml</configFileName>
+            <configId>newsdk</configId>
+            <version>ss</version>
+        </tbmlFilterConfig>
+        <offlinePageTypes>
+            <offlinePageType>23</offlinePageType>
+            <offlinePageType>315</offlinePageType>
+            <offlinePageType>10</offlinePageType>
+            <offlinePageType>50</offlinePageType>
+
+        </offlinePageTypes>
+        <offlinePageDemoIds>
+            <offlinePageDemoId>5005</offlinePageDemoId>
+            <offlinePageDemoId>3602</offlinePageDemoId>
+            <offlinePageDemoId>3603</offlinePageDemoId>
+        </offlinePageDemoIds>
+    </siteInfo>
+    <pageRule>
+        <pages>
+            <page pageId="10001" name="微模版首页">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>5</maxModule>
+                    <renamable>false</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/index.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>10001</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="5301" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5302" name="上图下阴影文" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5303" name="左图右标右文" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5304" name="两图" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5306" name="通栏文案" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5307" name="分割线" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="10002" name="微模板活动页">
+                <pageInfo>
+                    <maxAppend>6</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>5</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <maxDesign>6</maxDesign>
+                    <type>10002</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="5301" name="图片轮播" editable="true" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="5" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5302" name="焦点信息" editable="true" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5303" name="图文简介" editable="true" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5304" name="图文窗格" editable="true" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="5" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5306" name="通栏文案" editable="true" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5307" name="分割线" editable="true" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5308" name="活动优惠券" editable="false" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="5" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5305" name="活动信息" editable="false" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5309" name="活动页头" editable="false" movable="false" addable="false"
+                            deleteable="true" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="10003" name="微模板图文详情页">
+                <pageInfo>
+                    <maxAppend>6</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>5</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/detail.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>10003</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="5301" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5306" name="通栏文案" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5307" name="分割线" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="10004" name="微模板自定义页">
+                <pageInfo>
+                    <maxAppend>6</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>5</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <maxDesign>6</maxDesign>
+                    <type>10004</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="5301" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5302" name="上图下阴影文" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5303" name="左图右标右文" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5304" name="两图" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5306" name="通栏文案" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5307" name="分割线" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+			<page pageId="10005" name="mall首页">
+                <pageInfo>
+                    <maxAppend>6</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>5</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <type>10005</type>
+                </pageInfo>
+                <supportedModules>	
+				<module moduleId="5309" name="活动页头" editable="false" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false"/>
+                    <module moduleId="5301" name="图片轮播" editable="true" movable="true"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false" designable="true"/>
+                    <module moduleId="5321" name="店铺信息" editable="false" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false"/>
+                    <module moduleId="5320" name="推荐优惠券" editable="false" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false"/>
+                    <module moduleId="5319" name="会员服务" editable="false" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false"/>
+                    <module moduleId="5318" name="商家链接" editable="false" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false"/>
+                    <module moduleId="5317" name="美食电影KTV" editable="false" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false"/>
+					<module moduleId="5316" name="品牌服务商地址" editable="false" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false"/>
+
+
+					<module moduleId="5301" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true" addable="true"/>
+                    <module moduleId="5302" name="上图下阴影文" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true" addable="true"/>
+                    <module moduleId="5303" name="左图右标右文" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true" addable="true"/>
+                    <module moduleId="5304" name="两图" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true" addable="true"/>
+                    <module moduleId="5306" name="通栏文案" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true" addable="true"/>
+                    <module moduleId="5307" name="分割线" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true" addable="true"/>
+
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+			<page pageId="10006" name="商家详情页">
+                <pageInfo>
+                    <maxAppend>6</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>5</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <type>10006</type>
+                </pageInfo>
+                <supportedModules>	
+				<module moduleId="5313" name="商家详情" editable="false" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950" showable="false"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+        </pages>
+    </pageRule>
+    <headRule>
+        <headInfo>
+            <maxLayout>0</maxLayout>
+            <maxModule>0</maxModule>
+            <moduleAddable>true</moduleAddable>
+        </headInfo>
+        <supportedModules>
+        </supportedModules>
+        <supportedLayouts>
+            <layout layoutId="23" name="页首布局">
+                <layoutInfo>
+                    <maxModule>2</maxModule>
+                    <required>false</required>
+                    <position>1</position>
+                    <supportWidth>950</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </headRule>
+    <footRule>
+        <footInfo>
+            <maxLayout>0</maxLayout>
+            <maxModule>0</maxModule>
+            <editable>false</editable>
+        </footInfo>
+        <supportedModules>
+        </supportedModules>
+        <supportedLayouts>
+            <layout layoutId="33" name="尾部布局">
+                <layoutInfo>
+                    <maxModule>1</maxModule>
+                    <required>false</required>
+                    <position>1</position>
+                    <supportWidth>950</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </footRule>
+</rule>

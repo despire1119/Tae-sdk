@@ -1,0 +1,25 @@
+<c:if test="${not empty localModulesCombinedSecureJsURL}">
+    <c:if test="${not empty siteCajaConfig}">
+        <script type="text/javascript">
+            ${siteCajaConfig}
+        </script>
+    </c:if>
+    <script type="text/javascript" src="${siteCajaJsURL}"></script>
+    <script type="text/javascript" src="${localModulesCombinedSecureJsURL}"></script>
+    <c:choose>
+        <c:when test="${not empty siteCajaConfig and not empty siteCajaSetupJsURL}">
+            <script type="text/javascript" src="${siteCajaSetupJsURL}"></script>
+        </c:when>
+        <c:otherwise>
+            <script>
+                KISSY.use("sizzle", function () {
+                KISSY.ready(function(){
+                if (TShop.Balcony.setup) {
+                TShop.Balcony.setup();
+                }
+                })
+                });
+            </script>
+        </c:otherwise>
+    </c:choose>
+</c:if>

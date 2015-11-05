@@ -1,0 +1,17 @@
+
+
+
+&lt;!--mm是：${mm}regionWidth是：${regionWidth}--&gt;
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-gongyi&quot;&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    &lt;div class=&quot;skin-box-hd&quot;&gt;
+        &lt;i&gt;&lt;/i&gt;&lt;h3&gt;&lt;span&gt;公益广告联盟&lt;/span&gt;&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;skin-box-bd&quot;&gt;
+         &lt;iframe id=&quot;J_themeActivityIframe&quot; 
+			marginheight=&quot;0&quot; marginwidth=&quot;0&quot; frameborder=&quot;0&quot; width=&quot;100%&quot; height=&quot;280&quot; scrolling=&quot;no&quot; 
+			src=&quot;//ying.taobao.com/json/themeActivityIframe.htm?themeId=&amp;widthType=&amp;shopId=71884477&amp;uid=&quot;&gt;
+		 &lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;/div&gt;

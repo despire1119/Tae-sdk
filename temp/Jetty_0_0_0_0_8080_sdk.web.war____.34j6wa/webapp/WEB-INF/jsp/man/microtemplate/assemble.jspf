@@ -1,0 +1,23 @@
+<h3>组装模块</h3>
+    <ul class="page-list">
+    <c:forEach items="${pagesList}" var="page">
+        <li>
+            <c:set var="thumbnail" value="${page.thumbnail}" />
+            <c:if test="${not fn:startsWith(thumbnail,'http') && not fn:startsWith(thumbnail,'//')}">
+                <c:set var="thumbnail" value="/${template.directoryName}/${page.thumbnail}" />
+            </c:if>
+            <a href="/microdesign/page/debug/${template.directoryName}/${page.file}/" target="_blank">
+                <img src="${thumbnail}" title="点击进入页面组装"><p>${page.name}</p>
+			</a>
+            </li>
+    </c:forEach>
+</ul>
+<div class="guide">
+    <p>
+        想手工为页面添加模块？<a href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E6.A8.A1.E6.9D.BF.E7.BB.84.E8.A3.85" target="_blank">点击此处可以了解！</a>
+    </p>
+    <p class="next">
+		<span>完成 组装模块 ？</span> <a href="/man/microtemplate/publish/${template.directoryName}/" class="btn">进入下一步</a>
+    </p>
+</div>
+		

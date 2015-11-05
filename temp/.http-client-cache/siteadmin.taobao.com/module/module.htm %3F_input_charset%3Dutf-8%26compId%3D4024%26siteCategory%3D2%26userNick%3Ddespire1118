@@ -1,0 +1,67 @@
+
+
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-main-slide tshop-pbsm-shop-main-slide-1446689233404&quot;&gt;
+    &lt;style&gt;.tshop-pbsm-shop-main-slide-1446689233404 .slide-box,.tshop-pbsm-shop-main-slide-1446689233404 .slide-box .slide-content li{height: 250px;}&lt;/style&gt;
+	&lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+		&lt;div class=&quot;skin-box-hd &quot;&gt;
+		&lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;
+		&lt;h3&gt;
+			&lt;span&gt;
+				 										Í¼Æ¬ÂÖ²¥
+													&lt;/span&gt;
+		&lt;/h3&gt;
+		&lt;div class=&quot;skin-box-act disappear&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;more&quot;&gt;¸ü¶à&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+		&lt;div class=&quot;skin-box-bd&quot;&gt;
+		&lt;div data-widget-config=&quot;{
+            &#39;contentCls&#39;: &#39;slide-content&#39;,
+            &#39;triggerCls&#39;: &#39;slide-triggers&#39;,
+            &#39;navCls&#39;: &#39;slide-triggers&#39;,
+            &#39;activeTriggerCls&#39;: &#39;selected&#39;,
+            &#39;triggerType&#39;: &#39;mouse&#39;,
+            &#39;effect&#39;: &#39;fade&#39;,
+            &#39;prevBtnCls&#39;: &#39;prev-btn&#39;,
+            &#39;nextBtnCls&#39;: &#39;next-btn&#39;,
+            &#39;disableBtnCls&#39;: &#39;disable&#39;,
+            &#39;steps&#39;: 1,
+            &#39;autoplay&#39;: true,
+            &#39;circular&#39;: true,
+            &#39;length&#39;: 2,
+            &#39;interval&#39;: 3,
+            &#39;easing&#39;: &#39;easeBothStrong&#39;
+        }&quot; data-widget-type=&quot;Carousel&quot; class=&quot;J_TWidget slide-box&quot;&gt;
+			&lt;ul class=&quot;slide-content&quot;&gt;
+												&lt;li style=&quot;display: block;&quot;&gt;
+															                                            &lt;a target=&quot;_blank&quot; title=&quot;&quot; href=&quot;#&quot;&gt;&lt;img  src=&quot;//gdp.alicdn.com/tps/i2/T1GBncXl4fXXa_gJAe-950-250.png&quot; &gt;&lt;/a&gt;
+                        				    &lt;div class=&quot;title&quot;&gt;&lt;/div&gt;
+					&lt;div class=&quot;sub-title&quot;&gt;&lt;/div&gt;
+					&lt;div class=&quot;other&quot;&gt;&lt;/div&gt;
+				
+                &lt;/li&gt;
+												&lt;li style=&quot;display: block;&quot;&gt;
+															                                            &lt;a target=&quot;_blank&quot; title=&quot;&quot; href=&quot;#&quot;&gt;&lt;img  src=&quot;//gdp.alicdn.com/tps/i3/T1NWDfXjldXXa_gJAe-950-250.png&quot; &gt;&lt;/a&gt;
+                        				    &lt;div class=&quot;title&quot;&gt;&lt;/div&gt;
+					&lt;div class=&quot;sub-title&quot;&gt;&lt;/div&gt;
+					&lt;div class=&quot;other&quot;&gt;&lt;/div&gt;
+				
+                &lt;/li&gt;
+											&lt;/ul&gt;
+			&lt;div class=&quot;slide-triggers-bg&quot;&gt;&lt;/div&gt;
+			&lt;ol class=&quot;slide-triggers&quot;&gt;
+			    				   &lt;li class=&quot;first selected&quot;&gt;&lt;span&gt;01&lt;/span&gt;&lt;s&gt;&lt;/s&gt;&lt;/li&gt;
+								   &lt;li &gt;&lt;span&gt;02&lt;/span&gt;&lt;s&gt;&lt;/s&gt;&lt;/li&gt;
+							&lt;/ol&gt;
+			&lt;div class=&quot;prev-btn prev&quot;&gt;
+				&lt;div class=&quot;prev-next-bg&quot;&gt;&lt;/div&gt;
+				&lt;div class=&quot;text&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;next-btn next&quot;&gt;
+				&lt;div class=&quot;prev-next-bg&quot;&gt;&lt;/div&gt;
+				&lt;div class=&quot;text&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+	&lt;/div&gt;

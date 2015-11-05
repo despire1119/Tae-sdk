@@ -1,0 +1,37 @@
+
+
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-other-customer-service&quot;&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+            &lt;div class=&quot;skin-box-hd&quot;&gt;
+                &lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;
+                                            &lt;h3&gt;
+                            &lt;span&gt;
+                                                                                                        客服中心
+                                                                                                &lt;/span&gt;
+                       &lt;/h3&gt;
+                            &lt;/div&gt;
+	    &lt;div class=&quot;skin-box-bd&quot;&gt;
+    &lt;ul&gt;
+                        &lt;li class=&quot;service-block&quot;&gt;
+                &lt;h4&gt;工作时间&lt;/h4&gt;
+                &lt;ul class=&quot;service-content&quot;&gt;
+                                        &lt;li&gt;周一至周五：9:00-21:00&lt;/li&gt;
+                                                            &lt;li&gt;周六至周日：0:00-24:00&lt;/li&gt;
+                                    &lt;/ul&gt;
+            &lt;/li&gt;
+                        &lt;li class=&quot;service-block&quot;&gt;
+                &lt;h4&gt;在线咨询&lt;/h4&gt;
+                &lt;ul data-url=&quot;&quot; data-group-filter=&quot;all&quot; data-nick=&quot;MOCK%E8%B4%A6%E5%8F%B7&quot; data-gnick=&quot;MOCK%D5%CB%BA%C5&quot; class=&quot;service-content service-group&quot;&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+                   &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+               &lt;script type=&quot;text/javascript&quot;&gt;
+          KISSY.getScript(&quot;//g.alicdn.com//shop/modules/0.2.11/other/customer-service/design/index-min.js&quot;, function() {
+             setTimeout(function() {
+                   CustomerService(&#39;#shop4073&#39;);
+             }, 50);
+          });
+       &lt;/script&gt;
+    &lt;/div&gt;

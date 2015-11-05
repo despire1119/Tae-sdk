@@ -1,0 +1,34 @@
+
+
+<?xml version="1.0" encoding="GBK"?>
+<cssconfig>
+    <allowedSelectors>
+        <selector name="body">
+            <allowedProperty name="background"/>
+            <allowedProperty name="background-color"/>
+            <allowedProperty name="background-image"/>
+            <allowedProperty name="background-repeat"/>
+            <allowedProperty name="background-attachment"/>
+            <allowedProperty name="background-position"/>
+        </selector>
+    </allowedSelectors>
+    <importantPropertyRule>
+        <selector name=".no-border">
+            <allowedProperty name="border-width"/>
+            <allowedProperty name="padding"/>
+        </selector>
+        <selector name=".tb-shop .no-border">
+            <allowedProperty name="border-width"/>
+            <allowedProperty name="padding"/>
+        </selector>
+        <selector name=".no-border .bd">
+            <allowedProperty name="border-width"/>
+            <allowedProperty name="padding"/>
+        </selector>
+        <selector name=".tb-shop .no-border .bd">
+            <allowedProperty name="border-width"/>
+            <allowedProperty name="padding"/>
+        </selector>
+
+    </importantPropertyRule>
+</cssconfig>

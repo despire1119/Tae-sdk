@@ -1,0 +1,111 @@
+<c:set var="formType" value="${parameter.formType}" />
+<c:set var="parameterType" value="${parameter.ptype}" />
+<%--
+	注意：formType和parameterType均为枚举类型，因此比较值与枚举项名称保持一致。
+ --%>
+<%--
+<jsp:include page="/WEB-INF/jsp/render/module/${formType}-control.jspf" />
+ --%>
+<c:set var="desc" value="${parameter.description}" />
+
+<div class="control-group">
+	<label class="control-label" for=""> ${parameter.label} </label>
+	<div class="control">
+		<c:choose>
+			<c:when test="${formType =='TEXT'}">
+				<jsp:directive.include
+					file="/WEB-INF/jsp/render/module/text-control.jspf" />
+			</c:when>
+			<c:when test="${formType =='TEXTAREA'}">
+				<jsp:directive.include
+					file="/WEB-INF/jsp/render/module/textarea-control.jspf" />
+			</c:when>
+			<c:when test="${formType =='CHECKBOX'}">
+				<jsp:directive.include
+					file="/WEB-INF/jsp/render/module/checkbox-control.jspf" />
+			</c:when>
+			<c:when test="${formType =='RANGE'}">
+				<jsp:directive.include
+					file="/WEB-INF/jsp/render/module/range-control.jspf" />
+			</c:when>
+			<c:when test="${formType =='SELECT'}">
+				<jsp:directive.include
+					file="/WEB-INF/jsp/render/module/select-control.jspf" />
+			</c:when>
+			<c:when test="${formType =='ITEM_FORM'}">
+				<c:choose>
+					<c:when test="${parameterType == 'ITEM'}">
+						<jsp:directive.include file="/WEB-INF/jsp/render/module/itemForm-control.jspf" />
+					</c:when>
+					<c:otherwise>
+						<span style="color:red">宝贝选择器参数[${parameter.name}] ptype属性必须为"item"</span>				
+					</c:otherwise>
+				</c:choose>				
+			</c:when>
+			<c:when test="${formType =='CONTENT_FORM'}">
+				<c:choose>
+					<c:when test="${parameterType == 'CONTENT'}">
+						<jsp:directive.include file="/WEB-INF/jsp/render/module/contentForm-control.jspf" />
+					</c:when>
+					<c:otherwise>
+						<span style="color:red">内容选择器参数[${parameter.name}] ptype属性必须为"content"</span>				
+					</c:otherwise>
+				</c:choose>				
+			</c:when>
+			<c:when test="${formType =='CONTENT_CLASS_FORM'}">
+				<c:choose>
+					<c:when test="${parameterType == 'CONTENTCLASS'}">
+						<jsp:directive.include file="/WEB-INF/jsp/render/module/contentClassForm-control.jspf" />
+					</c:when>
+					<c:otherwise>
+						<span style="color:red">内容分类选择器参数[${parameter.name}] ptype属性必须为"contentClass"</span>				
+					</c:otherwise>
+				</c:choose>				
+			</c:when>
+			<c:when test="${formType =='CATEGORY_FORM'}">
+				<c:choose>
+					<c:when test="${parameterType == 'CATEGORY'}">
+						<jsp:directive.include file="/WEB-INF/jsp/render/module/categoryForm-control.jspf" />
+					</c:when>
+					<c:otherwise>
+						<span style="color:red">类目选择器参数[${parameter.name}] ptype属性必须为"category"</span>				
+					</c:otherwise>
+				</c:choose>
+			</c:when>
+            <c:when test="${formType =='ITEM_RATE_FORM'}">
+                <c:choose>
+                    <c:when test="${parameterType == 'ITEMRATE'}">
+                        <jsp:directive.include file="/WEB-INF/jsp/render/module/itemRateForm-control.jspf" />
+                    </c:when>
+                    <c:otherwise>
+                        <span style="color:red">宝贝评论选择器参数[${parameter.name}] ptype属性必须为"itemRate"</span>
+                    </c:otherwise>
+                </c:choose>
+            </c:when>
+            <c:when test="${formType =='COUPON_FORM'}">
+                <c:choose>
+                    <c:when test="${parameterType == 'COUPON'}">
+                        <jsp:directive.include file="/WEB-INF/jsp/render/module/couponForm-control.jspf" />
+                    </c:when>
+                    <c:otherwise>
+                        <span style="color:red">优惠券选择器参数[${parameter.name}] ptype属性必须为"coupon"</span>
+                    </c:otherwise>
+                </c:choose>
+            </c:when>
+		</c:choose>
+		<span class="tips"> <c:choose>
+				<c:when test="${fn:length(desc) > 16}">
+				${fn:substring(desc,0,16)}
+				<i class="intro J_popTipTrigger">[?]</i>
+					<div class="allTips">
+						<div class="allPoptips J_allTips">${desc}</div>
+					</div>
+				</c:when>
+				<c:otherwise>
+				${desc}
+			</c:otherwise>
+			</c:choose>
+		</span>
+	</div>
+</div>
+

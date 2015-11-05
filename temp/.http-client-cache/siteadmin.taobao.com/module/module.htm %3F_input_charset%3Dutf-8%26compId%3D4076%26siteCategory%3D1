@@ -1,0 +1,23 @@
+
+
+&lt;!-- bulletinUrl :   --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-bulletin&quot;&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    &lt;div class=&quot;skin-box-hd&quot;&gt;
+        &lt;h3&gt;
+            &lt;span&gt;店铺公告&lt;/span&gt;
+        &lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;skin-box-bd outer&quot;&gt;
+        &lt;div class=&quot;inner&quot;&gt;
+            &lt;div class=&quot;content&quot;&gt;
+                &lt;marquee style=&quot;position:relative;&quot;
+                         scrollamount=&quot;1&quot;
+                         scrolldelay=&quot;85&quot; direction=&quot;up&quot; behavior=&quot;scroll&quot; height=&quot;110&quot;&gt;
+                                            暂无公告
+                                    &lt;/marquee&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;/div&gt;

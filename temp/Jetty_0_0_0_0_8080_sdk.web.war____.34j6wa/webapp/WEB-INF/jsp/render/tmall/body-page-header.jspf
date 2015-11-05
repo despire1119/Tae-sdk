@@ -1,0 +1,99 @@
+<%-- 天猫店铺 body#header 部分内容 --%>
+<div id="header">
+    <!-- global logo -->
+    <div id="headerCon">
+        <h1 id="mallLogo">
+            <span class="mlogo">
+                <a href="http://www.tmall.com/" title="天猫Tmall.com">
+                    <s></s>天猫Tmall.com
+                </a>
+            </span>
+        </h1>
+        <div id="tmallSearch">
+            <form action="http://list.tmall.com/search_product.htm" class="mallSearch-form" name="searchTop">
+                <fieldset>
+                    <legend>天猫搜索</legend>
+                    <div class="mallSearch-input clearfix">
+                        <label for="mq">搜索 天猫 商品/店铺</label>
+                        <input accesskey="s" autocomplete="off" autocomplete="off" id="mq" name="q" type="text" value="" x-webkit-grammar="builtin:search" x-webkit-speech=""/>
+                        <button class="currShopBtn" id="J_CurrShopBtn" type="button">搜本店<s></s>
+                        </button>
+                        <button id="J_SearchBtn" type="submit">搜天猫<s></s>
+                        </button>
+                        <input id="J_Type" name="type" type="hidden" value="p"/>
+                        <input id="J_MallSearchStyle" name="style" type="hidden" value="">
+                        <input id="J_Cat" name="cat" type="hidden" value="all"/>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="headerNav">
+        <div class="headerNav-con">
+            <div class="headerCrumb" id="J_HeaderCrumb"></div>
+            <ul class="headerPromise">
+                <li class="hPicon1"><a target="_blank" title="正品行货" href=" http://www.tmall.com/go/chn/mall2010/promise.php#ZPBZ">正品行货</a></li>
+                <li class="hPicon2"><a target="_blank" title="提供发票" href=" http://www.tmall.com/go/chn/mall2010/promise.php#TGFP">提供发票</a></li>
+                <li class="hPicon3"><a target="_blank" title="七天退换" href=" http://www.tmall.com/go/chn/mall2010/promise.php#QTTH">七天退换</a></li>
+            </ul>
+            <div id="mall-shop">
+                <div id="shop-info">
+                    <div class="main-info">
+                        <h3 class="shop-title">
+                            <a href="http://wpdrbgtl.daily.tmall.net/" target="_blank">${shop.ownerNick}</a>
+                        </h3>
+                        <p class="shop-status">
+                            <a class="i" href="http://www.tmall.com/go/chn/mall2010/promise.php#PPZX" target="_blank">品牌直销</a>
+                            <span class="J_WangWang" data-display="inline" data-encode="true" data-nick="tmall133" data-tnick=""></span>
+                        </p>
+                        <p class="shop-grade">
+                            <a href="http://rate.daily.taobao.net/user-rate-b2c483167e1cafa900e891ffc0661c50.htm" target="_blank">
+                                <span class="c-value-no c-value-d" title="目前无人打分"></span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="extra-info">
+                        <div class="bd">
+                            <div class="shop-rate">
+                                <div>
+                                    该店铺尚未收到评价 
+                                </div>
+                            </div>
+                            <div class="extend">
+                                <ul>
+                                    <li class="shopkeeper">
+                                        <label>掌 柜：</label>
+                                        <a href="#">${user.nick}</a>
+                                    </li>
+                                    <li>
+                                        <label>客 服：</label>
+                                        <span class="J_WangWang" data-display="inline" data-encode="true" data-nick="${user.nick}" data-tnick="">${user.nick}</span>
+                                    </li>
+                                    <li class="locus">
+                                        <label>
+                                            所 在 地：
+                                        </label>
+                                        ${user.province}, ${user.city}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="other">
+                                <a class="J_PopupTrigger collection xshop_sc J_TDialogTrigger J_TokenSign" data-closebtn="true" data-height="260" data-width="440" href="#" style="width: 84px;">
+                                    <span>
+                                        收藏本店铺 
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="opt">
+                            <b id="J_InfoTrigger">展开/收起</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    TMall.Head.init()
+</script>

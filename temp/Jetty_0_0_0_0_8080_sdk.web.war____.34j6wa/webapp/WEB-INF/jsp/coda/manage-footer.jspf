@@ -1,0 +1,66 @@
+<c:if test="${fn:contains(pageContext.request.requestURL, 'tae-sdk.taobao.com')}">
+    <c:choose>
+        <c:when test="${fn:contains(requestURI, '/bugs/bug')}">
+            <jsp:directive.include file="/WEB-INF/jsp/bugs/bug-help.jspf"/>
+        </c:when>
+        <c:otherwise>
+            <c:forEach var="entry" items="${pageContext.request.attributeNames}">
+                <c:if test='${entry eq "isLogin"}'>
+                    <c:set var="login" value="${entry}" />
+                </c:if>
+            </c:forEach>
+            <c:if test='${login eq "isLogin"}'>
+                <jsp:directive.include file="/WEB-INF/jsp/bugs/bug-help.jspf"/>
+            </c:if>
+        </c:otherwise>
+    </c:choose>
+</c:if>
+
+<footer class="footer">
+<div class="wraper">
+	<article class="guide">
+	<dl>
+		<dt>
+			<a href="http://bbs.zx.taobao.com/thread.php?fid=12">玩转市场</a>
+		</dt>
+		<dd>
+			<a href="http://bbs.zx.taobao.com/thread.php?fid=12">如何挑选模板</a>
+		</dd>
+		<dd>
+			<a href="http://bbs.zx.taobao.com/thread.php?fid=12">如何付款</a>
+		</dd>
+		<dd>
+			<a href="http://bbs.zx.taobao.com/thread.php?fid=12">如何使用模板</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<a href="http://bbs.zx.taobao.com/thread.php?fid=13">认证设计师</a>
+		</dt>
+		<dd>
+			<a href="http://bbs.zx.taobao.com/thread.php?fid=13">如何申请入驻</a>
+		</dd>
+		<dd>
+			<a href="http://bbs.zx.taobao.com/thread.php?fid=13">如何获得分成</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<a href="http://bbs.zx.taobao.com/index.php?m=bbs&amp;cateid=4">开发者</a>
+		</dt>
+		<dd>
+			<a href="http://bbs.zx.taobao.com/index.php?m=bbs&amp;cateid=4">如何设计开发模板</a>
+		</dd>
+		<dd>
+			<a href="http://bbs.zx.taobao.com/index.php?m=bbs&amp;cateid=4">如何调试模板</a>
+		</dd>
+		<dd>
+			<a href="http://bbs.zx.taobao.com/index.php?m=bbs&amp;cateid=4">如何上传模板</a>
+		</dd>
+	</dl>
+	</article>
+	<p class="copyright">2010-2012 Taobao.com - Terms &amp;Conditions</p>
+</div>
+</footer>
+</body>
+</html>

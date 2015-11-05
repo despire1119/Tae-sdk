@@ -1,0 +1,11 @@
+
+
+&lt;div class=&quot;os-box of-leftpic&quot;&gt;
+        &lt;a href=&quot;&quot; class=&quot;ws-wrap&quot;&gt;
+            &lt;img src=&quot;http://gtms01.alicdn.com/tps/i1/T12PtqFpXeXXcQIkwy-190-150.jpg&quot; alt=&quot;&quot; data-ng=&quot;{{moduleData[&#39;5647909782&#39;].pic}}&quot;&gt;
+            &lt;em data-ng=&quot;{{moduleData[&#39;5647909782&#39;].title}}&quot;&gt;此处请输入标题&lt;/em&gt;
+            &lt;span data-ng=&quot;{{moduleData[&#39;5647909782&#39;].content}}&quot;&gt;
+                此处请输入内容
+            &lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;

@@ -1,0 +1,40 @@
+<div id="vl-sidebar">
+    <div class="wrapper">
+        <div class="vl-box-hd">
+            <h2>“≥√Êπ‹¿Ì</h2>
+            <a href="#" class="action J_TGoldData" data-gold-type="click/type" data-gold-url="/tbwmdd.3.4" data-gold-data="{&quot;siteCategoryId&quot;:60,&quot;userId&quot;:435685463,&quot;instId&quot;:199733927,&quot;pageId&quot;:557108276}">+</a>
+        </div>
+        <div class="vl-box-bd" id="J_boxBdWrapper" style="height: 329px;">
+            <div class="vl-f-container J_firstContainer" aria-multiselectable="true" role="tablist">
+                <c:forEach items="${typedPagesListMap}" var="typedPagesListEntry">
+                    <c:set var="pageType" value="${typedPagesListEntry.key}" />
+                    <c:set var="pagesList" value="${typedPagesListEntry.value}" />
+                    <div class="vl-f-trigger J_firstTrigger" id="ks-accordion-tab68" role="tab" aria-expanded="true" aria-selected="true" aria-controls="ks-accordion-tab-panel65" tabindex="0">
+                        <a href="#" oritabindex="0" tabindex="0">
+                            <i></i><span>${pageType.fileName}</span>
+                        </a>
+                    </div>
+                    <ul class="vl-f-content J_firstContent" id="ks-accordion-tab-panel65" role="tabpanel" aria-hidden="false" aria-labelledby="ks-accordion-tab68">
+                        <li class="vl-s-container vl-s-container-active">
+                            <c:forEach items="${pagesList}" var="page" >
+                                <div class="vl-s-trigger">
+                                    <c:set var="isCurrentPage" value="${pageFileName eq page.file}" />
+                                    <a href="/design/page/${isLayout ? 'layout' : 'debug'}/${templateDirectoryName}/${page.file}/"
+                                            <c:if test="${isCurrentPage}">
+                                                class="active"
+                                            </c:if>
+                                            ><span>${page.name}</span></a>
+                                </div>
+                            </c:forEach>
+                        </li>
+                    </ul>
+                </c:forEach>
+            </div>
+        </div>
+    </div>
+    <%--<div class="switch" style="display: block;">--%>
+        <%--<a href="http://siteadmin.taobao.com/design.htm?sid=199733927&amp;pageId=557108276#">--%>
+            <%--<i></i>--%>
+        <%--</a>--%>
+    <%--</div>--%>
+</div>

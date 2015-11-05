@@ -1,0 +1,35 @@
+<head>
+	<meta charset="gbk" />
+	<meta name="description" content="淘宝, 店铺, 旺铺, 店铺名"/>
+	<meta name="keywords" content="欢迎前来淘宝网某某旺铺，选购某某商品,想了解更多某某商品，请进入某某旺铺，众多商品任你选购" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7"/>
+	<jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+	<title>${title}</title>
+	<c:if test="${systemModulesCombinedJsURL ne null}">
+		<c:set var="modsJsComboUrls" value="http://${systemModulesCombinedJsURL}" />
+	</c:if>
+	<script>
+		<c:set var="assetsRootURL" value="http://${assetsHost}" />
+		<c:set var="assetsRootCombinedURLPrefix" value="http://${assetsHost}/??" />
+		<c:set var="modulesJsComboURIs" value="${fn:substringAfter(modsJsComboUrls,assetsRootCombinedURLPrefix)}" />
+        window.g_hb_monitor_st = +new Date();
+        // 全局配置， appId(旺旺点灯，前端性能监控都需要) ， assetsHost告诉前端，当前的生产环境是什么，日常还是预发线上
+        window.g_config={appId:2,assetsHost:"${assetsRootURL}"};
+        // 和店铺相关的信息都统一放在_shop_config全局对象里面
+        window.shop_config={};
+        // 模块js combo url
+        window.shop_config.modsJsComboUrls = '${modulesJsComboURIs}';
+    </script>
+
+	<link rel="shortcut icon" href="http://www.taobao.com/favicon.ico" type="image/x-icon" />
+	<jsp:directive.include file="/WEB-INF/jsp/prelude/render-css.jspf" />
+
+    <script src="http://${assetsHost}/??s/kissy/1.3.0/kissy-min.js,p/global/1.0/global-min.js?t=${date}" charset="utf-8"></script>
+    <script type="text/javascript" src="http://${assetsHost}/apps/taesite/platinum/scripts/wangpu/init-min.js?t=${date}"></script>
+
+    <%--
+    不再需要加载
+	<script type="text/javascript" src="http://${assetsHost}/p/snsdk/core.js"></script>
+	--%>
+
+</head>

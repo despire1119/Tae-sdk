@@ -1,0 +1,24 @@
+<textarea id="J_AddLayoutHTML" class="tb-hidden">
+    <%-- TODO：移除一下硬编码的方式 --%>
+    <div class="layout-list ${"3" eq siteTemplate.applySites ? "layout-list-990":""}">
+        <span class="extra">单位：像素</span>
+        <c:set var="isBasicTemplate" value="${'BASIC' eq siteTemplate.templateType}" />
+        <c:if test="${not isBasicTemplate}">
+            <div data-modules="main" data-type="grid-m0">
+               <a data-prototypeid="231" data-componentid="231" class="l-grid-m0" href="#"></a>
+            </div>
+        </c:if>
+        <div data-modules="main,sub" data-type="grid-s5m0,grid-m0s5">
+            <a data-prototypeid="1" data-componentid="1" class="l-grid-s5m0" href="#"></a>
+            <a data-prototypeid="228" data-componentid="228" class="l-grid-m0s5" href="#"></a>
+        </div>
+        <c:if test="${not isBasicTemplate}">
+            <div data-modules="main,sub,extra"
+                data-type="grid-s5m0e5,grid-s5m0e5,grid-s5e5m0">
+                <a data-prototypeid="20" data-componentid="20" class="l-grid-s5m0e5" href="#"></a>
+                <a data-prototypeid="229" data-componentid="229" class="l-grid-m0s5e5" href="#"></a>
+                <a data-prototypeid="230" data-componentid="230" class="l-grid-s5e5m0" href="#"></a>
+            </div>
+        </c:if>
+    </div>
+</textarea>

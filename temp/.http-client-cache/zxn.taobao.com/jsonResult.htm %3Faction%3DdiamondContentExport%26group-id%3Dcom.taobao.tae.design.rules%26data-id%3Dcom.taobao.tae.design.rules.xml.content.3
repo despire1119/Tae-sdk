@@ -1,0 +1,937 @@
+
+
+<?xml version="1.0" encoding="GBK"?>
+<rule productId="3" name="商城店铺0725" desc="商城店铺装修规则" publishTimeMills="1342859986551"
+      xsi:schemaLocation="http://design.taobao.com/design/rules/schema/design-rules-1.0.xsd"
+      xmlns:ns2="http://design.taobao.com/tae-design-rules" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <siteInfo>
+        <maxPageNum>60</maxPageNum>
+        <homePageId>1</homePageId>
+        <background>true</background>
+        <cms>true</cms>
+        <css>true</css>
+        <footer>true</footer>
+        <headerModule>true</headerModule>
+        <logo>true</logo>
+        <showside>true</showside>
+        <mulitLayout>true</mulitLayout>
+        <scriptcode><![CDATA[
+                ]]></scriptcode>
+        <permissions>
+            <permission permId="116"
+                        scope="edit" desc="检查用户是否有实体店页面的使用权限">
+                <scriptcode><![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                  def execute(context) {
+                        def result = new ValidateResult()
+                        def isLifeUser = false
+	                    try{
+	                           def user = context.userDO
+                               def rs = uicDataServiceClient.getData(user.userId,'bendi-lifeplace-userdata')
+		                       if(rs?.isSuccess()){
+		                          def model = rs.getModule()
+		                          if(model){
+		                              isLifeUser = (model.toLong() & 2) ==2
+		                          }
+		                          log.error('isLifeUser '+isLifeUser)
+		                       }
+	                    }catch(e){
+	                        result.setSuccess(false)
+	                        result.errorMessage = '系统出错'
+	                        log.error('validate permission 116 in rule 2 errors',e)
+	                    }
+	                    
+	                    if(!isLifeUser){
+	                        result.errorMessage = '没有实体证页面权限'
+	                        result.setSuccess(false)
+	                    }
+                        result
+                }
+                ]]></scriptcode>
+            </permission>
+            <permission permId="4007" scope="edit" desc="检查是否是超级用户">
+                <scriptcode>
+                     <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                                                         import com.taobao.shopservice.core.client.util.ShopFeatureConstant
+                                                         import groovy.json.JsonSlurper
+                                 def execute(context) {
+                                		def result = new ValidateResult();
+                                		def success = false
+                                		try{
+                                		  def shop = context.shopDO
+                                		  def isFull = shop?.getFeature(ShopFeatureConstant.IS_FULL_SELF_USER)
+                                		  if(isFull == 'true'){
+                                		     success = true
+                                		  }else{
+                                		        def map = parseJsonToMap(isFull)
+                                                if(map.fullSelf == 'true'){
+                                                    success = true
+                                                }
+                                		  }
+                                		}catch(e){
+                                		  log.error('validate is Full self user errors',e)
+                                		}
+                                		result.setSuccess(success)
+                                		return result
+                                	}
+                 def parseJsonToMap(jsonStr){
+                    def paramsMap = [:]
+                    if(!jsonStr)return paramsMap
+                    JsonSlurper json = new JsonSlurper()
+                    try{
+                        paramsMap = json.parseText(jsonStr)
+                    }catch(e){
+                        return paramsMap
+                    }
+                    paramsMap
+                }]]>
+                </scriptcode>
+            </permission>
+            <permission permId="4111"
+                        scope="edit" desc="店铺实验室白名单">
+                <scriptcode><![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                                     import com.taobao.tae.common.context.Env
+                     def execute(context) {
+                            def result = new ValidateResult()
+                            try{
+                                if(!(env in [Env.predeploy,Env.online]))return result
+                                def superUser = []
+                                superUser << '商家测试帐号28'
+                                superUser << '商家测试帐号27'
+                                superUser << '商家测试帐号14'
+                                superUser << '商家测试帐号64'
+                                superUser << 'othermix旗舰店'
+                                superUser << '伊米妮旗舰店'
+                                superUser << 'GXG官方旗舰店'
+                                superUser << '博洋家纺官方旗舰店'
+                                superUser << '橡菲旗舰店'
+                                superUser << '纳纹服饰旗舰店'
+                                superUser << '秋水伊人官方旗舰店'
+                                superUser << '妖精的口袋旗舰店'
+                                superUser << '我的百分之一旗舰店'
+                                superUser << 'osa品牌服饰旗舰店'
+                                superUser << '茵曼旗舰店'
+                                superUser << '歌莉娅官方旗舰店'
+                                superUser << 't400旗舰店'
+                                superUser << '七匹狼官方旗舰店'
+                                superUser << '零号男旗舰店'
+                                superUser << '裂帛服饰旗舰店'
+                                superUser << '阿芙四季堂专卖店'
+                                superUser << '东方季道官方旗舰店'
+                                superUser << '韩都衣舍旗舰店'
+                                superUser << '艺福堂铭茶旗舰店'
+                                superUser << 'artka官方旗舰店'
+                                superUser << '刹那旗舰店'
+                                superUser << 'dmcin女装旗舰店'
+                                superUser << '多喜爱旗舰店'
+                                superUser << '美的美凡专卖店'
+                                superUser << '索菲欧引领美专卖店'
+                                superUser << '三草两木旗舰店'
+                                superUser << 'MRING官方旗舰店'
+                                superUser << '牛尔官方旗舰店'
+                                superUser << '长生鸟fenix旗舰店'
+                                superUser << '衣香丽影官方旗舰店'
+                                superUser << '娇时丝芙宝专卖店'
+                                superUser << 'ELLE香包官方旗舰店'
+                                superUser << '御泥坊旗舰店'
+                                superUser << '凯迪丝服饰专营'
+                                superUser << 'lindacollection店'
+                                
+                                def user = context.userDO
+                                if(!(user?.nick in superUser)){
+                                        result.setSuccess(false)
+                                        result.setErrorMessage("超级用户权限校验失败，不是超级用户")
+                                 }
+                            }catch(e){
+                               result.setSuccess(false)
+                               result.errorMessage = '系统出错'
+                               log.error('validate permission 4075 in rule 2 errors',e)
+                            }
+                            result
+                }
+                ]]></scriptcode>
+            </permission>
+        </permissions>
+        <localModulePrefix>tshop-um-</localModulePrefix>
+        <systemModulePrefix>tshop-pbsm-</systemModulePrefix>
+        <tbmlFilterConfig>
+            <configFileName>tbml-filter-tae-newsdk.xml</configFileName>
+            <configId>newsdk</configId>
+            <version>ss</version>
+        </tbmlFilterConfig>
+    </siteInfo>
+    <pageRule>
+        <pages>
+            <page pageId="1" name="首页">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>false</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/index.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>1</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4024" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,550,790,750,990,950" designable="true"/>
+                    <module moduleId="4200" name="天猫(190)掌柜档案" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190"/>
+                    <module moduleId="4067" name="友情链接" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,990,950" designable="true"/>
+                    <module moduleId="4010" name="默认宝贝分类" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="5842" name="个性化宝贝分类" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190"/>
+                    <module moduleId="4023" name="宝贝排行榜" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="4004" name="宝贝推荐" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4031" name="店内搜索" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4200" name="天猫(190)掌柜档案" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"/>
+                    <module moduleId="5003" name="自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950"/>
+                    <module moduleId="4007" name="完全自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950" designable="true">
+                        <permissions>
+                            <permission permId="4007"/>
+                        </permissions>
+                    </module>
+                    <module moduleId="4073" name="客服中心" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="true"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4068" name="淘金币" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"></module>
+                    <module moduleId="4069" name="无线二维码" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="false" supportWidth="190" designable="true"></module>
+                    <module moduleId="4066" name="充值中心（淘宝客）" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4071" name="量子统计图表" editable="false"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4111" name="店铺实验室" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190,590,790,990,550,750,950">
+                    </module>
+                    <module moduleId="4078" name="公益广告" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="10"
+                            renamable="true" supportWidth="190,590,790,990,550,750,950" designable="true"></module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="1" name="grid-s5m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="20" name="grid-s5m0e5">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="228" name="grid-m0s5">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="229" name="grid-m0s5e5">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="230" name="grid-s5e5m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="231" name="grid-m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="3" name="店内搜索页">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>2</maxLayout>
+                    <maxModule>15</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/search.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <type>3</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4200" name="天猫(190)掌柜档案" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"/>
+                    <module moduleId="4010" name="宝贝分类" editable="true" movable="true"
+                            deleteable="true" addable="true" required="false" maxAppend="1"
+                            renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="4023" name="宝贝排行榜" editable="true"
+                            movable="true" deleteable="true" addable="true" required="false"
+                            maxAppend="1" renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="4011" name="搜索列表" editable="true" movable="false"
+                            deleteable="false" addable="true" required="true" maxAppend="1"
+                            renamable="false" supportWidth="790,990,950,750" designable="true"/>
+
+                    <module moduleId="4024" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4067" name="友情链接" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,990,950" designable="true"/>
+                    <module moduleId="5842" name="个性化宝贝分类" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190"/>
+                    <module moduleId="4004" name="宝贝推荐" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4031" name="店内搜索" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="5003" name="自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950"/>
+                    <module moduleId="4007" name="完全自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950" designable="true">
+                        <permissions>
+                            <permission permId="4007"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="231" name="grid-m0">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="1" name="grid-s5m0">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+
+
+            <page pageId="5" name="默认宝贝分类页">
+                <pageInfo>
+                    <maxAppend>15</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>15</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/category.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>5</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4011" name="搜索列表" editable="true" movable="true"
+                            deleteable="false" addable="true" required="true" maxAppend="1"
+                            renamable="false" supportWidth="790,990,950,750" designable="true"/>
+                    <module moduleId="4024" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4067" name="友情链接" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,990,950" designable="true"/>
+                    <module moduleId="4010" name="宝贝分类" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4023" name="宝贝排行榜" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="4004" name="宝贝推荐" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950,790,590,990" designable="true"/>
+                    <module moduleId="4031" name="店内搜索" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="5003" name="自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950"/>
+                    <module moduleId="5842" name="个性化宝贝分类" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190"/>
+                    <module moduleId="4073" name="客服中心" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="true"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4068" name="淘金币" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"></module>
+                    <module moduleId="4069" name="无线二维码" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="false" supportWidth="190" designable="true"></module>
+                    <module moduleId="4066" name="充值中心（淘宝客）" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4071" name="量子统计图表" editable="false"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4007" name="完全自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950" designable="true">
+                        <permissions>
+                            <permission permId="4007"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="1" name="grid-s5m0">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="20" name="grid-s5m0e5">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="228" name="grid-m0s5">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="229" name="grid-m0s5e5">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="230" name="grid-s5e5m0">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="231" name="grid-m0">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+
+            <page pageId="15" name="自定义宝贝分类页">
+                <pageInfo>
+                    <maxAppend>15</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>15</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <type>15</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4024" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4067" name="友情链接" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,990,950" designable="true"/>
+                    <module moduleId="4010" name="宝贝分类" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4023" name="宝贝排行榜" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="4004" name="宝贝推荐" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4011" name="搜索列表" editable="true" movable="true"
+                            deleteable="false" addable="true" required="true" maxAppend="1"
+                            renamable="false" supportWidth="790,990,750,950" designable="true"/>
+                    <module moduleId="4031" name="店内搜索" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="5003" name="自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950"/>
+                    <module moduleId="5842" name="个性化宝贝分类" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190"/>
+                    <module moduleId="4073" name="客服中心" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="true"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4068" name="淘金币" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"></module>
+                    <module moduleId="4069" name="无线二维码" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="false" supportWidth="190" designable="true"></module>
+                    <module moduleId="4066" name="充值中心（淘宝客）" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4071" name="量子统计图表" editable="false"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4007" name="完全自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950" designable="true">
+                        <permissions>
+                            <permission permId="4007"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="1" name="grid-s5m0">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="20" name="grid-s5m0e5">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="228" name="grid-m0s5">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="229" name="grid-m0s5e5">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="230" name="grid-s5e5m0">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="231" name="grid-m0">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+
+
+            <page pageId="2" name="默认宝贝详情页">
+                <pageInfo>
+                    <maxAppend>25</maxAppend>
+                    <maxLayout>1</maxLayout>
+                    <maxModule>15</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/detail.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>2</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4200" name="天猫(190)掌柜档案" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"/>
+                    <module moduleId="4024" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4067" name="友情链接" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,990,950" designable="true"/>
+                    <module moduleId="4010" name="宝贝分类" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4023" name="宝贝排行榜" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="4004" name="宝贝推荐" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,790,750" designable="true"/>
+                    <module moduleId="4018" name="关联推荐" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,790,750" designable="true"/>
+                    <module moduleId="4031" name="店内搜索" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="5003" name="自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,790,750"/>
+                    <module moduleId="5842" name="个性化宝贝分类" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190"/>
+                    <module moduleId="4073" name="客服中心" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="true"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4068" name="淘金币" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"></module>
+                    <module moduleId="4069" name="无线二维码" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="false" supportWidth="190" designable="true"></module>
+                    <module moduleId="4066" name="充值中心（淘宝客）" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4071" name="量子统计图表" editable="false"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="3" name="taobao.layout.grid-s5m0-fordetail">
+                        <layoutInfo>
+                            <maxModule>15</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="1" name="grid-s5m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+
+            <page pageId="4" name="自定义页">
+                <pageInfo>
+                    <maxAppend>50</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <maxDesign>50</maxDesign>
+                    <type>4</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4024" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4067" name="友情链接" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,990,950" designable="true"/>
+                    <module moduleId="4010" name="宝贝分类" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4023" name="宝贝排行榜" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="4004" name="宝贝推荐" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4031" name="店内搜索" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="5003" name="自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950"/>
+                    <module moduleId="5842" name="个性化宝贝分类" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190"/>
+                    <module moduleId="4073" name="客服中心" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="true"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4068" name="淘金币" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"></module>
+                    <module moduleId="4069" name="无线二维码" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="false" supportWidth="190" designable="true"></module>
+                    <module moduleId="4066" name="充值中心（淘宝客）" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4071" name="量子统计图表" editable="false"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4111" name="店铺实验室" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190,590,790,990,550,750,950">
+                    </module>
+                    <module moduleId="4078" name="公益广告" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="10"
+                            renamable="true" supportWidth="190,590,790,990,550,750,950" designable="true"></module>
+                    <module moduleId="4007" name="完全自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,550,750,950" designable="true">
+                        <permissions>
+                            <permission permId="4007"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="1" name="grid-s5m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="20" name="grid-s5m0e5">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="228" name="grid-m0s5">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="229" name="grid-m0s5e5">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="230" name="grid-s5e5m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                    <layout layoutId="231" name="grid-m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="10" name="店铺动态">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>1</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>false</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <type>10</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4039" name="店铺动态" editable="false" movable="false" deleteable="false"
+                            required="true" maxAppend="1" renamable="false" addable="false" supportWidth="990,950"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="231" name="grid-m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="40" name="权益中心">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>1</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>false</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <type>40</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4203" name="会员规则" editable="false" movable="false" deleteable="false"
+                            required="true" maxAppend="1" renamable="false" supportWidth="990,950"/>
+                    <module moduleId="4204" name="会员商品" editable="true" movable="false" deleteable="true"
+                            required="false" maxAppend="1" renamable="false" supportWidth="990,950"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="231" name="grid-m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="115" name="同店转让页">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>1</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>false</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <type>115</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="4024" name="图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="4070" name="同店宝贝转让" editable="true"
+                            movable="false" deleteable="false" required="true" maxAppend="1"
+                            renamable="false" supportWidth="790,750"/>
+                    <module moduleId="4010" name="宝贝分类" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4023" name="宝贝排行榜" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190" designable="true"/>
+                    <module moduleId="4004" name="宝贝推荐" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990" designable="true"/>
+                    <module moduleId="4031" name="店内搜索" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,590,790,990,550,750,950" designable="true"/>
+                    <module moduleId="5003" name="自定义内容区" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="false" supportWidth="190,590,790,990,750,550,950"/>
+                    <module moduleId="5842" name="个性化宝贝分类" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="40"
+                            renamable="true" supportWidth="190"/>
+                    <module moduleId="4073" name="客服中心" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="true"
+                            supportWidth="190" designable="true"/>
+                    <module moduleId="4068" name="淘金币" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190"></module>
+                    <module moduleId="4069" name="无线二维码" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="false" supportWidth="190" designable="true"></module>
+                    <module moduleId="4066" name="充值中心（淘宝客）" editable="true"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                    <module moduleId="4071" name="量子统计图表" editable="false"
+                            movable="true" deleteable="true" required="false" maxAppend="1"
+                            renamable="true" supportWidth="190" designable="true"></module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout layoutId="1" name="grid-s5m0">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+        </pages>
+    </pageRule>
+    <headRule>
+        <headInfo>
+            <maxLayout>1</maxLayout>
+            <maxModule>2</maxModule>
+            <moduleAddable>true</moduleAddable>
+        </headInfo>
+        <supportedModules>
+            <module moduleId="5001" name="店铺招牌" editable="true" movable="true"
+                    deleteable="true" required="false" maxAppend="1" renamable="false"
+                    supportWidth="990,950" designable="true"/>
+            <module moduleId="5002" name="店铺导航" editable="true" movable="true"
+                    deleteable="false" required="false" maxAppend="1" renamable="false"
+                    supportWidth="990,950" designable="true"/>
+            <module moduleId="4007" name="完全自定义内容区" editable="true" movable="true"
+                    deleteable="true" required="false" maxAppend="10" renamable="true" supportWidth="990,950" designable="true">
+			      <permissions>
+                       <permission permId="4007"/>
+                </permissions>
+			  </module>
+        </supportedModules>
+        <supportedLayouts>
+            <layout layoutId="23" name="页首布局">
+                <layoutInfo>
+                    <maxModule>2</maxModule>
+                    <required>true</required>
+                    <position>1</position>
+                    <supportWidth>990</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </headRule>
+    <footRule>
+        <footInfo>
+            <maxLayout>1</maxLayout>
+            <maxModule>1</maxModule>
+            <editable>false</editable>
+        </footInfo>
+        <supportedModules>
+            <module moduleId="4006" name="店铺尾部" editable="true" movable="false" addable="false"
+                    deleteable="false" required="false" maxAppend="1" renamable="false"
+                    supportWidth="990,950" designable="true"/>
+        </supportedModules>
+        <supportedLayouts>
+            <layout layoutId="33" name="尾部布局">
+                <layoutInfo>
+                    <maxModule>1</maxModule>
+                    <required>true</required>
+                    <position>1</position>
+                    <supportWidth>990</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </footRule>
+</rule>

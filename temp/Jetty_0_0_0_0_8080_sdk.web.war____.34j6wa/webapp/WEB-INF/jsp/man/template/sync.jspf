@@ -1,0 +1,26 @@
+<h3>店铺数据同步</h3>
+<br />
+<div style="background: #FBFBE7;border: 1px dashed #ccc; padding:10px;">
+<p/>
+说明：店铺数据同步是用于SDK模板同步其关联用户的店铺线上的真实数据（比如：宝贝、分类、评论等），将数据同步到SDK本地数据库中，丰富<a href="http://newwiki.zx.taobao.com/index.php?title=%E5%BC%80%E6%94%BE%E6%8E%A5%E5%8F%A3" target="_blank">开放接口</a>的数据！
+<p/>
+注意：店铺数据同步只适用于新旺铺2012（老店铺的店铺数据无法同步）。
+</div>
+
+当前模板关联的用户：<b>${userNick}</b>。如若想修改模板关联用户，<a href="/man/template/form/${template.directoryName}#USER_NICK">请点击！</a>
+<br />
+<br />
+<a href="/man/template/sync/${templateDirectoryName}/system/modules/html/content/" class="btn">同步系统模块</a>
+<br />
+<c:if test="${not isSkinTemplate}">   
+
+<a href="/man/template/sync/${template.directoryName}/shop/categories/" class="btn">同步类目信息</a>
+<br />
+<a href="/man/template/sync/${template.directoryName}/items/" class="btn">同步商品信息</a>
+<br />
+<a href="/man/template/sync/${template.directoryName}/rates/" class="btn">同步评论信息</a>
+<br />
+</c:if>
+<c:if test="${not empty syncOperation}">
+	提示：同步${syncOperation}${success ? '成功' : '失败'}!
+</c:if>

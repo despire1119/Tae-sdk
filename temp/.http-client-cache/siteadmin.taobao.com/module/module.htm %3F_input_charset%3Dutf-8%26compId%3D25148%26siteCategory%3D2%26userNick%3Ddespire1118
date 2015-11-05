@@ -1,0 +1,46 @@
+
+
+&lt;!-- e:$e  isB2CShop: false    showActivity:  false --&gt;
+
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-activity-list&quot; id=&quot;J_TbShopActivityList&quot;&gt;
+&lt;style&gt;
+    .tshop-pbsm-shop-activity-list .skin-box-bd{padding:10px 0;border-width:1px 1px!important;border-style:solid;border-color:#ccc}.tshop-pbsm-shop-activity-list .act-hidden{visibility:hidden}.tshop-pbsm-shop-activity-list .act-baby-switchable{position:relative}.tshop-pbsm-shop-activity-list .scrollable-trigger{display:none}.tshop-pbsm-shop-activity-list .act-next,.tshop-pbsm-shop-activity-list .act-prev{display:block;position:absolute;top:0;left:-15px;width:25px;height:160px;z-index:100000000;background-position:center center;background-repeat:no-repeat}.tshop-pbsm-shop-activity-list .act-prev{background-image:url(//gtd.alicdn.com/tps/i3/TB1XpLYFVXXXXakaXXXUd.cFFXX-25-40.png)}.tshop-pbsm-shop-activity-list .act-prev:hover{background-image:url(//gtd.alicdn.com/tps/i2/TB1LOlQGXXXXXa2XXXXUd.cFFXX-25-40.png)}.tshop-pbsm-shop-activity-list .act-next{left:150px;background-image:url(//gtd.alicdn.com/tps/i1/TB1K0JLGXXXXXaUXXXXUd.cFFXX-25-40.png)}.tshop-pbsm-shop-activity-list .act-next:hover{background-image:url(//gtd.alicdn.com/tps/i1/TB15upIGXXXXXX_XFXXUd.cFFXX-25-40.png)}.tshop-pbsm-shop-activity-list .act-baby-module{width:160px;margin-bottom:25px}.tshop-pbsm-shop-activity-list .act-tiejia-module,.tshop-pbsm-shop-activity-list .act-qingcang-module,.tshop-pbsm-shop-activity-list .act-shiyong-module,.tshop-pbsm-shop-activity-list .act-new-module{height:225px}.tshop-pbsm-shop-activity-list .act-baby-item-outer{width:160px;height:225px;overflow:hidden}.tshop-pbsm-shop-activity-list .act-baby-module-title{width:160px;height:25px;background:#f40;color:#FFF}.tshop-pbsm-shop-activity-list .act-tiejia-module .act-baby-module-title{background:#f40}.tshop-pbsm-shop-activity-list .act-qingcang-module .act-baby-module-title{background:#b11200}.tshop-pbsm-shop-activity-list .act-shiyong-module .act-baby-module-title{background:#7a49c4}.tshop-pbsm-shop-activity-list .act-buyershow-module .act-baby-module-title{background:#00ad8e}.tshop-pbsm-shop-activity-list .act-vote-module .act-baby-module-title{background:#fa5b5b}.tshop-pbsm-shop-activity-list .act-module-name{float:left;margin:3px 0 0 10px}.tshop-pbsm-shop-activity-list .act-baby-num{float:right;display:inline-block;margin:3px 10px 0 0;opacity:.8}.tshop-pbsm-shop-activity-list .act-baby-img{position:relative;width:160px;height:160px;cursor:pointer;display:inline}.tshop-pbsm-shop-activity-list .act-baby-img img{width:100%;height:100%}.tshop-pbsm-shop-activity-list .act-baby-img .act-discount{position:absolute;bottom:0;right:0;*right:3px;*bottom:3px;float:none;display:inline-block;padding:0 2px;background:#f15a12;color:#fff}.tshop-pbsm-shop-activity-list .act-baby-item{position:relative;width:160px;height:210px}.tshop-pbsm-shop-activity-list .act-baby-item a{float:left;display:block;width:160px;text-decoration:none;margin-bottom:10px;overflow:hidden;_zoom:1}.tshop-pbsm-shop-activity-list .act-baby-main{margin-top:2px}.tshop-pbsm-shop-activity-list .act-price-sec{width:160px;position:relative;overflow:hidden}.tshop-pbsm-shop-activity-list .act-price-primary{color:#ff5000;font-weight:800}.tshop-pbsm-shop-activity-list .act-price-del{margin-left:5px;color:#999;text-decoration:line-through}.tshop-pbsm-shop-activity-list .act-remain{position:absolute;right:0;top:0;color:#999}.tshop-pbsm-shop-activity-list .act-discount{float:right;display:inline-block;padding:0 2px;background:#f15a12;color:#fff}.tshop-pbsm-shop-activity-list .act-baby-info{width:160px;height:20px;color:#666;overflow:hidden}.tshop-pbsm-shop-activity-list .act-code-area{padding:15px 15px 10px;width:130px;_zoom:1;background:#dbf9f3;*padding:15px 15px 10px;*width:130px;*_zoom:1;*background:#dbf9f3!important}.tshop-pbsm-shop-activity-list .act-vote-module .act-code-area{background:#ffeeed;*background:#ffeeed}.tshop-pbsm-shop-activity-list .act-code-infor{color:#9c9c9c}.tshop-pbsm-shop-activity-list .act-code-infor em{color:#ff4501}.tshop-pbsm-shop-activity-list .act-code-module .act-baby-info{color:#666;margin-top:5px}.tshop-pbsm-shop-activity-list .act-code-module .act-participants-num{color:#999}.tshop-pbsm-shop-activity-list .act-shop-activity{width:160px;margin-left:14px}.tshop-pbsm-shop-activity-list .act-coupon-area{overflow:hidden;margin-bottom:10px}.tshop-pbsm-shop-activity-list .act-coupon-item{position:relative;width:160px;height:47px;margin-bottom:10px;color:#FFF;background:url(//gtd.alicdn.com/tps/i3/TB1lyYRFVXXXXaBXXXX87HEGpXX-160-47.png) no-repeat 0 0}.tshop-pbsm-shop-activity-list .act-coupon-num{position:absolute;top:3px;left:0;width:60px;height:20px;font-size:18px;text-align:center}.tshop-pbsm-shop-activity-list .tb-rmb{font-size:12px}.tshop-pbsm-shop-activity-list .act-coupon-type{position:absolute;top:25px;width:60px;height:15px;text-align:center}.tshop-pbsm-shop-activity-list .act-coupon-take{position:absolute;top:10px;right:15px;width:68px;height:25px;line-height:25px;text-align:center;background-color:#e0c3ed;color:#a46dbb;text-decoration:none}.tshop-pbsm-shop-activity-list .act-coupon-item-yellow{background-image:url(//gtd.alicdn.com/tps/i2/TB1VfDMFVXXXXbYXpXX87HEGpXX-160-47.png)}.tshop-pbsm-shop-activity-list .act-coupon-item-red{background-image:url(//gtd.alicdn.com/tps/i3/TB1E1kIFVXXXXX1XVXX87HEGpXX-160-47.png)}.tshop-pbsm-shop-activity-list .act-coupon-item-yellow .act-coupon-take{background-color:#f5e3c3;color:#9e6d18}.tshop-pbsm-shop-activity-list .act-coupon-item-red .act-coupon-take{background-color:#f5bdb8;color:#d24034}.tshop-pbsm-shop-activity-list .disable,.tshop-pbsm-shop-activity-list .act-coupon-item-red .disable{color:#fff;background:#666}.tshop-pbsm-shop-activity-list .act-more-btn{display:block;width:160px;padding:7px 0;text-align:center;background:#f6f6f6;color:#666;text-decoration:none}.tshop-pbsm-shop-activity-list .act-more-btn:hover{background:#f0f0f0}.tshop-pbsm-shop-activity-list .ks-switchable-nav{display:none}
+&lt;/style&gt;
+    &lt;!-- isDefault:, title:, showTitle:true  --&gt;
+        &lt;div class=&quot;skin-box-hd&quot;&gt;
+        &lt;h3&gt;
+				&lt;span&gt;
+                                                                        店铺活动
+                                                            &lt;/span&gt;
+        &lt;/h3&gt;
+    &lt;/div&gt;
+        
+&lt;div class=&quot;skin-box-bd&quot;&gt;
+&lt;div class=&quot;act-shop-activity&quot;&gt;
+&lt;!-- 红包优惠券--&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;${tbToken}&quot; name=&quot;tb_token&quot; id=&quot;J_ShopActTokenField&quot;/&gt;
+&lt;div class=&quot;act-coupon-area&quot;&gt;
+            &lt;!-- tjb: --&gt;
+    &lt;/div&gt;
+
+&lt;!--天天特价--&gt;
+    
+&lt;!--免费使用--&gt;
+    
+&lt;!--店铺清仓--&gt;
+    
+&lt;!--新品首发--&gt;
+    &lt;!-- 买家秀--&gt;
+    
+&lt;!-- 投票--&gt;
+    
+&lt;div class=&quot;act-baby-module&quot;&gt;
+    &lt;a href=&quot;//shop71884477.taobao.com/ugo.htm&quot; target=&quot;_blank&quot; class=&quot;act-more-btn&quot;&gt;
+        更多店铺活动
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+

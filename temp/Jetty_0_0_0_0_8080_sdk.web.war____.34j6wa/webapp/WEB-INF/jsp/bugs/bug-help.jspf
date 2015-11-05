@@ -1,0 +1,19 @@
+<div id="feedback_hane" class="top-bugbtn-container" style="position:fixed;right:15px;bottom:50%;z-index:400;"></div>
+<script src="http://a.tbcdn.cn/apps/top/x/sdk.js?appkey=12632866"></script>
+<script type="text/javascript">
+    (function(win, undefined){
+
+        TOP.ui("bugbtn", {
+            container:".top-bugbtn-container",
+            assigned_to:"Ã“π»",
+            version_id:"31093"
+        });
+
+    })(window);
+</script>
+<style>
+    #feedback_hane   .top-bug-btn {
+        position: static!important;
+        z-index: 400!important;
+    }
+</style>

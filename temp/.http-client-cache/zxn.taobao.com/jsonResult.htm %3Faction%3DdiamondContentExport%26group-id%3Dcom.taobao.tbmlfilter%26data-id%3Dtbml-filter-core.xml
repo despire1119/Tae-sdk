@@ -1,0 +1,987 @@
+
+
+<?xml version="1.0" encoding="GBK"?>
+<config id="core">
+	<urlBlacklist>
+	</urlBlacklist>
+	
+	<urlConfigs>
+		<rule id="default" checkDomain="true" supportRelativePath="false" relativePathStartWithSlash="true">
+			<allowedDomains>
+				<domain value=".taobao.com"/>
+				<domain value=".taobaocdn.com"/>
+				<domain value=".tbcdn.cn"/>
+				<domain value=".taobao.net"/>
+			</allowedDomains>
+		</rule>
+		
+		<rule id="href" checkDomain="true" supportRelativePath="false" relativePathStartWithSlash="true" supportAnchor="true">
+			<allowedDomains>
+				<domain value=".taobao.com"/>
+				<domain value=".taobaocdn.com"/>
+				<domain value=".tbcdn.cn"/>
+				<domain value=".taobao.net"/>
+			</allowedDomains>
+		</rule>
+		
+		
+	</urlConfigs>
+
+	<cssConfig>
+	  <ruleFilter class="com.taobao.top.tbml.css.filter.DefaultCSSRuleFilter">
+    </ruleFilter>
+	  <functionProperties>
+			<property name="filter" type="named" function-case-sensitive="false" parameter-case-sensitive="false" alias="-ms-filter">
+				<allowedFunctions>
+					<function name="progid:DXImageTransform.Microsoft.Alpha">
+						<param name="enabled" class="Boolean" />
+						<param name="finishOpacity" class="Int" minValue="0" maxValue="100" />
+						<param name="finishX" class="Int" minValue="0" maxValue="100" />
+						<param name="finishY" class="Int" minValue="0" maxValue="100" />
+						<param name="opacity" class="Int" minValue="0" maxValue="100" />
+						<param name="startX" class="Int" minValue="0" maxValue="100" />
+						<param name="startY" class="Int" minValue="0" maxValue="100" />
+						<param name="style" class="Int" minValue="0" maxValue="3" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Fade">
+						<param name="center" class="Boolean" />
+						<param name="duration" class="Number" minValue="0.0"/>
+						<param name="enabled" class="Boolean" />
+						<param name="overlap" class="Number" minValue="0.0" maxValue="1.0" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Chroma">
+						<param name="color" class="ColorA" quote="true" />
+						<param name="enabled" class="Boolean" />
+					</function>
+				
+					<function name="progid:DXImageTransform.Microsoft.Compositor">
+						<param name="function" class="Int" minValue="0" maxValue="25" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Emboss">
+						<param name="Bias" class="Number" minValue="-1.0" maxValue="1.0" />
+						<param name="enabled" class="Boolean" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Engrave">
+						<param name="Bias" class="Number" minValue="-1.0" maxValue="1.0" />
+						<param name="enabled" class="Boolean" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.DropShadow">
+						<param name="color" class="ColorA" quote="true" />
+						<param name="enabled" class="Boolean" />
+						<param name="offX" class="Int" />
+						<param name="offY" class="Int" />
+						<param name="positive" class="Boolean" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.BasicImage">
+						<param name="enabled" class="Boolean" />
+						<param name="grayScale" class="Boolean" />
+						<param name="mirror" class="Int" minValue="0" maxValue="1" />
+						<param name="opacity" class="Number" minValue="0.0" maxValue="1.0"/>
+						<param name="XRay" class="Int" minValue="0" maxValue="1" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Blur">
+						<param name="enabled" class="Boolean" />
+						<param name="makeShadow" class="Boolean" />
+						<param name="pixelRadius" class="Number" minValue="1.0" maxValue="100.0"/>
+						<param name="shadowOpacity" class="Number" minValue="0.0" maxValue="1.0"/>
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Glow">
+						<param name="color" class="Color" quote="true" />
+						<param name="enabled" class="Boolean" />
+						<param name="strength" class="Int" minValue="1" maxValue="255"/>
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Light">
+						<param name="enabled" class="Boolean" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.MaskFilter">
+						<param name="color" class="ColorA" quote="true" />
+						<param name="enabled" class="Boolean" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Matrix">
+						<param name="Dx" class="Number"/>
+						<param name="Dy" class="Number"/>
+						<param name="enabled" class="Boolean" />
+						<param name="FilterType" class="StringList" list="bilinear, nearest neighbor" quote="true" />
+						<param name="M11" class="Number"/>
+						<param name="M12" class="Number"/>
+						<param name="M21" class="Number"/>
+						<param name="M22" class="Number"/>
+						<param name="SizingMethod" class="StringList" list="clip to original, auto expand" quote="true" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.MotionBlur">
+						<param name="add" class="Boolean" />
+						<param name="direction" class="IntList" list="0, 45, 90, 135, 180, 225, 270, 315" quote="true" />
+						<param name="enabled" class="Boolean" />
+						<param name="strength" class="Int" minValue="0" maxValue="255"/>
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Shadow">
+						<param name="color" class="Color" quote="true" />
+						<param name="enabled" class="Boolean" />
+						<param name="direction" class="IntList" list="0, 45, 90, 135, 180, 225, 270, 315" quote="true" />
+						<param name="strength" class="Int" minValue="1" maxValue="255"/>
+					</function>
+
+					<function name="progid:DXImageTransform.Microsoft.Wave">
+						<param name="add" class="Boolean" />
+						<param name="enabled" class="Boolean" />
+						<param name="freq" class="Int" minValue="0" />
+						<param name="lightStrength" class="Int" minValue="0" maxValue="100"/>
+						<param name="phase" class="Int" minValue="0" maxValue="100"/>
+						<param name="strength" class="Int" minValue="1" />
+					</function>
+
+					<function name="progid:DXImageTransform.Microsoft.Wheel">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="spokes" class="Int" minValue="2" maxValue="20"/>
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Iris">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="irisStyle" class="StringList" list="DIAMOND, CIRCLE, CROSS, PLUS, SQUARE, STAR" quote="true" />
+						<param name="motion" class="StringList" list="out, in" quote="true" />
+					</function>
+
+					<function name="progid:DXImageTransform.Microsoft.Blinds">
+						<param name="bands" class="Int" minValue="1" maxValue="100"/>
+						<param name="Direction" class="StringList" list="up, down, right, left" quote="true" />
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.CheckerBoard">
+						<param name="Direction" class="StringList" list="up, down, right, left" quote="true" />
+						<param name="squaresX" class="Int" minValue="2" />
+						<param name="squaresY" class="Int" minValue="2" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.RandomDissolve">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Barn">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="motion" class="StringList" list="out, in" quote="true" />
+						<param name="orientation" class="StringList" list="horizontal, vertical" quote="true" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Strips">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="motion" class="StringList" list="leftdown, leftup, rightdown, rightup" quote="true" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.RandomBars">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="orientation" class="StringList" list="horizontal, vertical" quote="true" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.GradientWipe">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="gradientSize" class="Number" minValue="0.0" maxValue="1.0"/>
+						<param name="motion" class="StringList" list="forward, reverse" quote="true" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.gradient">
+						<param name="startcolorstr" class="Color" quote="true" />
+						<param name="endcolorstr" class="Color" quote="true" />
+						<param name="gradientType" class="Int" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Inset">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Pixelate">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="maxSquare" class="Int" minValue="2" maxValue="50"/>
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.RadialWipe">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="wipeStyle" class="StringList" list="CLOCK, WEDGE, RADIAL" quote="true" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Slide">
+						<param name="bands" class="Int" minValue="1" maxValue="100"/>
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="slideStyle" class="StringList" list="HIDE, PUSH, SWAP" quote="true" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Spiral">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="gridSizeX" class="Int" minValue="0"/>
+						<param name="gridSizeY" class="Int" minValue="0"/>
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Stretch">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="stretchStyle" class="StringList" list="HIDE, PUSH, SPIN" quote="true" />
+					</function>
+					
+					<function name="progid:DXImageTransform.Microsoft.Zigzag">
+						<param name="duration" class="Number" minValue="0.0" />
+						<param name="enabled" class="Boolean" />
+						<param name="gridSizeX" class="Int" minValue="0"/>
+						<param name="gridSizeY" class="Int" minValue="0"/>
+					</function>
+				</allowedFunctions>
+			</property>
+			
+			<property name="transform" type="ordered" function-case-sensitive="false" alias="-moz-transform,-o-transform,-webkit-transform,-ms-transform">
+				<allowedFunctions>
+					<function name="matrix" required-param-count="5">
+						<param class="Number"/>
+						<param class="Number"/>
+						<param class="Number"/>
+						<param class="Number"/>
+						<param class="Number"/>
+						<param class="Number"/>
+					</function>
+					<function name="translate" required-param-count="1">
+						<param class="CommonLength"/>
+						<param class="CommonLength"/>
+					</function>
+					<function name="translateX" required-param-count="1">
+						<param class="CommonLength"/>
+					</function>
+					<function name="translateY" required-param-count="1">
+						<param class="CommonLength"/>
+					</function>
+					<function name="scale" required-param-count="1">
+						<param class="Number"/>
+						<param class="Number"/>
+					</function>
+					<function name="scaleX" required-param-count="1">
+						<param class="Number"/>
+					</function>
+					<function name="scaleY" required-param-count="1">
+						<param class="Number"/>
+					</function>
+					<function name="rotate" required-param-count="1">
+						<param class="Angle"/>
+					</function>
+					<function name="skew" required-param-count="1">
+						<param class="Angle"/>
+						<param class="Angle"/>
+					</function>
+					<function name="skewX" required-param-count="1">
+						<param class="Angle"/>
+					</function>
+					<function name="skewY" required-param-count="1">
+						<param class="Angle"/>
+					</function>
+				</allowedFunctions>
+			</property>
+		</functionProperties>
+	</cssConfig>
+	
+	<tagConfig>
+		<tagRules>
+			<tag name="a" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="a"/>
+					<option name="td"/>
+					<option name="tr"/>
+					<option name="form"/>
+					<option name="li"/>
+				</endTags>
+				<endClosureTags>
+					<option name="td"/>
+					<option name="tr"/>
+					<option name="form"/>
+					<option name="li"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="abbr" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="acronym" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="address" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="area" composite="false" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="b" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="bdo" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="big" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="blockquote" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="form"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="body" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="br" composite="false" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="button" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="button"/>
+					<option name="input"/>
+					<option name="form"/>
+				</endTags>
+				<endClosureTags>
+					<option name="form"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="caption" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="thead"/>
+					<option name="tr"/>
+				</endTags>
+				<endClosureTags>
+					<option name="table"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="center" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="cite" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="col" composite="false" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="colgroup" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="colgroup"/>
+					<option name="thead"/>
+				</endTags>
+				<endClosureTags>
+					<option name="thead"/>
+					<option name="table"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="dd" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="dd"/>
+					<option name="dt"/>
+					<option name="dl"/>
+				</endTags>
+				<endClosureTags>
+					<option name="dl"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="del" composite="true" textOnlyChildren="true" trimChildrenTextRemark="false"/>
+
+			<tag name="dfn" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="div" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="dl" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="dl"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="dt" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="dd"/>
+					<option name="dt"/>
+					<option name="dl"/>
+				</endTags>
+				<endClosureTags>
+					<option name="dl"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="em" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="embed" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="fieldset" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="fieldset"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="font" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="font"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="form" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="form"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="h1" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="h1"/>
+					<option name="h2"/>
+					<option name="h3"/>
+					<option name="h4"/>
+					<option name="h5"/>
+					<option name="h6"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="h2" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="h1"/>
+					<option name="h2"/>
+					<option name="h3"/>
+					<option name="h4"/>
+					<option name="h5"/>
+					<option name="h6"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="h3" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="h1"/>
+					<option name="h2"/>
+					<option name="h3"/>
+					<option name="h4"/>
+					<option name="h5"/>
+					<option name="h6"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="h4" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="h1"/>
+					<option name="h2"/>
+					<option name="h3"/>
+					<option name="h4"/>
+					<option name="h5"/>
+					<option name="h6"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="h5" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="h1"/>
+					<option name="h2"/>
+					<option name="h3"/>
+					<option name="h4"/>
+					<option name="h5"/>
+					<option name="h6"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="h6" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="h1"/>
+					<option name="h2"/>
+					<option name="h3"/>
+					<option name="h4"/>
+					<option name="h5"/>
+					<option name="h6"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="head" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="head"/>
+					<option name="body"/>
+				</endTags>
+				<endClosureTags>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="hr" composite="false" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="html" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+			</tag>
+
+			<tag name="i" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="img" composite="false" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="iframe" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+			</tag>
+			
+			<tag name="input" composite="false" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="ins" composite="true" textOnlyChildren="true" trimChildrenTextRemark="false"/>
+
+			<tag name="kbd" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="label" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="label"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="legend" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="legend"/>
+					<option name="fieldset"/>
+				</endTags>
+				<endClosureTags>
+					<option name="fieldset"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="li" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="li"/>
+				</endTags>
+				<endClosureTags>
+					<option name="ol"/>
+					<option name="ul"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+			
+			<tag name="link" composite="false" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="map" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="map"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="nobr" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+			</tag>
+
+			<tag name="noscript" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="script"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="ol" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="optgroup" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="optgroup"/>
+					<option name="select"/>
+					<option name="input"/>
+					<option name="textarea"/>
+					<option name="button"/>
+				</endTags>
+				<endClosureTags>
+					<option name="select"/>
+					<option name="form"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="option" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="option"/>
+					<option name="optgroup"/>
+					<option name="select"/>
+					<option name="input"/>
+					<option name="textarea"/>
+					<option name="button"/>
+				</endTags>
+				<endClosureTags>
+					<option name="optgroup"/>
+					<option name="select"/>
+					<option name="form"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="p" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="p"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="q" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="q"/>
+				</endTags>
+				<endClosureTags>
+					<option name="blockquote"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="s" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="script" composite="true" textOnlyChildren="true" trimChildrenTextRemark="true"/>
+			
+			<tag name="select" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="select"/>
+					<option name="input"/>
+					<option name="textarea"/>
+					<option name="button"/>
+				</endTags>
+				<endClosureTags>
+					<option name="form"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="small" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="span" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="strike" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="strong" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="style" composite="true" textOnlyChildren="true" trimChildrenTextRemark="true"/>
+
+			<tag name="sub" composite="true" textOnlyChildren="true" trimChildrenTextRemark="false"/>
+
+			<tag name="sup" composite="true" textOnlyChildren="true" trimChildrenTextRemark="false"/>
+			
+			<tag name="table" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="tbody" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="table"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="td" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="td"/>
+					<option name="tr"/>
+					<option name="tbody"/>
+					<option name="tfoot"/>
+				</endTags>
+				<endClosureTags>
+					<option name="tr"/>
+					<option name="tbody"/>
+					<option name="table"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="textarea" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false"/>
+
+			<tag name="tfoot" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="tfoot"/>
+				</endTags>
+				<endClosureTags>
+					<option name="table"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="th" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="th"/>
+					<option name="tr"/>
+					<option name="tbody"/>
+					<option name="tfoot"/>
+				</endTags>
+				<endClosureTags>
+					<option name="table"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="thead" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="th"/>
+					<option name="tr"/>
+					<option name="tbody"/>
+					<option name="tfoot"/>
+					<option name="thead"/>
+				</endTags>
+				<endClosureTags>
+					<option name="table"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="title" composite="true" textOnlyChildren="true" trimChildrenTextRemark="false"/>
+
+			<tag name="tr" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="tr"/>
+					<option name="tfoot"/>
+				</endTags>
+				<endClosureTags>
+					<option name="table"/>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="tt" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="u" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="ul" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+
+			<tag name="var" composite="true" textOnlyChildren="false" trimChildrenTextRemark="false">
+				<endTags>
+					<option name="var"/>
+				</endTags>
+				<endClosureTags>
+					<option name="body"/>
+					<option name="html"/>
+				</endClosureTags>
+			</tag>
+		</tagRules>
+		
+		<attributeRules>
+			<uriAttributes>
+				<attribute name="action"/>
+				<attribute name="background"/>
+				<attribute name="cite"/>
+				<attribute name="href" ruleId="href"/>
+				<attribute name="src"/>
+			</uriAttributes>
+
+			<standAloneAttributes>
+				<attribute name="checked"/>
+				<attribute name="disabled"/>
+				<attribute name="readonly"/>
+				<attribute name="selected"/>
+			</standAloneAttributes>
+		</attributeRules>
+		
+		<attributeGroups>
+			<group id="coreAttrs">
+				<attribute name="class"/>
+				<attribute name="id"/>
+				<attribute name="style"/>
+				<attribute name="title"/>
+			</group>
+			
+			<group id="commonAttrs">
+				<attribute name="class" ruleId="class"/>
+				<attribute name="dir"/>
+				<attribute name="style"/>
+				<attribute name="title"/>
+			</group>
+		</attributeGroups>
+	</tagConfig>
+</config>
+

@@ -1,0 +1,63 @@
+<head>
+    <meta charset="gbk" />
+    <meta name="description" content="淘宝, 店铺, 旺铺, 店铺名"/>
+    <meta name="keywords" content="欢迎前来淘宝网某某旺铺，选购某某商品,想了解更多某某商品，请进入某某旺铺，众多商品任你选购" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7"/>
+    <jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+    <title>${title}</title>
+    <%-- CSS 地址 --%>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/??g/mui/global/1.0.5/global.css,g/mui/header/1.0.4/header.css,g/tm/brandsite/common/base.css,g/tm/brandsite/common/mui.css"/>
+    <link rel="stylesheet" href="http://a.tbcdn.cn/apps/taesite/platinum/stylesheet/??common/mods/ww-hover/default-min.css,view/layout-tmall-990-min.css,common/modules-sys-tmall-default-min.css,common/modules-other-tmall-default-min.css?t=20130217.css"/>
+
+    <jsp:directive.include file="/WEB-INF/jsp/prelude/render-css.jspf" />
+
+    <script>
+        window.g_hb_monitor_st = +new Date();
+        window.g_config = {
+        brandsite: true,
+        appId: 7,
+        isVipSite: true,
+        brandId: '133644',
+        brandSiteId: '1737956428',
+        assetsHost: "http://a.tbcdn.cn/",
+        toolbar: false,
+        pageType: 'tmall',
+        shareId: '266',
+        snsAppId: 1100079
+        };
+        window.shop_config = {
+        "shopId": "58498830",
+        "name": "B2C小店68",
+        "siteId": "2",
+        "userId": "263693041",
+        "user_nick": "%E5%95%86%E5%AE%B6%E6%B5%8B%E8%AF%95%E5%B8%90%E5%8F%B768",
+        "template": {
+        "name": "",
+        "id": "",
+        "design_nick": ""
+        }
+        };
+        window.shop_config.isView = true;
+        window.shop_config.isvStat = {
+        nickName: '',
+        userId: '263693041',
+        shopId: '58498830',
+        siteId: '2',
+        siteCategoryId: '3',
+        itemId: '',
+        shopStats: '1',
+        validatorUrl: 'http://store.taobao.com/tadget/shop_stats.htm',
+        templateId: '',
+        templateName: ''
+        };
+    </script>
+
+    <%-- JS 地址 --%>
+    <script src="http://a.tbcdn.cn/??s/kissy/1.3.0/seed-min.js,g/mui/seed/1.1.1/seed.js,g/mui/global/1.0.5/global.js,g/mui/global/1.0.5/tml.js,g/tm/brandsite/seed.js,g/tm/brandsite/init.js,apps/taesite/platinum/scripts/wangpu/init-min.js"></script>
+    <script src="http://a.tbcdn.cn/g/tm/brandsite/common/caja-config.js"></script>
+    <script>TBS && TBS.init()</script>
+    <%-- 响应式布局脚本 --%>
+    <c:if test="${not empty responseVersion}">
+        <script>window.g_config={responseVersion:[${responseVersion}]}</script>
+    </c:if>
+</head>

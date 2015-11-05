@@ -1,0 +1,27 @@
+<c:choose>
+	<c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/render/')}">
+	</c:when>
+    <c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/design/json-result')}">
+    </c:when>
+	<c:when
+		test="${fn:contains(requestURI, '/WEB-INF/jsp/design/layout/')}">
+		<%--
+			<jsp:directive.include file="/WEB-INF/jsp/prelude/design-layout-header.jspf" />
+		 --%>
+	</c:when>
+	<c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/design/debug/')}">
+		<%--
+			<jsp:directive.include file="/WEB-INF/jsp/prelude/design-debug-header.jspf" />
+		 --%>
+	</c:when>
+    <c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/microdesign/debug/')}">
+    </c:when>
+    <c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/render/microshop/')}">
+    </c:when>
+	<c:when test="${fn:contains(requestURI, '/WEB-INF/jsp/design/category/')}">
+		<jsp:directive.include file="/WEB-INF/jsp/prelude/design-category-header.jspf" />
+	</c:when>
+	<c:otherwise>
+		<jsp:directive.include file="/WEB-INF/jsp/prelude/manage-header.jspf" />
+	</c:otherwise>
+</c:choose>

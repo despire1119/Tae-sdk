@@ -1,0 +1,217 @@
+<div class="tshop-psm-shop-header" id="header">
+    <div id="header-content" class="bd">
+        <h1 class="logo shop-logo">
+            <a class="main" href="http://www.taobao.com"></a>
+            <!--
+            <a class="sub" href="http://shop51187535.daily.taobao.net"></a>
+             -->
+        </h1>
+        <div class="head-archives has-hover">
+            <div class="left-info">
+                <a class="shop-name" href="http://shop51187535.daily.taobao.net" title="${user.nick}新建店铺">${user.nick}</a>
+                <span class="rank-icon">累计信用：<a target="_blank" href="http://rate.daily.taobao.net/user-rate-182589296.htm">${user.credit}</a></span>
+                <div class="rank-popup" style="visibility: hidden; display: none; position: absolute;">
+                    <span class="decoration-tips">
+                        <s></s>
+                        <b></b>
+                    </span>
+                    <p class="shop-date">从  <fmt:formatDate value="${shop.startTime}" pattern="yyyy/MM/dd"/>起至今</p>
+                    <p>虚拟宝贝交易:
+                        <em>0%</em></p>
+                    <p>实物宝贝交易:
+                        <em>0%</em></p>
+                </div>
+            </div>
+            <div class="right-tip">
+                <i></i>
+            </div>
+            <div class="bottom-border"></div>
+            <div class="popup-content hide">
+                <div class="content-hd">
+                    <h3>掌柜档案</h3>
+                </div>
+                <div class="content-bd">
+                    <div class="bd-left shop-intro">
+                        <h4>店铺介绍</h4>
+                        <dl>
+                            <dt>掌柜：</dt>
+                            <dd><span class="text">${user.nick}</span></dd>
+                        </dl>
+                        <dl>
+                            <dt>所在地区：</dt>
+                            <dd><span class="text">${user.city}</span></dd>
+                        </dl>
+                        <dl>
+                            <dt>宝贝数：</dt>
+                            <dd><span class="text">${shop.itemCount}</span></dd>
+                        </dl>
+                        <dl>
+                            <dt>创建时间：</dt>
+                            <dd><span class="text"><fmt:formatDate value="${shop.startTime}" pattern="yyyy'年'MM'月'dd'日'"/></span></dd>
+                        </dl>
+                        <dl>
+                            <dt>身份认证：</dt>
+                            <dd class="auth-dd">
+                                <a target="_blank" href="http://help.alipay.com/lab/help_detail.htm?help_id=211779">
+                                    <img border="0" align="absmiddle" title="已通过支付宝实名认证" alt="支付宝实名认证" src="http://img.taobaocdn.com/zfb_person_small.gif?1235">
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="vertical-separator"></div>
+                    <div class="bd-right shop-credit">
+                        <h4>店铺信用</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="rating">店铺动态评分</th>
+                                    <th class="comparing">与行业相比</th>
+                                </tr>
+                            </thead>
+                            <tr class="no-rating"><td colspan="2">该店铺尚未收到评价</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="good-rating">
+                        <dl><dt>总体好评率：</dt><dd>${user.goodRate}</dd></dl>
+                    </div>
+                </div>
+                <!--END OF shop-credit-->
+            </div>
+        </div>
+    </div>
+    <div class="qualification-service has-hover">
+        <div class="left-info">
+            <a class="important last" target="_blank" href="http://www.taobao.com/go/act/special/index.php?service=0&ad_id=&am_id=&cm_id=1400585190d2f0030ba5&pm_id"><img title="签署《消费者保障服务协议》，并已提交保证金" alt="消费者保障服务" src="http://img02.taobaocdn.com/tps/i2/T1.4HrXd4dXXcCXlfb-25-25.png"/></a>
+        </div>
+        <div class="right-tip">
+            <i></i>
+        </div>
+        <div class="bottom-border"></div>
+        <div class="popup-content hide">
+            <div class="content-hd">
+                <h3>掌柜资质与服务</h3>
+                <a class="in-detail" href="http://rate.daily.taobao.net/user-rate-182589296.htm" target="_blank"><span>详细</span>
+                    <i class="detail-icon"></i>
+                </a>
+            </div>
+            <div class="content-bd">
+                <div class="bd-left qualification">
+                    <h4>资质授权</h4>
+                    <!---->
+                    <p class="has-no">该店铺暂无资质认证</p>
+                </div>
+                <div class="vertical-separator"></div>
+                <div class="bd-right service">
+                    <h4>特色服务</h4>
+                    <dl class="important">
+                        <dt><a href="http://www.taobao.com/go/act/special/index.php?service=0&ad_id=&am_id=&cm_id=1400585190d2f0030ba5&pm_id" target="_blank"><img alt="消费者保障服务" src="http://img04.taobaocdn.com/tps/i4/T1aKvqXd0nXXb1HYPe-35-35.png" title="签署《消费者保障服务协议》，并已提交保证金"/></a></dt>
+                        <dd>
+                            <span class="title"><a class="last" href="http://www.taobao.com/go/act/special/index.php?service=0&ad_id=&am_id=&cm_id=1400585190d2f0030ba5&pm_id" target="_blank">消费者保障服务</a></span>
+                            <p class="desc">签署《消费者保障服务协议》，并已提交保证金</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://www.taobao.com/go/act/sale/kadepay.php?ad_id=&am_id=&cm_id=14001249574b437a411d&pm_id=" target="_blank"><img alt="信用卡付款" src="http://img02.taobaocdn.com/tps/i2/T1kqftXfthXXaOA1zX-15-11.png" title="本店支持信用卡直接付款"/></a></dt>
+                        <dd>
+                            <span class="title"><a class="last" href="http://www.taobao.com/go/act/sale/kadepay.php?ad_id=&am_id=&cm_id=14001249574b437a411d&pm_id=" target="_blank">信用卡付款</a></span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://cod.taobao.com" target="_blank"><img alt="货到付款" src="http://img03.taobaocdn.com/tps/i3/T1lW2tXelhXXXpRuzX-15-12.png" title="本店支持货到付款"/></a></dt>
+                        <dd>
+                            <span class="title"><a class="last" href="http://cod.taobao.com" target="_blank">货到付款</a></span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shop-search" class="shop-search">
+        <form id="J_TShopSearchForm" class="search-form" action="http://s.taobao.com/search">
+            <label for="shop-q" class="search-tips">想找什么宝贝?</label>
+            <input type="text" id="shop-q" name="q" autocomplete="off" class="search-input"/>
+            <input type="hidden" name="searcy_type" value="item"/>
+            <input type="hidden" value="newHeader" name="s_from">
+            <input type="hidden" name="source">
+            <input type="hidden" name="ssid" value="s5-e"/>
+            <input type="hidden" name="search" value="y"/>
+            <span class="search-button searchtb">搜淘宝</span>
+            <span class="search-button searchmy" data-action="http://shop51187535.daily.taobao.net/search.htm" hidefocus="true">
+                搜本店
+            </span>
+        </form>
+    </div>
+    <div class="customer-service has-hover">
+        <div class="left-info">
+            <span class="main-ww">
+                <span class="J_WangWang wangwang" title="点此可以直接和卖家交流选好的宝贝，或相互交流网购体验，还支持语音视频噢。" data-nick="%E6%96%B0%E9%A1%B5%E5%A4%B4%E6%97%97%E8%88%B0%E8%B4%A6%E5%8F%B7" data-tnick="%E6%96%B0%E9%A0%81%E9%A0%AD%E6%97%97%E8%89%A6%E8%B3%AC%E8%99%9F" data-encode="true" data-display="inline"></span>
+                <span class="title">客服</span>
+            </span>
+        </div>
+        <div class="right-tip">
+            <i></i>
+        </div>
+        <div class="bottom-border"></div>
+        <div class="ww-move-tip tip-hidden" id="J_TWWMoveTip">
+            <s></s>
+            <b></b>
+            <div class="wrap">
+                <span class="tip-msg">客服移到这里了。</span>
+                <a id="J_IKnow" href="javascript:void(0)" class="i-know">知道了</a>
+            </div>
+        </div>
+        <div class="popup-content hide">
+            <div class="content-bd">
+                <ul class="ww-list">
+                    <li class="last">
+                        <span class="title" title="${user.nick}">${user.nick}</span>
+                        <span class="J_WangWang wangwang" data-nick="%E6%96%B0%E9%A1%B5%E5%A4%B4%E6%97%97%E8%88%B0%E8%B4%A6%E5%8F%B7" data-tnick="%E6%96%B0%E9%A0%81%E9%A0%AD%E6%97%97%E8%89%A6%E8%B3%AC%E8%99%9F" data-encode="true" data-display="inline"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="favorites has-hover">
+        <div class="left-info">
+            <a class="collect-area no-collect J_TCollectInit J_TCollectShop J_TokenSign" title="点击收藏该店铺" data-width="440" data-height="260" data-init="http://shop51187535.daily.taobao.net/shop/favorite/collectFavorite.htm?shopId=51187535" href="http://favorite.daily.taobao.net/popup/add_collection.htm?id=51187535&itemid=51187535&itemtype=0&sellerid=182589296&scjjc=2" data-href="http://shop51187535.daily.taobao.net/dongtai.htm">
+                <!-- class, 如果没收藏 包含 no-collect, 如果已收藏 包含 collected -->
+                <i class="collect-icon"></i>
+                <span class="title">收藏</span>
+            </a>
+        </div>
+        <div class="right-tip">
+            <i></i>
+        </div>
+        <div class="bottom-border"></div>
+        <div class="popup-content hide">
+            <div class="content-hd">
+                <h3>店铺空间</h3>
+                <a class="in-detail" href="#">
+                    <span></span>
+                </a>
+            </div>
+            <div class="content-bd">
+                <div class="position-wrap">
+                    <dl class="collect-num">
+                        <dt data-info="" id="J_TCollCount"></dt>
+                        <dd>收藏人数</dd></dl>
+                    <dl class="info-num"><dt>3</dt><dd>店铺动态</dd></dl>
+                    <a class="collect-btn no-collect J_TCollectShop J_TokenSign" data-width="440" data-height="260" href="http://favorite.daily.taobao.net/popup/add_collection.htm?id=51187535&itemid=51187535&itemtype=0&sellerid=182589296&scjjc=2">立即收藏</a>
+                    <a class="leave-msg" href="#"></a>
+                    <a data-id="51187535" class="share J_TShare">分享给朋友</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popupPanel"></div>
+    <script>
+        if(window.TShop&&window.TShop.Util){
+        TShop.use('mod~header', function (TS) {
+            new TS.TshopPsmShopHeader({
+                mod: KISSY.DOM.get('.tshop-psm-shop-header')
+            });
+        });
+        }
+    </script>
+    </div>
+</div>

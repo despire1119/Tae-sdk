@@ -1,0 +1,7 @@
+<head>
+    <jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+    <link rel="shortcut icon" href="http://www.taobao.com/favicon.ico" type="image/x-icon" />
+    <script src="http://${assetsHost}/s/kissy/1.3.0/kissy-min.js?t=${date}" charset="utf-8"></script>
+    <title>${module.name}</title>
+    <jsp:directive.include file="/WEB-INF/jsp/prelude/template-render-css.jspf" />
+</head>

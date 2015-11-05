@@ -1,0 +1,26 @@
+<div id="page">
+        <jsp:directive.include file="/WEB-INF/jsp/design/debug/uz/tool-bar.jspf" />
+    <div id="wrapper">
+        <jsp:directive.include file="/WEB-INF/jsp/design/debug/uz/left-bar.jspf" />
+        <div id="vl-main">
+            <jsp:directive.include file="/WEB-INF/jsp/design/debug/uz/status-bar.jspf" />
+            <div id="vl-container">
+                <c:choose>
+                    <c:when test="${isLayout}">
+                        <jsp:directive.include file="/WEB-INF/jsp/design/layout/layout-content.jspf" />
+                    </c:when>
+                    <c:when test="${isDebug}">
+                        <div id="header" class="tshop-psm-shop-header" style="z-index: 100">
+                            <link rel="stylesheet" href="http://g.tbcdn.cn/tb/daogoudian/13.9.22/zx_common.css"  type="text/css"/>
+                            <script charset="utf-8" type="text/javascript" src="http://g.tbcdn.cn/tb/daogoudian/13.9.22/zx_common.js"></script>
+                        </div>
+                        <jsp:directive.include file="/WEB-INF/jsp/design/debug/debug-content.jspf" />
+                    </c:when>
+                </c:choose>
+                <div id="footer">
+                    <p id="copyright">2012 淘宝(中国)软件有限公司 版权所有</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

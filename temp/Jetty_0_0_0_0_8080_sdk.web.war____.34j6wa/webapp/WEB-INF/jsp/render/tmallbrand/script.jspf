@@ -1,0 +1,1 @@
+<script>(function(){if(!(window.g_config&&window.g_config.responseVersion)){return}var g=KISSY.DOM,f=window.g_config.responseVersion,a=document.body,d=g.viewportWidth()-20;f=f.sort(function(i,c){return i>c});for(var e=0;e<f.length;e++){var j=f[e],h=f[e+1];if(d<j||(d>j&&(e==f.length-1||d<h))){g.addClass(a,"w"+j);g.attr(a,"data-view",j);break}}})();</script>

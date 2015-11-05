@@ -1,0 +1,10 @@
+<div id="footer">
+    <p>2013 淘宝(中国)软件有限公司 版权所有</p>
+</div>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/addpage/addpage.js"></script>
+<script
+        src="http://g.tbcdn.cn/tb/o2o/0.0.4/framework/js/proxy-min.js"
+        data-frameid="o2oIframe"
+        data-timer="200"
+        data-proxy ="http://portal.o2o.taobao.com/proxy.html" >
+</script>

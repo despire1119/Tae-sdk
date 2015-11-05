@@ -1,0 +1,16 @@
+<!-- 组件按钮样式开始 -->
+
+<c:set var="itemsCount" value="0" />
+<c:choose>
+	<c:when test="${not empty parameter.value}">
+		<c:set var="itemIDsArray" value="${fn:split(parameter.value,',')}" />
+		<c:set var="itemsCount" value="${fn:length(itemIDsArray)}" />
+	</c:when>
+	<c:otherwise>
+	</c:otherwise>
+</c:choose>
+
+<a href="#" class="widget-btn J_itemChoseBtn" data-trigger="${parameter.name}">选择宝贝</a>
+<span class="item-sum J_itemSum"> （已选择 <em>${itemsCount}</em> 个宝贝） </span>
+<input type="hidden" class="J_itemDate" />
+<!-- 组件按钮样式结束 -->

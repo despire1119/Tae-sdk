@@ -1,0 +1,11 @@
+<%-- 模板渲染的CSS内容内容输出 --%>
+
+<c:if test="${not empty templateExtraCssURI}">
+    <!-- 模板全局CSS -->
+    <link rel="stylesheet" href="${templateExtraCssURI}" />
+</c:if>
+
+<c:if test="${not empty modulesCombinedCssURL}">
+	<!-- 所有自定义模块的合并CSS URL -->
+	<link rel="stylesheet" href="${modulesCombinedCssURL}" />
+</c:if>

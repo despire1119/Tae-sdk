@@ -1,0 +1,12 @@
+<!-- 组件按钮样式开始 -->
+<c:forEach items="${parameter.optionsList}" var="option">
+	<div class="rc-box">
+		<label><input type="radio" name="${parameter.name}"
+			value="${option.value}"
+			<c:if test="${not empty option.selected}">
+					checked="checked"
+				</c:if> />
+			${option.content} </label>
+	</div>
+</c:forEach>
+<!-- 组件按钮样式结束 -->

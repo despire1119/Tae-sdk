@@ -1,0 +1,8 @@
+
+
+window.cajaConfig = {
+    kissy:{
+        io:true,
+         kcharts:true
+    }
+};

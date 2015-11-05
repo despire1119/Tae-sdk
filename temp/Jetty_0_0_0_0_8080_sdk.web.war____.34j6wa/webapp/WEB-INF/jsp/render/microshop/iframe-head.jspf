@@ -1,0 +1,16 @@
+<head>
+    <meta charset="gbk">
+    <title>预览</title>
+    <link rel="stylesheet" type="text/css" href="http://g.tbcdn.cn/tb/o2o/0.0.4/framework/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="http://g.tbcdn.cn/mui/button/1.0.6/btn.css"/>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/mui/form/1.0.2/form.css"/>
+    <script src="http://g.tbcdn.cn/kissy/k/1.3.0/kissy-min.js"></script>
+    <script src="http://g.tbcdn.cn/tb/o2o/0.0.4/framework/js/base-min.js"></script>
+    <link href="http://g.tbcdn.cn/tb/o2o/0.0.4/design/stylesheets/common/common.css" type="text/css" rel="stylesheet"/>
+    <link href="http://g.tbcdn.cn/tb/o2o/0.0.4/design/stylesheets/preview/default.css" type="text/css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/tb/o2o/0.0.4/weishop/main-debug.css">
+    <script src="http://g.tbcdn.cn/tb/o2o/0.0.4/weishop/main-debug.js"></script>
+    <link rel="stylesheet" href=" http://g.tbcdn.cn/tb/o2o/0.0.4/design/stylesheets/preview/default.css"></head>
+
+</head>

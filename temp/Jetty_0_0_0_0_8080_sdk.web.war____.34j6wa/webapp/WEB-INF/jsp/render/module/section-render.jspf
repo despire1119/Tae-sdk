@@ -1,0 +1,8 @@
+<div class="title J_itemSetTrigger">
+	<h3>
+		<i></i>${section.title}
+	</h3>
+</div>
+<div class="set-inner">
+	<jsp:directive.include file="/WEB-INF/jsp/render/module/params-list-render.jspf" />
+</div>

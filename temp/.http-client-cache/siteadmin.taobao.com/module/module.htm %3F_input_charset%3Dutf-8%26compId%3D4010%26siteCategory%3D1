@@ -1,0 +1,46 @@
+
+
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-item-cates&quot;&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+
+    &lt;div class=&quot;skin-box-hd&quot;&gt;
+        &lt;i&gt;&lt;/i&gt;
+
+        &lt;h3&gt;
+			&lt;span&gt;
+				宝贝分类
+		    &lt;/span&gt;
+        &lt;/h3&gt;
+
+        &lt;div class=&quot;skin-box-act disappear&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;更多&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;skin-box-bd&quot;&gt;
+    
+        &lt;ul class=&quot;J_TCatsTree cats-tree J_TWidget&quot; data-widget-type=&quot;Accordion&quot; data-widget-config=&quot;{
+             &#39;triggerCls&#39;: &#39;acrd-trigger&#39;,
+             &#39;panelCls&#39;: &#39;fst-cat-bd&#39;,
+             &#39;activeTriggerCls&#39;: &#39;active-trigger&#39;,
+             &#39;triggerType&#39;: &#39;click&#39;,
+             &#39;multiple&#39;: true
+        }&quot;&gt;
+
+            &lt;li class=&quot;cat fst-cat float&quot;&gt;
+                &lt;h4 class=&quot;cat-hd fst-cat-hd&quot;&gt;
+                    &lt;i class=&quot;cat-icon fst-cat-icon acrd-trigger active-trigger&quot;&gt;&lt;/i&gt;
+                    &lt;a href=&quot;//shop1.taobao.com/category.htm?search=y&quot; class=&quot;cat-name fst-cat-name&quot; title=&quot;查看所有宝贝&quot;&gt;查看所有宝贝&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;ul class=&quot;fst-cat-bd&quot;&gt;
+                		                	&lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&amp;orderType=hotsell_desc&quot; class=&quot;cat-name&quot; title=&quot;按销量&quot;&gt;按销量&lt;/a&gt;
+	                    &lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&amp;orderType=newOn_desc&quot; class=&quot;cat-name&quot; title=&quot;按新品&quot;&gt;按新品&lt;/a&gt;
+	                    &lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&amp;orderType=price_asc&quot; class=&quot;cat-name&quot; title=&quot;按价格&quot;&gt;按价格&lt;/a&gt;
+	                    &lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&amp;orderType=hotkeep_desc&quot; class=&quot;cat-name&quot; title=&quot;按收藏&quot;&gt;按收藏&lt;/a&gt;
+	                                &lt;/ul&gt;
+            &lt;/li&gt;
+
+                    &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    &lt;/div&gt;
+	

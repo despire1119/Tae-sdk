@@ -1,0 +1,24 @@
+<c:set var="moduleInstanceID" value="${module.id}" />
+<c:set var="modulePrototypeID" value="${module.prototypeID}" />
+<c:set var="moduleID" value="${module.moduleID}" />
+<c:set var="isSystemModule" value="${module.systemModule}" />
+<c:choose>
+    <c:when test="${isSystemModule}">
+        <c:set var="editable" value="0" />
+    </c:when>
+    <c:otherwise>
+        <c:set var="editable" value="1" />
+    </c:otherwise>
+</c:choose>
+
+{
+"position": ${status.index},
+"params": "{}",
+"canEdit": "${editable}",
+"canDel": "1",
+"canMove": "1",
+"moduleId": ${modulePrototypeID},
+"html": "${module.content}",
+"widgetId": ${moduleInstanceID}
+}
+<c:if test="${!status.last}">,</c:if>

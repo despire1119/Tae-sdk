@@ -1,0 +1,29 @@
+<style>
+    .style .items li {
+        width:100%;
+    }
+</style>
+<div class="title">
+	<h3>页面列表</h3>
+    <a href="/man/app/page/create/${appName}/" class="radius-btn"><i class="icon-plus"></i> 创建新页面 </a>
+</div>
+<jsp:directive.include file="/WEB-INF/jsp/man/commons/man-opt-message.jspf" />
+<ul>
+	<c:forEach items="${phpFilesList}" var="phpFile">
+	<c:set var="phpFileRelativePath" value="${fn:substringAfter(phpFile.absolutePath,appDirectory.absolutePath)}" />
+    <c:set var="pageRenderURI" value="${appRootURL}${phpFileRelativePath}" />
+        <li>
+        <span>${phpFileRelativePath}</span>
+        <a href="${pageRenderURI}" target="_blank">预览</a>
+        <a class="J_del" href="/man/app/page/delete/${appName}/?phpFilePath=${phpFileRelativePath}">删除</a>
+	</li>
+	 </c:forEach>
+</ul>
+<div class="guide">
+	<p>
+		想手工创建页面？<a href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E5.A4.9A.E5.A5.97.E9.A3.8E.E6.A0.BC" target="_blank">点击此处可以了解！</a>
+	</p>
+	<p class="next">
+		<span>完成 页面管理 ？</span> <a href="/man/app/page/url/mapping/${appName}/" class="btn">进入下一步</a>
+	</p>
+</div>

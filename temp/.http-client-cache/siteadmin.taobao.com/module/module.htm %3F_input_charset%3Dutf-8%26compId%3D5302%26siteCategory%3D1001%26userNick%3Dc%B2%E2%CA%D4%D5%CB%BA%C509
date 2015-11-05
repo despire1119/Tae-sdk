@@ -1,0 +1,9 @@
+
+
+&lt;div class=&quot;os-box of-banner&quot;&gt;
+        &lt;a href=&quot;&quot; class=&quot;ws-wrap&quot; data-ng=&quot;{{moduleData[&#39;5647716174&#39;].url}}&quot;&gt;
+            &lt;img src=&quot;http://gtms01.alicdn.com/tps/i1/T1BgcKFfpbXXa8imn6-594-300.jpg?scene=taobao_shop&quot; data-ng=&quot;{{moduleData[&#39;5647716174&#39;].pic}}&quot; alt=&quot;&quot; width=&quot;600&quot; height=&quot;300&quot;&gt;
+            &lt;em data-ng=&quot;{{moduleData[&#39;5647716174&#39;].title}}&quot;&gt;╣д╥еки╥еки&lt;/em&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+

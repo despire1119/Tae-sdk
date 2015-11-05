@@ -1,0 +1,34 @@
+<jsp:directive.include file="/WEB-INF/jsp/design/commons-variables.jspf" />
+<div id="vl-navbar">
+    <div class="vl-navs">
+        <ul>            
+            <li class="vl-f-li">
+                <a href="${pageManageURI}" class="vl-f-m">
+                    <span>页面管理</span>
+                </a>
+            </li>
+			<li class="vl-f-li">
+                <a href="${templateThemeURI}" class="vl-f-m">
+                    <span>样式管理</span>
+                </a>
+            </li>
+            <li class="vl-f-li">
+                <a href="${templateManageURI}" class="vl-f-m">
+                    <span>模板管理</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="vl-my-setting">
+        <ul>
+            <li class="vl-my-li vl-setting">
+                <a href="javascript:void(0);" class="vl-toggle-trigger vl-my-f-m"></a>
+                <ul class="vl-my-s-m">
+                    <li>
+                        <a href="${templateAssembleURI}">退出</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

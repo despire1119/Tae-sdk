@@ -1,0 +1,6 @@
+<script src="http://${assetsHost}/??s/kissy/1.2.0/kissy-min.js,apps/taesite/wangpu2012/scripts/platform/layout/init-min.js?t=20131225"
+        charset="utf-8"></script>
+<script type="text/javascript" src="http://${assetsHost}/apps/taesite/wangpu2012/scripts/platform/framework/??framework-min.js,navbar-min.js,sidebar-min.js,goldTag-min.js?t=20131225123.js"></script>
+<script type="text/javascript">
+    KISSY.use('scripts/platform/layout/init');
+</script>

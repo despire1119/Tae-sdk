@@ -1,0 +1,4 @@
+<jsp:directive.include file="/WEB-INF/jsp/microdesign/script/home-page.jspf" />
+<jsp:directive.include file="/WEB-INF/jsp/microdesign/script/smart-edit.jspf" />
+<jsp:directive.include file="/WEB-INF/jsp/microdesign/script/yyz-notify.jspf" />
+<jsp:directive.include file="/WEB-INF/jsp/microdesign/script/other.jspf" />

@@ -1,0 +1,3 @@
+<!-- text输入框样式开始 -->
+<input class="input-box" type="text" autocomplete="off" name="${parameter.name}" value="${parameter.value}" />
+<!-- text输入框样式结束 -->

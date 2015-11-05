@@ -1,0 +1,4 @@
+<script src="http://${assetsHost}/??s/kissy/1.2.0/kissy-min.js,apps/taesite/platinum/scripts/platform/layout/init-min.js?t=${date}" charset="utf-8"></script>
+<script type="text/javascript">
+    KISSY.use('scripts/platform/layout/init');
+</script>

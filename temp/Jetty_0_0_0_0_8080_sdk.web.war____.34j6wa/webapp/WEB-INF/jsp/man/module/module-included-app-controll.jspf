@@ -1,0 +1,13 @@
+<c:if test="${not empty appNamesList}">
+    <div class="form-group">
+        <label class="form-label">TAE应用：</label>
+        <div class="form-controls">
+        </div>
+        <div class="form-controls">
+            <form:select path="includedApp" cssClass="select">
+        	    <form:options items="${appNamesList}"/>
+        	</form:select>
+        	<span class="help-inline">    选择本模块关联TAE应用的名称</span>
+        </div>
+    </div>
+</c:if>

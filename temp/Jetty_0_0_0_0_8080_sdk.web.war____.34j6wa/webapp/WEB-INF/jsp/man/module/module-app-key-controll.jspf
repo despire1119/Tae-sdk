@@ -1,0 +1,11 @@
+<c:if test="${isTaeTemplate}">
+    <div class="form-group">
+        <label class="form-label">TOP应用Key：</label>
+        <div class="form-controls">
+        </div>
+        <div class="form-controls">
+            <form:input cssClass="form-text J_templateFileName" path="appKey" />
+        	<span class="help-inline">  （可选）填写使用到了TOP应用Key</span>
+        </div>
+    </div>
+</c:if>

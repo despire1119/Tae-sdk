@@ -1,0 +1,4 @@
+
+<!-- textarea输入框样式开始 -->
+<textarea cols="30" rows="10" name="${parameter.name}">${parameter.value}</textarea>
+<!-- textarea输入框样式结束 -->

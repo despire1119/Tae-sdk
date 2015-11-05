@@ -1,0 +1,387 @@
+
+
+<?xml version="1.0" encoding="GBK"?>
+<rule productId="1003" name="手机无线店铺规则bc" desc="手机无线店铺" publishTimeMills="1342859986550"
+      xsi:schemaLocation="http://design.taobao.com/design/rules/schema/design-rules-1.0.xsd"
+      xmlns:ns2="http://design.taobao.com/tae-design-rules" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <siteInfo>
+        <maxPageNum>9999</maxPageNum>
+        <homePageId>1</homePageId>
+        <background>true</background>
+        <cms>true</cms>
+        <css>true</css>
+        <footer>true</footer>
+        <headerModule>true</headerModule>
+        <logo>true</logo>
+        <showside>true</showside>
+        <mulitLayout>true</mulitLayout>
+        <scriptcode><![CDATA[
+                ]]></scriptcode>
+        <permissions>
+        </permissions>
+        <localModulePrefix>ot-</localModulePrefix>
+        <systemModulePrefix>msp-</systemModulePrefix>
+        <tbmlFilterConfig>
+            <configFileName>tbml-filter-tae-newsdk.xml</configFileName>
+            <configId>newsdk</configId>
+            <version>ss</version>
+        </tbmlFilterConfig>
+        <permissions>
+            <permission permId="23"
+                        scope="edit" desc="">
+                <scriptcode>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+            							          def execute(context){
+            							              def result = new ValidateResult()
+            							              result.setSuccess(false)
+            									      try{
+            											  def baseUserDO = context.userDO
+            											  def nick = baseUserDO.nick
+            											  if(nick in ['shiruo2','c测试账号27','c测试账号136','shiguan02','shouyi001']){
+            												 result.setSuccess(true)
+            												 return result
+            											  }
+            											}catch(e){
+            											     log.error('validate permission errors',e)
+            												 return result
+            											}
+            										  result
+            									  }
+
+            		]]>
+                </scriptcode>
+            </permission>
+            <permission permId="5409" scope="edit" desc="">
+                <scriptcode>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+            							          def execute(context){
+            							              def result = new ValidateResult()
+            							              result.setSuccess(false)
+            									      try{
+            											  def baseUserDO = context.userDO
+            											  def userId = baseUserDO.userId
+            											  def isShow = false
+            											  isShow = memberCardService.isShopCardEnabled(userId)
+            											  result.setSuccess(isShow)
+            											}catch(e){
+            											     log.error('validate permission errors',e)
+            												 return result
+            											}
+            										  result
+            									  }
+
+            		]]>
+                </scriptcode>
+            </permission>
+        </permissions>
+        <offlinePageTypes>
+            <offlinePageType>23</offlinePageType>
+            <offlinePageType>315</offlinePageType>
+            <offlinePageType>10</offlinePageType>
+            <offlinePageType>50</offlinePageType>
+
+        </offlinePageTypes>
+        <offlinePageDemoIds>
+            <offlinePageDemoId>5005</offlinePageDemoId>
+            <offlinePageDemoId>3602</offlinePageDemoId>
+            <offlinePageDemoId>3603</offlinePageDemoId>
+        </offlinePageDemoIds>
+    </siteInfo>
+    <pageRule>
+
+        <pages>
+            <page pageId="11001" name="一阳指首页">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>1</maxLayout>
+                    <maxModule>30</maxModule>
+                    <renamable>false</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/index.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <type>11001</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="5401" name="店招" editable="true" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5402" name="宝贝列表" editable="true" movable="true"
+                            deleteable="false" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5403" name="4图轮播Banner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="2" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5404" name="左文右图Banner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="4" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5405" name="miniBanner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="2" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5406" name="标题组件" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5407" name="文本组件" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5408" name="分割线" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="40" renamable="false"
+                            supportWidth="190,550,750,950" designable="true"/>
+                    <module moduleId="5409" name="会员卡" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950">
+                        <permissions>
+                            <permission permId="5409"/>
+                        </permissions>
+                    </module>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            
+            <page pageId="11003" name="一阳指增强版首页">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>1</maxLayout>
+                    <maxModule>30</maxModule>
+                    <renamable>false</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>11003</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="5401" name="店招" editable="true" movable="false"
+                            deleteable="false" required="true" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5403" name="4图轮播Banner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="2" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5404" name="左文右图Banner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="4" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5405" name="miniBanner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="2" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5406" name="标题组件" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5407" name="文本组件" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5408" name="分割线" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="5" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5801" name="自由模块" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="20" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5804" name="增强版宝贝模块" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5409" name="会员卡" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            
+            <page pageId="11004" name="一阳指增强版活动页">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>1</maxLayout>
+                    <maxModule>30</maxModule>
+                    <renamable>false</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <type>11004</type>
+                </pageInfo>
+                <supportedModules>
+                    
+                    <module moduleId="5403" name="4图轮播Banner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="2" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5404" name="左文右图Banner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="4" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5405" name="miniBanner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="2" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5406" name="标题组件" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5407" name="文本组件" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5408" name="分割线" editable="false" movable="true"
+                            deleteable="true" required="false" maxAppend="5" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5801" name="自由模块" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="20" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5804" name="增强版宝贝模块" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5415" name="关键字" editable="true" movable="true" addable="true"
+                            deleteable="false" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    
+                    
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+
+            <page pageId="11002" name="一阳指活动页">
+                <pageInfo>
+                    <maxAppend>9999</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>30</maxModule>
+                    <renamable>false</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>11002</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="5406" name="标题组件" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="30" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5413" name="宝贝列表单例模块" editable="true" movable="true" addable="true"
+                            deleteable="false" required="false" maxAppend="5" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5414" name="宝贝列表双例模块" editable="true" movable="true" addable="true"
+                            deleteable="false" required="false" maxAppend="5" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5415" name="关键字" editable="true" movable="true" addable="true"
+                            deleteable="false" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5407" name="文本组件" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5416" name="活动页面页头" editable="true" movable="false" addable="false"
+                            deleteable="false" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5403" name="4图轮播Banner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="10" renamable="false"
+                            supportWidth="190,550,750,950">
+                    </module>
+                    <module moduleId="5404" name="左文右图Banner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="50" renamable="false"
+                            supportWidth="190,550,750,950">
+                    </module>
+                    <module moduleId="5405" name="miniBanner" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="2" renamable="false"
+                            supportWidth="190,550,750,950">
+                    </module>
+
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="12002" name="微淘行业版">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>1</maxLayout>
+                    <maxModule>1</maxModule>
+                    <renamable>false</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <type>12002</type>
+                </pageInfo>
+                <supportedModules>
+                    <module moduleId="5411" name="微淘图片轮播" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                    <module moduleId="5412" name="微淘目录模块" editable="true" movable="true"
+                            deleteable="true" required="false" maxAppend="1" renamable="false"
+                            supportWidth="190,550,750,950"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>9999</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                            <supportWidth>950</supportWidth>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+        </pages>
+    </pageRule>
+    <headRule>
+        <headInfo>
+            <maxLayout>0</maxLayout>
+            <maxModule>0</maxModule>
+            <moduleAddable>true</moduleAddable>
+        </headInfo>
+        <supportedModules>
+        </supportedModules>
+        <supportedLayouts>
+            <layout layoutId="23" name="页首布局">
+                <layoutInfo>
+                    <maxModule>2</maxModule>
+                    <required>false</required>
+                    <position>1</position>
+                    <supportWidth>950</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </headRule>
+    <footRule>
+        <footInfo>
+            <maxLayout>0</maxLayout>
+            <maxModule>0</maxModule>
+            <editable>false</editable>
+        </footInfo>
+        <supportedModules>
+        </supportedModules>
+        <supportedLayouts>
+            <layout layoutId="33" name="尾部布局">
+                <layoutInfo>
+                    <maxModule>1</maxModule>
+                    <required>false</required>
+                    <position>1</position>
+                    <supportWidth>950</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </footRule>
+</rule>

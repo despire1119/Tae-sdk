@@ -1,0 +1,18 @@
+<div id="header">
+    <div class="w clearfix">
+        <h1 class="logo"></h1>
+        <div class="main-nav">
+            <ul class="clearfix">
+                <ul class="clearfix">
+                    <li><a href="http://o2op.daily.taobao.net:8080/card/cardList.htm" class="member" style="width: 99px">会员<i></i></a></li>
+                    <li><a href="http://o2op.daily.taobao.net:8080/activity/activityList.htm" class="marketing" style="width: 99px">营销<i></i></a></li>
+                    <li><a href="http://o2op.daily.taobao.net:8080/mall/mallInfo.htm" class="info" style="width: 99px">信息<i></i></a></li>
+                    <li><a href="#" class="mobile  index current" style="width: 99px">掌中宝<i></i></a></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="top-info">
+            <span class="user-info">HI,eskin</span>
+        </div>
+    </div>
+</div>

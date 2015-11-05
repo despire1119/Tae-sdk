@@ -1,0 +1,42 @@
+
+
+&lt;!-- weishopRsActivityPageList: --&gt;
+&lt;!-- e: --&gt;
+&lt;div class=&quot;os-box of-slide&quot;&gt;
+    &lt;p class=&quot;ws-flipsnap&quot;  &gt;
+                            &lt;!-- http://img03.taobaocdn.com/bao/uploaded/i3/T1VpjZFUBaXXaCwpjX.png?scene=taobao_shop --&gt;
+                                                                                                                &lt;!-- === http://img03.taobaocdn.com/bao/uploaded/i3/T1VpjZFUBaXXaCwpjX.png?scene=taobao_shop == --&gt;
+            &lt;a href=&quot;http://h5.o2oshop.m.taobao.com/436013765/index.htm?scene=taobao_shop&quot; data-ng=&quot;{{moduleData[&#39;5510648549&#39;].url[0]}}&quot; class=&quot;J_Gold ws-wrap&quot;   data-str=&quot;picSlide=0&quot;&gt;
+                &lt;img data-ng=&quot;{{moduleData[&#39;5510648549&#39;].pic[0]}}&quot; src=&quot;http://img03.taobaocdn.com/bao/uploaded/i3/T1VpjZFUBaXXaCwpjX.png?scene=taobao_shop&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;&quot;&gt;
+            &lt;/a&gt;
+                                &lt;!-- http://img03.taobaocdn.com/bao/uploaded/i3/T1dqz2FPtXXXaCwpjX.png?scene=taobao_shop --&gt;
+                                                                                                                &lt;!-- === http://img03.taobaocdn.com/bao/uploaded/i3/T1dqz2FPtXXXaCwpjX.png?scene=taobao_shop == --&gt;
+            &lt;a href=&quot;http://h5.o2oshop.m.taobao.com/436013765/malldetail.htm?scene=taobao_shop&quot; data-ng=&quot;{{moduleData[&#39;5510648549&#39;].url[1]}}&quot; class=&quot;J_Gold ws-wrap&quot;   data-str=&quot;picSlide=1&quot;&gt;
+                &lt;img data-ng=&quot;{{moduleData[&#39;5510648549&#39;].pic[1]}}&quot; src=&quot;http://img03.taobaocdn.com/bao/uploaded/i3/T1dqz2FPtXXXaCwpjX.png?scene=taobao_shop&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;&quot;&gt;
+            &lt;/a&gt;
+                                &lt;!-- http://img04.taobaocdn.com/bao/uploaded/i4/T1VVaAFz8aXXb1upjX.jpg?scene=taobao_shop --&gt;
+                                                                                                                &lt;!-- === http://img04.taobaocdn.com/bao/uploaded/i4/T1VVaAFz8aXXb1upjX.jpg?scene=taobao_shop == --&gt;
+            &lt;a href=&quot;http://h5.o2oshop.m.taobao.com/436013765/page-587651949.htm?scene=taobao_shop&quot; data-ng=&quot;{{moduleData[&#39;5510648549&#39;].url[2]}}&quot; class=&quot;J_Gold ws-wrap&quot;   data-str=&quot;picSlide=2&quot;&gt;
+                &lt;img data-ng=&quot;{{moduleData[&#39;5510648549&#39;].pic[2]}}&quot; src=&quot;http://img04.taobaocdn.com/bao/uploaded/i4/T1VVaAFz8aXXb1upjX.jpg?scene=taobao_shop&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;&quot;&gt;
+            &lt;/a&gt;
+                                &lt;!-- http://img01.taobaocdn.com/bao/uploaded/i1/T1a.06FJBbXXb1upjX?scene=taobao_shop --&gt;
+                                                &lt;!-- === http://img01.taobaocdn.com/bao/uploaded/i1/T1a.06FJBbXXb1upjX?scene=taobao_shop == --&gt;
+            &lt;a href=&quot;#&quot; data-ng=&quot;{{moduleData[&#39;5510648549&#39;].url[3]}}&quot; class=&quot;J_Gold ws-wrap&quot;   data-str=&quot;picSlide=3&quot;&gt;
+                &lt;img data-ng=&quot;{{moduleData[&#39;5510648549&#39;].pic[3]}}&quot; src=&quot;http://img01.taobaocdn.com/bao/uploaded/i1/T1a.06FJBbXXb1upjX?scene=taobao_shop&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;&quot;&gt;
+            &lt;/a&gt;
+                                &lt;!-- http://img03.taobaocdn.com/bao/uploaded/i3/T1DruuFtBcXXb1upjX.jpg?scene=taobao_shop --&gt;
+                                                &lt;!-- === http://img03.taobaocdn.com/bao/uploaded/i3/T1DruuFtBcXXb1upjX.jpg?scene=taobao_shop == --&gt;
+            &lt;a href=&quot;#&quot; data-ng=&quot;{{moduleData[&#39;5510648549&#39;].url[4]}}&quot; class=&quot;J_Gold ws-wrap&quot;   data-str=&quot;picSlide=4&quot;&gt;
+                &lt;img data-ng=&quot;{{moduleData[&#39;5510648549&#39;].pic[4]}}&quot; src=&quot;http://img03.taobaocdn.com/bao/uploaded/i3/T1DruuFtBcXXb1upjX.jpg?scene=taobao_shop&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;&quot;&gt;
+            &lt;/a&gt;
+                    
+            &lt;/p&gt;
+
+    &lt;p class=&quot;ws-nav&quot;&gt;
+                            &lt;span class=&quot;ws-selected&quot;&gt;&lt;/span&gt;
+                                &lt;span&gt;&lt;/span&gt;
+                                &lt;span&gt;&lt;/span&gt;
+                                &lt;span&gt;&lt;/span&gt;
+                                &lt;span&gt;&lt;/span&gt;
+                        &lt;/p&gt;
+&lt;/div&gt;

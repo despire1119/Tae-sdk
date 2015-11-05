@@ -1,0 +1,10 @@
+<script id="smart-edit.html" type="text/ng-template">
+    <div>
+        <p class="default-line" ng-show="show"><span>{{pagename}}</span><span ng-show="editshow" class="icon-edit" ng-click="edit()"></span></p>
+        <p class="opt-line" ng-hide="show">
+            <input ng-model="prePagename" value="{{}}" type="text"/>
+            <span ng-click="save(event)" href="#" class="edit-button-next">±£´æ</span>
+            <span  ng-click="cancel()" class="form-button-cancel">È¡Ïû</span>
+        </p>
+    </div>
+</script>

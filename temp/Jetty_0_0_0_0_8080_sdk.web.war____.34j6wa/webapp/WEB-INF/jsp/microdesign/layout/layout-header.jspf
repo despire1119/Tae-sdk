@@ -1,0 +1,23 @@
+<meta charset="gbk"/>
+<meta name="microscope-data" content="pageId=1671437; userId=3618711672;siteCategoryId=1001;siteInstanceId=453025;">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>掌上宝</title>
+<link rel="stylesheet" type="text/css" href="http://g.tbcdn.cn/tb/o2o/0.0.4/framework/css/base.css"/>
+<link href="http://g.tbcdn.cn/tb/o2o/0.0.4/design/stylesheets/addpage/addpage.css" type="text/css"
+      rel="stylesheet"/>
+<script src="http://g.tbcdn.cn/kissy/k/1.3.0/kissy-min.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/framework/js/base-min.js"></script><!--[if lte IE 8]>
+<!--[if lte IE 8]>
+<script>
+document.createElement("ng-include");
+document.createElement("ng-pluralize");
+document.createElement("ng-view");
+document.createElement("pane");  // make ie7/8 happy !!
+</script>
+<![endif]-->
+<link href="http://g.tbcdn.cn/tb/o2o/0.0.4/design/stylesheets/common/common.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css"
+      href="http://g.tbcdn.cn/tb/o2o/0.0.4/design/stylesheets/editpage/??msp-pc.css,modules.css,editform.css">
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/iframe.js"></script>
+
+<jsp:directive.include file="/WEB-INF/jsp/prelude/template-render-css.jspf" />

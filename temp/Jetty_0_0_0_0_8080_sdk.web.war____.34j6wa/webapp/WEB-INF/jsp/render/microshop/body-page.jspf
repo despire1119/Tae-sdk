@@ -1,0 +1,5 @@
+<div id="main">
+    <div id="wrap">
+        <jsp:directive.include file="/WEB-INF/jsp/render/microshop/body-page-content.jspf" />
+    </div>
+</div>

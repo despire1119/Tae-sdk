@@ -1,0 +1,15 @@
+<dt class="name">${app.name}</dt>
+<c:set var="appRootURL" value="http://${appName}.taobaoapps.net:${serverPort}/" />
+<dd class="pic">
+	<c:set var="thumbnail" value="${app.thumbnail}" />
+        <c:if test="${not fn:startsWith(thumbnail,'http') && not fn:startsWith(thumbnail,'//')}">
+            <c:set var="thumbnail" value="${appRootURL}${thumbnail}" />
+        </c:if>
+	<img src="${thumbnail}" alt="缩略图" />
+</dd>
+<dd class="detail">
+	    <p>应用类型：${appType}</p>
+		<p>应用标题：${app.title}</p>
+		<p>语言：${app.language}</p>
+		<p>作者：${app.author}</p>
+</dd>

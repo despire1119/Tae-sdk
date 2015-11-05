@@ -1,0 +1,100 @@
+
+
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-other-taoke-recharge&quot;&gt;
+    		&lt;div class=&quot;skin-box-hd&quot;&gt;
+       &lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;
+	   &lt;h3&gt; &lt;span&gt; 充值中心&lt;/span&gt; &lt;/h3&gt;
+    &lt;/div&gt;
+		&lt;div class=&quot;skin-box-bd&quot;&gt;
+		&lt;input type=&quot;hidden&quot; value=&quot;true&quot; name=&quot;hasChooseAny&quot;&gt;
+	    &lt;input type=&quot;hidden&quot; value=&quot;edit&quot; name=&quot;envMode&quot;&gt;
+		&lt;input type=&quot;hidden&quot; value=&quot;true&quot; name=&quot;showTab&quot;&gt;
+		&lt;input type=&quot;hidden&quot; value=&quot;31491060&quot; name=&quot;taokepid&quot;&gt;
+		                                            &lt;div class=&quot;J_TWidget&quot; data-widget-type=&quot;Tabs&quot; data-widget-config=&quot;{
+                  &#39;navCls&#39;: &#39;recharge-nav&#39;,
+                  &#39;contentCls&#39;: &#39;recharge-panels&#39;,
+                  &#39;activeTriggerCls&#39;: &#39;selected&#39;,
+                  &#39;activeIndex&#39;:  0               }&quot;&gt;
+                    &lt;ul class=&quot;recharge-nav&quot;&gt;
+                        &lt;li  class=&quot;selected&quot; &gt;
+                            &lt;span&gt;手机充值&lt;/span&gt;
+                        &lt;/li&gt;
+                        &lt;li  &gt;
+                            &lt;span&gt;游戏快充&lt;/span&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;div class = &quot;recharge-panels&quot;&gt;
+                        &lt;div class=&quot;tel-panel&quot;&gt;
+                             	&lt;div&gt;
+		&lt;div&gt;
+			&lt;ul&gt;
+				&lt;li&gt;
+					&lt;label for=&quot;J_AlimTelInput&quot; class=&quot;tel-title&quot;&gt;手机号码：&lt;/label&gt;
+					&lt;input type=&quot;text&quot; name=&quot;phone&quot; id=&quot;J_AlimTelInput&quot; class=&quot;tel-text prompt space&quot; value=&quot;请输入&quot; autocomplete=&quot;off&quot; maxlength=&quot;11&quot;/&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;label for=&quot;J_AlimTelInputCfm&quot; class=&quot;tel-title&quot;&gt;确认号码：&lt;/label&gt;
+					&lt;input type=&quot;text&quot; name=&quot;phone_confirm&quot; id=&quot;J_AlimTelInputCfm&quot; class=&quot;tel-text prompt space&quot; value=&quot;请再次输入&quot; autocomplete=&quot;off&quot; maxlength=&quot;11&quot;/&gt;
+				&lt;/li&gt;
+				&lt;li class=&quot;tel-operator&quot;&gt;
+					&lt;span id=&quot;J_AlimTelOperator&quot;  class=&quot;hidden space&quot;&gt;&lt;/span&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;label for=&quot;J_AlimTelParPrice&quot; class=&quot;tel-title&quot;&gt;面值：&lt;/label&gt;
+					&lt;select name=&quot;item_id_num&quot; id=&quot;J_AlimTelParPrice&quot; class=&quot;tel-select space&quot;&gt;
+					&lt;/select&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;label for=&quot;J_AlimTelSalePrice&quot; id=&quot;J_AlimTelSalePriceLabel&quot;class=&quot;tel-title&quot;&gt;售价：&lt;/label&gt;
+					&lt;span id=&quot;J_AlimTelSalePrice&quot; class=&quot;sale-price space&quot;&gt;&lt;/span&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;p id=&quot;J_AlimTelMsgBox&quot; class=&quot;msg-box hidden&quot;&gt;
+				&lt;i id=&quot;J_TelMsgIcon&quot; class=&quot;&quot;&gt;&lt;/i&gt;
+				&lt;span id=&quot;J_AlimTelMsg&quot; class=&quot;msg&quot;&gt;&lt;/span&gt;
+			&lt;/p&gt;
+			&lt;a target=&quot;_blank&quot; href=&quot;#&quot; id=&quot;J_AlimTelSubmit&quot;  class=&quot;subbtn&quot;&gt; &lt;span class=&quot;hidden&quot;&gt;点此充值&lt;/span&gt; &lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;game-panel hidden&quot;&gt;
+                            	                              &lt;div class=&quot;game-nav&quot;&gt;
+                    	&lt;input type=&quot;radio&quot; name=&quot;game&quot; id=&quot;J_AlimGameCard&quot; class=&quot;J_GameTab&quot;/&gt;
+                    	&lt;label for=&quot;J_AlimGameCard&quot; &gt;点卡&lt;/label&gt;
+                    	&lt;input type=&quot;radio&quot; name=&quot;game&quot; id=&quot;J_AlimGameGold&quot; class=&quot;J_GameTab&quot;/&gt;
+                    	&lt;label for=&quot;J_AlimGameGold&quot;&gt;QQ&lt;/label&gt;
+                    	&lt;input type=&quot;radio&quot; name=&quot;game&quot; id=&quot;J_AlimGameOnline&quot; class=&quot;J_GameTab&quot;/&gt;
+                    	&lt;label for=&quot;J_AlimGameOnline&quot;&gt;网游物品&lt;/label&gt;
+                    &lt;/div&gt;
+              		&lt;div&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;list-line&quot;&gt;
+				&lt;label for=&quot;J_AlimGameCatId&quot; id=&quot;J_AlimGameCatName&quot; class=&quot;game-title&quot;&gt;
+					   							游戏：
+										&lt;/label&gt;
+				&lt;select name=&quot;cat_id&quot; id=&quot;J_AlimGameCatId&quot; class=&quot;game-select&quot; &gt;
+				&lt;/select&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;list-line&quot; &gt;
+				&lt;label for=&quot;J_AlimGameParPrice&quot; id=&quot;J_AlimGameParPrice_label&quot; class=&quot;game-title&quot;&gt;面值：&lt;/label&gt;
+				&lt;select name=&quot;item_id_num&quot; id=&quot;J_AlimGameParPrice&quot; class=&quot;game-select&quot;&gt;
+				&lt;/select&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;list-line&quot; id=&quot;J_AlimGameSalePriceEntry&quot;&gt;
+				&lt;label for=&quot;J_AlimGameSalePrice&quot; id=&quot;J_AlimGameSalePriceLabel&quot; class=&quot;game-title&quot;&gt;售价：&lt;/label&gt;
+				&lt;span id=&quot;J_AlimGameSalePrice&quot; class=&quot;sale-price&quot;&gt;&lt;/span&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;p id=&quot;J_AlimGameMsgBox&quot; class=&quot;msg-box hidden&quot;&gt;
+			&lt;i id=&quot;J_GameMsgIcon&quot; class=&quot;&quot;&gt;&lt;/i&gt;
+			&lt;span id=&quot;J_AlimGameMsg&quot; class=&quot;msg&quot;&gt;&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;a href=&quot;#&quot; target=&quot;_blank&quot;  id=&quot;J_AlimGameSubmit&quot;  class=&quot;subbtn&quot;&gt; &lt;span class=&quot;hidden&quot;&gt;点此充值&lt;/span&gt; &lt;/a&gt;
+	&lt;/div&gt;                        &lt;/div&gt;                    &lt;/div&gt;                    &lt;div class=&quot;alim-copyright&quot;&gt;
+                        货源由天猫统一提供
+                    &lt;/div&gt;
+                &lt;/div&gt;                              				    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+     &lt;/div&gt;
+	
+ 

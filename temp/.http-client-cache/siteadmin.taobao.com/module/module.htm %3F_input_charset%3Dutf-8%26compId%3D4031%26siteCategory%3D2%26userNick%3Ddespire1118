@@ -1,0 +1,46 @@
+
+
+ &lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-srch-inshop&quot;&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+		&lt;div class=&quot;skin-box-hd&quot;&gt;
+            &lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;
+									&lt;h3&gt;
+        				&lt;span&gt;
+            			                					            					本店搜索 
+            					            				        				&lt;/span&gt;
+				   &lt;/h3&gt;
+				    &lt;/div&gt;
+	    &lt;div class=&quot;skin-box-bd&quot;&gt;
+		              &lt;form name=&quot;SearchForm&quot; action=&quot;//shop71884477.taobao.com/search.htm&quot; method=&quot;get&quot;&gt;
+            &lt;ul&gt;
+                &lt;input type=&quot;hidden&quot; name=&quot;search&quot; value=&quot;y&quot;&gt;
+                &lt;li class=&quot;keyword&quot;&gt;
+                    &lt;label for=&quot;keyword&quot;&gt;
+                        &lt;span class=&quot;key&quot;&gt;关键字&lt;/span&gt;
+						&lt;input type=&quot;text&quot; size=&quot;18&quot; name=&quot;keyword&quot; autocomplete=&quot;off&quot; value=&quot;&quot; class=&quot;keyword-input J_TKeyword prompt&quot;&gt;
+                    &lt;/label&gt;
+                                                           
+                &lt;/li&gt;
+				                    &lt;li class=&quot;price&quot;&gt;
+                        &lt;label for=&quot;price&quot;&gt;
+                           &lt;span class=&quot;key&quot;&gt;价格&lt;/span&gt;
+						    &lt;input type=&quot;text&quot; id=&quot;price1&quot; name=&quot;lowPrice&quot; class=&quot;J_TCheckPrice J_TPrice1&quot; size=&quot;4&quot; value=&quot;&quot;&gt;
+                            &lt;span class=&quot;connect-line&quot;&gt;-&lt;/span&gt;
+                            &lt;input type=&quot;text&quot; id=&quot;price2&quot; name=&quot;highPrice&quot; class=&quot;J_TCheckPrice J_TPrice2&quot; size=&quot;4&quot; value=&quot;&quot;&gt;
+                        &lt;/label&gt;
+                    &lt;/li&gt;
+				                &lt;li class=&quot;submit&quot;&gt;
+                   &lt;input value=&quot;搜索&quot; class=&quot;J_TSubmitBtn btn&quot; type=&quot;submit&quot; class=&quot;btn&quot;&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/form&gt;
+        &lt;div class=&quot;hot-keys&quot;&gt;
+			
+							&lt;span&gt;热门搜索:&lt;/span&gt;
+                                        &lt;a href=&quot;//shop71884477.taobao.com/search.htm?search=y&amp;keyword=%B9%D8%BC%FC%B4%CA%D2%BB&quot;&gt;关键词一&lt;/a&gt;
+				                        &lt;a href=&quot;//shop71884477.taobao.com/search.htm?search=y&amp;keyword=%B9%D8%BC%FC%B4%CA%B6%FE&quot;&gt;关键词二&lt;/a&gt;
+				                        &lt;a href=&quot;//shop71884477.taobao.com/search.htm?search=y&amp;keyword=%B9%D8%BC%FC%B4%CA%C8%FD&quot;&gt;关键词三&lt;/a&gt;
+				                     &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+	&lt;/div&gt;

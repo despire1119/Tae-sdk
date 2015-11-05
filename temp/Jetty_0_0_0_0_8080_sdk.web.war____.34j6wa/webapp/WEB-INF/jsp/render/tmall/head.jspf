@@ -1,0 +1,33 @@
+<%-- 天猫店铺头部内容 --%>
+    <head>
+        <meta charset="gbk">
+        <meta http-equiv="X-UA-Compatible" content="IE=7"/>
+        <jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+        <title>${title}</title>
+        <script>
+            window.g_config = {
+                appId: 2,
+                assetsHost: "http://${assetsHost}/",
+                toolbar: false,
+                pageType: "tmall"
+            };
+            window.shop_config = {};
+        </script>
+        <%-- ICON 地址 --%>
+        <link rel="shortcut icon" href="http://${assetsHost}/p/mall/base/favicon.ico" type="image/x-icon" />
+        <style id="J_DG_Saved_Style">
+            #content {
+                background: url("#");
+            }
+            #hd {
+                background: url("#") #f4e827;
+            }
+        </style>
+        <%-- CSS 地址 --%>
+        <jsp:directive.include file="/WEB-INF/jsp/prelude/render-css.jspf" />
+
+        <%-- JS 地址 --%>
+        <script src="http://${assetsHost}/??s/kissy/1.3.0/kissy-min.js,p/mall/base/global-v2.js,apps/tmall/header/shop/head-seed.js?t=${date}"></script>
+        <script src="http://${assetsHost}/apps/taesite/platinum/scripts/wangpu/init-min.js?t=${date}"></script>
+        <script type="text/javascript" src="http://${assetsHost}/p/snsdk/core.js"></script>
+    </head>

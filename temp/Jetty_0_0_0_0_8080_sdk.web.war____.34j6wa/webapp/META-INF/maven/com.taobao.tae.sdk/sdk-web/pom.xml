@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>tae-sdk</artifactId>
+        <groupId>com.taobao.tae.sdk</groupId>
+        <version>${sdk.version}</version>
+    </parent>
+    <groupId>com.taobao.tae.sdk</groupId>
+    <artifactId>sdk-web</artifactId>
+    <packaging>war</packaging>
+    <name>TAE SDK Web 服务器 子工程</name>
+    <description>TAE SDK Web 服务器，用于管理系统和模板</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>sdk-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>GBK</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <packagingIncludes>
+                        META-INF/**,
+                        WEB-INF/*.*,
+                        WEB-INF/jsp/**,
+                        WEB-INF/jsp/**,
+                        WEB-INF/static/**,
+                        WEB-INF/classes/**,
+                        WEB-INF/lib/slf4j-api-*.jar
+                    </packagingIncludes>
+                    <!--
+					<packagingExcludes>
+						WEB-INF/lib/catalina-*.jar,
+						WEB-INF/lib/servlet-*.jar,
+						WEB-INF/lib/commons-logging-*.jar,
+						WEB-INF/lib/taobao-commons-*.jar,
+						WEB-INF/lib/ant-*.jar,
+						WEB-INF/lib/tbml-filter-*.jar,
+						WEB-INF/lib/tae-sdk-api-*.jar,
+						WEB-INF/lib/jackson-*.jar,
+						WEB-INF/lib/dom4j-*.jar,
+						WEB-INF/lib/jsoup-*.jar,
+						WEB-INF/lib/json-*.jar,
+						WEB-INF/lib/xml-apis-*.jar,
+						WEB-INF/lib/jsr305-*.jar,
+						WEB-INF/lib/sdk-*.jar,
+						WEB-INF/lib/tae-*.jar,
+						WEB-INF/lib/lesscss-*.jar,						
+						WEB-INF/lib/rhino-*.jar,
+						WEB-INF/lib/commons-*.jar,	
+						WEB-INF/lib/common-monitor-*.jar,			
+						WEB-INF/lib/diamond-*.jar,
+						WEB-INF/lib/groovy-*.jar,
+						WEB-INF/lib/jasypt-*.jar,
+						WEB-INF/lib/jline-*.jar,
+						WEB-INF/lib/lang-*.jar,
+						WEB-INF/lib/pushit-*.jar,
+						WEB-INF/lib/hsqldb-*.jar,
+						WEB-INF/lib/testng-*.jar,
+						WEB-INF/lib/spring-test-*.jar,
+						WEB-INF/lib/resin-*.jar,
+						WEB-INF/lib/activation-*.jar,
+						WEB-INF/lib/xerces*.jar,
+						WEB-INF/lib/guava-*.jar,
+						WEB-INF/lib/smarty4j-*.jar,						
+						%regex[WEB-INF/lib/log4j-(?!over-slf4j).*.jar]					
+					</packagingExcludes>
+					-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

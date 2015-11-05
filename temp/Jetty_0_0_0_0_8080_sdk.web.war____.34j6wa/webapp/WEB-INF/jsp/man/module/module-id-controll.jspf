@@ -1,0 +1,27 @@
+<c:set var="idDisabled" value="${editMode}" />
+<div class="form-group ${lmieSN}">
+	<label class="form-label">模块ID：</label>
+	<div class="form-controls">
+		<c:choose>
+			<c:when test="${isSystemModule}">
+				<c:set var="idPath" value="systemModuleID" />
+			</c:when>
+			<c:when test="${isLocalModule}">
+				<c:set var="idPath" value="localModuleID" />
+			</c:when>
+		</c:choose>
+		<c:if test="${idDisabled}">
+			<form:hidden path="${idPath}" />	
+		</c:if>
+		<form:input cssClass="form-text ${idDisabled ? 'disable':''} J_templateFileName" disabled="${idDisabled}" path="${idPath}" />
+		<span class="help-inline">
+		<c:if test="${isLocalModule}">
+			  只允许使用英文、数字、横线"-"和下划线"_"的组合（设计师模块ID必填，且自动添加前缀"tshop-um-"）	
+		</c:if>
+		<c:if test="${isSystemModule}">
+			模块ID皆以"tshop-pbsm-"为前缀
+		</c:if>
+			
+		</span>
+	</div>
+</div>

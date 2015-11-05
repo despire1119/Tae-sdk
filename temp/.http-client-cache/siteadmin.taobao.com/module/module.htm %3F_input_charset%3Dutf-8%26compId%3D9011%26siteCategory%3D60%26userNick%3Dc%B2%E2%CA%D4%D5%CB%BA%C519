@@ -1,0 +1,196 @@
+
+
+&lt;!-- detail module--&gt;
+&lt;!-- ================================= --&gt;
+&lt;!-- queryParameter id : 0  feedId : 0  --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  itemList :   $itemList --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  newdetailContent :   $newdetailContent --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  contentPage :   $contentPage --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  newrecommendContents :   $newrecommendContents --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  graphicRecommend :   $graphicRecommend --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  detailConsume :   $detailConsume --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  e2 : $e2 --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  errorStacks of e :   groovy.lang.MissingMethodException: No signature of method: com.taobao.tae.site.biz.daogou.DaogouHSFService.getContentPageByContentId() is applicable for argument types: (java.lang.Integer) values: [0]&lt;br/&gt;	org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:55)
+	org.codehaus.groovy.runtime.callsite.PojoMetaClassSite.call(PojoMetaClassSite.java:46)
+	org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	Comp_9011.execute(Comp_9011:132)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	java.lang.reflect.Method.invoke(Method.java:597)
+	org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1071)
+	groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:901)
+	groovy.lang.ProxyMetaClass$1.call(ProxyMetaClass.java:121)
+	groovy.lang.ProxyMetaClass.doCall(ProxyMetaClass.java:221)
+	groovy.lang.ProxyMetaClass.invokeMethod(ProxyMetaClass.java:119)
+	groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:721)
+	groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	groovy.lang.Script.invokeMethod(Script.java:78)
+	com.taobao.tae.engine.groovy.CompiledGroovy.invoke(CompiledGroovy.java:94)
+	com.taobao.tae.engine.TaeEngine.invokeGroovy(TaeEngine.java:178)
+	com.taobao.tae.sitecenter.client.EngineWrapper.excute(EngineWrapper.java:341)
+	com.taobao.tae.site.web.webx.screen.module.Module.render(Module.java:243)
+	com.taobao.tae.site.web.webx.screen.module.Module.execute(Module.java:86)
+	com.taobao.tae.site.web.webx.screen.module.Module$$FastClassByCGLIB$$18fe50fe.invoke(&lt;generated&gt;)
+	net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	com.alibaba.citrus.service.moduleloader.impl.adapter.MethodInvoker.invoke(MethodInvoker.java:70)
+	com.alibaba.citrus.service.moduleloader.impl.adapter.DataBindingAdapter.executeAndReturn(DataBindingAdapter.java:41)
+	com.alibaba.citrus.turbine.pipeline.valve.PerformScreenValve.performScreenModule(PerformScreenValve.java:111)
+	com.alibaba.citrus.turbine.pipeline.valve.PerformScreenValve.invoke(PerformScreenValve.java:74)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.alibaba.citrus.turbine.pipeline.valve.PerformActionValve.invoke(PerformActionValve.java:73)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invoke(PipelineImpl.java:210)
+	com.alibaba.citrus.service.pipeline.impl.valve.ChooseValve.invoke(ChooseValve.java:98)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invoke(PipelineImpl.java:210)
+	com.alibaba.citrus.service.pipeline.impl.valve.LoopValve.invokeBody(LoopValve.java:105)
+	com.alibaba.citrus.service.pipeline.impl.valve.LoopValve.invoke(LoopValve.java:83)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.EasywebValve.invoke(EasywebValve.java:73)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.security.token.webx3.pipeline.TBCheckCsrfTokenValve.invoke(TBCheckCsrfTokenValve.java:81)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.SetPageValve.invoke(SetPageValve.java:66)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.DomainCheckValve.invoke(DomainCheckValve.java:43)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.SetDesignRuleValve.invoke(SetDesignRuleValve.java:54)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.MDCValve.invoke(MDCValve.java:45)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.PrepareValve.invoke(PrepareValve.java:105)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.PrepareMockUserValve.invoke(PrepareMockUserValve.java:150)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.LoginCheckValve.invoke(LoginCheckValve.java:79)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.AnaylzeUrlValve.invoke(AnaylzeUrlValve.java:87)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.SetHttpHeaderValve.invoke(SetHttpHeaderValve.java:55)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.taobao.tae.site.web.pipeline.RefererCheckValve.invoke(RefererCheckValve.java:57)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.alibaba.alimonitor.jmonitor.plugin.webx3.JmonitorWebxUrlValve.invoke(JmonitorWebxUrlValve.java:34)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invoke(PipelineImpl.java:210)
+	com.alibaba.citrus.service.pipeline.impl.valve.TryCatchFinallyValve.invoke(TryCatchFinallyValve.java:83)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.alibaba.citrus.turbine.pipeline.valve.SetLoggingContextValve.invoke(SetLoggingContextValve.java:66)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.alibaba.citrus.turbine.pipeline.valve.PrepareForTurbineValve.invoke(PrepareForTurbineValve.java:52)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invokeNext(PipelineImpl.java:157)
+	com.alibaba.citrus.service.pipeline.impl.PipelineImpl$PipelineContextImpl.invoke(PipelineImpl.java:210)
+	com.alibaba.citrus.webx.impl.WebxControllerImpl.service(WebxControllerImpl.java:43)
+	com.alibaba.citrus.webx.impl.WebxRootControllerImpl.handleRequest(WebxRootControllerImpl.java:53)
+	com.alibaba.citrus.webx.support.AbstractWebxRootController.service(AbstractWebxRootController.java:165)
+	com.alibaba.citrus.webx.servlet.WebxFrameworkFilter.doFilter(WebxFrameworkFilter.java:152)
+	com.alibaba.citrus.webx.servlet.FilterBean.doFilter(FilterBean.java:148)
+	org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	com.taobao.tae.site.web.filter.MDCFilter.doFilter(MDCFilter.java:49)
+	org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	com.alibaba.citrus.webx.servlet.SetLoggingContextFilter.doFilter(SetLoggingContextFilter.java:61)
+	com.alibaba.citrus.webx.servlet.FilterBean.doFilter(FilterBean.java:148)
+	org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	com.taobao.mmp.client.web.filter.MmpSessionFilter.doFilter(MmpSessionFilter.java:167)
+	org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	com.taobao.session.TaobaoSessionFilter.doFilter(TaobaoSessionFilter.java:243)
+	org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	com.taobao.csp.sentinel.entrypoint.entrance.CommonFilter.doFilter(CommonFilter.java:46)
+	org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:410)
+	org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1042)
+	org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:314)
+	java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	java.lang.Thread.run(Thread.java:662)
+ --&gt;
+&lt;!-- ================================= --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-psm-detail&quot;&gt;
+&lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;div class=&quot;skin-box-hd&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;skin-box-bd&quot;&gt;
+&lt;!-- 在此写入你的模块内容
+--&gt;
+
+&lt;div id=&quot;content&quot; class=&quot;main-content clearfix &quot;&gt;
+    &lt;div class=&quot;side grid-col-250&quot;&gt;
+    &lt;div class=&quot;side-wrap&quot;&gt;
+        &lt;div id=&quot;J_SiteInfo&quot; class=&quot;site-info&quot;&gt;
+            &lt;a class=&quot; site-anchor &quot; href=&quot;$url&quot; target=&quot;_blank&quot;&gt;
+                &lt;div class=&quot;site-avata&quot; &gt;
+                    &lt;img class=&quot;avatar90&quot;   src=&quot;$defaultLogo&quot;   &gt;
+                &lt;/div&gt;
+                &lt;h2 class=&quot;yaHei-title&quot;&gt;c测试账号19&lt;/h2&gt;
+                &lt;p&gt;&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;div class=&quot;sh-focus-wrap&quot;&gt;
+                &lt;a class=&quot;sh-btn focus J_SiteFocus&quot; data-href=&quot;$url&quot;&gt;+关注&lt;strong&gt;0&lt;/strong&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+                                    &lt;ul class=&quot;site-others&quot;&gt;
+                                &lt;/ul&gt;
+                    &lt;div class=&quot;site-relative&quot;&gt;
+                &lt;ul class=&quot;clearfix&quot;&gt;
+                                    &lt;/ul&gt;
+            &lt;/div&gt;
+                &lt;div id=&quot;J_Finding&quot; class=&quot;finding  visibility-hidden&quot;&gt;
+            &lt;div class=&quot;b-bg&quot;&gt;
+                &lt;span class=&quot;b-rec&quot;&gt;&lt;/span&gt;&lt;span class=&quot;b-circle&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script pointman=&quot;lOKpeO&quot;&gt;
+        (function(S){
+            var modules = &#39;components/site-side-header/index.css&#39;;
+            S.importStyle(modules);
+            S.use(&#39;components/site-side-header/index&#39;, function(S, SiteSideHeader){
+                new SiteSideHeader();
+            });
+        })(KISSY);
+
+    &lt;/script&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;/div&gt;
+&lt;script pointman=&quot;lOKpeO&quot;&gt;
+    (function(S){
+        S.use(&#39;components/site-article-detail/index&#39;, function(S, SiteArticle){
+            new SiteArticle();
+        });
+    })(KISSY);
+
+&lt;/script&gt;
+
+

@@ -1,0 +1,27 @@
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/bower_components/json2/json2.js"></script>
+
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/bower_components/jquery/jquery.min.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/bower_components/jqueryui/ui/jquery-ui.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/bower_components/angular/angular.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/bower_components/angular-route/angular-route.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/bower_components/angular-resource/angular-resource.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/third_lib/jquery.form.js"></script>
+
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/app.js"></script>
+
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/controllers/homeCtrl.js"></script>
+
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/services/apiService.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/services/moduleService.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/services/utilService.js"></script>
+
+
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/directives/bindHtmlDirective.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/directives/dndModuleDirective.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/directives/dndListDirective.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/directives/editFormDirective.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/directives/singleUpload.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/directives/notifyDirective.js"></script>
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/directives/smartEditDirective.js"></script>
+
+<script src="http://g.tbcdn.cn/tb/o2o/0.0.4/design/javascripts/editpage/scripts/directives/moduleEditFormDirective.js"></script>

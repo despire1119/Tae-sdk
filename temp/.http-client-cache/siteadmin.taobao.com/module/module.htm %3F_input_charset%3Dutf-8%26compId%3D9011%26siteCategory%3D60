@@ -1,0 +1,84 @@
+
+
+&lt;!-- detail module--&gt;
+&lt;!-- ================================= --&gt;
+&lt;!-- queryParameter id : $id  feedId : $feedId  --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  itemList :   $itemList --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  newdetailContent :   $newdetailContent --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  contentPage :   $contentPage --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  newrecommendContents :   $newrecommendContents --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  graphicRecommend :   $graphicRecommend --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  detailConsume :   $detailConsume --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  e2 : $e2 --&gt;
+&lt;!-- ================================= --&gt;
+&lt;!--  errorStacks of e :   $errorStacks --&gt;
+&lt;!-- ================================= --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-psm-detail&quot;&gt;
+&lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;div class=&quot;skin-box-hd&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;skin-box-bd&quot;&gt;
+&lt;!-- 在此写入你的模块内容
+--&gt;
+
+&lt;div id=&quot;content&quot; class=&quot;main-content clearfix &quot;&gt;
+    &lt;div class=&quot;side grid-col-250&quot;&gt;
+    &lt;div class=&quot;side-wrap&quot;&gt;
+        &lt;div id=&quot;J_SiteInfo&quot; class=&quot;site-info&quot;&gt;
+            &lt;a class=&quot; site-anchor &quot; href=&quot;$url&quot; target=&quot;_blank&quot;&gt;
+                &lt;div class=&quot;site-avata&quot; &gt;
+                    &lt;img class=&quot;avatar90&quot;   src=&quot;$defaultLogo&quot;   &gt;
+                &lt;/div&gt;
+                &lt;h2 class=&quot;yaHei-title&quot;&gt;&lt;/h2&gt;
+                &lt;p&gt;&lt;/p&gt;
+            &lt;/a&gt;
+            &lt;div class=&quot;sh-focus-wrap&quot;&gt;
+                &lt;a class=&quot;sh-btn focus J_SiteFocus&quot; data-href=&quot;$url&quot;&gt;+关注&lt;strong&gt;0&lt;/strong&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+                                    &lt;ul class=&quot;site-others&quot;&gt;
+                                &lt;/ul&gt;
+                    &lt;div class=&quot;site-relative&quot;&gt;
+                &lt;ul class=&quot;clearfix&quot;&gt;
+                                    &lt;/ul&gt;
+            &lt;/div&gt;
+                &lt;div id=&quot;J_Finding&quot; class=&quot;finding  visibility-hidden&quot;&gt;
+            &lt;div class=&quot;b-bg&quot;&gt;
+                &lt;span class=&quot;b-rec&quot;&gt;&lt;/span&gt;&lt;span class=&quot;b-circle&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script pointman=&quot;&quot;&gt;
+        (function(S){
+            var modules = &#39;components/site-side-header/index.css&#39;;
+            S.importStyle(modules);
+            S.use(&#39;components/site-side-header/index&#39;, function(S, SiteSideHeader){
+                new SiteSideHeader();
+            });
+        })(KISSY);
+
+    &lt;/script&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+&lt;/div&gt;
+&lt;script pointman=&quot;&quot;&gt;
+    (function(S){
+        S.use(&#39;components/site-article-detail/index&#39;, function(S, SiteArticle){
+            new SiteArticle();
+        });
+    })(KISSY);
+
+&lt;/script&gt;
+
+

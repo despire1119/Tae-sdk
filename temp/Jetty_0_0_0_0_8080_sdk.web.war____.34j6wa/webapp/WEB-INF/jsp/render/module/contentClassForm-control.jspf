@@ -1,0 +1,20 @@
+<!-- 组件按钮样式开始 -->
+
+<c:forEach items="${selectedCategoryTreeJSONMap}" var="selectedCategoryTreeJSONEntry">
+	<c:if test="${parameter.name eq selectedCategoryTreeJSONEntry.key}">
+		<c:set var="selectedCategoryTreeJSON" value="${selectedCategoryTreeJSONEntry.value}" />
+	</c:if>
+</c:forEach>
+
+<c:forEach items="${chosenContentClassMap}" var="chosenContentClassEntity">
+	<c:if test="${parameter.name eq chosenContentClassEntity.key}">
+		<c:set var="chosenContentClassJSONContent" value="${chosenContentClassEntity.value.jsonContent}" />
+		<c:set var="chosenContentClassCount" value="${chosenContentClassEntity.value.chosedCount}" />
+	</c:if>
+</c:forEach>
+
+<a href="#" class="btn-ok J_categoryChoseBtn" data-trigger="${parameter.name}">选择分类</a>
+<span class="category-sum J_categorySum"> （已选择 <em>${chosenContentClassCount}</em> 个分类） </span> 
+<input type="hidden" class="J_categoryDate" temp-data='${chosenContentClassJSONContent}' 
+	   class="J_ItemIds" name="${parameter.name}" value="" />
+<!-- 组件按钮样式结束 -->

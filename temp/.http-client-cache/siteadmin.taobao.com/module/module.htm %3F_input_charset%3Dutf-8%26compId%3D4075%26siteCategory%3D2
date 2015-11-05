@@ -1,0 +1,29 @@
+
+
+&lt;!--   e:$e      --&gt;
+&lt;!--   couponListJson:[]   --&gt;
+&lt;!--   jsonListFromSearch:$jsonListFromSearch   --&gt;
+&lt;!--   envMode:edit   --&gt;
+&lt;!--   couponList:[]   --&gt;
+&lt;!--   couponList.size():0   --&gt;
+&lt;!--   couponList.isEmpty():true   --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-coupon&quot;&gt;
+        &lt;div class=&quot;skin-box-hd&quot;&gt;
+        &lt;i class=&quot;hd-icon&quot;&gt;&lt;/i&gt;
+        &lt;h3&gt;
+            &lt;span&gt;优惠劵专区&lt;/span&gt;
+        &lt;/h3&gt;
+        &lt;div class=&quot;skin-box-act&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        &lt;div class=&quot;skin-box-bd&quot;&gt;
+    	    		    	    		    	  &lt;img src=&quot;//img.alicdn.com/tps/i4/T1d.c2XiVdXXcFlAcy-190-120.png&quot; style=&quot;height:120px;display:block;&quot;/&gt;
+	    	    	            &lt;/div&gt;
+    	    &lt;script type=&quot;text/javascript&quot;&gt;
+	    KISSY.getScript(&quot;//g.alicdn.com//shop/modules/0.2.0/shop/coupon/design/index-min.js&quot;,function(){
+	        setTimeout(function(){
+	            CouponSet(&quot;#shop4075&quot;); //模块id
+	        },50);
+	    });
+	    &lt;/script&gt;
+    &lt;/div&gt;

@@ -1,0 +1,546 @@
+
+
+<?xml version="1.0" encoding="GBK"?>
+<rule productId="60" name="导购sss店铺" desc="导购店铺装修规则" publishTimeMills="1342859986550"
+      xsi:schemaLocation="http://design.taobao.com/design/rules/schema/design-rules-1.0.xsd"
+      xmlns:ns2="http://design.taobao.com/tae-design-rules" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- 新增了pageGroup 和presentPages 节点， 在完全回归之前请勿推送线上 -->
+    <siteInfo>
+        <maxPageNum>9999</maxPageNum>
+        <homePageId>1</homePageId>
+        <background>true</background>
+        <cms>true</cms>
+        <css>true</css>
+        <footer>true</footer>
+        <headerModule>true</headerModule>
+        <logo>true</logo>
+        <showside>true</showside>
+        <mulitLayout>true</mulitLayout>
+        <scriptcode><![CDATA[
+
+                ]]></scriptcode>
+        <localModulePrefix>tshop-um-</localModulePrefix>
+        <systemModulePrefix>tshop-psm-,tshop-uz-</systemModulePrefix>
+        <tbmlFilterConfig>
+            <configFileName>tbml-filter-tae-newsdk.xml</configFileName>
+            <configId>newsdk</configId>
+            <version>ss</version>
+        </tbmlFilterConfig>
+        <pageGroups>
+            <pageGroup>
+                <id>1</id>
+                <pageGroupName>基础页</pageGroupName>
+                <addiable>false</addiable>
+                <sortedPageTypes>
+                    <pageTypeId>1</pageTypeId>
+                    <pageTypeId>114</pageTypeId>
+                </sortedPageTypes>
+            </pageGroup>
+            <pageGroup>
+                <id>2</id>
+                <pageGroupName>详情页</pageGroupName>
+                <addiable>false</addiable>
+                <sortedPageTypes>
+                    <pageTypeId>6</pageTypeId>
+                </sortedPageTypes>
+            </pageGroup>
+            <pageGroup>
+                <id>3</id>
+                <pageGroupName>列表页</pageGroupName>
+                <addiable>false</addiable>
+                <sortedPageTypes>
+                    <pageTypeId>3</pageTypeId>
+                </sortedPageTypes>
+            </pageGroup>
+            <pageGroup>
+                <id>4</id>
+                <pageGroupName>自定义页</pageGroupName>
+                <addiable>true</addiable>
+                <sortedPageTypes>
+                    <pageTypeId>4</pageTypeId>
+                </sortedPageTypes>
+            </pageGroup>
+        </pageGroups>
+
+        <presetPages>
+            <presetPage>
+                <pageDemoId>2031</pageDemoId>
+                <defaultLoad>false</defaultLoad>
+                <condition>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                  def execute(Map context) {
+                		return true
+                	}]]>
+                </condition>
+            </presetPage>
+            <presetPage>
+                <pageDemoId>2032</pageDemoId>
+                <defaultLoad>false</defaultLoad>
+                <condition>
+                    <![CDATA[import com.taobao.tae.design.rules.validate.ValidateResult
+                  def execute(Map context) {
+                		return true
+                	}]]>
+                </condition>
+            </presetPage>
+        </presetPages>
+        <presetPageGroups>
+            <presetPageGroup>
+                <id>4</id>
+                <groupName>自定义页</groupName>
+                <pageTypeIds>
+                    <pageTypeId>4</pageTypeId>
+                </pageTypeIds>
+                <action>/page/selfPage.htm</action>
+            </presetPageGroup>
+            <presetPageGroup>
+                <id>3</id>
+                <groupName>列表页</groupName>
+                <pageTypeIds>
+                    <pageTypeId>3</pageTypeId>
+                </pageTypeIds>
+                <action>/page/categoryPage.htm</action>
+            </presetPageGroup>
+            <pageGroup>
+                <id>2</id>
+                <groupName>详情页</groupName>
+                <pageTypeIds>
+                    <pageTypeId>6</pageTypeId>
+                </pageTypeIds>
+                <action>/page/detailPage.htm</action>
+            </pageGroup>
+        </presetPageGroups>
+        <offlinePageTypes>
+            <offlinePageType>23</offlinePageType>  <!--十周年抽奖页面  site_page_types 标中已不存在记录-->
+            <offlinePageType>315</offlinePageType> <!--活动促销页 site_page_types 标中已不存在记录 -->
+            <offlinePageType>10</offlinePageType>  <!--店铺动态页  -->
+            <offlinePageType>50</offlinePageType>  <!--会员权益页 site_page_types 标中已不存在记录 -->
+
+        </offlinePageTypes>
+        <offlinePageDemoIds>
+            <offlinePageDemoId>5005</offlinePageDemoId>  <!--活动促销页  -->
+            <offlinePageDemoId>3602</offlinePageDemoId>  <!--混合布局协作页面  -->
+            <offlinePageDemoId>3603</offlinePageDemoId>  <!-- 通栏协作页面 -->
+        </offlinePageDemoIds>
+    </siteInfo>
+    <pageRule>
+        <pages>
+            <page name="首页" pageId="1">
+                <pageInfo>
+                    <maxAppend>1</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>false</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/index.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>1</type>
+                </pageInfo>
+
+                <supportedModules>
+                    <module supportWidth="950" renamable="true" maxAppend="50" required="false" deleteable="true"
+                            movable="true" editable="true" name="图片轮播" moduleId="9008" designable="true"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="2" required="false"
+                            deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="9010"
+                            addable="false" designable="true"/>
+                    <module supportWidth="950" renamable="true" maxAppend="1" required="false" deleteable="true"
+                            movable="true" editable="true" name="导购内容瀑布流" moduleId="9006" designable="true"/>
+                    <module supportWidth="950" renamable="true" maxAppend="2" required="false" deleteable="true"
+                            movable="true" editable="true" name="行家轮播图" moduleId="9205" designable="true"/>
+
+
+                </supportedModules>
+
+                <supportedLayouts>
+                    <layout name="grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5m0e5" layoutId="20">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5e5" layoutId="229">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5e5m0" layoutId="230">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+
+                    </layout>
+
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="内容详情页" pageId="6">
+                <pageInfo>
+                    <maxAppend>15</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/detail.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>6</type>
+                </pageInfo>
+
+                <supportedModules>
+                    <module supportWidth="950" renamable="true" maxAppend="2" required="false" deleteable="true"
+                            movable="true" editable="true" name="图片轮播" moduleId="9008" addable="false"
+                            designable="true"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="false"
+                            movable="true" editable="false" name="导购站点Detail页面" moduleId="9011" designable="true"/>
+                </supportedModules>
+
+                <supportedLayouts>
+                    <layout name="grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5m0e5" layoutId="20">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5e5" layoutId="229">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5e5m0" layoutId="230">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="内容分类页" pageId="3">
+                <pageInfo>
+                    <maxAppend>10</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/list.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>3</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950" renamable="true" maxAppend="2" required="false" deleteable="true"
+                            movable="true" editable="true" name="图片轮播" moduleId="9008" addable="false"
+                            designable="true"/>
+                    <module supportWidth="950" renamable="false" maxAppend="1" required="false" deleteable="false"
+                            movable="true" editable="true" name="导购内容瀑布流" moduleId="9006" designable="true"/>
+                </supportedModules>
+
+                <supportedLayouts>
+                    <layout name="grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5m0e5" layoutId="20">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5e5" layoutId="229">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5e5m0" layoutId="230">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page name="留言页" pageId="114">
+                <pageInfo>
+                    <maxAppend>10</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>40</maxModule>
+                    <renamable>true</renamable>
+                    <required>true</required>
+                    <position>0</position>
+                    <pageurl>/board.htm</pageurl>
+                    <defaultLoad>true</defaultLoad>
+                    <maxDesign>1</maxDesign>
+                    <type>114</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950" renamable="true" maxAppend="1" required="true" deleteable="false"
+                            movable="true" editable="false" name="站长用户互动区" moduleId="9012" designable="true"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5m0e5" layoutId="20">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5e5" layoutId="229">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5e5m0" layoutId="230">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>true</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+            <page pageId="4" name="自定义页">
+                <pageInfo>
+                    <maxAppend>50</maxAppend>
+                    <maxLayout>5</maxLayout>
+                    <maxModule>50</maxModule>
+                    <renamable>true</renamable>
+                    <required>false</required>
+                    <position>0</position>
+                    <pageurl>/</pageurl>
+                    <defaultLoad>false</defaultLoad>
+                    <maxDesign>50</maxDesign>
+                    <type>4</type>
+                </pageInfo>
+                <supportedModules>
+                    <module supportWidth="950" renamable="true" maxAppend="50" required="false" deleteable="true"
+                            movable="true" editable="true" name="图片轮播" moduleId="9008" addable="true"
+                            designable="true"/>
+                    <module supportWidth="190,550,750,950" renamable="false" maxAppend="50" required="false"
+                            deleteable="true" movable="true" editable="true" name="自定义内容区" moduleId="9010"
+                            addable="true" designable="true"/>
+                    <module supportWidth="950" renamable="true" maxAppend="50" required="false" deleteable="true"
+                            movable="true" editable="true" name="导购内容瀑布流" moduleId="9006" addable="true"
+                            designable="true"/>
+                    <module supportWidth="950" renamable="true" maxAppend="2" required="false" deleteable="true"
+                            movable="true" editable="true" name="行家轮播图" moduleId="9205" addable="false"
+                            designable="true"/>
+                </supportedModules>
+                <supportedLayouts>
+                    <layout name="grid-s5m0" layoutId="1">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5m0e5" layoutId="20">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5" layoutId="228">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0s5e5" layoutId="229">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-s5e5m0" layoutId="230">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+
+                    <layout name="grid-m0" layoutId="231">
+                        <layoutInfo>
+                            <maxModule>40</maxModule>
+                            <required>false</required>
+                            <position>0</position>
+                        </layoutInfo>
+                    </layout>
+                </supportedLayouts>
+            </page>
+        </pages>
+    </pageRule>
+
+    <headRule>
+        <headInfo>
+            <maxLayout>1</maxLayout>
+            <maxModule>2</maxModule>
+            <moduleAddable>true</moduleAddable>
+        </headInfo>
+
+        <supportedModules>
+            <module supportWidth="950" renamable="true" maxAppend="1" required="true" deleteable="false" movable="false"
+                    editable="false" name="导购站点套头" moduleId="9001" addable="true" designable="true"/>
+            <module supportWidth="950" renamable="true" maxAppend="1" required="false" deleteable="true" movable="false"
+                    editable="true" name="导购站点导航栏" moduleId="9002" addable="true" designable="true"/>
+        </supportedModules>
+
+        <supportedLayouts>
+            <layout name="页首布局" layoutId="23">
+                <layoutInfo>
+                    <maxModule>2</maxModule>
+                    <required>true</required>
+                    <position>0</position>
+                    <supportWidth>950</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </headRule>
+
+    <footRule>
+        <footInfo>
+            <maxLayout>1</maxLayout>
+            <maxModule>1</maxModule>
+            <editable>false</editable>
+        </footInfo>
+
+        <supportedModules>
+            <module supportWidth="950" renamable="true" maxAppend="1" required="true" deleteable="false" movable="false"
+                    editable="false" name="站长管理浮层" moduleId="9029" designable="true"/>
+        </supportedModules>
+
+        <supportedLayouts>
+            <layout name="尾部布局" layoutId="33">
+                <layoutInfo>
+                    <maxModule>1</maxModule>
+                    <required>true</required>
+                    <position>0</position>
+                    <supportWidth>950</supportWidth>
+                </layoutInfo>
+            </layout>
+        </supportedLayouts>
+    </footRule>
+</rule>

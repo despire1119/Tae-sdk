@@ -1,0 +1,59 @@
+<c:set var="isLayout" value="${fn:contains(requestURI, '/WEB-INF/jsp/design/layout/')}" />
+<c:set var="isDebug" value="${fn:contains(requestURI, '/WEB-INF/jsp/design/debug/')}" />
+
+<%-- 页面调试URI --%>
+<c:set var="pageDebugURI" value="/design/page/debug/${templateDirectoryName}/${pageFileName}/" />
+
+<%-- 页面布局URI --%>
+<c:set var="pageLayoutURI" value="/design/page/layout/${templateDirectoryName}/${pageFileName}/" />
+
+<%-- 页面设置URI --%>
+<c:set var="pageSettingURI" value="/man/template/page/edit/${templateDirectoryName}/${pageFileName}/" />
+
+<%-- 页面渲染URI --%>
+<c:set var="pageRenderURI" value="/htdocs/${templateDirectoryName}/${fn:substringBefore(pageFileName,'.json')}/${themeName}/" />
+
+<%-- 模板列表页面 --%>
+<c:set var="templateListURI" value="/man/template/list/" />
+
+<%-- 页面管理URI --%>
+<c:set var="pageManageURI" value="/man/template/layout/${templateDirectoryName}/" />
+
+<%-- 模板管理URI --%>
+<c:set var="templateManageURI" value="/index/" />
+
+<%-- 模板风格管理URI --%>
+<c:set var="templateThemeURI" value="/man/template/theme/${templateDirectoryName}/" />
+
+<%-- 保存页面布局URI --%>
+<c:set var="savePageLayoutURI" value="/design/save/page/layout/${templateDirectoryName}/${pageFileName}/" />
+
+<%-- 添加页面URI --%>
+<c:set var="addPageURI" value="/man/template/page/form/${templateDirectoryName}/" />
+
+<%-- 模板组装URI --%>
+<c:set var="templateAssembleURI" value="/man/template/assemble/${templateDirectoryName}/" />
+
+<%-- 模板风格管理URI --%>
+<c:set var="templateThemeURI" value="/man/template/theme/${templateDirectoryName}/" />
+
+<%-- 添加页面URI --%>
+<c:choose>
+    <c:when test="${siteLayout.siteID == 3}">
+        <c:set var="navLogoImageURL" value="http://img03.taobaocdn.com/tps/i3/T1jUlaXzFhXXcgU5U6-113-21.png" />
+    </c:when>
+    <c:when test="${siteLayout.siteID == 2}">
+            <c:set var="navLogoImageURL" value="http://img03.taobaocdn.com/tps/i3/T1Mx0bXCRaXXbTxfs_-127-25.png" />
+    </c:when>
+    <c:when test="${siteLayout.siteID == 66}">
+        <c:set var="navLogoImageURL" value="http://img03.taobaocdn.com/tps/i3/T1HhBDXB8XXXXn4.Z7-120-26.png" />
+    </c:when>
+    <c:otherwise>
+        <c:set var="navLogoImageURL" value="http://img03.taobaocdn.com/tps/i3/T1Mx0bXCRaXXbTxfs_-127-25.png" />
+    </c:otherwise>
+</c:choose>
+
+<%-- 站点级别属性 --%>
+<c:set var="responseVersion" value="${siteTemplate.responseVersion}"/>
+
+

@@ -1,0 +1,16 @@
+<!-- 组件按钮样式开始 -->
+
+<c:set var="contentsCount" value="0" />
+<c:choose>
+	<c:when test="${not empty parameter.value}">
+		<c:set var="contentIDsArray" value="${fn:split(parameter.value,',')}" />
+		<c:set var="contentsCount" value="${fn:length(contentIDsArray)}" />
+	</c:when>
+	<c:otherwise>
+	</c:otherwise>
+</c:choose>
+
+<a href="#" class="btn-ok J_itemChoseBtn" data-trigger="${parameter.name}">选择内容</a>
+<span class="item-sum J_itemSum"> （已选择 <em>${contentsCount}</em> 个内容） </span>
+<input type="hidden" class="J_itemDate" />
+<!-- 组件按钮样式结束 -->

@@ -1,0 +1,7 @@
+<body>
+    <%-- 响应式布局 --%>
+    <c:if test="${not empty responseVersion}">
+        <jsp:directive.include file="/WEB-INF/jsp/render/tmallbrand/script.jspf"/>
+    </c:if>
+    <jsp:directive.include file="/WEB-INF/jsp/render/tmallbrand/body-page.jspf"/>
+</body>

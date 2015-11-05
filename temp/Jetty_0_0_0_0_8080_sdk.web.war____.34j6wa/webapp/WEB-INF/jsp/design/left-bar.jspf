@@ -1,0 +1,39 @@
+
+<div id="sidebar">
+    <div class="handle">
+        <a href="#" class="handler"></a>
+    </div>
+    <div class="header">
+        <h2 class="title">
+            <i class="icon icon-list"></i>
+            <span class="des">页面管理</span>
+        </h2>
+        <a href="${addPageURI}" class="add"></a>
+    </div>
+    <div class="content">
+    	<c:forEach items="${typedPagesListMap}" var="typedPagesListEntry">
+    		<c:set var="pageType" value="${typedPagesListEntry.key}" />
+    		<c:set var="pagesList" value="${typedPagesListEntry.value}" />
+    		<div class="bar-switchable-panel switch-panel">
+                <div class="wrapper J_sideNav">
+                    <!--一级二级开始 -->
+                    <h4 class="ks-switchable-trigger fst">
+                        <i class="ks-icon icon"></i>${pageType.fileName}
+                    </h4>
+                    <ul class="ks-switchable-panel snd">
+                    	<c:forEach items="${pagesList}" var="page" >
+                    		<li>
+                    			<c:set var="isCurrentPage" value="${pageFileName eq page.file}" />
+                    			    <a href="/design/page/${isLayout ? 'layout' : 'debug'}/${templateDirectoryName}/${page.file}/"
+                    				<c:if test="${isCurrentPage}">
+                    					style="background:none repeat scroll 0 0 #E07120"
+                    				</c:if>
+                    			>${page.name}</a>
+                            </li>
+                    	</c:forEach>
+                    </ul>
+                </div>
+            </div>
+    	</c:forEach>       
+    </div>
+</div>

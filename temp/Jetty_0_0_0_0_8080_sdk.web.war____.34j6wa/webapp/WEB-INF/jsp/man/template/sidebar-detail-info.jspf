@@ -1,0 +1,16 @@
+<dt class="name">${template.name}</dt>
+<dd class="pic">
+	<c:set var="thumbnail" value="${template.thumbnail}" />
+	<c:if test="${not fn:startsWith(thumbnail,'http') && not fn:startsWith(thumbnail,'//')}">
+		<c:set var="thumbnail" value="/${manDirectoryName}/${thumbnail}" />
+	</c:if>
+	<img src="${thumbnail}" alt="缩略图" />
+</dd>
+<dd class="detail">
+        <p>适用店铺：${siteTitle}</p>
+	    <p>模板类型：${template.siteTemplate.templateType.label}</p>
+		<p>店铺类型：${template.shopType}</p>
+		<p>版本号：${template.version}</p>
+		<p>语言：${template.language}</p>
+		<p>最后编辑：${template.lastModifiedDate}</p>
+</dd>

@@ -1,0 +1,17 @@
+<!-- test -->
+<%-- 系统模块的合并JS URL --%>
+<c:if test="${systemModulesCombinedJsURL ne null}">
+	<script id="J_TModsFileList" src="http://${systemModulesCombinedJsURL}"></script>
+</c:if>
+
+<c:if test="${not empty localModulesCombinedJsURL}">
+		<script type="text/javascript" src="${localModulesCombinedJsURL}"></script>
+</c:if>
+
+
+<%--
+//TODO:暂时取消Less浏览器编译
+<c:if test="${not empty modulesCombinedLessURL}">
+		<script src="/resource/javascripts/less" type="text/javascript"></script> 
+</c:if>
+--%>

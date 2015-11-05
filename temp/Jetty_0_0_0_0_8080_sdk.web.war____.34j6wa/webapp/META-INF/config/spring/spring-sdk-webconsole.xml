@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans default-autowire="byName" xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+
+
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+    <import resource="classpath:/META-INF/config/spring/spring-sdk-service.xml"/>
+
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+
+    <util:map id="cssBackgroundRepeatMap">
+        <entry key="no-repeat" value="无平铺"/>
+        <entry key="repeat" value="平铺"/>
+        <entry key="repeat-x" value="水平平铺"/>
+        <entry key="repeat-y" value="垂直平铺"/>
+    </util:map>
+
+    <util:map id="cssBackgroundPositionMap">
+        <entry key="" value="无"/>
+        <entry key="top left" value="左上"/>
+        <entry key="top center" value="中上"/>
+        <entry key="top right" value="右上"/>
+        <entry key="left center" value="中左"/>
+        <entry key="center center" value="中"/>
+        <entry key="right center" value="中右"/>
+        <entry key="bottom left" value="左下"/>
+        <entry key="bottom center" value="中下"/>
+        <entry key="bottom right" value="右下"/>
+    </util:map>
+
+    <util:map id="cssFontFamiliesMap">
+        <entry key="SimSun" value="宋体"/>
+        <entry key="NSimSun" value="新宋体"/>
+        <entry key="FangSong" value="仿宋"/>
+        <entry key="KaiTi" value="楷体"/>
+        <!-- <entry key="DFKai-SB left" value="中左" /> -->
+        <entry key="BiaoKaiTi" value="标楷体"/>
+        <entry key="Microsoft JhengHei" value="微软正黑体"/>
+        <entry key="Microsoft YaHei" value="微软雅黑"/>
+        <entry key="SimHei" value="黑体"/>
+        <entry key="MingLiu" value="细明体"/>
+        <entry key="PMingLiu" value="新细明体"/>
+    </util:map>
+
+    <util:map id="cssBorderRadiusMap">
+        <entry key="0px" value="直角"/>
+        <entry key="3px" value="圆角"/>
+    </util:map>
+
+    <util:list id="cssFontSizesList">
+        <value>9px</value>
+        <value>10px</value>
+        <value>11px</value>
+        <value>12px</value>
+        <value>14px</value>
+        <value>18px</value>
+        <value>24px</value>
+        <value>30px</value>
+        <value>36px</value>
+        <value>48px</value>
+        <value>60px</value>
+        <value>72px</value>
+    </util:list>
+
+    <util:list id="cssFontWeightList">
+        <value>normal</value>
+        <value>bold</value>
+        <value>bolder</value>
+        <value>lighter</value>
+    </util:list>
+
+    <!-- <util:list id="templateType">
+         <value>简易模板</value>
+         <value>高级模板</value>
+         <value>JS模板</value>
+         <value>TAE模板</value>
+     </util:list> -->
+
+
+    <!--
+   系统管理导航视图列表
+    -->
+    <util:list id="systemMangerNavigationViewList">
+        <ref bean="indexMangerNavigationViewUI"/>
+        <ref bean="myTemplateMangerNavigationViewUI"/>
+        <ref bean="myMicroTemplateMangerNavigationViewUI"/>
+        <ref bean="myAppMangerNavigationViewUI"/>
+        <ref bean="systemSettingMangerNavigationViewUI"/>
+        <ref bean="feedbackNavigationViewUI"/>
+        <ref bean="helpNavigationViewUI"/>
+    </util:list>
+
+    <bean id="indexMangerNavigationViewUI" class="com.taobao.tae.sdk.web.model.MangerNavigationViewUI">
+        <property name="title" value="首 页"/>
+        <property name="uri" value="/index/"/>
+        <property name="matchURIPrefix" value="/index/"/>
+    </bean>
+
+    <bean id="myTemplateMangerNavigationViewUI" class="com.taobao.tae.sdk.web.model.MangerNavigationViewUI">
+        <property name="title" value="我的模板"/>
+        <property name="uri" value="/man/template/list/"/>
+        <property name="matchURIPrefix" value="/man/template/"/>
+    </bean>
+
+    <bean id="myMicroTemplateMangerNavigationViewUI" class="com.taobao.tae.sdk.web.model.MangerNavigationViewUI">
+        <property name="title" value="我的微模板"/>
+        <property name="uri" value="/man/microtemplate/list/"/>
+        <property name="matchURIPrefix" value="/man/microtemplate/"/>
+    </bean>
+
+    <bean id="myAppMangerNavigationViewUI" class="com.taobao.tae.sdk.web.model.MangerNavigationViewUI">
+        <property name="title" value="我的应用"/>
+        <property name="uri" value="/man/app/list/"/>
+        <property name="matchURIPrefix" value="/man/app/"/>
+    </bean>
+
+
+    <bean id="systemSettingMangerNavigationViewUI" class="com.taobao.tae.sdk.web.model.MangerNavigationViewUI">
+        <property name="title" value="系统设置"/>
+        <property name="uri" value="/man/system/settings/"/>
+        <property name="matchURIPrefix" value="/man/system/"/>
+    </bean>
+
+    <bean id="feedbackNavigationViewUI" class="com.taobao.tae.sdk.web.model.MangerNavigationViewUI">
+        <property name="title" value="缺陷反馈"/>
+        <property name="uri" value="/bugs/bug/"/>
+        <property name="matchURIPrefix" value="/bugs/"/>
+    </bean>
+
+    <bean id="helpNavigationViewUI" class="com.taobao.tae.sdk.web.model.MangerNavigationViewUI">
+        <property name="title" value="帮助"/>
+        <property name="uri" value="/help/"/>
+        <property name="matchURIPrefix" value="/help/"/>
+    </bean>
+
+    <!-- 应用类型 -->
+    <util:map id="taeAppTypesMap">
+        <entry key="1" value="TAE 店铺模块"/>
+        <entry key="2" value="淘宝U站"/>
+        <entry key="3" value="通用应用"/>
+        <entry key="4" value="独立模块（迁移）"/>
+        <entry key="5" value="商圈"/>
+        <entry key="6" value="爱淘宝"/>
+        <entry key="7" value="微淘插件"/>
+    </util:map>
+
+    <!-- 业务类型 -->
+    <util:map id="bizTypesMap">
+        <entry key="1" value="天猫品牌站"/>
+        <entry key="2" value="服务市场"/>
+    </util:map>
+
+    <!-- 应用业务类型 key : taeAppTypesMap ; value : bizTypesMap-->
+    <util:map id="taeAppBizTypesMap">
+        <entry key="1" value="1,2"/>
+    </util:map>
+
+    <bean id="templateEditFormURIPrefix" class="java.lang.String">
+        <constructor-arg value="/man/template/form"/>
+    </bean>
+
+    <bean id="appEditFormURIPrefix" class="java.lang.String">
+        <constructor-arg value="/man/app/form"/>
+    </bean>
+
+    <bean id="microTemplateEditFormURIPrefix" class="java.lang.String">
+        <constructor-arg value="/man/microtemplate/form"/>
+    </bean>
+
+    <!-- 应用公用页面片段路径 -->
+    <bean id="appCommonPageFragmentPath" class="java.lang.String">
+        <constructor-arg value="/WEB-INF/jsp/man/app/app-common-page.jspf"/>
+    </bean>
+
+    <bean id="templateSidebarDetailInfoPageFragmentPath" class="java.lang.String">
+        <constructor-arg value="/WEB-INF/jsp/man/template/sidebar-detail-info.jspf"/>
+    </bean>
+
+    <bean id="appSidebarDetailInfoPageFragmentPath" class="java.lang.String">
+        <constructor-arg value="/WEB-INF/jsp/man/app/sidebar-detail-info.jspf"/>
+    </bean>
+
+    <bean id="templateLayoutManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/template/layout"/>
+        <property name="sectionTabTitle" value="1.选择布局"/>
+        <property name="sectionClassName" value="layout"/>
+        <property name="sidebarEditFormURIPrefix" ref="templateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/template/layout.jspf"/>
+    </bean>
+
+    <bean id="templateModuleManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/template/module"/>
+        <property name="sectionTabTitle" value="2.开发模块"/>
+        <property name="sectionClassName" value="module"/>
+        <property name="sidebarEditFormURIPrefix" ref="templateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/template/module.jspf"/>
+    </bean>
+
+    <bean id="templateAssembleManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/template/assemble"/>
+        <property name="sectionTabTitle" value="3.组装模板"/>
+        <property name="sectionClassName" value="module"/>
+        <property name="sidebarEditFormURIPrefix" ref="templateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/template/assemble.jspf"/>
+    </bean>
+
+    <bean id="templateThemeManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/template/theme"/>
+        <property name="sectionTabTitle" value="4.管理风格"/>
+        <property name="sectionClassName" value="style"/>
+        <property name="sidebarEditFormURIPrefix" ref="templateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/template/theme.jspf"/>
+    </bean>
+
+    <bean id="templatePublishManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/template/publish"/>
+        <property name="sectionTabTitle" value="5.发布模板"/>
+        <property name="sectionClassName" value="public"/>
+        <property name="sidebarEditFormURIPrefix" ref="templateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/template/publish.jspf"/>
+    </bean>
+
+    <bean id="templateSyncManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/template/sync"/>
+        <property name="sectionTabTitle" value="6.店铺同步"/>
+        <property name="sectionClassName" value="public"/>
+        <property name="sidebarEditFormURIPrefix" ref="templateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/template/sync.jspf"/>
+    </bean>
+
+    <bean id="appPageManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/app/page"/>
+        <property name="sectionTabTitle" value="1.页面管理"/>
+        <property name="sectionClassName" value="style"/>
+        <property name="sidebarEditFormURIPrefix" ref="appEditFormURIPrefix"/>
+        <property name="commonPageFragmentPath" ref="appCommonPageFragmentPath"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="appSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/app/app-page-man.jspf"/>
+    </bean>
+
+    <bean id="appPageUrlMappingManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/app/page/url/mapping"/>
+        <property name="sectionTabTitle" value="2.URL映射管理"/>
+        <property name="sectionClassName" value="style"/>
+        <property name="sidebarEditFormURIPrefix" ref="appEditFormURIPrefix"/>
+        <property name="commonPageFragmentPath" ref="appCommonPageFragmentPath"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="appSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/app/app-url-mapping-man.jspf"/>
+    </bean>
+
+
+    <bean id="appSecurityManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/app/security"/>
+        <property name="sectionTabTitle" value="3.URL权限管理"/>
+        <property name="sectionClassName" value="style"/>
+        <property name="sidebarEditFormURIPrefix" ref="appEditFormURIPrefix"/>
+        <property name="commonPageFragmentPath" ref="appCommonPageFragmentPath"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="appSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/app/app-security-man.jspf"/>
+    </bean>
+
+
+    <bean id="appServiceManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/app/service"/>
+        <property name="sectionTabTitle" value="4.服务管理"/>
+        <property name="sectionClassName" value="style"/>
+        <property name="sidebarEditFormURIPrefix" ref="appEditFormURIPrefix"/>
+        <property name="commonPageFragmentPath" ref="appCommonPageFragmentPath"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="appSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/app/app-service-man.jspf"/>
+    </bean>
+
+    <bean id="appModuleManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/app/module"/>
+        <property name="sectionTabTitle" value="5.模块管理"/>
+        <property name="sectionClassName" value="module"/>
+        <property name="sidebarEditFormURIPrefix" ref="appEditFormURIPrefix"/>
+        <property name="commonPageFragmentPath" ref="appCommonPageFragmentPath"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="appSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/app/app-module-man.jspf"/>
+    </bean>
+
+    <bean id="appPublishManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/app/publish"/>
+        <property name="sectionTabTitle" value="6.应用上线"/>
+        <property name="sectionClassName" value="module"/>
+        <property name="sidebarEditFormURIPrefix" ref="appEditFormURIPrefix"/>
+        <property name="commonPageFragmentPath" ref="appCommonPageFragmentPath"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="appSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/app/app-publish-man.jspf"/>
+    </bean>
+
+    <bean id="microTemplateLayoutManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/microtemplate/layout"/>
+        <property name="sectionTabTitle" value="1.选择布局"/>
+        <property name="sectionClassName" value="layout"/>
+        <property name="sidebarEditFormURIPrefix" ref="microTemplateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/microtemplate/layout.jspf"/>
+    </bean>
+
+    <bean id="microTemplateModuleManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/microtemplate/module"/>
+        <property name="sectionTabTitle" value="2.开发模块"/>
+        <property name="sectionClassName" value="module"/>
+        <property name="sidebarEditFormURIPrefix" ref="microTemplateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/microtemplate/module.jspf"/>
+    </bean>
+
+    <bean id="microTemplateAssembleManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/microtemplate/assemble"/>
+        <property name="sectionTabTitle" value="3.组装模板"/>
+        <property name="sectionClassName" value="module"/>
+        <property name="sidebarEditFormURIPrefix" ref="microTemplateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/microtemplate/assemble.jspf"/>
+    </bean>
+
+    <bean id="microTemplatePublishManagerViewUI" class="com.taobao.tae.sdk.web.model.ManagerViewUI">
+        <property name="sectionURIPrefix" value="/man/microtemplate/publish"/>
+        <property name="sectionTabTitle" value="4.发布模板"/>
+        <property name="sectionClassName" value="public"/>
+        <property name="sidebarEditFormURIPrefix" ref="microTemplateEditFormURIPrefix"/>
+        <property name="sidebarDetailInfoPageFragmentPath" ref="templateSidebarDetailInfoPageFragmentPath"/>
+        <property name="sectionMainPageFragmentPath" value="/WEB-INF/jsp/man/microtemplate/publish.jspf"/>
+    </bean>
+
+    <util:list id="managerViewUIList">
+        <ref bean="templateLayoutManagerViewUI"/>
+        <ref bean="templateModuleManagerViewUI"/>
+        <ref bean="templateAssembleManagerViewUI"/>
+        <ref bean="templateThemeManagerViewUI"/>
+        <ref bean="templatePublishManagerViewUI"/>
+        <ref bean="templateSyncManagerViewUI"/>
+        <ref bean="appPageManagerViewUI"/>
+        <ref bean="appPageUrlMappingManagerViewUI"/>
+        <ref bean="appSecurityManagerViewUI"/>
+        <ref bean="appServiceManagerViewUI"/>
+        <ref bean="appModuleManagerViewUI"/>
+        <ref bean="appPublishManagerViewUI"/>
+        <ref bean="microTemplateLayoutManagerViewUI"/>
+        <ref bean="microTemplateModuleManagerViewUI"/>
+        <ref bean="microTemplateAssembleManagerViewUI"/>
+        <ref bean="microTemplatePublishManagerViewUI"/>
+    </util:list>
+
+    <!-- Key为：Detail的标题信息，Value为：Detail的属性值 -->
+    <!--
+    <util:map id="templateManagerSidebarDetailInfoMap" map-class="java.util.LinkedHashMap">
+        <entry key="模板类型" value="siteTemplate.templateType.label"/>
+        <entry key="店铺类型" value="shopType"/>
+        <entry key="版本号" value="version"/>
+        <entry key="语言" value="language"/>
+        <entry key="最后编辑" value="lastModifiedDate"/>
+    </util:map>
+     -->
+    <!--
+    <util:map id="appManagerTabInfoMap" map-class="java.util.LinkedHashMap">
+        <entry key="/man/app/page/{0}/" value="1.管理页面"/>
+        <entry key="/man/app/security/{0}/" value="2.管理权限"/>
+        <entry key="/man/app/assemble/{0}/" value="3.组装模板"/>
+        <entry key="/man/app/publish/{0}/" value="4.发布应用"/>
+    </util:map>
+    -->
+
+    <util:map id="uploadTaobaoMediaCenterParamsMap">
+        <entry key="bizCode" value="tu"/>
+        <entry key="notify" value="null"/>
+        <entry key="isPublic" value="true"/>
+        <entry key="mark" value="false"/>
+        <entry key="d" value="1"/>
+        <entry key="dirId" value="0"/>
+        <entry key="upload_m" value="NewFlash"/>
+    </util:map>
+
+
+    <util:list id="taeSupportedLanguagesList">
+        <value>PHP</value>
+    </util:list>
+
+
+    <context:annotation-config/>
+
+</beans>

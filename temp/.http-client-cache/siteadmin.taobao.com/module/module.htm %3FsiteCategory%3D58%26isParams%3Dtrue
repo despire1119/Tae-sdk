@@ -1,0 +1,76 @@
+
+
+    {
+    "system-modules-list": [
+        {
+            "id": "pinpai.module.homePicRound",
+            "last-modified": "2014-05-27T05:42:41+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u56FE\u7247\u8F6E\u64AD",
+            "js-url": "apps/brandservice/js/brand_index.js,apps/brandservice/js/brand_active.js",
+            "params": {
+                
+            },
+            "componentId": 791,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=791&siteCategory=58"
+        },
+        {
+            "id": "pinpai.module.custom",
+            "last-modified": "2014-05-27T05:35:53+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u81EA\u5B9A\u4E49\u5185\u5BB9\u533A",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 2,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=2&siteCategory=58"
+        },
+        {
+            "id": "pinpai.module.fullScreenPic",
+            "last-modified": "2014-05-27T05:42:49+0000",
+            "pic-url": "//gdp.alicdn.com/tps/i3/T1b656FnXbXXa_Z76h-990-485.jpg",
+            "cssSelectorName": null,
+            "name": "\u5168\u5C4F\u56FE\u7247\u8F6E\u64AD",
+            "js-url": "apps/brandservice/scripts/mods/index-slide-big-min.js",
+            "params": {
+                
+            },
+            "componentId": 447,
+            "css-url": "/apps/brandservice/stylesheet/mods/index-slide-big-min.css",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=447&siteCategory=58"
+        },
+        {
+            "id": "pinpai.module.tongFullRoundPic",
+            "last-modified": "2014-05-27T05:46:09+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "\u901A\u680F\u56FE\u7247\u8F6E\u64AD",
+            "js-url": "apps/brandservice/scripts/mods/index-slide-fullscreen-min.js",
+            "params": {
+                
+            },
+            "componentId": 453,
+            "css-url": "/apps/brandservice/stylesheet/mods/index-slide-fullscreen-min.css",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=453&siteCategory=58"
+        },
+        {
+            "id": "pinpai.module.minifeeds",
+            "last-modified": "2014-05-27T05:42:55+0000",
+            "pic-url": "http://img02.taobaocdn.com/tps/i2/T1XFRLXn4mXXXXXXXX-50-50.png",
+            "cssSelectorName": null,
+            "name": "sns\u76F4\u64AD\u5899",
+            "js-url": "\"\"",
+            "params": {
+                
+            },
+            "componentId": 915,
+            "css-url": "\"\"",
+            "dom-url": "http://siteadmin.taobao.com/module/module.htm?_input_charset=utf-8&compId=915&siteCategory=58"
+        }
+    ]
+}

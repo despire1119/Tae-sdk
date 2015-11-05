@@ -1,0 +1,22 @@
+<%--
+<div class="form-group">
+    <label class="form-label">模块类型:</label>
+
+    <div class="form-controls radio-fix">
+        <form:hidden path="type"/>
+        <lable class="radio">
+            <input type="radio" name="type" value="1" disabled="disabled"
+            <c:if test="${isSystemModule}">checked="true"</c:if>
+            class="J_systemModule"> 系统模块
+        </lable>
+        <lable class="radio">
+            <input type="radio" name="type" value="2"
+            <c:if test="${isLocalModule}">checked="true"</c:if>
+            disabled="disabled" class="J_designerModule"> 设计师模块
+        </lable>
+        <a href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E9.AB.98.E7.BA.A7.E6.A8.A1.E6.9D.BF.E4.B8.8E.E7.AE.80.E6.98.93.E6.A8.A1.E7.89.88"
+           target="_blank" class="intro">它们有什么不同？</a>
+    </div>
+</div>
+--%>
+<input type="hidden" name="type" value="${isLocalModule ? 2 : 1}"/>

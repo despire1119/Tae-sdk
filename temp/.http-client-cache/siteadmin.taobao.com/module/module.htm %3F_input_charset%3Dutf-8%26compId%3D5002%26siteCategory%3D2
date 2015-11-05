@@ -1,0 +1,60 @@
+
+
+&lt;!-- navigatorForCharge,${renderForDetailLeft}, ${showForceShow} dcPageId: --&gt;
+&lt;!--hasDcOnNav :  , hasDcPage :  --&gt;
+&lt;div class=&quot;skin-box tb-module tshop-pbsm tshop-pbsm-shop-nav-ch&quot;&gt;
+    &lt;s class=&quot;skin-box-tp&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+
+    &lt;div class=&quot;skin-box-bd&quot;&gt;
+                    &lt;div class=&quot;all-cats popup-container&quot;&gt;
+                &lt;div class=&quot;all-cats-trigger popup-trigger&quot;&gt;
+                    &lt;a class=&quot;link &quot; href=&quot;//shop1.taobao.com/search.htm?search=y&quot;&gt;
+                     &lt;span class=&quot;title&quot;&gt;
+                                                      所有分类
+                                              &lt;/span&gt;
+                        &lt;i class=&quot;popup-icon&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;popup-content all-cats-popup&quot;&gt;
+                    &lt;div class=&quot;popup-inner&quot;&gt;
+                                                                                                                                                                                                                            
+                        &lt;ul class=&quot;J_TAllCatsTree cats-tree&quot;&gt;
+                            &lt;li class=&quot;cat fst-cat&quot;&gt;
+                                &lt;h4 class=&quot;cat-hd fst-cat-hd has-children&quot;&gt;
+                                                                    &lt;i class=&quot;cat-icon fst-cat-icon&quot;&gt;&lt;/i&gt;
+                                    &lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&quot; class=&quot;cat-name fst-cat-name&quot;&gt;所有宝贝&lt;/a&gt;
+                                &lt;/h4&gt;
+
+                                &lt;div class=&quot;snd-pop&quot;&gt;
+                                    &lt;div class=&quot;snd-pop-inner&quot;&gt;
+                                        &lt;ul class=&quot;fst-cat-bd&quot;&gt;
+                                            &lt;li class=&quot;cat snd-cat&quot;&gt;
+                                                                                                &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                    &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                    &lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&amp;orderType=hotsell_desc&quot;
+                                                       class=&quot;by-label by-sale snd-cat-name&quot; rel=&quot;nofollow&quot; &gt;按销量&lt;/a&gt;
+                                                &lt;/h4&gt;
+                                                &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                    &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                    &lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&amp;orderType=newOn_desc&quot;
+                                                       class=&quot;by-label by-new snd-cat-name&quot; rel=&quot;nofollow&quot; &gt;按新品&lt;/a&gt;
+                                                &lt;/h4&gt;
+                                                &lt;h4 class=&quot;cat-hd snd-cat-hd&quot;&gt;
+                                                    &lt;i class=&quot;cat-icon snd-cat-icon&quot;&gt;&lt;/i&gt;
+                                                    &lt;a href=&quot;//shop1.taobao.com/search.htm?search=y&amp;orderType=price_asc&quot;
+                                                       class=&quot;by-label by-price snd-cat-name&quot; rel=&quot;nofollow&quot; &gt;按价格&lt;/a&gt;
+                                                &lt;/h4&gt;
+                                            &lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/li&gt;
+                                                    &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+                &lt;ul class=&quot;menu-list&quot;&gt;
+                                &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;s class=&quot;skin-box-bt&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/s&gt;
+    &lt;/div&gt;

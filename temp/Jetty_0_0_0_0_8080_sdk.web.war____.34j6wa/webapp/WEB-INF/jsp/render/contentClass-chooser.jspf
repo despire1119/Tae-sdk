@@ -1,0 +1,52 @@
+<textarea style="display: none" id="J_categoryContent">
+<div id="nav-edit">
+	<div class="J_DialogBody">
+		<form
+				action="/design/${templateDirectoryName}/${pageFileName}/${moduleID}/${moduleInstanceID}/contentClass/chooser/save/"
+				class="J_categoryForm">
+			<p class="nav-head desc">请选择要添加的分类</p>
+			<div id="tree-content">
+				<ul class="cat-list J_catList">
+					<c:choose>
+                        <c:when test="${not empty contentClassList}">
+                            <c:forEach items="${contentClassList}" var="contentClass">
+								<li class="cat fst-cat">
+        							<input data-id="${contentClass.id}" class="J_TFstCat" type="checkbox" />
+        							<label>${contentClass.name}</label>
+        						</li>
+                			</c:forEach>
+                        </c:when>
+                        <c:otherwise>
+                            <c:forEach items="${shopCategories}" var="category">
+        						<li class="cat fst-cat">
+        							<c:if test="${not empty category.children}">
+        								<i class="cat-icon collapse J_TAcrdTrigger "></i>
+        							</c:if>
+        							<input data-id="${category.id}" class="J_TFstCat" type="checkbox" />
+        							<label>${category.name}</label>
+        							
+        							<c:if test="${not empty category.children}">
+        								<ul class="fst-cat-bd">
+        									<c:forEach items="${category.children}" var="subCategory">
+        										<li class="cat snd-cat">
+        											<input data-id="${subCategory.id}" class="J_TSndCat" type="checkbox" />
+        											<label>${subCategory.name}</label>
+        										</li>
+        									</c:forEach>
+        								</ul>
+        							</c:if>
+        						</li>
+        					</c:forEach>
+						</c:otherwise>
+                    </c:choose>
+					
+				</ul>
+			</div>
+			<div class="opt-footer">
+				<a class="btn-ok J_saveCategory" href="">保存</a>
+				<a class="btn-cancel J_cancelCategory">取消</a>
+			</div>
+		</form>
+	</div>
+</div>
+</textarea>

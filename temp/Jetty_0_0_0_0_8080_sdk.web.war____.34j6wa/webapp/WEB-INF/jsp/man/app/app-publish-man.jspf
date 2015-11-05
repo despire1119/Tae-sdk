@@ -1,0 +1,75 @@
+<c:set var="logLink" value="${requestScope['app.validation.log.link']}" />
+<c:set var="validationResult" value="${requestScope['app.validation.result'] }" />
+<style>
+    .btn_package{
+        font-size: 18px;
+        width : 130px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 6px;
+    }
+    .wraper h3, .wraper p{
+        margin: 0px 0 10px 0;
+    }
+    .fail_tip{
+        color: #c7254e;
+        background-color: #fcf2f2;
+        margin: 20px 0;
+        padding: 15px 30px 15px 15px;
+        border-left: 5px solid #dFb5b4;
+    }
+    .fail_tip h4, .success_tip h4{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .success_tip{
+        color: #468847;
+        background-color: #dff0d8;
+        padding: 15px 30px 15px 15px;
+        border-left: 5px solid #468847;
+    }
+</style>
+<div class="items">
+    <div class="wraper">
+        <h3>上线应用</h3>
+        <p>
+            <p>
+                <c:forEach items="${moduleTemplatesList}" var="module">
+                    <a class="btn btn_package" style="display:inline-block;" href="/man/app/publish/${appName}/package/${module.id}" class="btn">前端打包</a>
+                </c:forEach>
+
+                <a class="btn btn_package" style="display:inline-block; margin-left:20px;" href="/man/app/publish/${appName}/package/" class="btn">后端打包</a>
+            </p>
+            <c:choose>
+                <c:when test="${empty validationResult}">
+                    <c:if test="${not empty logLink}">
+                        <div class="fail_tip">
+                            <h4>
+                                &#10008;打包失败!
+                            </h4>
+                            <p>
+                                ${appName}应用验证错误，<a href="${logLink}" target="_blank">查看错误日志</a>
+                            </p>
+                        </div>
+                    </c:if>
+                </c:when>
+                <c:when test="${validationResult == 'valid'}">
+                    <c:if test="${modulePackageFile ne null}">
+                        <div class="success_tip">
+                            <h4>
+                                &#10004;打包成功!
+                            </h4>
+                            <p>
+                                路径：${modulePackageFile.absolutePath}
+                            </p>
+                            <p>
+                                <a target="_blank" href="http://tae.taobao.com/develop/app/my.html" style="font-size: 14px">前往TAE上传</a>
+                            </p>
+                        </div>
+                    </c:if>
+                </c:when>
+            </c:choose>
+        </p>
+        </div>
+    </div>

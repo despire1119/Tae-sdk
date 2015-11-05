@@ -1,0 +1,22 @@
+<c:set var="isLayout" value="${fn:contains(requestURI, '/WEB-INF/jsp/design/layout/')}" />
+<c:set var="isDebug" value="${fn:contains(requestURI, '/WEB-INF/jsp/design/debug/')}" />
+
+<%-- 模块编辑URI --%>
+<c:set var="moduleEditURI" value="/micromodule/${templateDirectoryName}/${pageFileName}/form/" />
+<%-- 模块添加URI --%>
+<c:set var="moduleAddURI" value="/microdesign/${templateDirectoryName}/${pageFileName}/module/add/" />
+<%-- 模块保存URI --%>
+<c:set var="moduleSaveURI" value="/microdesign/${templateDirectoryName}/${pageFileName}/module/params/?_input_charset=utf-8" />
+<%-- 模块删除URI --%>
+<c:set var="moduleDelURI" value="/microdesign/${templateDirectoryName}/${pageFileName}/page/save/" />
+<%-- 模块列表URI --%>
+<c:set var="moduleListURI" value="/microdesign/${templateDirectoryName}/${pageFileName}/module/list/" />
+<%-- 模块内容URI --%>
+<c:set var="pageContentURI" value="/microdesign/${templateDirectoryName}/${pageFileName}/page/content/" />
+<%-- 布局保存URI --%>
+<c:set var="layoutSaveURI" value="/microdesign/${templateDirectoryName}/${pageFileName}/page/save/" />
+<%-- 图片上传URI --%>
+<c:set var="imageUploadURI" value="/microdesign/${templateDirectoryName}/upload/image/?_input_charset=utf-8"/>
+<%-- 页面重命名 --%>
+<c:set var="pageNameSaveURI" value="/microdesign/${templateDirectoryName}/${pageFileName}/pagename/save/?_input_charset=utf-8"/>
+

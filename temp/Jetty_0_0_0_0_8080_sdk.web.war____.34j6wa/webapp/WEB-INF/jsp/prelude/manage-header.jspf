@@ -1,0 +1,38 @@
+<%-- 以下初始化定义，请参考BaseManagerController类 --%>
+<c:set var="systemMangerNavigationViewList" value="${applicationScope['systemMangerNavigationViewList']}" />
+<c:set var="managerViewUIList" value="${applicationScope['managerViewUIList']}" />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk" />
+<jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+<title>设计师SDK</title>
+<!--[if lt IE 9]> 
+	<script src="http://${assetsHost}/apps/taesite/platinum/scripts/sdk/tools/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://${assetsHost}/apps/taesite/platinum/stylesheet/sdk/exports.css">
+<script src="http://${assetsHost}${kissyURI}" charset="utf-8"></script>
+<style>
+    .header .nav {
+        width: ${fn:length(systemMangerNavigationViewList)}00px;
+    }
+</style>
+</head>
+<body>
+	<header class="header">
+		<div class="wraper">
+			<h1>Shop SDK</h1>
+			<nav class="nav">
+				<ul>
+				<c:forEach items="${systemMangerNavigationViewList}" var="systemMangerNavigationView">
+				    <c:set var="uri" value="${systemMangerNavigationView.uri}" />
+					<li <c:if test="${fn:startsWith(requestForwardedURI,systemMangerNavigationView.matchURIPrefix)}">class="active"
+					<c:set var="currentMangerNavigationView" value="${systemMangerNavigationView}" />
+					</c:if>>					    
+				        <a href ="${uri}">${systemMangerNavigationView.title}</a>
+				    </li>
+				</c:forEach>
+				</ul>
+			</nav>
+		</div>
+	</header>

@@ -1,0 +1,9 @@
+<script id="yyz-notify.html" type="text/ng-template">
+    <div>
+        <div class="notifier" ng-class="{show: show}">
+            <div class="notifier-inner">
+                <span>{{msg}}<a class='notify-cancel-btn' ng-click='canelDel()' ng-show="cancelBtnShow">³·Ïú</a></span>
+            </div>
+        </div>
+    </div>
+</script>

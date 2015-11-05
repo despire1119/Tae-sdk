@@ -1,0 +1,11 @@
+<%-- 管理页面-操作消息提示页面 --%>
+<c:set var="paramMessage" value="${sdk:urlDecode(param['message'],encoding)}" />
+<c:set var="message" value="${not empty paramMessage ? paramMessage : message}" />
+<c:if test="${not empty message}">
+    <br />
+    <div style="background: #FBFBE7;border: 1px dashed #ccc; padding:10px;">
+    ${message}
+    <p/>
+    </div>
+    <br />
+</c:if>

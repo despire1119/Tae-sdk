@@ -1,0 +1,30 @@
+<style>
+    .style .items li {
+        width:100%;
+    }
+</style>
+<div class="title">
+    <h3>页面URL映射列表</h3>
+    <a href="/man/app/page/url/mapping/create/${appName}/" class="radius-btn"><i class="icon-plus"></i> 创建新URL映射 </a>
+</div>
+<jsp:directive.include file="/WEB-INF/jsp/man/commons/man-opt-message.jspf" />
+<ul>
+	<c:forEach items="${app.urls}" var="urlItem">
+	<c:set var="url" value="${urlItem.url}" />
+	<c:set var="pageRenderURI" value="${appRootURL}/d${url}" />
+    <li>
+        <span>${url}</span>
+        <a href="${pageRenderURI}" target="_blank">预览</a>
+        <a href="/man/app/page/url/mapping/edit/${appName}/?url=${url}">编辑</a>
+        <a class="J_del" href="/man/app/page/url/mapping/delete/${appName}/?url=${url}">删除</a>
+	</li>
+	 </c:forEach>
+</ul>
+<div class="guide">
+	<p>
+		想手工创建页面URL映射？<a href="http://newwiki.zx.taobao.com/index.php?title=SDK_DEV_REF#.E5.A4.9A.E5.A5.97.E9.A3.8E.E6.A0.BC" target="_blank">点击此处可以了解！</a>
+	</p>
+	<p class="next">
+		<span>完成页面URL映射管理？</span> <a href="/man/app/service/${appName}/" class="btn">进入下一步</a>
+	</p>
+</div>

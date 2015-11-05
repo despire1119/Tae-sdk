@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+<link rel="stylesheet" href="http://${assetsHost}/apps/taesite/platinum/stylesheet/platform/design/design.css">
+<link rel="stylesheet" type="text/css" href="http://${assetsHost}/apps/taesite/platinum/stylesheet/sdk/debug.css">
+	
+<jsp:directive.include file="/WEB-INF/jsp/prelude/render-css.jspf" />
+
+<script src="http://${assetsHost}${kissyURI}" charset="utf-8"></script>
+<script type="text/javascript" src="http://${assetsHost}/p/snsdk/core.js"></script>
+
+<jsp:directive.include file="/WEB-INF/jsp/design/commons/toolbar.jspf" />
+<meta charset="gbk">
+<title>装修首页</title>
+<!-- ds config -->
+<script>
+	window.ds_config = {
+		appId : 1006,
+		if_url : {
+			"savemod" : "/design/${templateDirectoryName}/${pageFileName}/module/operation/",
+			"addmod" : "/design/${templateDirectoryName}/${pageFileName}/module/list/"
+		}
+	};
+</script>
+
+
+
+
+
+<link rel="stylesheet"
+	href="http://${assetsHost}/apps/taesite/platinum/stylesheet/common/mods/??item-cates/yellow.css,nav/default.css,srch-inshop/default.css,item-recommend/default.css,bulletin/default.css">
+
+</head>

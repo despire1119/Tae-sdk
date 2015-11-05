@@ -1,0 +1,19 @@
+<div class="form-group J_layout">
+	<label class="form-label">Ä£¿é²¼¾Ö£º</label>
+	<div class="form-controls">
+		<c:forEach items="${moduleSupportedWidthList}"
+			var="moduleSupportedWidth">
+			<lable class="radio"> <input name="supportedWidth"
+				type="checkbox" value="${moduleSupportedWidth}"
+				<c:forEach items="${moduleForm.supportedWidths}" var="width" >					
+					<c:if test="${moduleSupportedWidth == width}">
+						checked="true"
+					</c:if>
+				</c:forEach>>${moduleSupportedWidth}
+			</lable>
+		</c:forEach>
+		<%--
+		<form:checkboxes items="${moduleSupportedWidthList}" path="supportedWidth" />
+		 --%>
+	</div>
+</div>

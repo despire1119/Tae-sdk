@@ -1,0 +1,8 @@
+<aside class="sidebar">
+<dl>
+	<jsp:include page="${currentManagerViewUI.sidebarDetailInfoPageFragmentPath}" />
+	<dd class="control">
+		<a href="${currentManagerViewUI.sidebarEditFormURIPrefix}/${manDirectoryName}/" class="radius-btn">±à ¼­</a>
+	</dd>
+</dl>
+</aside>

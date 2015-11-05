@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+<meta charset="gbk" />
+<title>设计师SDK</title>
+<!--[if lt IE 9]>
+			<script src="../../scripts/sdk/tools/html5.js"></script>
+<![endif]-->
+		<link rel="stylesheet" type="text/css" href="http://${assetsHost}/apps/taesite/platinum/stylesheet/sdk/exports.css">
+</head>
+<body>

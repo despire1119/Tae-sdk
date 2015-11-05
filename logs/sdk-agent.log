@@ -1,0 +1,346 @@
+09:55:21 [INFO]: SDK 开发版本激活
+09:55:21 [INFO]: http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+09:55:21 [INFO]: SDK Java系统属性配置：
+java.vendor : Apple Inc.
+sun.java.launcher : SUN_STANDARD
+sun.management.compiler : HotSpot 64-Bit Tiered Compilers
+max.watch.service.thread : 100
+os.name : Mac OS X
+sun.boot.class.path : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/alt-string.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/alt-rt.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+system.module.common.js.uri : /apps/taesite/platinum/scripts/common/mods/
+page.number.on.nav.bar : 3
+java.vm.specification.vendor : Sun Microsystems Inc.
+java.runtime.version : 1.6.0_65-b14-468-11M4833
+user.name : Mr-WC
+awt.nativeDoubleBuffering : true
+kissy.uri : /s/kissy/1.2.0/kissy-min.js
+user.language : zh
+sun.boot.library.path : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+java.version : 1.6.0_65
+user.timezone : Asia/Shanghai
+caja.setup.js.url : http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/caja-setup.js
+development.mode : true
+sun.arch.data.model : 64
+java.endorsed.dirs : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed
+sun.cpu.isalist : 
+sun.jnu.encoding : EUC_CN
+file.encoding.pkg : sun.io
+file.separator : /
+java.specification.name : Java Platform API Specification
+DCSDK_HOME : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK
+java.class.version : 50.0
+user.country : CN
+java.home : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+design.rules.diamond.data.id.prefix : com.taobao.tae.design.rules.xml.content.
+java.vm.info : mixed mode
+offline.mode : 
+os.version : 10.10.5
+caja.js.url : http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+caja.js.uri : /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+path.separator : :
+xml.line.width : 800
+java.vm.version : 20.65-b04-468
+user.nick : c测试账号154,商家测试帐号28,c测试账号188
+java.awt.printerjob : apple.awt.CPrinterJob
+sun.io.unicode.encoding : UnicodeLittle
+awt.toolkit : apple.awt.CToolkit
+main.class : com.taobao.tae.sdk.platform.Main
+user.home : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../temp
+design.rules.diamond.group.id : com.taobao.tae.design.rules
+java.specification.vendor : Sun Microsystems Inc.
+java.library.path : .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.vendor.url : http://www.apple.com/
+java.vm.vendor : Apple Inc.
+gopherProxySet : false
+java.runtime.name : Java(TM) SE Runtime Environment
+sun.java.command : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../lib/jetty/start-6.1.26.jar /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../conf/jetty.xml
+java.class.path : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../lib/jetty/start-6.1.26.jar:/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../lib/taobao/sdk-agent-2.0.0-SNAPSHOT.jar
+site.admin.root.url : http://siteadmin.taobao.com
+native.node.js.express.static.file.web.server.enabled : 
+node.js.enabled : 
+java.vm.specification.name : Java Virtual Machine Specification
+java.vm.specification.version : 1.0
+sun.cpu.endian : little
+sun.os.patch.level : unknown
+enable.sdk.mode : true
+assets.host : a.tbcdn.cn
+java.io.tmpdir : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../temp
+java.vendor.url.bug : http://bugreport.apple.com/
+START : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../conf/start.config
+tae.market.root.url : http://zxn.taobao.com
+mrj.build : 11M4833
+os.arch : x86_64
+java.awt.graphicsenv : apple.awt.CGraphicsEnvironment
+java.ext.dirs : /Library/Java/Extensions:/System/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext
+mrj.version : 1070.1.6.0_65-468
+user.dir : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../temp
+line.separator : 
+
+native.node.js.less.compiler.enabled : 
+java.vm.name : Java HotSpot(TM) 64-Bit Server VM
+caja.service.uri : http://zxn.taobao.com/tbcajaService.htm
+prmain.async.action.thread.pool.size : 2
+file.encoding : GBK
+display.template.number.per.page : 10
+prmain.async.action.enabled : 
+java.specification.version : 1.6
+09:55:22 [INFO]: [提示]：SDK缺陷反馈已关闭！
+09:57:54 [INFO]: 目录[路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/apps] 创建成功！
+09:57:54 [INFO]: 目录[路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/htdocs] 创建成功！
+09:57:54 [INFO]: 目录[路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/temp] 已经存在！
+09:57:54 [INFO]: 目录[路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/logs] 已经存在！
+09:57:54 [INFO]: [提示] Node JS 功能激活！
+09:57:54 [INFO]: NativeNodeJsExpressStaticFileWebServer was created!
+09:57:54 [INFO]: [提示] Node JS 静态服务器[根目录路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/htdocs，端口：9999]已经启动！
+09:58:54 [INFO]: GC操作建议已经提交！
+09:59:54 [WARN]: 
+10:00:54 [INFO]: GC操作建议已经提交！
+10:01:54 [INFO]: GC操作建议已经提交！
+10:02:54 [INFO]: GC操作建议已经提交！
+10:03:54 [INFO]: GC操作建议已经提交！
+10:04:55 [INFO]: GC操作建议已经提交！
+10:05:54 [INFO]: GC操作建议已经提交！
+10:06:54 [INFO]: GC操作建议已经提交！
+10:07:54 [INFO]: GC操作建议已经提交！
+10:08:54 [INFO]: GC操作建议已经提交！
+10:09:54 [INFO]: GC操作建议已经提交！
+10:10:54 [INFO]: GC操作建议已经提交！
+10:11:54 [INFO]: GC操作建议已经提交！
+10:12:54 [INFO]: GC操作建议已经提交！
+10:13:54 [INFO]: GC操作建议已经提交！
+10:14:54 [INFO]: GC操作建议已经提交！
+10:15:54 [INFO]: GC操作建议已经提交！
+10:16:54 [INFO]: GC操作建议已经提交！
+10:17:54 [INFO]: GC操作建议已经提交！
+10:18:54 [INFO]: GC操作建议已经提交！
+10:19:54 [INFO]: GC操作建议已经提交！
+10:20:54 [INFO]: GC操作建议已经提交！
+10:21:54 [INFO]: GC操作建议已经提交！
+10:22:54 [INFO]: GC操作建议已经提交！
+10:23:54 [INFO]: GC操作建议已经提交！
+10:24:54 [INFO]: GC操作建议已经提交！
+10:25:54 [INFO]: GC操作建议已经提交！
+10:26:54 [INFO]: GC操作建议已经提交！
+10:27:25 [INFO]: SDK 开发版本激活
+10:27:25 [INFO]: http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+10:27:25 [INFO]: SDK Java系统属性配置：
+java.vendor : Apple Inc.
+sun.java.launcher : SUN_STANDARD
+sun.management.compiler : HotSpot 64-Bit Tiered Compilers
+max.watch.service.thread : 100
+os.name : Mac OS X
+sun.boot.class.path : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/alt-string.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/alt-rt.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+system.module.common.js.uri : /apps/taesite/platinum/scripts/common/mods/
+page.number.on.nav.bar : 3
+java.vm.specification.vendor : Sun Microsystems Inc.
+java.runtime.version : 1.6.0_65-b14-468-11M4833
+user.name : Mr-WC
+awt.nativeDoubleBuffering : true
+kissy.uri : /s/kissy/1.2.0/kissy-min.js
+user.language : zh
+sun.boot.library.path : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+java.version : 1.6.0_65
+user.timezone : Asia/Shanghai
+caja.setup.js.url : http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/caja-setup.js
+development.mode : true
+sun.arch.data.model : 64
+java.endorsed.dirs : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed
+sun.cpu.isalist : 
+sun.jnu.encoding : EUC_CN
+file.encoding.pkg : sun.io
+file.separator : /
+java.specification.name : Java Platform API Specification
+DCSDK_HOME : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK
+java.class.version : 50.0
+user.country : CN
+java.home : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+design.rules.diamond.data.id.prefix : com.taobao.tae.design.rules.xml.content.
+java.vm.info : mixed mode
+offline.mode : 
+os.version : 10.10.5
+caja.js.url : http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+caja.js.uri : /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+path.separator : :
+xml.line.width : 800
+java.vm.version : 20.65-b04-468
+user.nick : c测试账号154,商家测试帐号28,c测试账号188
+java.awt.printerjob : apple.awt.CPrinterJob
+sun.io.unicode.encoding : UnicodeLittle
+awt.toolkit : apple.awt.CToolkit
+main.class : com.taobao.tae.sdk.platform.Main
+user.home : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../temp
+design.rules.diamond.group.id : com.taobao.tae.design.rules
+java.specification.vendor : Sun Microsystems Inc.
+java.library.path : .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.vendor.url : http://www.apple.com/
+java.vm.vendor : Apple Inc.
+gopherProxySet : false
+java.runtime.name : Java(TM) SE Runtime Environment
+sun.java.command : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../lib/jetty/start-6.1.26.jar /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../conf/jetty.xml
+java.class.path : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../lib/jetty/start-6.1.26.jar:/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../lib/taobao/sdk-agent-2.0.0-SNAPSHOT.jar
+site.admin.root.url : http://siteadmin.taobao.com
+native.node.js.express.static.file.web.server.enabled : 
+node.js.enabled : 
+java.vm.specification.name : Java Virtual Machine Specification
+java.vm.specification.version : 1.0
+sun.cpu.endian : little
+sun.os.patch.level : unknown
+enable.sdk.mode : true
+assets.host : a.tbcdn.cn
+java.io.tmpdir : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../temp
+java.vendor.url.bug : http://bugreport.apple.com/
+START : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../conf/start.config
+tae.market.root.url : http://zxn.taobao.com
+mrj.build : 11M4833
+os.arch : x86_64
+java.awt.graphicsenv : apple.awt.CGraphicsEnvironment
+java.ext.dirs : /Library/Java/Extensions:/System/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext
+mrj.version : 1070.1.6.0_65-468
+user.dir : /Users/Mr-WC/Documents/tae-sdk/TAE_SDK/bin/../temp
+line.separator : 
+
+native.node.js.less.compiler.enabled : 
+java.vm.name : Java HotSpot(TM) 64-Bit Server VM
+caja.service.uri : http://zxn.taobao.com/tbcajaService.htm
+prmain.async.action.thread.pool.size : 2
+file.encoding : GBK
+display.template.number.per.page : 10
+prmain.async.action.enabled : 
+java.specification.version : 1.6
+10:27:25 [INFO]: [提示]：SDK缺陷反馈已关闭！
+10:28:22 [INFO]: 目录[路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/apps] 已经存在！
+10:28:22 [INFO]: 目录[路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/htdocs] 已经存在！
+10:28:22 [INFO]: 目录[路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/temp] 已经存在！
+10:28:22 [INFO]: 目录[路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/logs] 已经存在！
+10:28:22 [INFO]: [提示] Node JS 功能激活！
+10:28:23 [INFO]: NativeNodeJsExpressStaticFileWebServer was created!
+10:28:23 [INFO]: [提示] Node JS 静态服务器[根目录路径：/Users/Mr-WC/Documents/tae-sdk/TAE_SDK/htdocs，端口：9999]已经启动！
+10:29:23 [INFO]: GC操作建议已经提交！
+10:30:23 [INFO]: GC操作建议已经提交！
+10:31:23 [INFO]: GC操作建议已经提交！
+10:32:23 [INFO]: GC操作建议已经提交！
+10:33:23 [INFO]: GC操作建议已经提交！
+10:34:23 [INFO]: GC操作建议已经提交！
+10:35:23 [INFO]: GC操作建议已经提交！
+10:36:23 [INFO]: GC操作建议已经提交！
+10:37:23 [INFO]: GC操作建议已经提交！
+10:38:23 [INFO]: GC操作建议已经提交！
+10:39:23 [INFO]: GC操作建议已经提交！
+10:40:23 [INFO]: GC操作建议已经提交！
+10:41:23 [INFO]: GC操作建议已经提交！
+10:42:23 [INFO]: GC操作建议已经提交！
+10:43:23 [INFO]: GC操作建议已经提交！
+10:44:23 [INFO]: GC操作建议已经提交！
+10:45:23 [INFO]: GC操作建议已经提交！
+10:46:23 [INFO]: GC操作建议已经提交！
+10:47:23 [INFO]: GC操作建议已经提交！
+10:48:23 [INFO]: GC操作建议已经提交！
+10:49:23 [INFO]: GC操作建议已经提交！
+10:50:23 [INFO]: GC操作建议已经提交！
+10:51:23 [INFO]: GC操作建议已经提交！
+10:52:23 [INFO]: GC操作建议已经提交！
+10:53:23 [INFO]: GC操作建议已经提交！
+10:54:23 [INFO]: GC操作建议已经提交！
+10:55:23 [INFO]: GC操作建议已经提交！
+10:56:23 [INFO]: GC操作建议已经提交！
+10:59:31 [INFO]: SDK 开发版本激活
+10:59:31 [INFO]: http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+10:59:31 [INFO]: SDK Java系统属性配置：
+java.vendor : Apple Inc.
+sun.java.launcher : SUN_STANDARD
+sun.management.compiler : HotSpot 64-Bit Tiered Compilers
+max.watch.service.thread : 100
+os.name : Mac OS X
+sun.boot.class.path : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/alt-string.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/alt-rt.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar
+system.module.common.js.uri : /apps/taesite/platinum/scripts/common/mods/
+page.number.on.nav.bar : 3
+java.vm.specification.vendor : Sun Microsystems Inc.
+java.runtime.version : 1.6.0_65-b14-468-11M4833
+user.name : Mr-WC
+awt.nativeDoubleBuffering : true
+kissy.uri : /s/kissy/1.2.0/kissy-min.js
+user.language : zh
+sun.boot.library.path : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries
+java.version : 1.6.0_65
+user.timezone : Asia/Shanghai
+caja.setup.js.url : http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/caja-setup.js
+development.mode : true
+sun.arch.data.model : 64
+java.endorsed.dirs : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed
+sun.cpu.isalist : 
+sun.jnu.encoding : EUC_CN
+file.encoding.pkg : sun.io
+file.separator : /
+java.specification.name : Java Platform API Specification
+DCSDK_HOME : /Users/Mr-WC/svn/tae-sdk/TAE_SDK
+java.class.version : 50.0
+user.country : CN
+java.home : /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+design.rules.diamond.data.id.prefix : com.taobao.tae.design.rules.xml.content.
+java.vm.info : mixed mode
+offline.mode : 
+os.version : 10.10.5
+caja.js.url : http://a.tbcdn.cn/apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+caja.js.uri : /apps/taesite/balcony/core/r3002/??caja/caja-min.js,caja-log-min.js,widget/gs-upload.js,widget/window-scroll.js,caja-adapter-min.js,balcony-min.js,html-widgets/switchable-min.js
+path.separator : :
+xml.line.width : 800
+java.vm.version : 20.65-b04-468
+user.nick : c测试账号154,商家测试帐号28,c测试账号188
+java.awt.printerjob : apple.awt.CPrinterJob
+sun.io.unicode.encoding : UnicodeLittle
+awt.toolkit : apple.awt.CToolkit
+main.class : com.taobao.tae.sdk.platform.Main
+user.home : /Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../temp
+design.rules.diamond.group.id : com.taobao.tae.design.rules
+java.specification.vendor : Sun Microsystems Inc.
+java.library.path : .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.vendor.url : http://www.apple.com/
+java.vm.vendor : Apple Inc.
+gopherProxySet : false
+java.runtime.name : Java(TM) SE Runtime Environment
+sun.java.command : /Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../lib/jetty/start-6.1.26.jar /Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../conf/jetty.xml
+java.class.path : /Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../lib/jetty/start-6.1.26.jar:/Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../lib/taobao/sdk-agent-2.0.0-SNAPSHOT.jar
+site.admin.root.url : http://siteadmin.taobao.com
+native.node.js.express.static.file.web.server.enabled : 
+node.js.enabled : 
+java.vm.specification.name : Java Virtual Machine Specification
+java.vm.specification.version : 1.0
+sun.cpu.endian : little
+sun.os.patch.level : unknown
+enable.sdk.mode : true
+assets.host : a.tbcdn.cn
+java.io.tmpdir : /Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../temp
+java.vendor.url.bug : http://bugreport.apple.com/
+START : /Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../conf/start.config
+tae.market.root.url : http://zxn.taobao.com
+mrj.build : 11M4833
+os.arch : x86_64
+java.awt.graphicsenv : apple.awt.CGraphicsEnvironment
+java.ext.dirs : /Library/Java/Extensions:/System/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext
+mrj.version : 1070.1.6.0_65-468
+user.dir : /Users/Mr-WC/svn/tae-sdk/TAE_SDK/bin/../temp
+line.separator : 
+
+native.node.js.less.compiler.enabled : 
+java.vm.name : Java HotSpot(TM) 64-Bit Server VM
+caja.service.uri : http://zxn.taobao.com/tbcajaService.htm
+prmain.async.action.thread.pool.size : 2
+file.encoding : GBK
+display.template.number.per.page : 10
+prmain.async.action.enabled : 
+java.specification.version : 1.6
+10:59:31 [INFO]: [提示]：SDK缺陷反馈已关闭！
+11:00:22 [INFO]: 目录[路径：/Users/Mr-WC/svn/tae-sdk/TAE_SDK/apps] 已经存在！
+11:00:22 [INFO]: 目录[路径：/Users/Mr-WC/svn/tae-sdk/TAE_SDK/htdocs] 已经存在！
+11:00:22 [INFO]: 目录[路径：/Users/Mr-WC/svn/tae-sdk/TAE_SDK/temp] 已经存在！
+11:00:22 [INFO]: 目录[路径：/Users/Mr-WC/svn/tae-sdk/TAE_SDK/logs] 已经存在！
+11:00:22 [INFO]: [提示] Node JS 功能激活！
+11:00:22 [INFO]: NativeNodeJsExpressStaticFileWebServer was created!
+11:00:22 [INFO]: [提示] Node JS 静态服务器[根目录路径：/Users/Mr-WC/svn/tae-sdk/TAE_SDK/htdocs，端口：9999]已经启动！
+11:01:22 [INFO]: GC操作建议已经提交！
+11:02:22 [INFO]: GC操作建议已经提交！
+11:03:22 [INFO]: GC操作建议已经提交！
+11:04:22 [INFO]: GC操作建议已经提交！
+11:05:22 [INFO]: GC操作建议已经提交！
+11:06:22 [INFO]: GC操作建议已经提交！
+11:07:22 [INFO]: GC操作建议已经提交！

@@ -1,0 +1,11 @@
+<meta charset="gbk"/>
+<title>店铺装修-布局管理-淘宝网</title>
+<jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+<link rel="stylesheet" href="http://${assetsHost}/apps/taesite/wangpu2012/stylesheet/platform/layout/layout-min.css?t=201312251805.css"/>
+<link rel="stylesheet" href="http://${assetsHost}/??p/global/1.0/global-min.css?t=20131225111.css"/>
+<link rel="stylesheet" href="http://${assetsHost}/apps/taesite/wangpu2012/stylesheet/platform/framework/??layout-min.css,navbar-min.css,sidebar-min.css?t=20131225111.css"/>
+<script type="text/javascript">
+    window.FRAMEWORK = {
+        hasScroll:true
+    }
+</script>

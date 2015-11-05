@@ -1,0 +1,18 @@
+<body>
+    <div class="w clearfix">
+        <div id="content">
+            <div class="phone-wrap">
+                <div class="phone">
+                    <div class="phone-container">
+                        <iframe src="/microshop/htdocs/render/${templateDirectoryName}/${pageFileName}/"></iframe>
+                    </div>
+                    <div class="phone-shadow"></div>
+                </div>
+                <div class="phone-bottom"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>2012 淘宝(中国)软件有限公司 版权所有</p>
+    </div>
+</body>

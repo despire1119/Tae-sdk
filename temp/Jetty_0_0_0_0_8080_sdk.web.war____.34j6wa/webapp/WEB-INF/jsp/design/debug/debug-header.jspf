@@ -1,0 +1,23 @@
+<jsp:directive.include file="/WEB-INF/jsp/prelude/no-cache-header.jspf" />
+<meta charset="gbk">
+<meta name="spm-id" content=""/>
+<meta name="microscope-data" content="">
+<title>${currentPage.name}-店铺装修-淘宝网</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link rel="shortcut icon" href="http://www.taobao.com/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" type="text/css" href="http://${assetsHost}/apps/taesite/platinum/stylesheet/platform/design/design.css">
+<link rel="stylesheet" type="text/css" href="http://${assetsHost}/apps/taesite/platinum/stylesheet/sdk/debug.css">
+<jsp:directive.include file="/WEB-INF/jsp/prelude/render-css.jspf" />
+<script type="text/javascript">
+    window.ds_config = {
+                appId:1006,
+                if_url:{
+                	"savemod" : "/design/${templateDirectoryName}/${pageFileName}/module/operation/",
+        			"addmod" : "/design/${templateDirectoryName}/${pageFileName}/module/list/"
+                },
+                site_category:2,
+                page_type:1
+            }
+</script>
+<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js?t=${date}" charset="utf-8"></script>
+<script type="text/javascript" src="http://${assetsHost}/p/snsdk/core.js"></script>
